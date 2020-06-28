@@ -1,0 +1,11 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "The backend part of the thiscourse project.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ThisCourse",
+  "license": "ISC"
+}
