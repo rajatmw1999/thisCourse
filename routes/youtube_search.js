@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-require('dotenv').config();
+require('dotenv').config();  
 
-const { google } = require('googleapis');
+const { google } = require('googleapis'); // install using npm install googleapis --save
 
-
+// The get request
 router.get('/', (req,res,next) => {
 	const query = {
 			q: req.body.q
