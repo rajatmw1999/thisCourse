@@ -24,7 +24,8 @@ rp('https://www.coursera.org/search?query=web%20development&skipBrowseRedirect=t
 .then((html) => {
     let name = $('.ais-InfiniteHits-item',html);
     for(let i=0;i<name.length;i++){
-    console.log(name[i].children[0].children[0].children[0].children[0].children[0].children[0].children[0].attribs.alt);
+    console.log("Name : ",name[i].children[0].children[0].children[0].children[0].children[0].children[0].children[0].attribs.alt);
+    console.log("ImgLink : ",name[i].children[0].children[0].children[0].children[0].children[0].children[0].children[0].attribs.src);
     };
 });
 
