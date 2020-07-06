@@ -1,11 +1,15 @@
 {
-  "name": "back-end",
+  "name": "fbase",
   "version": "1.0.0",
-  "description": "The backend part of the thiscourse project.",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "ThisCourse",
-  "license": "ISC"
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.3",
+    "express": "^4.17.1"
+  }
 }
