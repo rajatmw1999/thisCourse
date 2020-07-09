@@ -7,6 +7,7 @@ let rp = require("request-promise");
 let $ = require("cheerio");
 
 const app = express();
+const youtubeSearchRoutes = require('./api/routes/youtube_search');
 
 app.use((req,res,next)=>{
     res.setHeader("Access-Control-Allow-Origin","*");
@@ -20,6 +21,7 @@ app.use((req,res,next)=>{
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
+//Coursera Part
 rp('https://www.coursera.org/search?query=web%20development&skipBrowseRedirect=true')
 .then((html) => {
     let name = $('.ais-InfiniteHits-item',html);
@@ -34,10 +36,29 @@ rp('https://www.coursera.org/search?query=web%20development&skipBrowseRedirect=t
   
 });
 
+//Youtube Route
+app.use('/youtubeSearch', youtubeSearchRoutes);
+
 app.get(express.static(path.join(__dirname,'frontend/build')));
 app.get('*',(req,res) => {
     res.sendFile(path.join(__dirname + '/frontend/build/index.html'));
 });
+
+
+app.use((req, res, next) =>{
+	const error = new Error('Not found');
+	error.status = 404;
+	next(error);
+});
+
+app.use((error, req, res, next) => {
+	res.status(error.status || 500);
+	res.json({
+		error: {
+			message: error.message
+		}
+	});
+})
 
 app.listen(process.env.PORT || 8000,() => {
     console.log("Server is running");
