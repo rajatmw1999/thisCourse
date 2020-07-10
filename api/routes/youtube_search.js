@@ -1,15 +1,17 @@
 const express = require('express');
 const router = express.Router();
-require('dotenv').config();  
+require('dotenv').config();
+const mongoose = require('mongoose');
 
-const { google } = require('googleapis'); // install using npm install googleapis --save
+const { google } = require('googleapis');
+const Search = require('../models/youtube_search');
 
-// The get request
 router.get('/', (req,res,next) => {
-	const query = {
-			q: req.body.q
-	};
 
+	const query = new Search({
+		q: req.body.q
+	});
+	
 	google.youtube('v3')
 	.search.list({
 	key: process.env.YOUTUBE_TOKEN,
@@ -29,13 +31,13 @@ router.get('/', (req,res,next) => {
 					}
 				}) 
 		};
-
+		console.log(response);
 		res.status(200).json(response);	
 	})
 	.catch((err) => console.log(err));
-
+	
 	//console.log(query);
-
+	
 });
 
-module.exports = router; 
+module.exports = router;
