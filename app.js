@@ -7,7 +7,8 @@ let $ = require("cheerio");
 
 const app = express();
 const youtubeSearchRoutes = require('./api/routes/youtube_search');
-app.use('/udemySearch',udemySearchRoutes);
+const udemySearchRoutes  = require('./routes/udemy_search');
+
 
 app.use((req,res,next)=>{
     res.setHeader("Access-Control-Allow-Origin","*");
@@ -38,6 +39,7 @@ rp('https://www.coursera.org/search?query=web%20development&skipBrowseRedirect=t
 
 //Youtube Route
 app.use('/youtubeSearch', youtubeSearchRoutes);
+app.use('/udemySearch',udemySearchRoutes);
 
 app.get(express.static(path.join(__dirname,'frontend/build')));
 app.get('*',(req,res) => {
