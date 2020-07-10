@@ -7,6 +7,7 @@ let $ = require("cheerio");
 
 const app = express();
 const youtubeSearchRoutes = require('./api/routes/youtube_search');
+app.use('/udemySearch',udemySearchRoutes);
 
 app.use((req,res,next)=>{
     res.setHeader("Access-Control-Allow-Origin","*");
