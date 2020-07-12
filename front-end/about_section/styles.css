@@ -1,0 +1,103 @@
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("https://www.upskilled.edu.au/getmedia/26e5eefe-8bac-4084-a7a2-21074c52747b/myths-and-realities-of-studying-online-2.jpg;.aspx");
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+h1{
+  font-size: 4.5em;
+  font-family: 'Bree Serif', serif;
+}
+h2{
+  color:white;
+  font-size: 40px;
+  font-family: 'Muli', sans-serif;
+}
+.tag{
+  font-size: 1.5em;
+  font-family: 'Fondamento', cursive;
+}
+
+li{
+display:inline;
+margin-left: 0px;
+font-size: 20px;
+padding:5px;
+font-size:1.0em;
+font-family: 'Muli', sans-serif;
+}
+.a{
+  padding-left:0px;
+  margin-left: 0px;
+}
+mark{
+  background-color: #4a3f35;
+  color:white;
+}
+.fa {
+  padding: 7px;
+  font-size: 15px;
+  width: 15px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-reddit {
+  background: #ff5700;
+  color: white;
+}
