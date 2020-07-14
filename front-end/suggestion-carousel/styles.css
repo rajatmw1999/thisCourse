@@ -1,11 +1,91 @@
 
+body{
+    background-color: grey;
+}
+
+
 h2 {
     text-align: center;
     font-size: 50;
 }
 
 .block {
-    padding: 77px;
-    border: 10px solid white;
+    background-color: white;
+    height: 300px;
+    width: 200px;
+    border: 1px solid black;
+    margin-right: 20px;
+    margin-left: 5px;
+    float: left;
+    align-items: left;
+    border-radius: 10px;
+
+}
+
+.card-img-top {
+    height: 120px;
+    width: 200px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.btn {
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    text-align:center;
+    float: bottom;
+}
+
+.h6{
+    margin-left: 10px;
     float: left;
 }
+
+.h6-instructor {
+    margin-left: 10px;
+}
+
+h5 {
+    margin-right: 10px;
+    color: green;
+    float: right;
+    
+}
+
+.carousel-indicators{
+    float:bottom;
+    bottom:-50px;
+}
+  
+.carousel-inner {
+     margin-bottom:50px;
+     padding-left: 15px;
+  }
+
+.card-title {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.carousel-control {
+    /*size */
+    height: 300px;
+    width: 30px;
+    /*color */
+    background: #1b1b1b none repeat scroll 0 0;
+    opacity: 0.5;
+    /*shape border*/
+    border: 0 none;
+    border-radius: 0; /*zero for square */
+    /*symbol */
+    color: #fff;
+    line-height: 40px;
+    /*vertical position */
+    
+}
+
