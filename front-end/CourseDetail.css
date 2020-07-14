@@ -1,0 +1,85 @@
+.CourseDetail {
+  padding-top: 4em;
+  margin-left: 2em;
+}
+
+.new{
+  display: inline-block;
+}
+#pfortags{
+  color: orange;
+}
+
+.h1coursedesc{
+  font-weight: bold;
+}
+.h1class{
+  font-weight: bolder;
+}
+
+#spantag{
+  display: block;
+  color:white;
+  padding-left: 0.5em;
+  background-color: blue;
+  
+}
+.coursedestag{
+  display: block;
+}
+
+.det{
+  display: inline-block;
+  background-color: white;
+  height: 18em;
+  border-radius: 10px;
+  padding:30px;
+}
+
+.spantagclass{
+  display: inline-block;
+  
+}
+
+#coursename{
+  padding-left: 2em; 
+}
+
+.details{
+  padding-top: 2em;
+  margin-top: 4em;
+}
+
+
+
+#separatorspan{
+  background-color: #e6e6e6;
+  display: inline-block;
+  
+  padding-left: 0.5em;
+  
+  
+}
+.infodivdetail{
+  margin-left: 2em;
+}
+
+.small{
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.h2bold{
+  color:black;
+  font-weight: bold;
+  padding-top: 1.72em;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  
+  
+  bottom:0;
+}
+
+.gotocourse{
+  width:70%;
+}
