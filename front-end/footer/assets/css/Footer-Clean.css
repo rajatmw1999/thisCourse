@@ -63,8 +63,27 @@
   opacity: 0.75;
 }
 
-.footer-clean .item.social > a:hover {
-  opacity: 0.9;
+.footer-clean .item.social > a.fb-col:hover {
+  opacity: 1;
+  background:#3b5998;
+  border-color: #28282d;
+}
+
+.footer-clean .item.social > a.tw-col:hover {
+  opacity: 1;border-color: #28282d;
+  background:#00acee;
+}
+
+.footer-clean .item.social > a.lin-col:hover {
+  opacity: 1;
+  border-color: #28282d;
+  background:#0e76a8 ;
+}
+
+.footer-clean .item.social > a.ins-col:hover {
+  opacity: 1;
+  border-color: #28282d;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
 }
 
 @media (max-width:991px) {
@@ -85,4 +104,3 @@
   font-size: 13px;
   opacity: 0.6;
 }
-
