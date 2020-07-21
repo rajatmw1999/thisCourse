@@ -1,0 +1,104 @@
+body {
+  font-family: Montserrat, sans-serif;
+  background: #28223f;
+}
+.container {
+  user-select: none;
+  margin: 100px auto;
+  background: white;
+  color: black;
+  border-radius: 5px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.75);
+}
+.cover-photo {
+  background-color: #5409e0;
+  height: 50px;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+.profile {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  margin: 10px 0 0 -240px;
+  border: 1px solid #1f1a32;
+  padding: 4px;
+  background: #292343;
+}
+.profile-name {
+  color: black;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 7px 0 0 80px;
+}
+
+.about-profile {
+  margin-top: 8%;
+  text-align: center;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+button {
+  margin: 10px 0 40px 0;
+}
+.follownow-btn {
+  background: #3b49df;
+  border: 1px solid #03bfbc;
+  padding: 10px 25px;
+  color: #3b49df;
+  border-radius: 3px;
+  font-family: Montserrat, sans-serif;
+  cursor: pointer;
+}
+.follownow-btn {
+  margin-left: 10px;
+  background: #3b49df;
+  color: white;
+  width: 90%;
+  margin-bottom: 5px;
+}
+.follownow-btn:hover {
+  color: white;
+  background: #1827ce;
+  transition: 0.5s;
+}
+.container i {
+  padding-left: 20px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.container i:hover {
+  color: #03bfbc;
+}
+
+.heading {
+  margin-left: 5%;
+  margin-bpttom: 0px;
+  text-align: left;
+  color: #64707d;
+  filer: contrast(4.83);
+  font-size: 12px;
+}
+
+.answer {
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-left: 5%;
+  text-align: left;
+  color: #202428;
+  filer: contrast(14.94);
+  font-size: 14px;
+}
+@media screen and (max-width: 400px) {
+  .container{
+    width:90%;
+  }
+  .profile{
+    margin: 10px 0 0 -180px;
+  }
+
+}
