@@ -1,197 +1,55 @@
-
 body {font-family: 'Pangolin', cursive;}
-* {box-sizing: border-box;}
-
-/* Full-width input fields */
 input[type=text], input[type=password] {
   width: 75%;
   padding: 15px;
-  margin: 5px 40px 22px 75px;
   display: inline-block;
   border: none;
   background: #f1f1f1;
 }
 
-/* Add a background color when the inputs get focus */
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-button:hover {
-  opacity:1;
-}
-
-h1{
-  text-align: center;
-  font-family: 'Oswald', sans-serif;
-  font-size: 50px;
-  padding-bottom: 0px;
-  margin-top: 5px;
-  margin-bottom: 0px;
-}
-/* Float cancel and signup buttons and add an equal width */
- .signupbtn {
-  text-align: center;
-  width: 50%;
-  border-radius: 2px;
-background-color: #007aff;
-margin-left: 100px;
-}
-
-/* Add padding to container elements */
-.container {
-  padding: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(48, 48, 48, 0.7);
-  padding-top: 50px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 0.7% auto 25% auto; /* 1% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 50%; /* Could be more or less, depending on screen size */
-  border-radius: 5px;
-  padding-top: 0px;
-
-}
-p{
-  align-content: center;
-  text-align: center;
-  font-size: 20px;
-  padding-bottom: 0px;
-  margin-bottom: 2px;
-  margin-top: 0px;
-}
-/* Style the horizontal ruler */
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 3px;
-  margin-top: 1px;
-}
-
-.btn {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 4px;
-  margin: 5px 0;
-  opacity: 0.85;
-  display: inline-block;
-  font-size: 17px;
-  line-height: 20px;
-  text-decoration: none; /* remove underline from anchors */
-}
-
-input:hover,
-.btn:hover {
-  opacity: 1;
-}
-
-.strike{
-  font-size: 15px;
-  color: #474e5d;
-}
-
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 250px;
-  top: 40px;
-  font-size: 40px;
-  font-weight: bold;
-  color: #f1f1f1;
-}
-
-.close:hover,
-.close:focus {
-  color: #f44336;
-  cursor: pointer;
-}
-
-/* Clear floats */
-.clearfix{
-  padding-left: 65px;
-}
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-
-}
-
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-   .signupbtn {
-     width: 90%;
-     border-radius: 5px;
-     background-color: #007aff;
-  }
-}
-.upper{
-padding-left: 100px;
-padding-top: 0px;
-margin-top: 0px;
-}
 .btn-G{
   background-color: white;
   color: black;
   border: 1px solid;
   border-color: #474e5d;
   border-radius: 4px;
-  width:80%;
+  width:70%;
   font-size: 20px;
+  margin-left: 15px;
   cursor: pointer;
+  margin-bottom: 2%;
+  margin-top: 1%;
 }
-.lower{
+
+/* .lower{
 padding-left:100px;
-}
+} */
 
 .btn-fb {
   background-color: #3B5998;
   border: none;
   color: white;
   padding: 12px 16px;
-  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 17px;
   cursor: pointer;
-  width:40%;
+  width:35%;
+  border-radius: 4px;
+  margin-left: 15px;
+}
+.btn-ld{
+background-color: rgb(255,255,255);
+border: 1px solid rgb(0, 119, 181);
+  color: rgb(0, 119, 181);
+  padding: 12px 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  width:35%;
   border-radius: 4px;
 
-}
-.btn-git{
-background-color: #444444;
-border: none;
-  color: white;
-  padding: 12px 16px;
-  font-size: 20px;
-  cursor: pointer;
-  width:40%;
-  border-radius: 4px;
   }
 
   .btn-G:hover{
@@ -200,15 +58,15 @@ border: none;
   .btn-fb:hover{
   color:#fff;background-color:#2d4373;border-color:rgba(0,0,0,0.2);
   }
-  .btn-git:hover{
-  color:#fff;background-color:#2b2b2b;border-color:rgba(0,0,0,0.2)
+  .btn-ld:hover{
+  color:#fff;background-color:rgb(0, 119, 181) ;border-color:rgb(0, 119, 181);
   }
 
 .psw-char{
   padding-top: 0px;
   margin-top:0px;
-  float:right;
   font-size: 13px;
+  margin-left: 70%;
   color: #474e5d;
 }
 
@@ -223,3 +81,43 @@ border: none;
 $white: #fff;
 $google-blue: #4285f4;
 $button-active-blue: #1669F2;
+
+.strike{
+  font-size: 15px;
+  color: #474e5d;
+}
+
+hr{
+  border: 1px solid #f1f1f1;
+  margin-bottom: 3px;
+  margin-top: 1px;
+}
+input:hover,
+.btn:hover {
+  opacity: 1;
+}
+.signupbtn{
+  text-align: center;
+  width: 50%;
+  border-radius: 2px;
+background-color: #007aff;
+color: white;
+box-shadow: 0px;
+}
+.signin{
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+.btn-fb{
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 17px;
+}
+.btn-ld{
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 17px;
+}
+
+}

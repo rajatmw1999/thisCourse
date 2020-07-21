@@ -7,61 +7,65 @@ body, html {
 
 .bg {
   /* The image used */
-  background-image: url("https://www.upskilled.edu.au/getmedia/26e5eefe-8bac-4084-a7a2-21074c52747b/myths-and-realities-of-studying-online-2.jpg;.aspx");
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url("https://www.upskilled.edu.au/getmedia/26e5eefe-8bac-4084-a7a2-21074c52747b/myths-and-realities-of-studying-online-2.jpg;.aspx");
   /* Full height */
-  height: 100%;
+  height: 80%;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
+    background-color: rgba(0,0,0,0.7);
 
-#overlay {
-  position: fixed;
-  display: none;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.7);
-  z-index: 2;
-  cursor: pointer;
 }
 
 #text{
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 35%;
+  left: 35%;
   color: white;
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
 }
+
+.bottom{
+  position: absolute;
+  top: 60%;
+  left: 35%;
+  color: white;
+  transform: translate(-50%,-50%);
+}
+
+.rule{
+  width:120%;
+  position: absolute;
+  top: 56%;
+  left: 55%;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
 h1{
-  font-size: 4.5em;
+  font-size: 3.5em;
   font-family: 'Bree Serif', serif;
 }
-h2{
-  color:white;
-  font-size: 40px;
-  font-family: 'Muli', sans-serif;
-}
+
+
 .tag{
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-family: 'Fondamento', cursive;
 }
 
 li{
 display:inline;
 margin-left: 0px;
-font-size: 20px;
+font-size: 10px;
 padding:5px;
 font-size:1.0em;
 font-family: 'Muli', sans-serif;
 }
 .a{
-  padding-left:0px;
+  padding-left:1px;
   margin-left: 0px;
 }
 mark{
@@ -100,4 +104,47 @@ mark{
 .fa-reddit {
   background: #ff5700;
   color: white;
+}
+
+
+@media screen and (max-width: 1030px) {
+.rule{
+  top:60.9%
+}
+.bottom{
+  top:63.9%;
+}
+}
+
+@media screen and (max-width: 770px) {
+.rule{
+  top:62.9%
+}
+.bottom{
+  top:65.9%;
+  left: 32%;
+}
+li{
+font-size: 10px;
+padding:2.3px;
+font-size:1.0em;
+}
+}
+
+@media screen and (max-width: 500px) {
+.rule{
+  top:68.9%
+}
+.bottom{
+  display: none;
+}
+
+@media screen and (max-width: 400px) {
+#text{
+  margin-left: 40px;
+}
+
+@media screen and (max-width: 350px) {
+#text{
+  margin-left: 45px;
 }
