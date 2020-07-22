@@ -7,7 +7,7 @@ let $ = require("cheerio");
 
 const app = express();
 const youtubeSearchRoutes = require('./api/routes/youtube_search');
-const udemySearchRoutes  = require('./routes/udemy_search');
+const udemySearchRoutes  = require('./api/routes/udemy_search');
 
 
 app.use((req,res,next)=>{
