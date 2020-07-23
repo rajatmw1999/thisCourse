@@ -1,27 +1,68 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Dynamic Quiz Project</title>
-		<link type='text/css' rel='stylesheet' href='stylesheet.css'/>
-		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open Sans"/>
-	</head>
-	<body>
-		<div id='container'>
-			<div id='title'>
-				<h1>Mathematical Quiz</h1>
-			</div>
-   			<br/>
-  			<div id='quiz'></div>
-    		<div class='button' id='next'><a href='#'>Next</a></div>
-    		<div class='button' id='prev'><a href='#'>Prev</a></div>
-    		<div class='button' id='start'> <a href='#'>Start Over</a></div>
-    		<!-- <button class='' id='next'>Next</a></button>
-    		<button class='' id='prev'>Prev</a></button>
-    		<button class='' id='start'> Start Over</a></button> -->
-    	</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
-		<script type="text/javascript" src='questions.json'></script>
-		<script type='text/javascript' src='jsquiz.js'></script>
-	</body>
+    <link rel="stylesheet"type="text/css" href="quiz.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script type="text/javascript"src="quiz.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="get" action="page2.html">
+        
+    
+    <div id="div1">  
+        
+
+        <p>1.What is the best prograaming language to learn in 2020?</p>
+        <p><input type="radio" name="question1" value="HTML">A.Html</p> 
+        <p><input type="radio" name="question1" value="javascript">B.javascript</p>  
+        <p><input type="radio" name="question1" value="React">C.React</p>  
+        <p><input type="radio" name="question1" value="Bootsrap">D.Bootsrap</p> 
+
+    </di>
+    <div id="div2" >    
+        <p>2.Which of the following type of variable is visible everywhere in your JavaScript code?</p>
+        <p><input type="radio" name="question2" value="global variable">A.global variable</p> 
+        <p><input type="radio" name="question2" value=" local variable">B. local variable</p>  
+        <p><input type="radio" name="question2" value="React">C.Both of the above.</p>  
+        <p><input type="radio" name="question2" value="Bootsrap">D. None of the above.</p> 
+
+    </div>
+    <div id="div3" > 
+        <p>3. Which built-in method returns the character at the specified index?</p>
+        <p><input type="radio" name="question3" value="characterAt()">A.characterAt()</p> 
+        <p><input type="radio" name="question3" value="getCharAt()">B.getCharAt()</p>  
+        <p><input type="radio" name="question3" value="charAt() ">C.charAt() </p>  
+        <p><input type="radio" name="question3" value="None of the above.">D.None of the above.</p>  
+
+    </div>
+    <div id="div4">
+        <p>4 Which built-in method returns the characters in a string beginning at the specified location?</p>
+        <p><input type="radio" name="question4" value="substr()">A.substr()</p> 
+        <p><input type="radio" name="question4" value="getSubstring()">B.getSubstring()</p>  
+        <p><input type="radio" name="question4" value=" slice()">C. slice()</p>  
+        <p><input type="radio" name="question4" value=" None of the above.">D. None of the above.</p>  
+
+    </div>
+    <div id="div5">   
+        <p>5.What is the best prograaming language to learn in 2020?</p>
+        <p><input type="radio" name="question1" placeholder="HTML">A.Html</p> 
+        <p><input type="radio" name="question1" value="javascript">B.javascript</p>  
+        <p><input type="radio" name="question1" value="React">C.React</p>  
+        <p><input type="radio" name="question1" value="Bootsrap">D.Bootsrap</p>  
+
+    </div>
+    <button type="btn1">Next</button>
+
+
+
+    
+</form>
+
+</body>
 </html>

@@ -1,0 +1,11 @@
+body {
+    background-color:brown;
+    animation-name: colors;
+    animation-duration: 4s;
+  }
+@keyframes colors {
+    0%   {background-color:lightseagreen;}
+    25%  {background-color:lightsalmon;}
+    50%  {background-color:lightskyblue;}
+    100% {background-color:rgb(226, 147, 43);}
+  }
