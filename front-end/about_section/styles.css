@@ -9,17 +9,21 @@ body, html {
   /* The image used */
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url("https://www.upskilled.edu.au/getmedia/26e5eefe-8bac-4084-a7a2-21074c52747b/myths-and-realities-of-studying-online-2.jpg;.aspx");
   /* Full height */
-  height: 80%;
+  height: 64%;
+  margin-left: 150px;
+  margin-right: 150px;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-    background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.7);
 
 }
 
 #text{
   position: absolute;
+  margin-left: 50px;
+  margin-right: 200px;
   top: 35%;
   left: 35%;
   color: white;
@@ -29,15 +33,18 @@ body, html {
 
 .bottom{
   position: absolute;
+  margin-left: 50px;
+  margin-right: 70px;
   top: 60%;
   left: 35%;
   color: white;
   transform: translate(-50%,-50%);
 }
 
-.rule{
-  width:120%;
+hr.rule {
+  border: 1px solid white;
   position: absolute;
+  width: 100%;
   top: 56%;
   left: 55%;
   color: white;
@@ -53,7 +60,7 @@ h1{
 
 .tag{
   font-size: 1.2em;
-  font-family: 'Fondamento', cursive;
+  font-family: 'Roboto', sans-serif;
 }
 
 li{
@@ -105,3 +112,179 @@ mark{
   background: #ff5700;
   color: white;
 }
+
+/* start of desktop styles */
+  
+  @media screen and (max-width: 767px) {
+  /* start of medium tablet styles */
+
+  
+  }
+  
+  @media screen and (max-width: 479px) {
+  /* start of phone styles */
+  
+    
+  .bg {
+    /* The image used */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url("https://www.upskilled.edu.au/getmedia/26e5eefe-8bac-4084-a7a2-21074c52747b/myths-and-realities-of-studying-online-2.jpg;.aspx");
+    /* Full height */
+    height: 74%;
+    margin-left: 45px;
+    margin-right: 45px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0,0,0,0.7);
+  
+  }
+  
+  #text{
+    position: absolute;
+    margin-left: 5px;
+    margin-right: 10px;
+    top: 35%;
+    left: 35%;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+  }
+  
+  .bottom{
+    position: absolute;
+    margin-left: 5px;
+    margin-right: 7px;
+    top: 62%;
+    left: 35%;
+    color: white;
+    transform: translate(-50%,-50%);
+  }
+  
+  hr.rule {
+    border: 1px solid white;
+    position: absolute;
+    width: 100%;
+    top: 52%;
+    left: 55%;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+  }
+  
+  h1{
+    font-size: 1.8em;
+    font-family: 'Bree Serif', serif;
+    margin-left: 35px;
+  }
+  
+  
+  .tag{
+    font-size: 0.9em;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 35px;
+    margin-right: -25px
+  }
+  
+  li{
+  display:inline;
+  margin-left: 0px;
+  font-size: 8px;
+  padding:5px;
+  font-size:1.0em;
+  font-family: 'Muli', sans-serif;
+  }
+  
+
+  }
+
+
+
+
+  @media screen and (max-width: 325px) {
+    /* start of small screen phone styles */
+    
+      
+    .bg {
+      /* The image used */
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url("https://www.upskilled.edu.au/getmedia/26e5eefe-8bac-4084-a7a2-21074c52747b/myths-and-realities-of-studying-online-2.jpg;.aspx");
+      /* Full height */
+      height: 80%;
+      margin-left: 45px;
+      margin-right: 45px;
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: rgba(0,0,0,0.7);
+    
+    }
+    
+    #text{
+      position: absolute;
+      margin-left: 5px;
+      margin-right: 10px;
+      top: 35%;
+      left: 35%;
+      color: white;
+      transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+    }
+    
+    .bottom{
+      position: absolute;
+      margin-left: 5px;
+      margin-right: 7px;
+      top: 66%;
+      left: 35%;
+      color: white;
+      transform: translate(-50%,-50%);
+    }
+    
+    hr.rule {
+      border: 1px solid white;
+      position: absolute;
+      width: 100%;
+      top: 54%;
+      left: 55%;
+      color: white;
+      transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+    }
+    
+    h1{
+      font-size: 1.8em;
+      font-family: 'Bree Serif', serif;
+      margin-left: 35px;
+    }
+    
+    
+    .tag{
+      font-size: 0.9em;
+      font-family: 'Roboto', sans-serif;
+      margin-left: 35px;
+      margin-right: -35px
+    }
+    
+    li{
+    display:inline;
+    margin-left: 0px;
+    font-size: 8px;
+    padding:5px;
+    font-size:1.0em;
+    font-family: 'Muli', sans-serif;
+    }
+
+    .fa {
+      padding: 5px;
+      font-size: 12px;
+      width: 12px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+      border-radius: 50%;
+
+    }
+    
+  
+    }
