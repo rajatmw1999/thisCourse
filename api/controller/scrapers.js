@@ -1,4 +1,4 @@
-const Search = require('../models/udemy_search');
+const Search = import('../models/udemy_search');
 
 exports.scrape =  (req, res, next) =>{
 					const query = new Search({
