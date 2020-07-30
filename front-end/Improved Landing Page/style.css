@@ -1350,10 +1350,15 @@ body.host_version .first-section .effect-1.slide-btn::after{
 	color: #121212;
 }
 
+@media only screen and (min-width: 770px) {
+  .hidel {
+      display: none;
+    }
+}
 
 
 
-@media only screen and (maxwidth : 768px){
+@media only screen and (max-width : 768px){
  .hover-btn-new{
      font-size: 14px;
      font-weight: 300;
@@ -1400,9 +1405,12 @@ body.host_version .first-section .effect-1.slide-btn::after{
     padding: 0;
     position: relative;
 }
+.hide {
+      display: none;
+    }
 }
 
-@media only screen and (maxwidth : 576px){
+@media only screen and (max-width : 576px){
     .hover-btn-new{
         font-size: 5px;
         font-weight: 80;
@@ -1450,9 +1458,13 @@ body.host_version .first-section .effect-1.slide-btn::after{
         padding: 0;
         position: relative;
     }
+
+    .hide {
+      display: none;
+    }
    }
 
-@media only screen and (maxwidth : 350px){
+@media only screen and (max-width : 350px){
     .hover-btn-new{
         font-size: 4px;
         font-weight: 80;
@@ -1499,6 +1511,10 @@ body.host_version .first-section .effect-1.slide-btn::after{
         margin: 0;
         padding: 0;
         position: relative;
+    }
+
+    .hide {
+      display: none;
     }
 
    }
