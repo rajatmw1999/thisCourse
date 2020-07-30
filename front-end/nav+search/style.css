@@ -12,7 +12,7 @@ li:hover {
   background:transparent;
 } */.main {
       width: 30%;
-      transform: translate(200px, 7px);
+      transform: translate(170px, 7px);
       display: block;
       position: absolute;
   }
@@ -26,10 +26,11 @@ li:hover {
   
 @media only screen and (max-width: 600px)
 { .main{
-  width:30%;
-  transform: translate(160px, 7px);
+  width:100%;
+  transform: translate(2px, 5px);
   display: block;
   position: absolute;
+
 }
 
 }
@@ -51,4 +52,12 @@ li:hover {
   color: #aaa;
   top: 1%;
   left: 3%;
+}
+@media (min-width: 650px) and (max-width: 991px) {
+  .main{
+  width:30%;
+  transform: translate(2px, 7px);
+  display: block;
+  position: absolute;
+  }
 }
