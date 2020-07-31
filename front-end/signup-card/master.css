@@ -5,6 +5,7 @@ input[type=text], input[type=password] {
   display: inline-block;
   border: none;
   background: #f1f1f1;
+  margin-bottom: 10px;
 }
 
 .btn-G{
@@ -17,7 +18,7 @@ input[type=text], input[type=password] {
   font-size: 20px;
   margin-left: 15px;
   cursor: pointer;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
   margin-top: 1%;
 }
 
@@ -27,28 +28,27 @@ padding-left:100px;
 
 .btn-fb {
   background-color: #3B5998;
-  border: none;
+  border: 1px solid;
   color: white;
-  padding: 12px 16px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size: 17px;
-  cursor: pointer;
-  width:35%;
   border-radius: 4px;
+  width:70%;
+  font-size: 22px;
   margin-left: 15px;
+  cursor: pointer;
+  margin-bottom: 1%;
+  margin-top: 1%;
 }
 .btn-ld{
 background-color: rgb(255,255,255);
 border: 1px solid rgb(0, 119, 181);
   color: rgb(0, 119, 181);
-  padding: 12px 16px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size: 17px;
-  cursor: pointer;
-  width:35%;
   border-radius: 4px;
+  width:70%;
+  font-size: 20px;
+  margin-left: 15px;
+  cursor: pointer;
+  margin-bottom: 2%;
+  margin-top: 1%;
 
   }
 
@@ -98,7 +98,7 @@ input:hover,
 }
 .signupbtn{
   text-align: center;
-  width: 50%;
+  width: 70%;
   border-radius: 2px;
 background-color: #007aff;
 color: white;
