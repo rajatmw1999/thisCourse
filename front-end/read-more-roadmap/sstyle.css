@@ -1,3 +1,16 @@
+body {
+    background-color: #e6e6e6 !important;
+    padding: 2% 15% !important;
+}
+
+.more-articles {
+    background-color: #fff !important;
+    border: 10px solid #fff; 
+    border-radius: 5px !important;
+    box-shadow: 1px 1px 4px 4px rgba(1, 1, 2, 0.06);
+    
+}
+
 :root{--header-height: 56px;--site-width: 1280px;
     --su-1: 0.25rem;--su-2: 0.5rem;--su-3: 0.75rem;--su-4: 1rem;--su-5: 1.25rem;--su-6: 1.5rem;--su-7: 2rem;--su-8: 3rem;--su-9: 4rem;--su-10: 8rem;
     --radius: 3px;--transition-func: cubic-bezier(0.17, 0.67, 0.5, 0.71);--transition-time: 100ms;--transition-props: var(--transition-func) var(--transition-time);
@@ -62,3 +75,8 @@ body{
 .crayons-card{border-radius:var(--radius);background:var(--card-bg);color:var(--card-color);box-shadow:0 0 0 1px var(--card-border)}
 .crayons-card--secondary{background:var(--card-secondary-bg);color:var(--card-secondary-color);box-shadow:0 0 0 1px var(--card-secondary-border)}
 
+@media screen and (max-width: 450px) {
+    body {
+        padding: 2% 2% !important;
+    }
+}
