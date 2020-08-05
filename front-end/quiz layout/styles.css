@@ -1,0 +1,83 @@
+body{
+	background-color: #ffe8df;
+	font-size: 1rem;
+	animation-name: colors;
+	animation-duration: 4s;
+	/* animation-delay: 1s; */
+}
+@keyframes colors {
+	10% {background-color:#4f3961;}
+	20% {background-color:#ea728c;}
+	30% {background-color:#fc9d9d;}
+	40% {background-color:#f3d4d4;}
+    50% {background-color:#f0f0f0;}
+    60% {background-color:#888888;}
+    70% {background-color:#ffffff;}
+    80% {background-color:#ffe8df;}
+}
+
+hr{
+	margin: 3%;
+}
+
+.container{
+	margin-top: 2%;
+}
+
+.ques{
+	border-radius: 10px;
+	background: white;
+	padding: 1% 2% 0.2%;
+}
+
+.triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	border-top: 30px solid white;
+	margin-top: -10px;
+	margin-left: 20px;
+}
+
+.vl{
+	border-left: 5px dotted white;
+	height: 25px;
+	margin-left: 48px;
+}
+
+.card{
+	background-color: white;
+	font-size: 0.8rem;
+	border-radius: 8px;
+	padding: 0;
+}
+.card-body{
+	padding: 0;
+}
+
+.card :hover{
+	border-radius: 8px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hl{
+	margin-top: 20px;
+	border-top: 5px dotted white;
+	width: 80px;
+}
+
+.row{
+	margin-left: 30px;
+}
+
+.badge{
+	margin-right: 5px;
+	padding: 4.5%;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.btn{
+	padding: .5% 2%;
+	float: right;
+}
