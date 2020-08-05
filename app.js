@@ -8,7 +8,11 @@ let $ = require("cheerio");
 const app = express();
 const youtubeSearchRoutes = require('./api/routes/youtube_search');
 const udemySearchRoutes  = require('./api/routes/udemy_search');
-
+const userRoutes = require('./api/routes/users');
+const harvardSearchRoutes = require('./routes/harvard');
+const edxSearchRoutes = require('./routes/edx');
+const courseraSearchRoutes = require('./routes/coursera');
+const udacitySearchRoutes = require('./routes/Udacity');
 
 app.use((req,res,next)=>{
     res.setHeader("Access-Control-Allow-Origin","*");
@@ -40,6 +44,11 @@ rp('https://www.coursera.org/search?query=web%20development&skipBrowseRedirect=t
 //Youtube Route
 app.use('/youtubeSearch', youtubeSearchRoutes);
 app.use('/udemySearch',udemySearchRoutes);
+app.use('/users', userRoutes);
+app.use('/harvardSearch',harvardSearchRoutes);
+app.use('/edxSearch',edxSearchRoutes);
+app.use('/courseraSearch',courseraSearchRoutes);
+app.use('/udacitySearch',udacitySearchRoutes);
 
 app.get(express.static(path.join(__dirname,'frontend/build')));
 app.get('*',(req,res) => {
