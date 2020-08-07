@@ -1,13 +1,37 @@
-var selected=false;
-$(".card").on('click', function() {
-	
-	if (selected===false){
-		$(this).css({backgroundColor: "#1fab89"});
-		selected=true;
+
+$(".ques1").on('click', function() {
+
+	if ($(this).hasClass('active')) {
+		$(this).removeClass('active');
 	}
-	else {
-		$(this).css({backgroundColor: "white"});
-		selected=false;
-	} 
+	else{
+		$(".ques1").removeClass('active');
+		$(this).addClass('active');
+	}
+	
+});
+
+$(".ques2").on('click', function() {
+
+	if ($(this).hasClass('active')) {
+		$(this).removeClass('active');
+	}
+	else{
+		$(".ques2").removeClass('active');
+		$(this).addClass('active');
+	}
+	
+});
+
+$(".ques3").on('click', function() {
+
+	if ($(this).hasClass('active')) {
+		$(this).removeClass('active');
+	}
+	else{
+		$(".ques3").removeClass('active');
+		$(this).addClass('active');
+	}
+	
 });
 
