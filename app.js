@@ -122,101 +122,49 @@ app.use((req,res,next)=>{
 //     };
 // });
 
-//Verbling
-// let verblingSearchQuery = "english";
-// (async () => {
-  
-//   puppeteer.launch({ headless: true }).then(async browser => {
-    
-//     console.log('Running tests..');
-//     const page = await browser.newPage();
-//     await page.goto(`https://www.verbling.com/find-teachers/${verblingSearchQuery}?sort=magic`);
-//     await page.waitFor(10000);
-    
-//     let verblingResult = await page.evaluate(() => {
-//       let instructorName = (document.querySelectorAll('h2[class="no-margin margin-right-md"] >a'));
-//       let price = (document.querySelectorAll('span[class="currency-converter "]'));
-//       let rating = (document.querySelectorAll('div[class="text-bold text-large"]'));
-//       let lessons = (document.querySelectorAll('div[class="flex flex-direction-column ProfileBase--truncate flex-direction-column"] >div >span'));
-      
-//       var json = {instructorName:[],price:[],rating:[],lessons:[]};
-
-
-//       for(let i=0;i<instructorName.length;i++){
-//         json.instructorName.push(JSON.stringify(instructorName[i].innerText));       
-//       }
-      
-//       for(let i=0;i<price.length;i++){
-//         if(i%2 === 0){
-//           json.price.push(JSON.stringify(price[i].innerText));
-//         }
-//       }
-//       for(let i=0;i<rating.length;i++){
-//         json.rating.push(JSON.stringify(rating[i].innerText));
-//       }
-//       for(let i=1;i<lessons.length;i++){
-//           if(i === 5 || i === 11 || i === 17 || i === 23 || i === 29 || i === 35)
-//         json.lessons.push(JSON.stringify(lessons[i].innerText));
-//       }
-//        return json;
-//     });
-//     console.log("verblingResult",verblingResult);
-//   })
-  
-//   browser.close();
-// })();
-
-
-//Skill Share
-let skillShareSearchQuery = "creative-writing";
+// Verbling
+let verblingSearchQuery = "english";
 (async () => {
   
-    puppeteer.launch({ headless: true }).then(async browser => {
-      
-      console.log('Running tests..');
-      const page = await browser.newPage();
-      await page.goto(`https://www.skillshare.com/browse/${skillShareSearchQuery}?seeAll=1`);
-      await page.waitFor(10000);
-      
-      let skillshareResult = await page.evaluate(() => {
-        let instructorName = (document.querySelectorAll('p[class="title ellipsis"]'));
-        let courseName = (document.querySelectorAll('p[class="ss-card__title"] >a'));
-        let courseDuration = (document.querySelectorAll('div[class="ss-class__stats__duration"]'));
-        let studentsEnrolled = (document.querySelectorAll('span[class="ss-class__stats__stud-count"]'));
-        // let price = (document.querySelectorAll('span[class="currency-converter "]'));
-        // let rating = (document.querySelectorAll('div[class="text-bold text-large"]'));
-        // let lessons = (document.querySelectorAll('div[class="flex flex-direction-column ProfileBase--truncate flex-direction-column"] >div >span'));
-        
-        var json = {instructorName:[],courseName:[],courseDuration:[],studentsEnrolled:[]};
-  
-  
-        for(let i=0;i<instructorName.length;i++){
-          json.instructorName.push(JSON.stringify(instructorName[i].innerText));       
-          json.courseName.push(JSON.stringify(courseName[i].innerText));
-          json.courseDuration.push(JSON.stringify(courseDuration[i].innerText));
-          json.studentsEnrolled.push(JSON.stringify(studentsEnrolled[i].innerText));
-        }
-        
-        // for(let i=0;i<price.length;i++){
-        //   if(i%2 === 0){
-        //     json.price.push(JSON.stringify(price[i].innerText));
-        //   }
-        // }
-        // for(let i=0;i<rating.length;i++){
-        //   json.rating.push(JSON.stringify(rating[i].innerText));
-        // }
-        // for(let i=1;i<lessons.length;i++){
-        //     if(i === 5 || i === 11 || i === 17 || i === 23 || i === 29 || i === 35)
-        //   json.lessons.push(JSON.stringify(lessons[i].innerText));
-        // }
-         return json;
-      });
-      console.log("skillShareResult",skillshareResult);
-    })
+  puppeteer.launch({ headless: true }).then(async browser => {
     
-    browser.close();
-  })();
+    console.log('Running tests..');
+    const page = await browser.newPage();
+    await page.goto(`https://www.verbling.com/find-teachers/${verblingSearchQuery}?sort=magic`);
+    await page.waitFor(10000);
+    
+    let verblingResult = await page.evaluate(() => {
+      let instructorName = (document.querySelectorAll('h2[class="no-margin margin-right-md"] >a'));
+      let price = (document.querySelectorAll('span[class="currency-converter "]'));
+      let rating = (document.querySelectorAll('div[class="text-bold text-large"]'));
+      let lessons = (document.querySelectorAll('div[class="flex flex-direction-column ProfileBase--truncate flex-direction-column"] >div >span'));
+      
+      var json = {instructorName:[],price:[],rating:[],lessons:[]};
+
+
+      for(let i=0;i<instructorName.length;i++){
+        json.instructorName.push(JSON.stringify(instructorName[i].innerText));       
+      }
+      
+      for(let i=0;i<price.length;i++){
+        if(i%2 === 0){
+          json.price.push(JSON.stringify(price[i].innerText));
+        }
+      }
+      for(let i=0;i<rating.length;i++){
+        json.rating.push(JSON.stringify(rating[i].innerText));
+      }
+      for(let i=1;i<lessons.length;i++){
+          if(i === 5 || i === 11 || i === 17 || i === 23 || i === 29 || i === 35)
+        json.lessons.push(JSON.stringify(lessons[i].innerText));
+      }
+       return json;
+    });
+    console.log("verblingResult",verblingResult);
+  })
   
+  browser.close();
+})();
 
 //Youtube Route
 app.use('/youtubeSearch', youtubeSearchRoutes);
