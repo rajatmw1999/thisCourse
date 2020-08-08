@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Courses</title>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+	
+</head>
+<body>
+    <!-- <div class="searching">
+        <form class="search-container search">
+            <input type="text" id="search-bar" placeholder="Search for the language you want to learn...">
+            <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+          </form>
+      
+      </div> -->
+
+    <div class="home--hero-header hero--header-new">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center hero-header-container">
+                    <!-- <h1 class="hero-header">Find the Best Programming Courses &amp; Tutorials</h1> -->
+                    <div class="mobile-search-bar js-mobile-search-bar search-bar">
+                        <div class="form-holder">
+                            <div class="navbarSearch">
+                                <span class="twitter-typeahead" style="position: relative; display: inline-block;">
+                                    <input
+                                        
+                                        class="form-control navbar-search-input js-navbar-search-input nav-input autocomplete-topics typeahead tt-input"
+                                        type="text"
+                                        placeholder="Search for the language you want to learn: "
+                                        autocomplete="off"
+                                        spellcheck="false"
+                                        dir="auto"
+                                        style="position: relative; vertical-align: top;"
+                                        id="myInput1" onkeyup="myFunction1()"
+                                    />
+                                   
+                                    <pre
+                                        aria-hidden="true"
+                                        style="
+                                            position: absolute;
+                                            visibility: hidden;
+                                            white-space: pre;
+                                            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                                            font-size: 18px;
+                                            font-style: normal;
+                                            font-variant: normal;
+                                            font-weight: 400;
+                                            word-spacing: 0px;
+                                            letter-spacing: 0px;
+                                            text-indent: 0px;
+                                            text-rendering: auto;
+                                            text-transform: none;
+                                        "
+                                    ></pre>
+                                    <div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-courses"></div></div>
+                                </span>
+                            </div>
+                            <img class="icon" src="https://hackr.io/assets/images/header-icons/search-header.svg" width="16" height="16" />
+                        </div>
+                    </div>
+                    <div class="desktop-search-bar search-bar">
+                        <div class="form-holder">
+                            <div class="navbarSearch">
+                                <input id="myInput" onkeyup="myFunction()" class="form-control navbar-search-input js-navbar-search-input nav-input js-filter-topics" type="text" placeholder="Search for the language you want to learn: " />
+                            </div>
+                            <img class="icon color-filter" src="https://hackr.io/assets/images/header-icons/search-header.svg" width="17" height="17" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <div class="page--section paddingtop-sm marginbottom-lg margintop-md">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 no-paddingright-desktop">
+                        <div class="page--body">
+                            <div id="courses"  class="flex-grid hackr--flex-grid home--flex-grid js-topics-list">
+                                <a href="https://hackr.io/tutorials/learn-python" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Python Tutorials and Courses" src="https://hackr.io/tutorials/python/logo-python.svg?ver=1562823957" />
+                                    <p class="js-topic">Python</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-javascript" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="JavaScript Tutorials and Courses" src="https://hackr.io/tutorials/javascript/logo-javascript.svg?ver=1587977697" />
+                                    <p class="js-topic">JavaScript</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-java" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Java Tutorials and Courses" src="https://hackr.io/tutorials/java/logo-java.svg?ver=1579862171" />
+                                    <p class="js-topic">Java</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-android-development" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Android Development Tutorials and Courses" src="https://hackr.io/tutorials/android-development/logo-android-development.svg?ver=1587717128" />
+                                    <p class="js-topic">Android Development</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-data-structures-algorithms" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Data Structures and Algorithms Tutorials and Courses" src="https://hackr.io/tutorials/data-structures-algorithms/logo-data-structures-algorithms.svg?ver=1587721467" />
+                                    <p class="js-topic">Data Structures and Algorithms</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-c-plus-plus" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="C++ Tutorials and Courses" src="https://hackr.io/tutorials/c-plus-plus/logo-c-plus-plus.svg?ver=1579861999" />
+                                    <p class="js-topic">C++</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-react" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="React Tutorials and Courses" src="https://hackr.io/tutorials/react/logo-react.svg?ver=1588062753" />
+                                    <p class="js-topic">React</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-angular" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Angular Tutorials and Courses" src="https://hackr.io/tutorials/angular/logo-angular.svg?ver=1590863531" />
+                                    <p class="js-topic">Angular</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-html-5" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="HTML 5 Tutorials and Courses" src="https://hackr.io/tutorials/html-5/logo-html-5.svg?ver=1587977020" />
+                                    <p class="js-topic">HTML 5</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-c" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="C Tutorials and Courses" src="https://hackr.io/tutorials/c/logo-c.svg?ver=1553674176" />
+                                    <p class="js-topic">C</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-node-js" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Node.js Tutorials and Courses" src="https://hackr.io/tutorials/node-js/logo-node-js.svg?ver=1590331795" />
+                                    <p class="js-topic">Node.js</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-css" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="CSS Tutorials and Courses" src="https://hackr.io/tutorials/css/logo-css.svg?ver=1587721903" />
+                                    <p class="js-topic">CSS</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-php" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="PHP Tutorials and Courses" src="https://hackr.io/tutorials/php/logo-php.svg?ver=1579862212" />
+                                    <p class="js-topic">PHP</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-c-sharp" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="C# Tutorials and Courses" src="https://hackr.io/tutorials/c-sharp/logo-c-sharp.svg?ver=1587718651" />
+                                    <p class="js-topic">C#</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-django" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Django Tutorials and Courses" src="https://hackr.io/tutorials/django/logo-django.svg?ver=1579862450" />
+                                    <p class="js-topic">Django</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-information-security-ethical-hacking" class="topic-grid-item js-topic-grid-item">
+                                    <img
+                                        class="topic-thumbnail"
+                                        alt="Information Security &amp; Ethical Hacking Tutorials and Courses"
+                                        src="https://hackr.io/tutorials/information-security-ethical-hacking/logo-information-security-ethical-hacking.svg?ver=1587976807"
+                                    />
+                                    <p class="js-topic">Information Security &amp; Ethical Hacking</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-bootstrap" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Bootstrap Tutorials and Courses" src="https://hackr.io/tutorials/bootstrap/logo-bootstrap.svg?ver=1555328097" />
+                                    <p class="js-topic">Bootstrap</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-git" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Git Tutorials and Courses" src="https://hackr.io/tutorials/git/logo-git.svg?ver=1587724445" />
+                                    <p class="js-topic">Git</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-mysql" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="MySQL Tutorials and Courses" src="https://hackr.io/tutorials/mysql/logo-mysql.svg?ver=1587981026" />
+                                    <p class="js-topic">MySQL</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-sql" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="SQL Tutorials and Courses" src="https://hackr.io/tutorials/sql/logo-sql.svg?ver=1588063072" />
+                                    <p class="js-topic">SQL</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-intro-to-programming" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Intro to Programming Tutorials and Courses" src="https://hackr.io/tutorials/intro-to-programming/logo-intro-to-programming.svg?ver=1587978368" />
+                                    <p class="js-topic">Intro to Programming</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-jquery" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="jQuery Tutorials and Courses" src="https://hackr.io/tutorials/jquery/logo-jquery.svg?ver=1557130183" />
+                                    <p class="js-topic">jQuery</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-blockchain" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Blockchain Programming Tutorials and Courses" src="https://hackr.io/tutorials/blockchain/logo-blockchain.svg?ver=1587106554" />
+                                    <p class="js-topic">Blockchain Programming</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-unity" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Unity Tutorials and Courses" src="https://hackr.io/tutorials/unity/logo-unity.svg?ver=1579691365" />
+                                    <p class="js-topic">Unity</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-react-native" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="React Native Tutorials and Courses" src="https://hackr.io/tutorials/react-native/logo-react-native.svg?ver=1588062724" />
+                                    <p class="js-topic">React Native</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-arduino" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Arduino Tutorials and Courses" src="https://hackr.io/tutorials/arduino/logo-arduino.svg?ver=1551766080" />
+                                    <p class="js-topic">Arduino</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-flutter" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Flutter Tutorials and Courses" src="https://hackr.io/tutorials/flutter/logo-flutter.svg?ver=1579862938" />
+                                    <p class="js-topic">Flutter</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-vue-js" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Vue.js Tutorials and Courses" src="https://hackr.io/tutorials/vue-js/logo-vue-js.svg?ver=1555390471" />
+                                    <p class="js-topic">Vue.js</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-ios-swift" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="iOS Swift Tutorials and Courses" src="https://hackr.io/tutorials/ios-swift/logo-ios-swift.svg?ver=1587978037" />
+                                    <p class="js-topic">iOS Swift</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-kotlin" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Kotlin Tutorials and Courses" src="https://hackr.io/tutorials/kotlin/logo-kotlin.svg?ver=1555389603" />
+                                    <p class="js-topic">Kotlin</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-golang" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Go Tutorials and Courses" src="https://hackr.io/tutorials/golang/logo-golang.svg?ver=1555401655" />
+                                    <p class="js-topic">Go</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-typescript" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="TypeScript Tutorials and Courses" src="https://hackr.io/tutorials/typescript/logo-typescript.svg?ver=1588064696" />
+                                    <p class="js-topic">TypeScript</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-bitcoin" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Bitcoin Tutorials and Courses" src="https://hackr.io/tutorials/bitcoin/logo-bitcoin.svg?ver=1587717623" />
+                                    <p class="js-topic">Bitcoin</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-laravel" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Laravel Tutorials and Courses" src="https://hackr.io/tutorials/laravel/logo-laravel.svg?ver=1550762399" />
+                                    <p class="js-topic">Laravel</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-asp-net" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="ASP.NET Tutorials and Courses" src="https://hackr.io/tutorials/asp-net/logo-asp-net.svg?ver=1555328015" />
+                                    <p class="js-topic">ASP.NET</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-postgresql" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="PostgreSQL Tutorials and Courses" src="https://hackr.io/tutorials/postgresql/logo-postgresql.svg?ver=1555390079" />
+                                    <p class="js-topic">PostgreSQL</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-redux" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Redux Tutorials and Courses" src="https://hackr.io/tutorials/redux/logo-redux.svg?ver=1551354757" />
+                                    <p class="js-topic">Redux</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-java-spring-framework" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Java Spring Framework Tutorials and Courses" src="https://hackr.io/tutorials/java-spring-framework/logo-java-spring-framework.svg?ver=1555390385" />
+                                    <p class="js-topic">Java Spring Framework</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-software-testing" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Software Testing Tutorials and Courses" src="https://hackr.io/tutorials/software-testing/logo-software-testing.svg?ver=1553834045" />
+                                    <p class="js-topic">Software Testing</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-ruby-on-rails" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Ruby on Rails Tutorials and Courses" src="https://hackr.io/tutorials/ruby-on-rails/logo-ruby-on-rails.svg?ver=1588062348" />
+                                    <p class="js-topic">Ruby on Rails</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-unreal-engine" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Unreal Engine Tutorials and Courses" src="https://hackr.io/tutorials/unreal-engine/logo-unreal-engine.svg?ver=1551354757" />
+                                    <p class="js-topic">Unreal Engine</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-ruby" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Ruby Tutorials and Courses" src="https://hackr.io/tutorials/ruby/logo-ruby.svg?ver=1588062397" />
+                                    <p class="js-topic">Ruby</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-visual-basic-net-vb" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Visual Basic .NET Tutorials and Courses" src="https://hackr.io/tutorials/visual-basic-net-vb/logo-visual-basic-net-vb.svg?ver=1551354757" />
+                                    <p class="js-topic">Visual Basic .NET</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-scala" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Scala Tutorials and Courses" src="https://hackr.io/tutorials/scala/logo-scala.svg?ver=1588062152" />
+                                    <p class="js-topic">Scala</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-elastic-search" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Elastic Search Tutorials and Courses" src="https://hackr.io/tutorials/elastic-search/logo-elastic-search.svg?ver=1583389547" />
+                                    <p class="js-topic">Elastic Search</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-selenium" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Selenium Tutorials and Courses" src="https://hackr.io/tutorials/selenium/logo-selenium.svg?ver=1556099522" />
+                                    <p class="js-topic">Selenium</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-google-analytics" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Google Analytics Tutorials and Courses" src="https://hackr.io/tutorials/google-analytics/logo-google-analytics.svg?ver=1587726244" />
+                                    <p class="js-topic">Google Analytics</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-seo" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="SEO Tutorials and Courses" src="https://hackr.io/tutorials/seo/logo-seo.svg?ver=1550050459" />
+                                    <p class="js-topic">SEO</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-xamarin" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Xamarin Tutorials and Courses" src="https://hackr.io/tutorials/xamarin/logo-xamarin.svg?ver=1588065225" />
+                                    <p class="js-topic">Xamarin</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-ionic" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Ionic Tutorials and Courses" src="https://hackr.io/tutorials/ionic/logo-ionic.svg?ver=1587978084" />
+                                    <p class="js-topic">Ionic</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-website-performance" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Website Performance Tutorials and Courses" src="https://hackr.io/tutorials/website-performance/logo-website-performance.svg?ver=1592914803" />
+                                    <p class="js-topic">Website Performance</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-virtual-reality" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Virtual Reality Tutorials and Courses" src="https://hackr.io/tutorials/virtual-reality/logo-virtual-reality.svg?ver=1563364635" />
+                                    <p class="js-topic">Virtual Reality</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-alexa-skills-kit-ask" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Alexa Skills Kit Tutorials and Courses" src="https://hackr.io/tutorials/alexa-skills-kit-ask/logo-alexa-skills-kit-ask.svg?ver=1554107807" />
+                                    <p class="js-topic">Alexa Skills Kit</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-electron" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Electron Tutorials and Courses" src="https://hackr.io/tutorials/electron/logo-electron.svg?ver=1551354757" />
+                                    <p class="js-topic">Electron</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-solidity" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Solidity Tutorials and Courses" src="https://hackr.io/tutorials/solidity/logo-solidity.svg?ver=1553831680" />
+                                    <p class="js-topic">Solidity</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-growth-hacking" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Growth Hacking Tutorials and Courses" src="https://hackr.io/tutorials/growth-hacking/logo-growth-hacking.svg?ver=1587976317" />
+                                    <p class="js-topic">Growth Hacking</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-elixir" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Elixir Tutorials and Courses" src="https://hackr.io/tutorials/elixir/logo-elixir.svg?ver=1579691321" />
+                                    <p class="js-topic">Elixir</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-deno" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Deno Tutorials and Courses" src="https://hackr.io/tutorials/deno/logo-deno.svg?ver=1590289614" />
+                                    <p class="js-topic">Deno</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-vhdl" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="VHDL Tutorials and Courses" src="https://hackr.io/tutorials/vhdl/logo-vhdl.svg?ver=1590509528" />
+                                    <p class="js-topic">VHDL</p>
+                                </a>
+                                <a href="https://hackr.io/tutorials/learn-verilog" class="topic-grid-item js-topic-grid-item">
+                                    <img class="topic-thumbnail" alt="Verilog Tutorials and Courses" src="https://hackr.io/tutorials/verilog/logo-verilog.svg?ver=1590508305" />
+                                    <p class="js-topic">Verilog</p>
+                                </a>
+                              
+                            </div>
+                            <div id="no_topics_found" class="col-md-12 text-center hidden marginbottom-sm">
+                                <span class="no-results"><em>Sorry, no results found!</em></span>
+                                <p class="text-center margintop-md">We are a community-driven website. Please feel free to submit the courses/tutorials that you would want to recommend to the community.</p>
+                            </div>
+                        </div>
+                        <!-- <div style="margin-bottom: 15px; display: flex; justify-content: center;">
+                            <div id="gpt-passback-stpd-0-1572966252313" data-google-query-id="CMLU27zN5eoCFQPccwEdoRENqA">
+                                <div id="google_ads_iframe_/147246189/hackr.io_970x250_homepage_DFP_0__container__" style="border: 0pt none;">
+                                    <iframe
+                                        id="google_ads_iframe_/147246189/hackr.io_970x250_homepage_DFP_0"
+                                        title="3rd party ad content"
+                                        name="google_ads_iframe_/147246189/hackr.io_970x250_homepage_DFP_0"
+                                        width="970"
+                                        height="250"
+                                        scrolling="no"
+                                        marginwidth="0"
+                                        marginheight="0"
+                                        frameborder="0"
+                                        srcdoc=""
+                                        style="border: 0px; vertical-align: bottom; width: 980px; height: 250px;"
+                                        data-google-container-id="5"
+                                        data-iv-id="opp51"
+                                        data-load-complete="true"
+                                    ></iframe>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <!-- <div class="clearfix"></div> -->
+                </div>
+                <!-- <div class="appstore-links"></div> -->
+            </div>
+        </div>
+       
+    </div>
+
+
+
+
+      
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+    <script src="index.js"></script>
+
+</body>
+</html>

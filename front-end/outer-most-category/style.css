@@ -1,0 +1,77 @@
+.para_1{
+  position: relative;
+  top:-30px;
+  left: 60px;
+}
+.para_2{
+  position: relative;
+  top: -30px;
+  left: 60px;
+}
+.para_3{
+  position: relative;
+  top:-30px;
+  left: 60px;
+}
+.para_4{
+  position: relative;
+  top: -30px;
+  left: 60px;
+}
+.para_5{
+  position: relative;
+  top: -30px;
+  left: 60px;
+}
+
+.para_6{
+  position: relative;
+  top: -40px;
+  left:60px;
+}
+
+.para_7{
+  position: relative;
+  top: -40px;
+  left: 60px;
+}
+.para_8{
+  position: relative;
+  top: -40px;
+  left: 60px;
+}
+.para_9{
+  position: relative;
+  top: -40px;
+  left: 60px;
+}
+.para_10{
+  position: relative;
+  top: -40px;
+  left: 60px;
+  right: -60px;
+}
+.para_11{
+  position: relative;
+  top: -40px;
+  right: -60px;
+  left: 60px;
+}
+.para_12{
+  position: relative;
+  top: -40px;
+  left: 70px;
+}
+/* .cs:hover{
+  
+} */
+
+.form-group {
+  margin-bottom: 0px;
+  
+}
+
+@media(max-width:800px){
+.all{
+  padding-left: 40px;
+}}
