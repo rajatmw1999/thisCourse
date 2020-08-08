@@ -3,7 +3,6 @@ body{
 	font-size: 1rem;
 	animation-name: colors;
 	animation-duration: 4s;
-	/* animation-delay: 1s; */
 }
 @keyframes colors {
 	10% {background-color:#4f3961;}
@@ -60,7 +59,18 @@ hr{
 	border-radius: 8px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
+.A{
+	background-color: #f65c78;
+}
+.B{
+	background-color: #ffd271;
+}
+.C{
+	background-color: #c3f584;
+}
+.D{
+	background-color: #3fc5f0;
+}
 .hl{
 	margin-top: 20px;
 	border-top: 5px dotted white;
@@ -70,12 +80,19 @@ hr{
 .row{
 	margin-left: 30px;
 }
+.active{
+	border: inset;
+	border-color: grey;
+	background-color: #f4f6ff;
+}
 
 .badge{
 	margin-right: 5px;
 	padding: 4.5%;
+	border-radius: 8px;
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
+
 }
 .btn{
 	padding: .5% 2%;
