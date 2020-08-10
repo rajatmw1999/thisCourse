@@ -12,7 +12,7 @@ router.get('/',(req, res, next) =>{
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 puppeteer.use(StealthPlugin());
 
-let skillShareSearchQuery = "creative-writing";
+let skillShareSearchQuery = query.q;
 (async () => {
   
     puppeteer.launch({ headless: true }).then(async browser => {
@@ -44,6 +44,11 @@ let skillShareSearchQuery = "creative-writing";
          return json;
       });
       console.log("skillShareResult",skillshareResult);
+	  res.status(200).json({
+									message:'Search Results from Digigrad== FREE!',
+									query: query.q,
+									Data: skillshareResult
+								});
     })
     
     browser.close();
