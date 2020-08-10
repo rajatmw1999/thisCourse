@@ -33,6 +33,16 @@ const bitdegreeSearchRoutes = require('./routes/bitdegree');
 const khanAcademySearchRoutes = require('./routes/khanAcademy');
 const openYaleSearchRoutes = require('./routes/openYale');
 const digigradSearchRoutes = require('./routes/digigrad');
+const bluebrownSearchRoutes = require('./routes/3blue1brown');
+const apnacourseSearchRoutes = require('./routes/apnacourse');
+const edurekaSearchRoutes = require('./routes/edureka');
+const skillshareSearchRoutes = require('./routes/skillshare');
+const codeacademySearchRoutes = require('./routes/codeacademy');
+const alisonSearchRoutes = require('./routes/alison');
+const arcademicsSearchRoutes = require('./routes/arcademics');
+const harvardBusinessSearchRoutes = require('./routes/harvardBusiness');
+
+
 
 app.use(session({
     secret:"thisCourse Secret",
@@ -118,18 +128,6 @@ app.use((req,res,next)=>{
 });
 
 
-//Coursera Part
-// rp('https://www.coursera.org/search?query=web%20development&skipBrowseRedirect=true')
-// .then((html) => {
-//     let name = $('.ais-InfiniteHits-item',html);
-//     for(let i=0;i<name.length;i++){
-//     console.log("Name : ",name[i].children[0].children[0].children[0].children[0].children[0].children[0].children[0].attribs.alt);
-//     console.log("ImgLink : ",name[i].children[0].children[0].children[0].children[0].children[0].children[0].children[0].attribs.src);
-//     console.log("Partner Name : ",name[i].children[0].children[0].children[0].children[0].children[0].children[0].next.children[0].next.children[0].children[0].data);
-//     console.log("Course Type : ",name[i].children[0].children[0].children[0].children[0].children[0].children[0].next.children[0].next.next.children[0].children[0].data,"\n");
-//     };
-// });
-
 // Verbling
 let verblingSearchQuery = "english";
 (async () => {
@@ -185,6 +183,15 @@ app.use('/bitdegreeSearch', bitdegreeSearchRoutes);
 app.use('/khanAcademySearch',khanAcademySearchRoutes);
 app.use('/openYaleSearch',openYaleSearchRoutes);
 app.use('/digigradSearch',digigradSearchRoutes);
+app.use('/3blue1brownSearch',bluebrownSearchRoutes);
+app.use('/apnacourseSearch',apnacourseSearchRoutes);
+app.use('/edurekaSearch', edurekaSearchRoutes);
+app.use('/skillshareSearch', skillshareSearchRoutes);
+app.use('/codeacademySearch', codeacademySearchRoutes);
+app.use('/alisonSearch', alisonSearchRoutes);
+app.use('/arcademicsSearch',arcademicsSearchRoutes);
+app.use('/harvardBusinessSearch', harvardBusinessSearchRoutes);
+
 
 app.get(express.static(path.join(__dirname,'frontend/build')));
 app.get('*',(req,res) => {
