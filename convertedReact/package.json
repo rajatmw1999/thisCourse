@@ -11,6 +11,7 @@
     "react-icons": "^3.10.0",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
+    "react-script-tag": "^1.1.2",
     "react-scripts": "3.4.1",
     "redux": "^4.0.5"
   },
