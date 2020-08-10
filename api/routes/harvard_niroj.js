@@ -1,4 +1,16 @@
+
+const express = require('express');
+const router = express.Router();
+//require('dotenv').config();
+const mongoose = require('mongoose');
 const puppeteer = require('puppeteer');
+const Search = require('../models/search');
+
+router.get('/',(req, res, next) =>{
+					const query = new Search({
+						q: req.body.q
+					});
+				console.log('Running Scrappers');
 
 (async () =>{
     const extractNames= async (weburl) =>{
@@ -44,11 +56,19 @@ const puppeteer = require('puppeteer');
     }
 
     console.log(detail);
+	
+			res.status(200).json({
+									message:'Search Results from Havard Business!',
+									query: query.q,
+									Data: details,
+									Data2: detail
+								});
+	
+	
     await browser.close();
 
 })();
 
-
-
-
-
+});
+	
+module.exports = router;
