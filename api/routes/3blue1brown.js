@@ -1,7 +1,17 @@
 
 
+const express = require('express');
+const router = express.Router();
+//require('dotenv').config();
+const mongoose = require('mongoose');
 const puppeteer = require('puppeteer');
+const Search = require('../models/search');
 
+router.get('/',(req, res, next) =>{
+					const query = new Search({
+						q: req.body.q
+					});
+				console.log('Running Scrappers');
 (async () =>{
     const extractNames= async (weburl) =>{
         let page = await browser.newPage();
@@ -29,9 +39,23 @@ const puppeteer = require('puppeteer');
     
     details=await extractNames(url);
     console.log(details);
+	res.status(200).json({
+									message:'Search Results from 3blue1brown!',
+									query: query.q,
+									Data: details
+								});
+	
     
 
     
     await browser.close();
 
 })();
+
+
+		
+	
+});
+	
+module.exports = router;
+	
