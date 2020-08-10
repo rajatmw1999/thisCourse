@@ -1,7 +1,19 @@
-
+const express = require('express');
+const router = express.Router();
+//require('dotenv').config();
+const mongoose = require('mongoose');
 const puppeteer = require('puppeteer');
+const Search = require('../models/search');
+//const puppeteer = require('puppeteer');
 const { strict } = require('assert');
 const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require('constants');
+
+
+router.get('/',(req, res, next) =>{
+					const query = new Search({
+						q: req.body.q
+					});
+				console.log('Running Scrappers');
 
 (async () =>{
     const extractNames= async (weburl) =>{
@@ -47,9 +59,9 @@ const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require('constants');
 
     let browser= await puppeteer.launch(); 
     
-    q='web development'
+    //q='web development';
     let weburi='https://alison.com/courses?query=';
-    let weburl=weburi.concat(q)
+    let weburl=weburi.concat(query.q);
     
     data= await getDetails(weburl);
     details=[]
@@ -69,11 +81,21 @@ const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require('constants');
     
     
     console.log(details);
-    console.log(details.length);
+		res.status(200).json({
+									message:'Search Results from alison!',
+									query: query.q,
+									Data: details
+								});
+	
+    //console.log(details.length);
     await browser.close();
 
 })();
 
+	
+});
+	
+module.exports = router;
 
 
 

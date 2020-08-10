@@ -11,7 +11,7 @@ router.get('/',(req, res, next) =>{
 					});
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 puppeteer.use(StealthPlugin());
-let apnaCourseSearchQuery = "Banking-and-Finance";
+let apnaCourseSearchQuery = query.q;
 (async () => {
   
     puppeteer.launch({ headless: true }).then(async browser => {
@@ -47,7 +47,13 @@ let apnaCourseSearchQuery = "Banking-and-Finance";
         }
          return json;
       });
+	  
       console.log("apnaCourseResult",apnaCourseResult);
+	  res.status(200).json({
+								message:'Search Results from Apnacourse!',
+								query: query.q,
+								Data: apnaCourseResult
+							});
     })
     
     browser.close();

@@ -25,14 +25,24 @@ puppeteer.use(StealthPlugin());
 
 const youtubeSearchRoutes = require('./api/routes/youtube_search');
 const udemySearchRoutes  = require('./api/routes/udemy_search');
-const harvardSearchRoutes = require('./routes/harvard');
-const edxSearchRoutes = require('./routes/edx');
-const courseraSearchRoutes = require('./routes/coursera');
-const udacitySearchRoutes = require('./routes/Udacity');
-const bitdegreeSearchRoutes = require('./routes/bitdegree');
-const khanAcademySearchRoutes = require('./routes/khanAcademy');
-const openYaleSearchRoutes = require('./routes/openYale');
-const digigradSearchRoutes = require('./routes/digigrad');
+const harvardSearchRoutes = require('./api/routes/harvard');
+const edxSearchRoutes = require('./api/routes/edx');
+const courseraSearchRoutes = require('./api/routes/coursera');
+const udacitySearchRoutes = require('./api/routes/Udacity');
+const bitdegreeSearchRoutes = require('./api/routes/bitdegree');
+const khanAcademySearchRoutes = require('./api/routes/khanAcademy');
+const openYaleSearchRoutes = require('./api/routes/openYale');
+const digigradSearchRoutes = require('./api/routes/digigrad');
+const bluebrownSearchRoutes = require('./api/routes/3blue1brown');
+const apnacourseSearchRoutes = require('./api/routes/apnacourse');
+const edurekaSearchRoutes = require('./api/routes/edureka');
+const skillshareSearchRoutes = require('./api/routes/skillshare');
+const codeacademySearchRoutes = require('./api/routes/codeacademy');
+const alisonSearchRoutes = require('./api/routes/alison');
+const arcademicsSearchRoutes = require('./api/routes/arcademics');
+const harvardBusinessSearchRoutes = require('./api/routes/harvardBusiness');
+const verblingSearchRoutes = require('./api/routes/verbling');
+
 
 app.use(session({
     secret:"thisCourse Secret",
@@ -118,61 +128,8 @@ app.use((req,res,next)=>{
 });
 
 
-//Coursera Part
-// rp('https://www.coursera.org/search?query=web%20development&skipBrowseRedirect=true')
-// .then((html) => {
-//     let name = $('.ais-InfiniteHits-item',html);
-//     for(let i=0;i<name.length;i++){
-//     console.log("Name : ",name[i].children[0].children[0].children[0].children[0].children[0].children[0].children[0].attribs.alt);
-//     console.log("ImgLink : ",name[i].children[0].children[0].children[0].children[0].children[0].children[0].children[0].attribs.src);
-//     console.log("Partner Name : ",name[i].children[0].children[0].children[0].children[0].children[0].children[0].next.children[0].next.children[0].children[0].data);
-//     console.log("Course Type : ",name[i].children[0].children[0].children[0].children[0].children[0].children[0].next.children[0].next.next.children[0].children[0].data,"\n");
-//     };
-// });
-
 // Verbling
-let verblingSearchQuery = "english";
-(async () => {
-  
-  puppeteer.launch({ headless: true }).then(async browser => {
-    
-    console.log('Running tests..');
-    const page = await browser.newPage();
-    await page.goto(`https://www.verbling.com/find-teachers/${verblingSearchQuery}?sort=magic`);
-    await page.waitFor(10000);
-    
-    let verblingResult = await page.evaluate(() => {
-      let instructorName = (document.querySelectorAll('h2[class="no-margin margin-right-md"] >a'));
-      let price = (document.querySelectorAll('span[class="currency-converter "]'));
-      let rating = (document.querySelectorAll('div[class="text-bold text-large"]'));
-      let lessons = (document.querySelectorAll('div[class="flex flex-direction-column ProfileBase--truncate flex-direction-column"] >div >span'));
-      
-      var json = {instructorName:[],price:[],rating:[],lessons:[]};
 
-
-      for(let i=0;i<instructorName.length;i++){
-        json.instructorName.push(JSON.stringify(instructorName[i].innerText));       
-      }
-      
-      for(let i=0;i<price.length;i++){
-        if(i%2 === 0){
-          json.price.push(JSON.stringify(price[i].innerText));
-        }
-      }
-      for(let i=0;i<rating.length;i++){
-        json.rating.push(JSON.stringify(rating[i].innerText));
-      }
-      for(let i=1;i<lessons.length;i++){
-          if(i === 5 || i === 11 || i === 17 || i === 23 || i === 29 || i === 35)
-        json.lessons.push(JSON.stringify(lessons[i].innerText));
-      }
-       return json;
-    });
-    console.log("verblingResult",verblingResult);
-  })
-  
-  browser.close();
-})();
 
 //Youtube Route
 app.use('/youtubeSearch', youtubeSearchRoutes);
@@ -185,6 +142,16 @@ app.use('/bitdegreeSearch', bitdegreeSearchRoutes);
 app.use('/khanAcademySearch',khanAcademySearchRoutes);
 app.use('/openYaleSearch',openYaleSearchRoutes);
 app.use('/digigradSearch',digigradSearchRoutes);
+app.use('/3blue1brownSearch',bluebrownSearchRoutes);
+app.use('/apnacourseSearch',apnacourseSearchRoutes);
+app.use('/edurekaSearch', edurekaSearchRoutes);
+app.use('/skillshareSearch', skillshareSearchRoutes);
+app.use('/codeacademySearch', codeacademySearchRoutes);
+app.use('/alisonSearch', alisonSearchRoutes);
+app.use('/arcademicsSearch',arcademicsSearchRoutes);
+app.use('/harvardBusinessSearch', harvardBusinessSearchRoutes);
+app.use('/verblingSearch',verblingSearchRoutes);
+
 
 app.get(express.static(path.join(__dirname,'frontend/build')));
 app.get('*',(req,res) => {

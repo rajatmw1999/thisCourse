@@ -1,9 +1,15 @@
-
-
-
-
-
+const express = require('express');
+const router = express.Router();
+//require('dotenv').config();
+const mongoose = require('mongoose');
 const puppeteer = require('puppeteer');
+const Search = require('../models/search');
+
+router.get('/',(req, res, next) =>{
+					const query = new Search({
+						q: req.body.q
+					});
+				console.log('Running Scrappers');
 
 (async () =>{
     const extractNames= async (weburl) =>{
@@ -12,8 +18,11 @@ const puppeteer = require('puppeteer');
         
         const data = await page.evaluate(() =>{
             
-            let title=Array.from(document.querySelectorAll('div.container > ul.nav > li> ul > li > a')).map((ele) => ele.innerText);
-            let link=Array.from(document.querySelectorAll('div.container > ul.nav > li> ul > li > a')).map((ele) => ele.href) ;
+            //let title=Array.from(document.querySelectorAll('div.container > ul.nav > li> ul > li > a')).map((ele) => ele.innerText);
+            //let link=Array.from(document.querySelectorAll('div.container > ul.nav > li> ul > li > a')).map((ele) => ele.href) ;
+
+			let title=Array.from(document.querySelectorAll('td >a')).map((ele) => ele.innerText);
+			let link=Array.from(document.querySelectorAll('td >a')).map((ele) => ele.href) ;
 
             v={
                 title,
@@ -29,13 +38,30 @@ const puppeteer = require('puppeteer');
     }
 
     let browser= await puppeteer.launch(); 
-    url='https://www.arcademics.com/';
-    
-    details=await extractNames(url);
+	//q = ""
+    url='https://www.arcademics.com/games?subject=';
+    let weburl=url.concat(query.q);
+	
+    details=await extractNames(weburl);
+	
+	
     console.log(details);
+		res.status(200).json({
+									message:'Search Results from arcademics!',
+									query: query.q,
+									Data: details
+								});
     
 
     
     await browser.close();
 
 })();
+
+
+	
+});
+	
+module.exports = router;
+	
+
