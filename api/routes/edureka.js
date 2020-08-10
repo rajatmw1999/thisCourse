@@ -12,7 +12,7 @@ router.get('/',(req, res, next) =>{
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 puppeteer.use(StealthPlugin());
 
-let edurekaSearchQuery = "bi-and-visualization";
+let edurekaSearchQuery = query.q;
 (async () => {
   
     puppeteer.launch({ headless: true }).then(async browser => {
@@ -45,6 +45,11 @@ let edurekaSearchQuery = "bi-and-visualization";
          return json;
       });
       console.log("edurekaResult",edurekaResult);
+	  res.status(200).json({
+									message:'Search Results from Edureka',
+									query: query.q,
+									Data: edurekaResult
+								});
     })
     
     browser.close();
