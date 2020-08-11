@@ -1,0 +1,15 @@
+body {
+	padding: 5%;
+	background-color: #dcdcdc;
+}
+
+.breadcrumb {
+	float: left;
+}
+
+.breadcrumb a {
+	text-decoration: none;
+    color: #1e90ff;
+    padding: 0 5px;
+}
+
