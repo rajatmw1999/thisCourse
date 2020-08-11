@@ -97,7 +97,7 @@
 		padding:5% 25% 5% 30%;
 		border: 1% solid #fff;
 	}
-	a{
+	/* a{
 		display: block;
 		text-decoration: none;
 		color: orange;
@@ -107,7 +107,8 @@
 		padding: 2%;
 		border: 1% solid #000;
 		margin-left: -20%;
-	}
+	} */
+
 	#four{
 		font-size:1em; 
 		margin-left: -25%;
@@ -159,7 +160,7 @@
 		padding:1%;
 		border: 1% solid #fff;
 	}
-	a{
+	/* a{
 		display: block;
 		text-decoration: none;
 		color: orange;
@@ -168,7 +169,7 @@
 		margin: 1%;
 		padding: 2%;
 		border: 1% solid #000;
-	}
+	} */
 	#four{
 		font-size:1em; 
 	}

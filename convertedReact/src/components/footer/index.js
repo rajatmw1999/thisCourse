@@ -43,7 +43,7 @@ class Footer extends React.Component {
                                     <li><a href="#">Contact Us</a></li>
                                 </ul>
                             </div>
-                            <div className="col-lg-3 item social"><a href="#" className="fb-col"><i className="icon ion-social-facebook"></i></a><a href="#"className="tw-col"><i className="icon ion-social-twitter"></i></a>
+                            <div className="col-sm-4 col-md-3 item social"><a href="#" className="fb-col"><i className="icon ion-social-facebook"></i></a><a href="#"className="tw-col"><i className="icon ion-social-twitter"></i></a>
                                 <a href="#" className="lin-col"><i className="icon ion-social-linkedin"></i></a><a href="#" className="ins-col"><i className="icon ion-social-instagram"></i></a>
                                 <p className="copyright">ThisCourse © 2020</p>
                                 <p className="copyright">Terms &amp; Conditions</p>

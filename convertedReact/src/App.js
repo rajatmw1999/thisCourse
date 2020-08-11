@@ -1,7 +1,7 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
+// import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 // import Footer from './components/footer/index';
 // import IQtestintro from './components/IQ-test-intro/index';
 // import Navsearch from './components/nav_search/index';
@@ -13,14 +13,48 @@ import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 // import Newsbox from './components/newsbox/index';
 // import LandingPage from './components/landing-page/index';
 // import Newsbox2 from './components/newsbox2/index';
+import Aboutsection from './components/about_section/Aboutsection'
+import AuthorOfRoadmap from './components/authorOfRoadmap/authorOfRoadmap';
+import Blogpost from './components/BlogPost - Editor/Blogpost';
+// import BlogPostRoadmap from './components/blogPostRoadmap/blogPostRoadmap';
+import BreadCrumb from './components/BreadCrumb/BreadCrumb';
+import CardComponent from './components/cardComponent/cardComponent';
+import CardHackrio from './components/cardHackrio/cardHackrio';
+import CourseDetail from './components/course-detail section/CourseDetail';
+import Footer from './components/footer/index';
+import Navsearch from './components/nav_search/index';
+import Navbar from './components/Navbar/index';
+import OutermostCategory from './components/outermost-category/index'
+import Roadmap from './components/read-more-roadmap/Roadmap';
+import RoadmapCard from './components/roadmap-card/Roadmap_Card';
+import Search from './components/searchbar/Search';
+import Signup from './components/signup/signup';
+import SuggestionCarousel from './components/suggestion-carousel';
+import Timeline from './components/timeline';
 
 function App() {
   return (
-    <Router>
-      <Switch>
-      
-    </Switch>
-    </Router>
+    <div>
+        {/* <Aboutsection /> */}
+        {/* <AuthorOfRoadmap /> */}
+        {/* <Blogpost /> */}
+        {/* <BlogPostRoadmap /> */}
+        {/* <BreadCrumb /> */}
+        {/* <CardComponent /> */}
+        {/* <CardHackrio /> */}
+        {/* <CourseDetail /> */}
+        {/* <Footer /> */}
+        {/* <Navsearch /> */}
+        {/* <Navbar /> */}
+        {/* <OutermostCategory /> */}
+        {/* <Roadmap /> */}
+        {/* <RoadmapCard /> */}
+        {/* <Search /> */}
+        {/* <Signup /> */}
+        {/* <SuggestionCarousel /> */}
+        {/* <Timeline /> */}
+        
+        </div>
   );
 }
 

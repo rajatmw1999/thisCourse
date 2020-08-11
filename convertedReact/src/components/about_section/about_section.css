@@ -54,14 +54,14 @@ h1 {
     font-family: 'Fondamento', cursive;
 }
 
-li {
+/* li {
     display: inline;
     margin-left: 0;
     font-size: 10px;
     padding: 5px;
     font-size: 1.0em;
     font-family: 'Muli', sans-serif;
-}
+} */
 .a {
     padding-left: 1px;
     margin-left: 0;
@@ -70,14 +70,14 @@ mark {
     background-color: #4a3f35;
     color: white;
 }
-.fa {
+.custom_about{
     padding: 7px;
     font-size: 15px;
-    width: 15px;
+    width: 25px;
     text-align: center;
     text-decoration: none;
     margin: 5px 2px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 }
 .fa:hover {
     opacity: 0.7;

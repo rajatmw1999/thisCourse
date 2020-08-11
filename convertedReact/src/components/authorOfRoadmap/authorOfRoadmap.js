@@ -1,10 +1,11 @@
 import React, {Component} from "react"
 import "./authorOfRoadmap.css";
 
-class authorOfRoadmap extends Component {
+class AuthorOfRoadmap extends Component {
     render() {
         return (
             <div className="container">
+                <div className="customstyle_author">
                 <div className="cover-photo"><br/>
                     <img
                         src="https://images.unsplash.com/photo-1565464027194-7957a2295fb7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
@@ -27,9 +28,9 @@ class authorOfRoadmap extends Component {
                 <p className="answer">M.Tech</p>
                 <p className="heading">JOINED</p>
                 <p className="answer">July 12, 2019</p>
-                <br /></div>
+                <br /></div></div>
         );
     }
 }
 
-export default authorOfRoadmap;
+export default AuthorOfRoadmap;

@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import "./blogPostRoadmap.css";
 
-class blogPostRoadmap extends Component {
+class BlogPostRoadmap extends Component {
     render() {
         return (
             <div
@@ -28,7 +28,7 @@ class blogPostRoadmap extends Component {
                             </div>
 
                             <div Name="crayons-article__header__meta">
-                                <h1 className=" mb-4 medium">
+                                <h1 className="topic_custom_blogpostroadmap mb-4 medium">
                                     How To Become A Full Stack Developer In 2020[ROADMAP]?
                                 </h1>
 
@@ -274,4 +274,4 @@ class blogPostRoadmap extends Component {
     }
 }
 
-export default blogPostRoadmap;
+export default BlogPostRoadmap;

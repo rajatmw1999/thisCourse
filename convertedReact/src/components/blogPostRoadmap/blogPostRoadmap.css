@@ -144,7 +144,7 @@
   
   .crayons-card {
     border-radius: 3px;
-    background: #fff;
+    background: #fff !important;
     color: #08090a;
     box-shadow: 0 0 0 1px rgba(8, 9, 10, 0.1);
   }
@@ -189,6 +189,10 @@
     position: relative;
     width: 100%;
     padding-top: 42%;
+  }
+
+  .topic_custom_blogpostroadmap{
+    color:black !important;
   }
   
   .crayons-article__cover__image {
