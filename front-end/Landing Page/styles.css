@@ -105,51 +105,11 @@
   margin-top:-33px;
   padding:35px 0px 20px 0px;
 }
-#picture h2{
-  font-family:'Oswald','Arial',sans-serif;
-  font-size:40px;
-  color:green;
-}
-#picture p{
-  font-family:"Arial", sans-serif;
-  font-size:18px;
-}
 #intro span.underline{
   text-decoration:underline;
   font-size:25px;
 }
-#picture img{
-  width: 400px; /* You can set the dimensions to whatever you want */
-  height: 400px;
-  object-fit: cover;
-  width:98%;
-  max-width: 100%;
-  display: block;
-  height:auto;
-  margin:auto;
-  margin-bottom:10px;
-}
-#picture .first a{
-font-family:'Oswald','Arial',sans-serif;
-font-size:25px;
-color:black;
-}
-#picture .second {
-  font-family:"Arial", sans-serif;
-  color: black;
-  font-size: 20px;
-  margin-top:5px;
- // font-weight: normal;
-}
-/**************************/
-#gallery{
-    padding: 0px 50px;
-   // max-width: 1200px;
-    text-align: center;
-    margin: auto;
-		margin-top: 40px;
-    margin-bottom:20px;
-}
+
 .card {
   background-color: dodgerblue;
   color: white;
@@ -161,133 +121,6 @@ color:black;
   margin: 0 auto;
   display: grid;
   grid-gap: 1rem;
-}
-.parent{
-    //width: 45%;
-      margin: 5px;
-   // height: 300px;
-    border: 1px solid none;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-	  cursor: pointer;
-}
-.child{
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s;
-}
-.card1 {
-  background-image: url(https://everything-pr.com/wp-content/uploads/2019/01/3-Things-Entrepreneurs-Wish-They-Knew-Before-Starting-Their-Company.jpg);
-  background-position:center center;
-}
-.card2{
-  background-image: url(https://www.ryerson.ca/content/dam/news-events/news/2019/03/entrepreneurship-graphic.jpg);
-  background-position:center center;
-}
-.parent:hover .child, .parent:focus .child {
-    -ms-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    transform: scale(1.2);
-}
-.parent:hover .child:before, .parent:focus .child:before {
-    display: block;
-}
-.child:before {
-    content: "";
-    display: none;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(42, 46, 48,0.7);
-}
-
-.card .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  //background-color: #008CBA;
-}
-.parent:hover .overlay {
-  opacity: 1;
-}
-#gallery .text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-#gallery a {
-    color: #ffffff !important;
-    font-family: sans-serif;
-    text-align: center;
-    margin: auto;
-    cursor: pointer;
-    //text-decoration: none;
-}
-#hire {
-  text-align:center;
-}
-#hire h3{
-  font-family:"Oswald", 'Arial', sans-serif;
-  font-size:40px;
-  //border:1px solid black;
-  padding-top:15px;
-  margin:auto;
-}
-#hire button[type="button"]{
-  position:relative;
-  cursor: pointer;
-  font-family:'Oswald','Arial',sans-serif;
-  background:#fff;
-  color:#000;
-  font-size:15px;
-  padding:10px 10px;
-  margin:10px auto;
-  border-radius:0px;
-  border:1px solid #fff;
-}
-#hire button[type="button"]:hover,#hire button[type="button"]:focus{
-  background:#000;
-  color:#fff;
-  box-shadow:none;
-  border:1px solid #000;
-}
-#hire button[type="button"]:active {
-  top:3px;
-  box-shadow:none;
-}
-.siz{
-  margin-left:-10px;
-}
-.tolh{
-  height:250px;
-}
-.te{
-  margin-top:-5px;
-}
-#address, #address-flow{
-  font-family:"Oswald", "Helvetica", sans-serif;
 }
 
 
@@ -316,11 +149,7 @@ color:black;
   color:green;
 }
 
-@media (min-width:824px){
- #address-flow{
-    display:none;
-  }
-}
+
 @media (min-width:1400px){
   .card{
     padding:20rem 2rem;
@@ -330,23 +159,10 @@ color:black;
   .card{
     padding:40rem 2rem;
   }
-  #gallery .text {
-    font-size:50px;
-  }
+
 }
-@media (max-width:990px){
-  #listed li a, #listed-2 li a{
-    text-align:center;
-  }
-  #listed li a:hover, #listed-2 li a:hover, #listed li a.active, #listed-2 li a.active{
-    border-bottom:none;
-  }
-}
-@media (max-width:823px){
-  #address{
-    display:none;
-  }
-}
+
+
 @media (max-width:726px){
   #main-pic .container h1{
     font-size:30px;
@@ -362,28 +178,11 @@ color:black;
 @media (max-width:500px){
   .card{
     padding: 7rem 2rem;
+    height:35rem;
   }
-  #gallery .text{
-    font-size:15px;
-  }
+
 }
-@media screen and (max-width:320px) {
-  .first {
-    font-size: 14px;
-    text-align: center;
-    vertical-align: middle;
-    left: 0!important;
-    margin-left: -10px;
-    color: white;
-  }
-  .second {
-    font-size: 10px;
-    text-align: left;
-    vertical-align: middle;
-    margin-left: -10px;
-    color: white;
-  }
-}
+
 @media (min-width: 768px) {
   .cards { grid-template-columns: repeat(2, 1fr); }
 

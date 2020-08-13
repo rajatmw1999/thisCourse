@@ -1,0 +1,145 @@
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    /* The image used */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url("https://www.upskilled.edu.au/getmedia/26e5eefe-8bac-4084-a7a2-21074c52747b/myths-and-realities-of-studying-online-2.jpg;.aspx");
+    /* Full height */
+    height: 66%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0,0,0,0.7);
+}
+
+#text {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+.bottom {
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    color: white;
+    transform: translate(-50%,-50%);
+}
+
+.rule {
+    width: 120%;
+    position: absolute;
+    top: 56%;
+    left: 55%;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+h1 {
+    font-size: 3.5em;
+    font-family: 'Bree Serif', serif;
+}
+
+.tag {
+    font-size: 1.2em;
+    font-family: 'Fondamento', cursive;
+}
+
+/* li {
+    display: inline;
+    margin-left: 0;
+    font-size: 10px;
+    padding: 5px;
+    font-size: 1.0em;
+    font-family: 'Muli', sans-serif;
+} */
+.a {
+    padding-left: 1px;
+    margin-left: 0;
+}
+mark {
+    background-color: #4a3f35;
+    color: white;
+}
+.custom_about{
+    padding: 7px;
+    font-size: 15px;
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    /* border-radius: 50%; */
+}
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-reddit {
+    background: #ff5700;
+    color: white;
+}
+@media screen and (max-width: 1030px) {
+    .rule {
+        top: 60.9%;
+    }
+    .bottom {
+        top: 63.9%;
+    }
+}
+@media screen and (max-width: 770px) {
+    .rule {
+        top: 62.9%;
+    }
+    .bottom {
+        top: 65.9%;
+        left: 32%;
+    }
+    li {
+        font-size: 10px;
+        padding: 2.3px;
+        font-size: 1.0em;
+    }
+}
+@media screen and (max-width: 500px) {
+    .rule {
+        top: 65.9%;
+
+    }
+    .bottom {
+        display: none;
+    }
+}
+@media screen and (max-width: 400px) {
+    #text {
+        margin-left: 40px;
+    }
+}
+@media screen and (max-width: 350px) {
+    #text {
+        margin-left: 45px;
+    }
+}
