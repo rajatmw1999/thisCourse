@@ -2,7 +2,17 @@ body {
     font-family: Montserrat, sans-serif;
     background: #28223f;
 }
-.container {
+/* .container {
+    user-select: none;
+    margin: 100px auto;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.75);
+} */
+.customstyle_author{
     user-select: none;
     margin: 100px auto;
     background: white;
@@ -64,14 +74,14 @@ button {
     background: #1827ce;
     transition: 0.5s;
 }
-.container i {
+.customstyle_author i {
     padding-left: 20px;
     font-size: 20px;
     margin-bottom: 20px;
     cursor: pointer;
     transition: 0.5s;
 }
-.container i:hover {
+.customstyle_author i:hover {
     color: #03bfbc;
 }
 
@@ -94,7 +104,7 @@ button {
     font-size: 14px;
 }
 @media screen and (max-width: 400px) {
-    .container {
+    .customstyle_author {
         width: 90%;
     }
     .profile {

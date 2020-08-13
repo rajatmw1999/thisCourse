@@ -2,7 +2,7 @@ import React , {Component} from 'react';
 
 
 import './style.css';
-class Roadmap_more extends Component{
+class RoadmapMore extends Component{
     
 
     render() {
@@ -40,4 +40,4 @@ class Roadmap_more extends Component{
   }
  
 
-export default Roadmap_more;
+export default RoadmapMore;

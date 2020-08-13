@@ -4,11 +4,12 @@ import './index.css';
 import photo from './Course-Suggesion-1.jpg';
 import './icomoon/style.css';
 
-class suggestionCarousel extends React.Component {
+// import './js/main.js'
+class SuggestionCarousel extends React.Component {
     
     
     render() {
-        return <div className="site-section">
+        return (<div className="site-section">
         <div className="container">
           <div className="row">
             <div className="col-6 title-section">
@@ -109,9 +110,9 @@ class suggestionCarousel extends React.Component {
     
         </div>
       </div>
-;
+        );
      
   }
 }
   
-export default suggestionCarousel;
+export default SuggestionCarousel;

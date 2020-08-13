@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-class outermostCategory extends React.Component {
+class OutermostCategory extends React.Component {
     
     
     render() {
@@ -40,4 +40,4 @@ class outermostCategory extends React.Component {
   }
   }
   
-  export default outermostCategory;
+  export default OutermostCategory;
