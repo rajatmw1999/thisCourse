@@ -4,11 +4,7 @@ import "./authorOfRoadmap.css";
 class AuthorOfRoadmap extends Component {
     render() {
         return (
-<<<<<<< HEAD
             <div className="authorroadmap container col-sm-12 col-md-12 col-lg-4 col-xl-4">
-=======
-            <div className="container">
->>>>>>> aa85585ec7728bda5b62112a7e24a2af61ccdda5
                 <div className="customstyle_author">
                 <div className="cover-photo"><br/>
                     <img

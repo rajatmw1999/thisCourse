@@ -3,19 +3,6 @@ body {
     background: #28223f;
 }
 /* .container {
-<<<<<<< HEAD
-=======
-    user-select: none;
-    margin: 100px auto;
-    background: white;
-    color: black;
-    border-radius: 5px;
-    width: 400px;
-    text-align: center;
-    box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.75);
-} */
-.customstyle_author{
->>>>>>> aa85585ec7728bda5b62112a7e24a2af61ccdda5
     user-select: none;
     margin: 100px auto;
     background: white;
@@ -119,11 +106,7 @@ button {
 }
 @media screen and (max-width: 400px) {
     .customstyle_author {
-<<<<<<< HEAD
         width: 100%;
-=======
-        width: 90%;
->>>>>>> aa85585ec7728bda5b62112a7e24a2af61ccdda5
     }
     .profile {
         margin: 10px 0 0 -180px;
