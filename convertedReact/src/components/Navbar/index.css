@@ -5,20 +5,7 @@
 /* #Primary
 ================================================== */
 
-body{
-    font-family: 'Poppins', sans-serif;
-	font-size: 16px;
-	line-height: 24px;
-	font-weight: 400;
-	color: #212112;
-	/* background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg'); */
-	background-position: center;
-	background-repeat: repeat;
-	background-size: 7%;
-	background-color: #fff;
-	overflow-x: hidden;
-    transition: all 200ms linear;
-}
+
 ::selection {
 	color: #fff;
 	background-color: #8167a9;
@@ -52,7 +39,7 @@ body{
 	transition : all 0.3s ease-out;
 }
 .navigation-wrap{
-	position: fixed;
+	position: relative;
 	width: 100%;
 	top: 0;
 	left: 0;

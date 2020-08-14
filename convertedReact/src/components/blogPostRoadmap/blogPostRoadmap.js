@@ -1,11 +1,12 @@
 import React, {Component} from "react";
 import "./blogPostRoadmap.css";
+import Timeline from '../timeline/index';
 
-class blogPostRoadmap extends Component {
+class BlogPostRoadmap extends Component {
     render() {
         return (
             <div
-                className="crayons-layout__content grid col-sm-12 col-md-11 col-lg-8 col-xl-7">
+                className="blogpost crayons-layout__content grid col-sm-12 col-md-11 col-lg-8 col-xl-7">
                 <div class="article-wrapper">
 
                     <article
@@ -28,7 +29,7 @@ class blogPostRoadmap extends Component {
                             </div>
 
                             <div Name="crayons-article__header__meta">
-                                <h1 className=" mb-4 medium">
+                                <h1 className="topic_custom_blogpostroadmap mb-4 medium">
                                     How To Become A Full Stack Developer In 2020[ROADMAP]?
                                 </h1>
 
@@ -263,6 +264,7 @@ class blogPostRoadmap extends Component {
                             <p>I created this list and am constantly updating it with new resources,
                                 information, and news.
                             </p>
+                            <Timeline />
                         </div>
 
                     </article>
@@ -274,4 +276,4 @@ class blogPostRoadmap extends Component {
     }
 }
 
-export default blogPostRoadmap;
+export default BlogPostRoadmap;

@@ -1,83 +1,82 @@
 
-body,
-html {
-    height: 100%;
-    margin: 0;
-}
-
 .bg {
+    max-width: 100%;
     /* The image used */
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url("https://www.upskilled.edu.au/getmedia/26e5eefe-8bac-4084-a7a2-21074c52747b/myths-and-realities-of-studying-online-2.jpg;.aspx");
     /* Full height */
-    height: 66%;
+    height: 100%;
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(0,0,0,0.7);
+    padding: 25px 0px;
+   
 }
 
 #text {
-    position: absolute;
-    top: 35%;
-    left: 35%;
+   
+   
     color: white;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
+    /* transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%); */
 }
 
 .bottom {
-    position: absolute;
-    top: 60%;
-    left: 35%;
+   
     color: white;
-    transform: translate(-50%,-50%);
+    /* transform: translate(-50%,-50%); */
 }
 
 .rule {
-    width: 120%;
-    position: absolute;
-    top: 56%;
-    left: 55%;
+    width: 100%;
+
     color: white;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
+    /* transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%); */
 }
 
-h1 {
+/* h1 {
     font-size: 3.5em;
     font-family: 'Bree Serif', serif;
+} */
+.about_h1{
+    padding-left: 3%;
+    font-size: 3.5em;
+   color: white;
 }
 
 .tag {
+    padding-left: 3%;
     font-size: 1.2em;
     font-family: 'Fondamento', cursive;
 }
 
-li {
+.alpha {
     display: inline;
     margin-left: 0;
     font-size: 10px;
-    padding: 5px;
+    padding: 10px;
     font-size: 1.0em;
     font-family: 'Muli', sans-serif;
 }
-.a {
-    padding-left: 1px;
+.alpha {
+    text-decoration: none;
+    padding-left: 8px;
     margin-left: 0;
 }
 mark {
     background-color: #4a3f35;
     color: white;
 }
-.fa {
+.custom_about{
     padding: 7px;
     font-size: 15px;
-    width: 15px;
+    width: 25px;
     text-align: center;
     text-decoration: none;
     margin: 5px 2px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 }
 .fa:hover {
     opacity: 0.7;
@@ -125,6 +124,13 @@ mark {
     }
 }
 @media screen and (max-width: 500px) {
+    .about_h1{
+        padding-left: 0px;
+    }
+    
+    .tag {
+        padding-left: 0px;
+    }
     .rule {
         top: 65.9%;
 
@@ -135,11 +141,13 @@ mark {
 }
 @media screen and (max-width: 400px) {
     #text {
-        margin-left: 40px;
+        padding-left: 0px;
+        margin-left: 10px;
     }
 }
 @media screen and (max-width: 350px) {
     #text {
-        margin-left: 45px;
+        padding-left: 0px;
+        margin-left: 15px;
     }
 }

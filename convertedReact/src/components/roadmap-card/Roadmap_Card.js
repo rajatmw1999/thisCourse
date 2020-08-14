@@ -4,7 +4,7 @@ import './Roadmap_Card.css';
 
 
 
-class Roadmap extends Component{
+class RoadmapCard extends Component{
 
       render() {
         return(
@@ -28,4 +28,4 @@ class Roadmap extends Component{
   }
     
 
-export default Roadmap;
+export default RoadmapCard;

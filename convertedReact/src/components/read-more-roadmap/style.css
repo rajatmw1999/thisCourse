@@ -1,6 +1,6 @@
 body {
-    background-color: #e6e6e6 !important;
-    padding: 2% 0% !important;
+    /* background-color: #e6e6e6 !important; */
+    /* padding: 2% 0% !important; */
 }
 
 .more-articles {
@@ -44,7 +44,7 @@ body{
     font-family:var(--ff-default);
     padding:0;margin:0;
     overflow-y:auto;
-    padding-top:var(--header-height);
+    /* padding-top:var(--header-height); */
     display:flex;
     flex-direction:column}
     @media (max-width: 576px){
@@ -97,6 +97,4 @@ body{
         padding: 2% 2% !important;
     } */
 }
-
-
 

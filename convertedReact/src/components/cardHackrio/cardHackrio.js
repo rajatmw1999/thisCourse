@@ -3,14 +3,14 @@ import "./cardHackrio.css";
 import ScriptTag from 'react-script-tag';
 
 
-class cardHackrio extends Component{
+class CardHackrio extends Component{
     render(){
         return(
             <div className="b">
                 <ScriptTag type="text/javascript" src="./index.js" />
             <div className="home--hero-header hero--header-new">
-            
                 <div className="container">
+                    <div className="customcontainerstyle_cardhackrio">
             <div className="row">
                 <div className="col-xs-12 text-center hero-header-container">
                     
@@ -52,9 +52,11 @@ class cardHackrio extends Component{
                 </div>
             </div>
         </div>
+        </div>
        
         <div className="page--section paddingtop-sm marginbottom-lg margintop-md">
             <div className="container">
+                <div className="customcontainerstyle_cardhackrio">
                 <div className="row">
                     <div className="col-xs-12 no-paddingright-desktop">
                         <div className="page--body">
@@ -316,6 +318,7 @@ class cardHackrio extends Component{
                 </div>
                 
             </div>
+            </div>
         </div>
             
         </div>
@@ -325,4 +328,4 @@ class cardHackrio extends Component{
     }
 }
 
-export default cardHackrio;
+export default CardHackrio;

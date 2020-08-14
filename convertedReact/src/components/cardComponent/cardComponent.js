@@ -1,7 +1,7 @@
 import React,{Component} from "react";
 import "./cardComponent.css";
 
-class cardComponent extends Component {
+class CardComponent extends Component {
     render(){
         return(
             <div className="card mb-3" style={{maxWidth:"900px"}}>
@@ -55,4 +55,4 @@ class cardComponent extends Component {
     }
 }
 
-export default cardComponent;
+export default CardComponent;

@@ -263,7 +263,7 @@
   }
   
   @media (min-width: 1024px) {
-    .container {
+    .customcontainerstyle_cardhackrio {
         max-width:960px;
     }
   }
@@ -817,7 +817,7 @@
     border-radius: 4px;
   }
   
-  .container {
+  .customcontainerstyle_cardhackrio {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -825,19 +825,19 @@
   }
   
   @media (min-width: 768px) {
-    .container {
+    .customcontainerstyle_cardhackrio {
         width:750px;
     }
   }
   
   @media (min-width: 992px) {
-    .container {
+    .customcontainerstyle_cardhackrio {
         width:970px;
     }
   }
   
   @media (min-width: 1200px) {
-    .container {
+    .customcontainerstyle_cardhackrio {
         width:1170px;
     }
   }
@@ -969,12 +969,12 @@
     background-image: none;
   }
   
-  .clearfix:after,.clearfix:before,.container:after,.container:before,.row:after,.row:before {
+  .clearfix:after,.clearfix:before,.customcontainerstyle_cardhackrio:after,.customcontainerstyle_cardhackrio:before,.row:after,.row:before {
     display: table;
     content: " ";
   }
   
-  .clearfix:after,.container:after,.row:after {
+  .clearfix:after,.customcontainerstyle_cardhackrio:after,.row:after {
     clear: both;
   }
   

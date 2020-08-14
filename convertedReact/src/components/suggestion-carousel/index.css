@@ -3,7 +3,7 @@ body {
 	line-height: 1.7;
 	color: gray;
 	font-weight: 300;
-	background-color: #222831;
+	/* background-color: #222831; */
 	font-size: 16px; }
   
   ::-moz-selection {
@@ -24,7 +24,7 @@ body {
   h1, h2, h3, h4, h5,
   .h1, .h2, .h3, .h4, .h5 {
 	font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-	color: #fff; }
+	color: black; }
   
   .border-2 {
 	border-width: 2px; }
@@ -120,7 +120,7 @@ body {
 	border-radius: 4px;
 	background: none;
 	border-width: 1px;
-	color: #fff !important;
+	color: black !important;
 	border-color: rgba(255, 255, 255, 0.2);
 	font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
 	.form-control:active, .form-control:focus {

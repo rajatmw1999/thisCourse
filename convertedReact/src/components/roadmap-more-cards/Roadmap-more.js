@@ -2,12 +2,12 @@ import React , {Component} from 'react';
 
 
 import './style.css';
-class Roadmap_more extends Component{
+class RoadmapMore extends Component{
     
 
     render() {
       return(
-    <div>
+    <div className="roadmapmore col-12">
         <div id="c">
 		<p id="one">Tours & Travels</p>
 		<p id="two">Amazing Places On earth</p>
@@ -40,4 +40,4 @@ class Roadmap_more extends Component{
   }
  
 
-export default Roadmap_more;
+export default RoadmapMore;
