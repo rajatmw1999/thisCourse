@@ -1,8 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import FormControl from 'react-bootstrap/FormControl';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import './index.css';
 
 class Navsearch extends React.Component {
+
+    constructor(props) {
+        super(props);
+    
+        this.state = {
+          navExpanded: false
+        };
+      }
+    
+      setNavExpanded = (expanded) => {
+        this.setState({ navExpanded: expanded });
+      }
+    
+      setNavClose = () => {
+        this.setState({ navExpanded: false });
+      }
+
     
     
     render() {
@@ -10,44 +32,54 @@ class Navsearch extends React.Component {
       <div className="container">
           <div className="row">
               <div className="col-12">
-                  <nav className="navbar navbar-expand-md navbar-light">
+              <Navbar bg="light" expand="lg" className="navbar navbar-expand-md navbar-light" onToggle={this.setNavExpanded} expanded={this.state.navExpanded}>
+                    <Navbar.Brand href="#home">ThisCourse</Navbar.Brand>
+                    <Navbar.Toggle  className="navbar_navbar-toggler"  aria-controls="basic-navbar-nav" />
 
-                      <a className="navbar-brand" href="#" target="_blank">ThisCourse</a>
+                    <Navbar.Collapse id="basic-navbar-nav">
 
-                      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                          <span className="navbar-toggler-icon"></span>
-                      </button>
-                      
-                      <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                          <div className="main">
-                        <div className="form-group has-search">
-                            {/* <span className="fa fa-search form-control-feedback"></span> */}
-                            <input type="text" className="form-control" placeholder="Search" />
-                        </div>
-                      </div>
-        
-                        <ul className="navbar-nav ml-auto py-4 pt-5 py-md-0">
-                              <li className="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
-                                  <a className="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+                     
+                 <Nav classNameName="mr-auto" className="navbar-nav ml-auto py-md-0">
+                       <Form inline>
+                                <FormControl type="text" placeholder="Search" className="input_navsearch " />
+                                <span className="fa fa-lg fa-search form-control-feedback search_nav-search"></span>
+                            </Form>
+                            <li className="navbar_nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                              <Nav.Link onClick={this.setNavClose} className="navbar_nav-link dropdown-toggle">
+                                    Home
 
+                              
+                              </Nav.Link>
+                            </li>
+                              
+                              <li className="navbar_nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <Nav.Link onClick={this.setNavClose} className="navbar_nav-link dropdown-toggle">
+                                    Page 1
+                                </Nav.Link>
                               </li>
-                              <li className="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                  <a className="nav-link" href="#">Page 1</a>
+                              
+                              <li className="navbar_nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <Nav.Link to="#" onClick={this.setNavClose} className="navbar_nav-link dropdown-toggle">
+                                    Page 2
+                                </Nav.Link>
                               </li>
-                              <li className="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                  <a className="nav-link" href="#">Page 2</a>
+                              
+                              <li className="navbar_nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <Nav.Link onClick={this.setNavClose} className="navbar_nav-link dropdown-toggle">
+                                    Signup
+                                </Nav.Link>
                               </li>
 
-                              <li className="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                  <a className="nav-link" href="#">Signup</a>
+                              
+                              <li className="navbar_nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <Nav.Link onClick={this.setNavClose} className="navbar_nav-link dropdown-toggle">
+                                    Login
+                                </Nav.Link>
                               </li>
-                              <li className="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                  <a className="nav-link" href="#">Login</a>
-                              </li>
-                          </ul>
-                      </div>
+                      </Nav>
+                      </Navbar.Collapse>
 
-                  </nav>
+                  </Navbar>
               </div>
           </div>
       </div>
@@ -57,3 +89,5 @@ class Navsearch extends React.Component {
   }
   
   export default Navsearch;
+
+  
