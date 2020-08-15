@@ -7,7 +7,7 @@ class RoadmapMore extends Component{
 
     render() {
       return(
-    <div>
+    <div className="roadmapmore col-12">
         <div id="c">
 		<p id="one">Tours & Travels</p>
 		<p id="two">Amazing Places On earth</p>

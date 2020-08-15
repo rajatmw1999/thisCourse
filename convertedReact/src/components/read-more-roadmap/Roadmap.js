@@ -8,7 +8,7 @@ class Roadmap extends Component{
     render() {
       return(
     <div>
-        <div className="crayons-layout__content grid col-sm-12 col-md-11 col-lg-8 col-xl-7">     
+        <div className="crayons-layout__content grid col-sm-12 col-md-12 col-lg-4 col-xl-4">     
         <div className="more-articles crayons-card crayons-card--secondary">
   <h1 className="fs-4xl fw-bold mb-4">
     Read Next
