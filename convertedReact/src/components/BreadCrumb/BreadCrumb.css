@@ -4,7 +4,8 @@ body {
 }
 
 .breadcrumb {
-	float: left;
+	/* float: left; */
+	width: 50%;
 }
 
 .breadcrumb a {
