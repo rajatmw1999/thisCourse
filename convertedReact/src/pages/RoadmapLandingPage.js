@@ -4,7 +4,6 @@ import Aboutsection from "../components/about_section/Aboutsection";
 
 import RoadmapCard from '../components/roadmap-card/Roadmap_Card';
 import Footer from "../components/footer/index";
-import Navtabs from '../components/Nav-tabs/index';
 
 class RoadmapLandingPage extends Component {
     render() {
@@ -12,7 +11,7 @@ class RoadmapLandingPage extends Component {
             <div>
                 <Navbar />
                 <Aboutsection />
-                <Navtabs />
+
                 <RoadmapCard />
                 <RoadmapCard />
                 <RoadmapCard />

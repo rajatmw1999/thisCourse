@@ -31,8 +31,8 @@ import Search from './components/searchbar/Search';
 import Signup from './components/signup/signup';
 import SuggestionCarousel from './components/suggestion-carousel';
 import Timeline from './components/timeline';
-
-import RoadmapLandingPage  from './pages/RoadmapLandingPage';
+import ListingCoursesPage from "./pages/listingCourses/listingCourses";
+import CourseDetailPage from "./pages/courseDetail/courseDetail";
 
 function App() {
   return (
@@ -55,9 +55,8 @@ function App() {
         {/* <Signup /> */}
         {/* <SuggestionCarousel /> */}
         {/* <Timeline /> */}
-        <RoadmapLandingPage />
-       
-        
+        {/* <ListingCoursesPage /> */}
+        {/* <CourseDetailPage /> */}
         </div>
   );
 }

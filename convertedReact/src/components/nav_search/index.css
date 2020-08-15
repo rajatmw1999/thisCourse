@@ -192,12 +192,12 @@ body{
 .nav-item.active .nav-link{
 	color: #777 !important;
 }
-/* .nav-link {
+.nav-link {
 	position: relative;
 	padding: 5px 0 !important;
 	display: inline-block;
-} */
-/* .nav-item:after{
+}
+.nav-item:after{
 	position: absolute;
 	bottom: -5px;
 	left: 0;
@@ -207,7 +207,7 @@ body{
 	background-color: #8167a9;
 	opacity: 0;
     transition: all 200ms linear;
-} */
+}
 .nav-item:hover:after{
 	bottom: 0;
 	opacity: 1;
@@ -216,7 +216,7 @@ body{
 	opacity: 0;
 }
 .nav-item{
-	/* position: relative; */
+	position: relative;
     transition: all 200ms linear;
 }
 
