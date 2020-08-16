@@ -33,6 +33,9 @@ import SuggestionCarousel from './components/suggestion-carousel';
 import Timeline from './components/timeline';
 import ListingCoursesPage from "./pages/listingCourses/listingCourses";
 import CourseDetailPage from "./pages/courseDetail/courseDetail";
+import RoadmapLandingPage  from './pages/RoadmapLandingPage';
+import ParticularRoadmapPage  from './pages/ParticularRoadmapPage';
+import FilterBox from './components/FilterBox/index';
 
 function App() {
   return (
@@ -46,7 +49,8 @@ function App() {
         {/* <CardHackrio /> */}
         {/* <CourseDetail /> */}
         {/* <Footer /> */}
-        {/* <Navsearch /> */}
+       {/* <Navsearch /> */}
+       {/* <FilterBox /> */}
         {/* <Navbar /> */}
         {/* <OutermostCategory /> */}
         {/* <Roadmap /> */}
@@ -55,8 +59,10 @@ function App() {
         {/* <Signup /> */}
         {/* <SuggestionCarousel /> */}
         {/* <Timeline /> */}
-        {/* <ListingCoursesPage /> */}
-        {/* <CourseDetailPage /> */}
+        <ListingCoursesPage />
+        <CourseDetailPage />
+        <RoadmapLandingPage />
+        <ParticularRoadmapPage/>
         </div>
   );
 }
