@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+/* Design */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: white;
+}
+
+body {
+  color: white;
+  font-family: 'Quicksand', serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 0rem;
+}
+
+.main{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: left;
+    color:black;
+}
+
+img {
+  height: auto;
+  max-width: 50%;
+  vertical-align: middle;
+  border-radius:50%;
+}
+
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 3rem;
+  border:none;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border: none;
+  box-shadow: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 1rem;
+  color:black;
+}
+
+.card_title {
+    font-family: 'Quicksand', serif;
+  color: black;
+  text-align:center;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  color: black;
+  text-align:center;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+}
