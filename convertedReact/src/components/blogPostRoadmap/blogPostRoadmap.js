@@ -1,11 +1,12 @@
 import React, {Component} from "react";
 import "./blogPostRoadmap.css";
+import Timeline from '../timeline/index';
 
 class BlogPostRoadmap extends Component {
     render() {
         return (
             <div
-                className="crayons-layout__content grid col-sm-12 col-md-11 col-lg-8 col-xl-7">
+                className="blogpost crayons-layout__content grid col-sm-12 col-md-11 col-lg-8 col-xl-7">
                 <div class="article-wrapper">
 
                     <article
@@ -263,6 +264,7 @@ class BlogPostRoadmap extends Component {
                             <p>I created this list and am constantly updating it with new resources,
                                 information, and news.
                             </p>
+                            <Timeline />
                         </div>
 
                     </article>
