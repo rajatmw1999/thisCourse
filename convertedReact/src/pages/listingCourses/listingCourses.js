@@ -6,6 +6,7 @@ import AboutUs from "../../components/about_section/Aboutsection";
 import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 import Card from "../../components/cardComponent/cardComponent";
 import CardHackrio from "../../components/cardHackrio/cardHackrio";
+import FilterBox from "../../components/FilterBox/index";
 import Footer from "../../components/footer/index";
 
 class listingCourses extends Component{
@@ -21,10 +22,10 @@ class listingCourses extends Component{
                 <BreadCrumb />
                 <div className="container">
                     <div className="row">
-                        <div className="col-4 filter">
-                            FilterBox
+                        <div className="col-12 col-sm-4 filter">
+                            <FilterBox />
                         </div>
-                        <div className="col-8 cardRow">
+                        <div className="col-12 col-sm-8 cardRow">
                             {mainCards}
                         </div>
                     </div>
