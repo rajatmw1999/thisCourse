@@ -1,0 +1,135 @@
+:root{
+  --bg-clr: #382f60;
+  --card-bg-clr: #8274A6;
+  --card-clr-left: #57417F;
+  --card-clr-right: #645AA8;
+  --bg-clr-button: #8274A6;
+  --text-clr-light: #d3cedf;
+  --text-clr: #fff;
+}
+
+.aniket_numbers_section, .aniket_numbers_section::before, .aniket_numbers_section::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: var(--bg-clr);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#aniket_link{
+  font-size: 1.125rem;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  color: var(--text-clr);
+  margin: 2em auto;
+}
+
+#aniket_link:hover{
+  text-decoration: underline;
+}
+
+.aniket_container{
+  color: var(--text-clr);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aniket_card{
+  background: linear-gradient(to right, var(--card-clr-left), var(--card-clr-right));
+  margin: 1em 1em;
+  padding: 8em 8em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.aniket_type h1{
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+}
+
+.aniket_type p{
+  width: 45ch;
+  margin: 1em auto 2em;
+}
+
+.aniket_type button{
+  outline: none;
+  border: none;
+  background: var(--bg-clr-button);
+  color: var(--text-clr);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.2ch;
+  padding: 1em 2em;
+  border-radius: 2px;
+  transition: all 150ms;
+}
+
+.aniket_type button:hover{
+  transform: translateY(-10%);
+  background: #382f60;
+}
+
+.aniket_stats{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5em;
+  position: relative;
+}
+
+.aniket_stats span{
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.aniket_stats p{
+  font-size: 0.7rem;
+  margin-left: 1em;
+  text-transform: uppercase;
+  color: var(--text-clr-light);
+}
+
+.aniket_stats::before, .aniket_stats::after{
+  content: '';
+  position: absolute;
+}
+
+.aniket_stats::before{
+  top: 50%;
+  left: -5%;
+  width: 110%;
+  height: 1px;
+  background: var(--text-clr-light);
+}
+
+.aniket_stats::after{
+  left: 50%;
+  top: -5%;
+  width: 0.8px;
+  height: 110%;
+  background: var(--text-clr-light);
+}
+
+.aniket_card::before{
+  content: '';
+  position: absolute;
+  z-index: -10;
+  width: 90%;
+  height: 110%;
+  left: 5%;
+  right: 0;
+  top: -5%;
+  bottom: 0;
+  background: #443874;
+}
