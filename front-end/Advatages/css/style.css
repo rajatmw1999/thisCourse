@@ -1,0 +1,26 @@
+a:hover,
+a:active,
+a:focus {
+  color: #0a98c0;
+  outline: none;
+  text-decoration: none;
+}
+
+h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+/* shashikant-features Section
+--------------------------------*/
+
+#shashikant-features {
+  padding: 80px 0;
+}
+
+#shashikant-features h4 {
+  font-weight: 600;
+  font-size: 24px;
+}

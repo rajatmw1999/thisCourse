@@ -1,0 +1,68 @@
+a:hover,
+a:active,
+a:focus {
+  color: #0a98c0;
+  outline: none;
+  text-decoration: none;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+/*Call to Action*/
+
+#shashikant-call-to-action {
+  background: #2d2b46;
+  background-size: cover;
+  padding: 40px 0;
+}
+
+#shashikant-call-to-action .shashikant-cta-title {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+#shashikant-call-to-action .shashikant-cta-text {
+  color: #fff;
+}
+
+#shashikant-call-to-action .shashikant-cta-btn {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 26px;
+  border-radius: 3px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 3px solid #fff;
+  color: #fff;
+}
+
+#shashikant-call-to-action .shashikant-cta-btn:hover {
+  background: #1bb1dc;
+  border: 3px solid #1bb1dc;
+}
+
+@media (min-width: 991px) {
+  #shashikant-call-to-action .shashikant-cta-btn-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
