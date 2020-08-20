@@ -6,26 +6,27 @@ const mongoose = require('mongoose');
 
 //const youtubeSearchRoutes = require('./routes/youtube_search');
 //const udemySearchRoutes  = require('./routes/udemy_search');
-const harvardSearchRoutes = require('./routes/harvard');
-const edxSearchRoutes = require('./routes/edx');
-const courseraSearchRoutes = require('./routes/coursera');
-const udacitySearchRoutes = require('./routes/Udacity');
-const bitdegreeSearchRoutes = require('./routes/bitdegree');
-const khanAcademySearchRoutes = require('./routes/khanAcademy');
-const openYaleSearchRoutes = require('./routes/openYale');
-const digigradSearchRoutes = require('./routes/digigrad');
-const bluebrownSearchRoutes = require('./routes/3blue1brown');
-const apnacourseSearchRoutes = require('./routes/apnacourse');
-const edurekaSearchRoutes = require('./routes/edureka');
-const skillshareSearchRoutes = require('./routes/skillshare');
-const codeacademySearchRoutes = require('./routes/codeacademy');
-const alisonSearchRoutes = require('./routes/alison');
-const arcademicsSearchRoutes = require('./routes/arcademics');
-const harvardBusinessSearchRoutes = require('./routes/harvardBusiness');
-const verblingSearchRoutes = require('./routes/verbling');
+const harvardSearchRoutes = require('./api/routes/harvard');
+const edxSearchRoutes = require('./api/routes/edx');
+const courseraSearchRoutes = require('./api/routes/coursera');
+const udacitySearchRoutes = require('./api/routes/Udacity');
+const bitdegreeSearchRoutes = require('./api/routes/bitdegree');
+const khanAcademySearchRoutes = require('./api/routes/khanAcademy');
+const openYaleSearchRoutes = require('./api/routes/openYale');
+const digigradSearchRoutes = require('./api/routes/digigrad');
+const bluebrownSearchRoutes = require('./api/routes/3blue1brown');
+const apnacourseSearchRoutes = require('./api/routes/apnacourse');
+const edurekaSearchRoutes = require('./api/routes/edureka');
+const skillshareSearchRoutes = require('./api/routes/skillshare');
+const codeacademySearchRoutes = require('./api/routes/codeacademy');
+const alisonSearchRoutes = require('./api/routes/alison');
+const arcademicsSearchRoutes = require('./api/routes/arcademics');
+const harvardBusinessSearchRoutes = require('./api/routes/harvardBusiness');
+const verblingSearchRoutes = require('./api/routes/verbling');
 
-const marketingSearchRoutes = require('./routes/marketing');
-const testRoute = require('./routes/test');
+const marketingSearchRoutes = require('./api/routes/marketing');
+const testRoute = require('./api/routes/test');
+const masterRoute = require('./api/routes/master');
 
 
 //console.log('In routes file');
@@ -74,6 +75,7 @@ app.use('/verblingSearch',verblingSearchRoutes);
 
 app.use('/marketing',marketingSearchRoutes);
 app.use('/test',testRoute);
+app.use('/master',masterRoute);
 
 
 //console.log('aint here');
@@ -92,5 +94,8 @@ app.use((error, req, res, next) => {
 	});
 })
 
+app.listen(3000,() =>{
+	console.log("Server is running on port 3000");
+})
 
 module.exports = app;

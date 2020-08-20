@@ -6,11 +6,11 @@ const puppeteer = require('puppeteer-extra');
 const Search = require('../models/search');
 const Skill = require('../models/skills');
 
-module.exports = (req, res, next) => {	
+module.exports = (req, res, next,data1,category) => {	
 	try{
-					const query = new Search({
-						q: req.body.q
-					});
+					// const query = new Search({
+					// 	q: req.body.q
+					// });
 
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 puppeteer.use(StealthPlugin());
@@ -18,7 +18,7 @@ puppeteer.use(StealthPlugin());
 async function scrapeProduct(url) {
 	
 	puppeteer.launch({ headless: true }).then(async browser => {
-	console.log('Running tests..');
+	console.log('Running middleware inside Bitdegree');
 	const page = await browser.newPage();
 	await page.goto(url);
 	await page.waitFor(5000);
@@ -58,13 +58,13 @@ let data = await page.evaluate(() =>{
 });
 
 					const skill = new Skill({
-						nameSkill: query.q,
+						category:category,
+						nameSkill: data1,
 						Courses: [ {NameofCourse: data.courseName[1], Price: data.price[1],LinkToCourse: data.link[1],Instructor: data.instructorName[1]},
 									{NameofCourse: data.courseName[2], Price: data.price[2],LinkToCourse: data.link[2],Instructor: data.instructorName[2]},
 									{NameofCourse: data.courseName[3], Price: data.price[3],LinkToCourse: data.link[3],Instructor: data.instructorName[3]},
 									{NameofCourse: data.courseName[4], Price: data.price[4],LinkToCourse: data.link[4],Instructor: data.instructorName[4]},]
 					});
-					console.log('YYYYYYYYYYYYY');
 					skill
 					.save()
 					.then(result => {
@@ -77,12 +77,7 @@ let data = await page.evaluate(() =>{
 						})
 					});
 
-
-
-
-
-
-console.log(data);
+// console.log(data);
 							//res.status(200).json({
 								//	message:'Search Results from BitDegree !',
 								//	query: query.q,
@@ -94,7 +89,7 @@ console.log(data);
 }
 
 //var query = 'blockchain';
-scrapeProduct('https://www.bitdegree.org/search?q='+query.q);
+scrapeProduct('https://www.bitdegree.org/search?q='+data1);
 next();
 	}
 	catch(error){

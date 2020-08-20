@@ -6,19 +6,21 @@ const puppeteer = require('puppeteer');
 const Search = require('../models/search');
 const Skill = require('../models/skills');
 
-module.exports = (req, res, next) => {	
+module.exports = (req, res, next,data1,category) => {	
 	try{
-					const query = new Search({
-						q: req.body.q
-					});
-				console.log('Running Scrappers');
+					// const query = new Search({
+					// 	q: req.body.q
+					// });
+				console.log('Inside Middleware of Verbling');
 
-let verblingSearchQuery = query.q;
+// let verblingSearchQuery = query.q;
+let verblingSearchQuery = data1;
+
 (async () => {
   
   puppeteer.launch({ headless: true }).then(async browser => {
     
-    console.log('Running tests..');
+    console.log('Inside Middleware of Verbling');
     const page = await browser.newPage();
     await page.goto(`https://www.verbling.com/find-teachers/${verblingSearchQuery}?sort=magic`);
     await page.waitFor(10000);
@@ -52,13 +54,14 @@ let verblingSearchQuery = query.q;
     });
 	
 						const skill = new Skill({
-								nameSkill: query.q,
+                category:category,
+								nameSkill: data1,
 								Courses: [ { Price: data.price[1],Rating: data.rating[1],Instructor: data.instructorName[1]},
 									{Price: data.price[2],Rating: data.rating[2],Instructor: data.instructorName[2]},
 									{Price: data.price[3],Rating: data.rating[3],Instructor: data.instructorName[3]},
 									{Price: data.price[4],Rating: data.rating[4],Instructor: data.instructorName[4]},]
 							});
-							console.log('YYYYYYYYYYYYY');
+
 							skill
 							.save()
 							.then(result => {
@@ -73,7 +76,7 @@ let verblingSearchQuery = query.q;
 	
 	
 	
-    console.log("verblingResult",data);
+    // console.log("verblingResult",data);
 				
   });
   
@@ -83,7 +86,7 @@ next();
 	}
 	catch(error){
 		return res.status(401).json({
-			message: 'Authorizationss Udacity Failed'
+			message: 'Authorizations verbling Failed'
 		});
 	}
 	
