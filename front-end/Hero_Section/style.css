@@ -1,0 +1,36 @@
+.ANIKET_HEROSECTION {
+	background-image: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg);
+	background-size: cover;
+  	background-repeat: no-repeat;
+  	background-position: top;
+  	background-attachment: fixed;
+  	padding: 15% 30%;
+
+}
+
+
+.ANIKET_HEROSECTION_Head .ANIKET_HEROSECTION_green {
+	color: #45ff2f !important;
+}
+
+.ANIKET_HEROSECTION_Head .ANIKET_HEROSECTION_Headpart {
+	font-size:3.5rem !important;
+	color: #fff; 
+}
+
+.ANIKET_HEROSECTION_Head .ANIKET_HEROSECTION_Headpart2 {
+	color: #dcdcdc;
+	font-size: 1.3rem !important;
+}
+
+
+@media screen and (max-width: 600px) {
+	.ANIKET_HEROSECTION_button {
+		font-size: 0.5rem !important;
+	}
+
+	.ANIKET_HEROSECTION {
+		padding: 70% 0;	
+	}
+	
+}
