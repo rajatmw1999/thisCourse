@@ -295,8 +295,8 @@
   
   .icon {
     position: absolute;
-    top: 50%;
-    left: 17px;
+    top: 43%;
+    left: 23px;
     transform: translateY(-50%) scale(1.1);
     opacity: 0.5;
     z-index: 2;
@@ -589,7 +589,8 @@
   
   @media (max-width: 767px) {
     .desktop-search-bar {
-        display:none;
+        /* display:none; */
+        padding: 0 0px;
     }
   }
   
@@ -659,7 +660,7 @@
   
   
   
-  
+/*   
   
   a {
     background-color: transparent;
@@ -700,9 +701,9 @@
   
   input {
     line-height: normal;
-  }
+  } */
   
-  @media print {
+  /* @media print {
     *,:after,:before {
         color: #000!important;
         text-shadow: none!important;
@@ -793,7 +794,7 @@
   
   p {
     margin: 0 0 10px;
-  }
+  } */
   
   .text-center {
     text-align: center;

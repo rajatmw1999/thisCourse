@@ -6,15 +6,15 @@ import ScriptTag from 'react-script-tag';
 class CardHackrio extends Component{
     render(){
         return(
-            <div className="b">
+            <div className="b ">
                 <ScriptTag type="text/javascript" src="./index.js" />
             <div className="home--hero-header hero--header-new">
                 <div className="container">
-                    <div className="customcontainerstyle_cardhackrio">
+                    <div className="">
             <div className="row">
-                <div className="col-xs-12 text-center hero-header-container">
+                <div className="col-xs-12 text-center hero-header-container" style={{width: "100%"}}>
                     
-                    <div className="mobile-search-bar js-mobile-search-bar search-bar">
+                    {/* <div className="mobile-search-bar js-mobile-search-bar search-bar">
                         <div className="form-holder">
                             <div className="navbarSearch">
                                 <span className="twitter-typeahead" style={{position:"relative",display:"inline-block"}}>
@@ -26,7 +26,7 @@ class CardHackrio extends Component{
                                         autocomplete="off"
                                         spellcheck="false"
                                         dir="auto"
-                                        style={{"position":"relative","verticalAlign":"top"}}
+                                        style={{"position":"relative","verticalAlign":"top","display":"middle"}}
                                         id="myInput1" onkeyup="myFunction1()"
                                     />
                                    
@@ -40,7 +40,7 @@ class CardHackrio extends Component{
                             </div>
                             <img class="icon" src="https://hackr.io/assets/images/header-icons/search-header.svg" width="16" height="16" />
                         </div>
-                    </div>
+                    </div> */}
                     <div className="desktop-search-bar search-bar">
                         <div className="form-holder">
                             <div className="navbarSearch">
@@ -56,7 +56,7 @@ class CardHackrio extends Component{
        
         <div className="page--section paddingtop-sm marginbottom-lg margintop-md">
             <div className="container">
-                <div className="customcontainerstyle_cardhackrio">
+                <div className="">
                 <div className="row">
                     <div className="col-xs-12 no-paddingright-desktop">
                         <div className="page--body">

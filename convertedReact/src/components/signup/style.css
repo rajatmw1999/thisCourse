@@ -1,6 +1,6 @@
 body {font-family: 'Pangolin', cursive;}
 input[type=text], input[type=password] {
-  width: 75%;
+  width: 100%;
   padding: 15px;
   display: inline-block;
   border: none;

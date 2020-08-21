@@ -12,9 +12,9 @@ class RoadmapLandingPage extends Component {
                 <Navbar />
                 <Aboutsection />
                 <Navtabs />
+                {/* <RoadmapCard />
                 <RoadmapCard />
-                <RoadmapCard />
-                <RoadmapCard />
+                <RoadmapCard /> */}
                 <Footer />
 
             </div>

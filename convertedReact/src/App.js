@@ -34,7 +34,7 @@ import Timeline from './components/timeline';
 import ListingCoursesPage from "./pages/listingCourses/listingCourses";
 import CourseDetailPage from "./pages/courseDetail/courseDetail";
 import RoadmapLandingPage  from './pages/RoadmapLandingPage';
-import ParticularRoadmapPage  from './pages/ParticularRoadmapPage';
+import ParticularRoadmapPage  from './pages/ParticularRoadmapPage/ParticularRoadmapPage';
 import FilterBox from './components/FilterBox/index';
 
 function App() {

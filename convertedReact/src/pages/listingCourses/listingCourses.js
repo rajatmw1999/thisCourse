@@ -20,12 +20,12 @@ class listingCourses extends Component{
                 <Navbar />
                 <AboutUs />
                 <BreadCrumb />
-                <div className="container">
+                <div className="container col-12  col-xl-10">
                     <div className="row">
-                        <div className="col-12 col-sm-4 filter">
-                            <FilterBox />
-                        </div>
-                        <div className="col-12 col-sm-8 cardRow">
+                    <div className="col-12 col-lg-3 cardRow">
+                        <FilterBox />
+                    </div>
+                        <div className="col-12 col-lg-9 cardRow">
                             {mainCards}
                         </div>
                     </div>

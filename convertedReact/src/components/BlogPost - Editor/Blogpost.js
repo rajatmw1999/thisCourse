@@ -53,8 +53,11 @@ handleTags = event =>{
 
     render() {
       return(
+        <div className="container">
+
+
       <div class='row'>
-        <div class="hello col-6">
+        <div class="hello col-12 col-md-6">
 
           <div class="jumbotron" style={{width:'100%'}}>
             <h1>Blog Post Builder</h1>
@@ -96,6 +99,7 @@ handleTags = event =>{
     </div>
 
     </div> 
+    </div>
           
           
         );
