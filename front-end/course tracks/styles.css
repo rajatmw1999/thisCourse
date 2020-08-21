@@ -1,0 +1,53 @@
+.vanshika_bodyTag{
+  font-family: "Muli",sans-serif;
+}
+.career_heading{
+  font-weight: bolder;
+  margin-bottom: 2%;
+}
+
+.course-card .vanshika_icons{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.course-card{
+  background-color: #F9F9FB;
+  margin-right: 13px;
+  margin-top: 0;
+  padding:2%;
+  height:170px;
+  width: 170px;
+  border-style: none;
+  text-align: center;
+  font-family: "Muli",sans-serif;
+}
+.course-card:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-style: solid;
+  border-color: #F6440E;
+  background-color: white;
+}
+.ML{
+  width:65px;
+}
+.sub-heading{
+  margin: 3% 0;
+  color: #616161;
+}
+.grad-badge{
+  padding: 0.3% 0.6%;
+  vertical-align: middle;
+  background: linear-gradient(to right, #78AB14 , #1BACB1);
+  font-size: 1rem;
+  font-weight: 300;
+  color: white;
+  border-radius: 5px;
+}
+@media (min-width: 200px) {
+  .course-card{
+    margin-bottom: 2.5%;
+  }
+}
