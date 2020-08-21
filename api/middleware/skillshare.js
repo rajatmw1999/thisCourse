@@ -7,20 +7,21 @@ const Search = require('../models/search');
 
 const Skill = require('../models/skills');
 
-module.exports = (req, res, next) => {	
+module.exports = (req, res, next,data1,category) => {	
 	try{
-					const query = new Search({
-						q: req.body.q
-					});
+					// const query = new Search({
+					// 	q: req.body.q
+					// });
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 puppeteer.use(StealthPlugin());
 
-let skillShareSearchQuery = query.q;
+// let skillShareSearchQuery = query.q;
+let skillShareSearchQuery = data1;
 (async () => {
   
     puppeteer.launch({ headless: true }).then(async browser => {
       
-      console.log('Running tests..');
+      console.log('In middleware of SkillShare');
       const page = await browser.newPage();
       await page.goto(`https://www.skillshare.com/search?query=${skillShareSearchQuery}`);
 	  
@@ -41,7 +42,7 @@ let skillShareSearchQuery = query.q;
         for(let i=0;i<instructorName.length;i++){
           json.instructorName.push(JSON.stringify(instructorName[i].innerText));       
           json.courseName.push(JSON.stringify(courseName[i].innerText));
-          json.courseDuration.push(JSON.stringify(courseDuration[i].innerText));
+        //   json.courseDuration.push(JSON.stringify(courseDuration[i].innerText));
           json.studentsEnrolled.push(JSON.stringify(studentsEnrolled[i].innerText));
         }
         
@@ -49,13 +50,13 @@ let skillShareSearchQuery = query.q;
       });
 	  
 	  	const skill = new Skill({
-								nameSkill: query.q,
-								Courses: [ {NameofCourse: data.courseName[1],Instructor: data.instructorName[1], NumberofHours: data.courseDuration[1]}, 
-											{NameofCourse: data.courseName[2],Instructor: data.instructorName[1], NumberofHours: data.courseDuration[1]},
-											{NameofCourse: data.courseName[3],Instructor: data.instructorName[1], NumberofHours: data.courseDuration[1]},
-											{NameofCourse: data.courseName[4],Instructor: data.instructorName[1], NumberofHours: data.courseDuration[1]},]
+								category:category,
+								nameSkill: data1,
+								Courses: [ {NameofCourse: data.courseName[1],Instructor: data.instructorName[1]}, 
+											{NameofCourse: data.courseName[2],Instructor: data.instructorName[1]},
+											{NameofCourse: data.courseName[3],Instructor: data.instructorName[1]},
+											{NameofCourse: data.courseName[4],Instructor: data.instructorName[1]},]
 							});
-							console.log('YYYYYYYYYYYYY');
 							skill
 							.save()
 							.then(result => {
@@ -69,7 +70,7 @@ let skillShareSearchQuery = query.q;
 							});
 
 	  
-      console.log("skillShareResult",data);
+    //   console.log("skillShareResult",data);
 	 
 
     })
@@ -80,7 +81,7 @@ next();
 	}
 	catch(error){
 		return res.status(401).json({
-			message: 'Authorizationss Failed'
+			message: 'Authorizations Skill Share Failed'
 		});
 	}
 	
