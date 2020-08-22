@@ -19,7 +19,7 @@ class Navtabs extends React.Component {
       };
 
     render() {
-        return <div className="container col-12">
+        return <div className="">
         
                 <br/>
                 <br/>
@@ -33,7 +33,7 @@ class Navtabs extends React.Component {
                 </div> */}
                 {/* <div className="collapse navbar-collapse" id="myNavbar" > */}
 
-                    <Tabs defaultActiveKey="home" className="nav nav-pills navtabs_indi" >
+                    <Tabs  defaultActiveKey="home" className="nav nav-pills navtabs_indi" >
 
                         <Tab className="" eventKey="home" title="home">
                         
@@ -56,7 +56,7 @@ class Navtabs extends React.Component {
                             <h3>Menu 4</h3>
                         </Tab>
                         <Tab eventKey="menu4" title="Mobile">
-
+                            <h3>Menu 5</h3>
                         </Tab>
                         <Tab eventKey="menu5" title="Print">
 

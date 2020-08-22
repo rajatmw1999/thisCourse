@@ -6,17 +6,18 @@ const puppeteer = require('puppeteer');
 const Search = require('../models/search');
 const Skill = require('../models/skills');
 
-module.exports = (req, res, next) => {	
+module.exports = (req, res, next,data1,category) => {	
 	try{
 				
-					const query = new Search({
-						q: req.body.q
-					});
-				console.log('Running Scrappers');
+					// const query = new Search({
+					// 	q: req.body.q
+					// });
+				
 
 (async () =>{
     const extractNames= async (weburl) =>{
-        let page = await browser.newPage();
+		let page = await browser.newPage();
+		await page.setDefaultNavigationTimeout(0);
         await page.goto(weburl);
         
         const data = await page.evaluate(() =>{
@@ -35,24 +36,25 @@ module.exports = (req, res, next) => {
             
         });
         await page.close();
-        return data
+        return data;
     }
 
-    let browser= await puppeteer.launch(); 
+	let browser= await puppeteer.launch(); 
+	console.log('Inside Middleware of Arcademics');
 	//q = ""
     url='https://www.arcademics.com/games?subject=';
-    let weburl=url.concat(query.q);
+    let weburl=url.concat(data1);
 	
     data=await extractNames(weburl);
 		
 		const skill = new Skill({
-								nameSkill: query.q,
+								category : category,
+								nameSkill: data1,
 								Courses: [ {NameofCourse: data.courseName[1],LinkToCourse: data.link[1]},
 											{NameofCourse: data.courseName[2],LinkToCourse: data.link[2]},
 											{NameofCourse: data.courseName[3],LinkToCourse: data.link[3]},
 											{NameofCourse: data.courseName[4],LinkToCourse: data.link[4]},]
 							});
-							console.log('YYYYYYYYYYYYY');
 							skill
 							.save()
 							.then(result => {
@@ -65,14 +67,7 @@ module.exports = (req, res, next) => {
 								})
 							});
 		
-		
-		
-		
-		
-		
-		
-		
-    console.log(data);
+    // console.log(data);
 
     await browser.close();
 
@@ -80,7 +75,7 @@ module.exports = (req, res, next) => {
 	next();
  } catch(error){
 		return res.status(401).json({
-			message: 'Authorizationss Udacity Failed'
+			message: 'Authorizationss Arcademics Failed'
 		});
 	}
 

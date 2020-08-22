@@ -18,12 +18,21 @@ body{
 .card__inner * {
   box-sizing: border-box;
 }
-.card__image {
+.aradhna_card__image {
   display: block;
-  width: 260px;
+  width: 100%;
   margin-right: 30px;
 }
-.card__image img {
+
+@media (max-width:767px){
+  .aradhna_card__image {
+    display: none;
+    width: 100%;
+    margin-right: 30px;
+  }
+
+}
+.aradhna_card__image img {
   position: relative;
   display: block;
   left: 0;

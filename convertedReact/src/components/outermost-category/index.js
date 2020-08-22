@@ -6,7 +6,8 @@ class OutermostCategory extends React.Component {
     
     
     render() {
-      return <div class="container">
+      return <div className="outer-div-outermost">
+      <div class="container">
 
       <div class="row form-group grp1" >
          <div class="col-md-3 all">	<img src="https://img.icons8.com/color/48/000000/book-reading.png" class="cs"/><p class="para_1">Computer science</p>
@@ -34,6 +35,7 @@ class OutermostCategory extends React.Component {
         <div class="col-md-3 all"><img src="https://img.icons8.com/color/48/000000/heart-health.png"/><p class="para_12">Health and fitness</p></div>
 
       </div>
+</div>
 </div>
 ;
      

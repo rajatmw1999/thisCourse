@@ -16,7 +16,7 @@ class FilterBox extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className=" col-12">
             <div id="loginmodal" class="modal fade" role="dialog">
                 <div class="modal-dialog modal-lg" role="conent">
                     <div class="modal-content">
@@ -648,7 +648,7 @@ class FilterBox extends React.Component {
     <div class="container el:amx-Pb(3.75em)" data-v-7cc4708a="">
         
         <div class="row el:amx-Mt(1em)@>lg el:amx-Mb(2em)" data-v-7cc4708a=""> */}
-            <div class="el:amx-D(n)@<sm col-lg-12"  data-v-7cc4708a="">
+            <div class="el:amx-D(n)@<sm "  data-v-7cc4708a="">
                 <div class="filter-nav" data-v-7cc4708a="" style={{border :"1px solid #ccc"}}>
                     <div class="el:amx-D(F) el:amx-FxJc(sb)" data-v-7cc4708a="">
                         <h4 class="filter" data-v-7cc4708a="">Filters</h4>  
@@ -1152,7 +1152,7 @@ class FilterBox extends React.Component {
                 </div>
             </div>
            
-//         </div>
+         </div>
 //     </div>
 // </div>
 //             </div>

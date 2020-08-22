@@ -493,3 +493,8 @@ display: inline-block;
   }
 
 }
+
+
+.crayons-article__header__meta{
+  padding: 0 var(--article-padding-x) var(--article-padding-y) var(--article-padding-x);
+}

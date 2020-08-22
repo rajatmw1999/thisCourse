@@ -374,7 +374,7 @@ body.dark .navbar_navbar-toggler[aria-expanded="true"] .navbar_navbar-toggler-ic
 }
 
 input[type=text], input[type=password] {
-    width: 75%;
+    width: 100%;
     padding: 15px;
     display: inline-block;
     border: none;

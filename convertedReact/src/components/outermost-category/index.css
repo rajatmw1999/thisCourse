@@ -62,9 +62,9 @@
     top: -40px;
     left: 70px;
   }
-  /* .cs:hover{
+   .cs:hover{
     
-  } */
+  }
   
   .form-group {
     margin-bottom: 0px;
@@ -73,7 +73,7 @@
   
   @media(max-width:800px){
   .all{
-    padding-left: 40px;
+    padding-left: 10px;
   }}
   
 
@@ -85,4 +85,10 @@
 
   .grp2{
     padding-bottom:5px;
+  } 
+
+  .outer-div-outermost{
+    /* background: #f5f8fd; */
+    padding-top: 150px;
+    padding-bottom: 100px;
   }

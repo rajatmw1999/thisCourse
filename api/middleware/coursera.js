@@ -1,4 +1,3 @@
-//const jwt = require('jsonwebtoken');
 const express = require('express');
 const router = express.Router();
 //require('dotenv').config();
@@ -7,13 +6,9 @@ const puppeteer = require('puppeteer-extra');
 const Search = require('../models/search');
 const Skill = require('../models/skills');
 
-module.exports = (req, res, next) => {
+module.exports = (req, res, next,data1,category) => {
 	//const decoded = jwt.decode();
 	try{
-		//const token = req.headers.authorization.split(" ")[1];
-		//console.log(token);
-		//const decoded = jwt.verify(token, process.env.JWT_KEY);	
-		//req.userData = decoded;
 		const query = new Search({
 						q: req.body.q
 					});
@@ -23,8 +18,9 @@ puppeteer.use(StealthPlugin());
 async function scrapeProduct(url) {
 	
 	puppeteer.launch({ headless: true }).then(async browser => {
-	console.log('Running tests.. inside middleware');
+	console.log('Running tests.. inside middleware of Coursera');
 	const page = await browser.newPage();
+	await page.setDefaultNavigationTimeout(0);
 	await page.goto(url);
 	await page.waitFor(5000);
 	
@@ -61,13 +57,14 @@ let data = await page.evaluate(() =>{
 });
 
 				const skill = new Skill({
-						nameSkill: query.q,
+						category:category,
+						platform:'coursera',
+						nameSkill: data1,
 						Courses: [ {NameofCourse: data.courseName[1], Price: data.instructorName[1],LinkToCourse: data.link[1]},
 									{NameofCourse: data.courseName[2], Price: data.instructorName[2],LinkToCourse: data.link[2]},
 									{NameofCourse: data.courseName[3], Price: data.instructorName[3],LinkToCourse: data.link[3]},
 									{NameofCourse: data.courseName[4], Price: data.instructorName[4],LinkToCourse: data.link[4]},]
 					});
-					console.log('YYYYYYYYYYYYY');
 					skill
 					.save()
 					.then(result => {
@@ -80,11 +77,7 @@ let data = await page.evaluate(() =>{
 						})
 					});
 
-
-
-
-
-console.log(data);
+// console.log(data);
 browser.close();
 								//res.status(200).json({
 								//	message:'Search Results from HARVARD !',
@@ -96,7 +89,9 @@ browser.close();
 }
 
 //var query = 'web';
-scrapeProduct('https://www.coursera.org/search?query='+ query.q);		
+// scrapeProduct('https://www.coursera.org/search?query='+ query.q);		
+scrapeProduct('https://www.coursera.org/search?query='+ data1);
+// scrapeProduct('https://www.coursera.org/search?query='+ "android");
 		next();
 	}
 	catch(error){

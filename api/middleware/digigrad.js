@@ -6,11 +6,11 @@ const puppeteer = require('puppeteer-extra');
 const Search = require('../models/search');
 const Skill = require('../models/skills');
 
-module.exports = (req, res, next) => {	
+module.exports = (req, res, next,data1,category) => {	
 	try{
-					const query = new Search({
-						q: req.body.q
-					});
+					// const query = new Search({
+					// 	q: req.body.q
+					// });
 
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 puppeteer.use(StealthPlugin());
@@ -18,8 +18,9 @@ puppeteer.use(StealthPlugin());
 async function scrapeProduct(url) {
 	
 	puppeteer.launch({ headless: true }).then(async browser => {
-	console.log('Running middleware.. DIGIGRAD');
+	console.log('Running middleware inside DIGIGRAD');
 	const page = await browser.newPage();
+	await page.setDefaultNavigationTimeout(0);
 	await page.goto(url);
 	await page.waitFor(5000);
 	
@@ -56,13 +57,13 @@ let data = await page.evaluate(() =>{
 
 
 						  const skill = new Skill({
-								nameSkill: query.q,
+								category:category,
+								nameSkill: data1,
 								Courses: [ {NameofCourse: data.courseName[1],Instructor: data.instructorName[1], NumberofHours: data.date[1]}, 
 											{NameofCourse: data.courseName[2],Instructor: data.instructorName[1], NumberofHours: data.date[2]},
 											{NameofCourse: data.courseName[3],Instructor: data.instructorName[1], NumberofHours: data.date[3]},
 											{NameofCourse: data.courseName[4],Instructor: data.instructorName[1], NumberofHours: data.date[4]},]
 							});
-							console.log('YYYYYYYYYYYYY');
 							skill
 							.save()
 							.then(result => {
@@ -75,9 +76,7 @@ let data = await page.evaluate(() =>{
 								})
 							});
 
-
-
-console.log(data);
+// console.log(data);
 browser.close();
 		});
 		
@@ -90,7 +89,7 @@ next();
 	}
 	catch(error){
 		return res.status(401).json({
-			message: 'Authorizationss Udacity Failed'
+			message: 'Authorizations Digigrad Failed'
 		});
 	}
 	

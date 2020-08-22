@@ -21,7 +21,11 @@ const tagSchema = mongoose.Schema({
 
 
 const skillSchema = mongoose.Schema({
-	category: {type: mongoose.Types.ObjectId, ref:'Category'},
+	// category: {type: mongoose.Types.ObjectId, ref:'Category'},
+	platform:{
+		type:String
+	},
+	category : {type:String, required: true},
 	nameSkill: {type: String, required: true },
 	Courses: [courseSchema],
 	tags: [tagSchema]
