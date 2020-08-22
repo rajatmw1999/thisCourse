@@ -193,6 +193,17 @@
 
 .topic_custom_blogpostroadmap{
   color:black !important;
+  padding-top: 20px;
+}
+
+
+@media (max-width:500px){
+  .topic_custom_blogpostroadmap{
+    padding-top: 20px;
+    color:black !important;
+    font-size: 1.9rem;
+  }
+  
 }
 
 .crayons-article__cover__image {
