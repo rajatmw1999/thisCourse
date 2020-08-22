@@ -14,24 +14,12 @@
   box-sizing: border-box;
 }
 
-body{
+.aniket_rns_body{
   background: var(--bg-clr);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-#aniket_link{
-  font-size: 1.125rem;
-  letter-spacing: 0.1rem;
-  text-decoration: none;
-  color: var(--text-clr);
-  margin: 2em auto;
-}
-
-#aniket_link:hover{
-  text-decoration: underline;
 }
 
 .aniket_container{
@@ -53,7 +41,7 @@ body{
   position: relative;
 }
 
-.aniket_type h1{
+.aniket_type .aniket_rns_h1{
   letter-spacing: 0.1rem;
   font-weight: 600;
 }
@@ -63,7 +51,7 @@ body{
   margin: 1em auto 2em;
 }
 
-.aniket_type button{
+.aniket_type .aniket_rns_button{
   outline: none;
   border: none;
   background: var(--bg-clr-button);
@@ -76,7 +64,7 @@ body{
   transition: all 150ms;
 }
 
-.aniket_type button:hover{
+.aniket_type .aniket_rns_button:hover{
   transform: translateY(-10%);
   background: #382f60;
 }
@@ -88,7 +76,7 @@ body{
   position: relative;
 }
 
-.aniket_stats span{
+.aniket_stats .aniket_rns_span{
   font-weight: 600;
   font-size: 3rem;
 }
@@ -132,4 +120,15 @@ body{
   top: -5%;
   bottom: 0;
   background: #443874;
+}
+@media (min-width:200px) and (max-width:900px) {
+  .aniket_rns_body{
+    display: inline-block;
+  }
+  .aniket_card{
+    display: inline-block;
+  }
+  .aniket_type .aniket_rns_button{
+    margin-bottom: 10%;
+  }
 }
