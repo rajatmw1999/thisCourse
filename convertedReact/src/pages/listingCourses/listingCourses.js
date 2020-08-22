@@ -8,6 +8,7 @@ import Card from "../../components/cardComponent/cardComponent";
 import CardHackrio from "../../components/cardHackrio/cardHackrio";
 import FilterBox from "../../components/FilterBox/index";
 import Footer from "../../components/footer/index";
+import SuggestionCarousel from '../../components/suggestion-carousel';
 
 class listingCourses extends Component{
     render(){
@@ -30,7 +31,7 @@ class listingCourses extends Component{
                         </div>
                     </div>
                 </div>
-                <CardHackrio />
+                <SuggestionCarousel />
                 <Footer />
             </div>
         );

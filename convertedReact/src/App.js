@@ -36,6 +36,9 @@ import CourseDetailPage from "./pages/courseDetail/courseDetail";
 import RoadmapLandingPage  from './pages/RoadmapLandingPage';
 import ParticularRoadmapPage  from './pages/ParticularRoadmapPage/ParticularRoadmapPage';
 import FilterBox from './components/FilterBox/index';
+import ParticularOuterMostCategory from './pages/ParticularOuterMostCategory'
+import LandingPage from './pages/LandingPage/index'
+import Rapid_Hero from './pages/LandingPage/Rapid_Hero/Rapid_Hero'
 
 function App() {
   return (
@@ -59,10 +62,14 @@ function App() {
         {/* <Signup /> */}
         {/* <SuggestionCarousel /> */}
         {/* <Timeline /> */}
-        <ListingCoursesPage />
-        <CourseDetailPage />
-        <RoadmapLandingPage />
-        <ParticularRoadmapPage/>
+        {/* <ListingCoursesPage /> */}
+        {/* <CourseDetailPage /> */}
+        {/* <RoadmapLandingPage /> */}
+        {/* <ParticularRoadmapPage/> */}
+        {/* <ParticularOuterMostCategory /> */}
+        <LandingPage />
+        {/* <Rapid_Hero /> */}
+
         </div>
   );
 }
