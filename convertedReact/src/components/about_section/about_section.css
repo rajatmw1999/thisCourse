@@ -47,6 +47,8 @@
    color: white;
 }
 
+
+
 .tag {
     padding-left: 3%;
     font-size: 1.2em;
@@ -151,4 +153,10 @@ mark {
         padding-left: 0px;
         margin-left: 15px;
     }
+        .about_h1{
+            padding-left: 3%;
+            font-size: 2em;
+           color: white;
+        }
+    
 }

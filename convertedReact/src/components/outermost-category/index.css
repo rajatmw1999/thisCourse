@@ -1,51 +1,51 @@
-.para_1{
+.para_1{    display: contents;
     position: relative;
     top:-30px;
     left: 60px;
   }
-  .para_2{
+  .para_2{    display: contents;
     position: relative;
     top: -30px;
     left: 60px;
   }
-  .para_3{
+  .para_3{    display: contents;
     position: relative;
     top:-30px;
     left: 60px;
   }
-  .para_4{
+  .para_4{    display: contents;
     position: relative;
     top: -30px;
     left: 60px;
   }
-  .para_5{
+  .para_5{    display: contents;
     position: relative;
     top: -30px;
     left: 60px;
   }
   
-  .para_6{
+  .para_6{    display: contents;
     position: relative;
     top: -40px;
     left:60px;
   }
   
-  .para_7{
+  .para_7{    display: contents;
     position: relative;
     top: -40px;
     left: 60px;
   }
-  .para_8{
+  .para_8{    display: contents;
     position: relative;
     top: -40px;
     left: 60px;
   }
-  .para_9{
+  .para_9{    display: contents;
     position: relative;
     top: -40px;
     left: 60px;
   }
-  .para_10{
+  .para_10{    display: contents;
     position: relative;
     top: -40px;
     left: 60px;
@@ -57,10 +57,18 @@
     right: -60px;
     left: 60px;
   }
-  .para_12{
+  .para_12{    display: contents;
     position: relative;
     top: -40px;
     left: 70px;
+  }
+
+
+  .para{
+    text-align: left;
+    padding: 15px;
+    display: inline-block;
+
   }
    .cs:hover{
     
@@ -74,21 +82,55 @@
   @media(max-width:800px){
   .all{
     padding-left: 10px;
-  }}
+  }
+
+ 
+}
+
+.biggerheading{
+  
+  margin-bottom: 25px;
+}
+
+
   
 
 
-  .grp1{
+  /* .grp1{
     padding-bottom:18px;
+  } */
+
+
+
+
+  .outer-div-outermost{
+    text-align: center;
+    /* background: #f5f8fd; */
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media(max-width:500px){
+    .outer-div-outermost{
+      /* background: #f5f8fd; */
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  
+  
   }
 
 
-  .grp2{
-    padding-bottom:5px;
-  } 
+  @media(min-width:1000px){
+    .grp2{
+      padding-bottom:15px;
+    } 
+  
+  
+  }
 
-  .outer-div-outermost{
-    /* background: #f5f8fd; */
-    padding-top: 150px;
-    padding-bottom: 100px;
+
+  .aradhna_outimg{
+    height: 46px;
+    width: 76px;
   }

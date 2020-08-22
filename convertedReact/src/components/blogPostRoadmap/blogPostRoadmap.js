@@ -39,7 +39,7 @@ class BlogPostRoadmap extends Component {
                                         className="crayons-tag mr-1"
                                         href="/t/fullstackdeveloper"
                                         style={{
-                                        backgroundColor: "#64707d"
+                                        backgroundColor: "whitesmoke"
                                     }}>
                                         <span className="crayons-tag__prefix">#</span>fullstackdeveloper</a>
                                 </div>

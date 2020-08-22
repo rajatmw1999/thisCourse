@@ -46,7 +46,7 @@ class CardHackrio extends Component{
                             <div className="navbarSearch">
                                 <input id="myInput" onkeyup="myFunction()" className="form-control navbar-search-input js-navbar-search-input nav-input js-filter-topics" type="text" placeholder="Search for the language you want to learn: " />
                             </div>
-                            <img className="icon color-filter" src="https://hackr.io/assets/images/header-icons/search-header.svg" width="17" height="17" />
+                            <img className="card-hackrioicon color-filter" src="https://hackr.io/assets/images/header-icons/search-header.svg" width="17" height="17" />
                         </div>
                     </div>
                 </div>
