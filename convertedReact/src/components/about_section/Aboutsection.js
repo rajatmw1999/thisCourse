@@ -6,7 +6,7 @@ class Aboutsection extends React.Component {
     render() {
         return (
             <div className="bg">
-                <div>
+                <div className="container col-12 col-md-10">
                     <div id="text">
                         <h1 className="about_h1">ThisCourse</h1>
                         <p className="tag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>
@@ -24,7 +24,7 @@ class Aboutsection extends React.Component {
                         <hr/>
                     </div>
 
-                    <div className="bottom">
+                    {/* <div className="bottom">
                         <ul>
                             <li className="alpha">A</li>
                             <li className="alpha">B</li>
@@ -52,7 +52,7 @@ class Aboutsection extends React.Component {
                             <li className="alpha">Y</li>
                             <li className="alpha">Z</li>
                         </ul>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         );

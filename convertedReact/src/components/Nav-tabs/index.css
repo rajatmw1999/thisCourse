@@ -80,9 +80,18 @@ a{
 
 
   .navtabs_indi{
-      padding:20px;
+    padding-left: 16%;
       border-bottom: 0px solid #dee2e6;
       /* color: yellow; */
+  }
+
+  @media (max-width:1000px){
+    .navtabs_indi{
+      padding-left: 0%;
+        border-bottom: 0px solid #dee2e6;
+        /* color: yellow; */
+    }
+  
   }
 
   .nav-tabs{

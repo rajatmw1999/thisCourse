@@ -1,0 +1,9 @@
+.aradhna_particularroadmap{
+    max-width: 85%;
+}
+
+@media (max-width:1300px){
+.aradhna_particularroadmap{
+    max-width: 100%;
+    padding: 0;
+}}

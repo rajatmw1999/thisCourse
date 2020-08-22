@@ -26,10 +26,10 @@
 		font-size: 1em;
 		color:#fff;
 	}
-	img{
+	/* img{
 		display:block;
 		width: 75%;
-	}
+	} */
 	.half{
 		text-align: center;
 		display:block;
@@ -87,10 +87,10 @@
 		font-size: 1em;
 		color:#fff;
 	}
-	img{
+	/* img{
 		display:block;
 		width: 75%;
-	}
+	} */
 	.half{
 		text-align: center;
 		display:block;
@@ -150,10 +150,10 @@
 		font-size: 1em;
 		color:#fff;
 	}
-	img{
+	/* img{
 		display:inline;
 		width: 50%;
-	}
+	} */
 	.half{
 		text-align: center;
 		display:inline-block;
