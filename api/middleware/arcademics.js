@@ -16,7 +16,8 @@ module.exports = (req, res, next,data1,category) => {
 
 (async () =>{
     const extractNames= async (weburl) =>{
-        let page = await browser.newPage();
+		let page = await browser.newPage();
+		await page.setDefaultNavigationTimeout(0);
         await page.goto(weburl);
         
         const data = await page.evaluate(() =>{

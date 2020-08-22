@@ -19,6 +19,7 @@ module.exports = (req, res, next,data1,category) => {
 						puppeteer.launch({ headless: true }).then(async browser => {
 						console.log('Running middleware.. Udemy');
 						const page = await browser.newPage();
+						await page.setDefaultNavigationTimeout(0);
 						await page.goto(url);
 						await page.waitFor(5000);
 						
@@ -48,6 +49,7 @@ module.exports = (req, res, next,data1,category) => {
 							const skill = new Skill({
 								category:category,
 								nameSkill: data1,
+								platform:'udemy',
 								Courses: [ {NameofCourse: data.courseName[1],Instructor: data.instructorName[1],LinkToCourse: data.link[1]},
 											{NameofCourse: data.courseName[2], Instructor: data.instructorName[2],LinkToCourse: data.link[2]},
 											{NameofCourse: data.courseName[3], Instructor: data.instructorName[3],LinkToCourse: data.link[3]},

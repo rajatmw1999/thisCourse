@@ -22,6 +22,7 @@ let verblingSearchQuery = data1;
     
     console.log('Inside Middleware of Verbling');
     const page = await browser.newPage();
+    await page.setDefaultNavigationTimeout(0);
     await page.goto(`https://www.verbling.com/find-teachers/${verblingSearchQuery}?sort=magic`);
     await page.waitFor(10000);
     

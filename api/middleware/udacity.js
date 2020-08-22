@@ -18,6 +18,7 @@ async function scrapeProduct(url) {
 	puppeteer.launch({ headless: true }).then(async browser => {
 	console.log('Inside middleware of Udacity');
 	const page = await browser.newPage();
+	await page.setDefaultNavigationTimeout(0);
 	await page.goto(url);
 	await page.waitFor(5000);
 	
@@ -49,6 +50,7 @@ let data = await page.evaluate(() =>{
 
 				const skill = new Skill({
 						category:category,
+						platform:'udacity',
 						nameSkill: data1,
 						Courses: [ {NameofCourse: data.courseName[1], Price: data.price[1]},
 									{NameofCourse: data.courseName[2], Price: data.price[2]},

@@ -22,6 +22,7 @@ async function scrapeProduct(url) {
 	puppeteer.launch({ headless: true }).then(async browser => {
 	console.log('Running middleware inside KhanAcademy');
 	const page = await browser.newPage();
+	await page.setDefaultNavigationTimeout(0);
 	await page.goto(url);
 	await page.waitFor(5000);
 	

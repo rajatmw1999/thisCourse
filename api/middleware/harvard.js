@@ -21,6 +21,7 @@ module.exports = (req, res, next,data1,category) => {
 					puppeteer.launch({ headless: true }).then(async browser => {
 					console.log('Running middleware in Harvard');
 					const page = await browser.newPage();
+					await page.setDefaultNavigationTimeout(0);
 					await page.goto(url);
 					await page.waitFor(5000);
 					

@@ -21,6 +21,7 @@ let apnaCourseSearchQuery = data1;
       
       console.log('Running middleware.. apnacourse');
       const page = await browser.newPage();
+      await page.setDefaultNavigationTimeout(0);
       await page.goto(`https://www.apnacourse.com/all-online-courses/${apnaCourseSearchQuery}`);
       await page.waitFor(10000);
       

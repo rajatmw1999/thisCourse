@@ -22,7 +22,8 @@ let skillShareSearchQuery = data1;
     puppeteer.launch({ headless: true }).then(async browser => {
       
       console.log('In middleware of SkillShare');
-      const page = await browser.newPage();
+	  const page = await browser.newPage();
+	  await page.setDefaultNavigationTimeout(0);
       await page.goto(`https://www.skillshare.com/search?query=${skillShareSearchQuery}`);
 	  
       await page.waitFor(10000);
@@ -52,6 +53,7 @@ let skillShareSearchQuery = data1;
 	  	const skill = new Skill({
 								category:category,
 								nameSkill: data1,
+								platform:'skillshare',
 								Courses: [ {NameofCourse: data.courseName[1],Instructor: data.instructorName[1]}, 
 											{NameofCourse: data.courseName[2],Instructor: data.instructorName[1]},
 											{NameofCourse: data.courseName[3],Instructor: data.instructorName[1]},
