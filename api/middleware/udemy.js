@@ -19,7 +19,6 @@ module.exports = (req, res, next,data1,category) => {
 						puppeteer.launch({ headless: true }).then(async browser => {
 						console.log('Running middleware.. Udemy');
 						const page = await browser.newPage();
-						await page.setDefaultNavigationTimeout(0);
 						await page.goto(url);
 						await page.waitFor(5000);
 						
@@ -27,17 +26,21 @@ module.exports = (req, res, next,data1,category) => {
 						let data = await page.evaluate(() =>{	
 
 								var courseName = document.querySelectorAll('div[class="popover--popover--t3rNO popover--popover-hover--14ngr"] > a > div > div[class="course-card--main-content--3xEIw course-card--has-price-text--1Ikr0"] > div[class="udlite-focus-visible-target udlite-heading-md course-card--course-title--2f7tE"]');
-								// var price = document.querySelectorAll('div[class="price-text--price-part--Tu6MH course-card--discount-price--3TaBk udlite-heading-md"] >span:nth-child(2)>span');
+								var Price = document.querySelectorAll('div[class="price-text--price-part--Tu6MH course-card--discount-price--3TaBk udlite-heading-md"] >span:nth-child(2)');
 								var link = document.querySelectorAll('a[class="udlite-custom-focus-visible course-card-link--link--3uQEZ"]');
-                                var instructorName = document.querySelectorAll('div[class="udlite-text-xs course-card--instructor-list--lIA4f"]');
-                                // var imageLink = document.querySelectorAll('div[class="course-card--image-wrapper--Sxd90' > img);
-								var json = {courseName:[""],link:[""],instructorName:[""]};
+								var instructorName = document.querySelectorAll('div[class="udlite-text-xs course-card--instructor-list--lIA4f"]');
+								var Rating = document.querySelectorAll('span[class="udlite-heading-sm star-rating--rating-number--3lVe8"]');
+								var NumberofHours = document.querySelectorAll('div[class="udlite-text-xs course-card--row--1OMjg course-card--course-meta-info--1hHb3"]>span:nth-child(1)');
+                                // var imageLink = document.querySelectorAll('div[class="course-card--container--3w8Zm course-card--large--1BVxY"]>div[class="course-card--image-wrapper--Sxd90"] > img[src]');
+								var json = {courseName:[],link:[],instructorName:[],Price:[],Rating:[],NumberofHours:[]};
 								for(let i = 0; i < courseName.length; i++){
 									json.courseName.push(JSON.stringify(courseName[i].innerText));		
 									json.instructorName.push(JSON.stringify(instructorName[i].innerText));
                                     json.link.push(JSON.stringify(link[i].href));
-                                    // json.price.push(JSON.stringify(price[i].innerText));
-                                    // json.imageLink.push(JSON.stringify(imageLink[i].src));
+									json.Price.push(JSON.stringify(Price[i].innerText));
+									json.Rating.push(JSON.stringify(Rating[i].innerText));
+									json.NumberofHours.push(JSON.stringify(NumberofHours[i].innerText));
+                                    // json.imageLink.push(JSON.stringify(imageLink[i].getAttribute('src')));
 								}
 								
 									return json;
@@ -49,11 +52,11 @@ module.exports = (req, res, next,data1,category) => {
 							const skill = new Skill({
 								category:category,
 								nameSkill: data1,
-								platform:'udemy',
-								Courses: [ {NameofCourse: data.courseName[1],Instructor: data.instructorName[1],LinkToCourse: data.link[1]},
-											{NameofCourse: data.courseName[2], Instructor: data.instructorName[2],LinkToCourse: data.link[2]},
-											{NameofCourse: data.courseName[3], Instructor: data.instructorName[3],LinkToCourse: data.link[3]},
-											{NameofCourse: data.courseName[4], Instructor: data.instructorName[4],LinkToCourse: data.link[4]},]
+								Courses: [ 	{NameofCourse: data.courseName[1],Instructor: data.instructorName[0],LinkToCourse: data.link[0],Price:data.Price[0],Rating:data.Rating[0],NumberofHours:data.NumberofHours[0]},
+											{NameofCourse: data.courseName[1],Instructor: data.instructorName[1],LinkToCourse: data.link[1],Price:data.Price[1],Rating:data.Rating[1],NumberofHours:data.NumberofHours[1]},
+											{NameofCourse: data.courseName[2], Instructor: data.instructorName[2],LinkToCourse: data.link[2],Price:data.Price[2],Rating:data.Rating[2],NumberofHours:data.NumberofHours[2]},
+											{NameofCourse: data.courseName[3], Instructor: data.instructorName[3],LinkToCourse: data.link[3],Price:data.Price[3],Rating:data.Rating[3],NumberofHours:data.NumberofHours[3]},
+											{NameofCourse: data.courseName[4], Instructor: data.instructorName[4],LinkToCourse: data.link[4],Price:data.Price[4],Rating:data.Rating[4],NumberofHours:data.NumberofHours[4]}]
 							});
 							skill
 							.save()

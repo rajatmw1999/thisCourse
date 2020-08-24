@@ -37,18 +37,28 @@ let data = await page.evaluate(() =>{
 	var courseName = document.querySelectorAll('h2[class="color-primary-text card-title headline-1-text"]');
 	//var price = document.querySelectorAll('div[class="price-text--price-part--Tu6MH course-card--discount-price--3TaBk udlite-heading-md"] >span >span');
 	
-	var instructorName = document.querySelectorAll(".partner-name");
+	var instructorName = document.querySelectorAll('div[class="card-info vertical-box"]>div[class="partner-logo-wrapper horizontal-box"]>span[class="partner-name"]');
+	var instructorImgLink = document.querySelectorAll('div[class="card-info vertical-box"]>div[class="partner-logo-wrapper horizontal-box"]>img[src]');
 	var link = document.querySelectorAll('li[class="ais-InfiniteHits-item"] >div >a');
+	var rating = document.querySelectorAll('span[class="ratings-text"]');
+	var studentsEnrolled = document.querySelectorAll('span[class="enrollment-number"]');
+	var difficultyLevel = document.querySelectorAll('span[class="difficulty"]');
+	var UrlOfImageThumbnail = document.querySelectorAll('div[class="image-wrapper vertical-box"]>img[src]');
 	//
 	//var json = JSON.stringify(price);
 	//return courseName;
 	//,price:[""]  courseName 
-	var json = {courseName:["wow"],instructorName:["wow"],link:["wow"]};
+	var json = {courseName:[],instructorName:[],instructorImgLink:[],link:[],rating:[],studentsEnrolled:[],difficultyLevel:[],UrlOfImageThumbnail:[]};
 	for(let i = 0; i < courseName.length; i++){
 		json.courseName.push(JSON.stringify(courseName[i].innerText));
 		//json.price.push(JSON.stringify(price[i].innerText));
+		json.instructorImgLink.push(JSON.stringify(instructorImgLink[i].getAttribute('src')));
 		json.instructorName.push(JSON.stringify(instructorName[i].innerText));
 		json.link.push(JSON.stringify(link[i].href));
+		json.rating.push(JSON.stringify(rating[i].innerText));
+		json.studentsEnrolled.push(JSON.stringify(studentsEnrolled[i].innerText));
+		json.difficultyLevel.push(JSON.stringify(difficultyLevel[i].innerText));
+		json.UrlOfImageThumbnail.push(JSON.stringify(UrlOfImageThumbnail[i].getAttribute('src')));
 	}
 	
 		return json;
@@ -60,10 +70,11 @@ let data = await page.evaluate(() =>{
 						category:category,
 						platform:'coursera',
 						nameSkill: data1,
-						Courses: [ {NameofCourse: data.courseName[1], Price: data.instructorName[1],LinkToCourse: data.link[1]},
-									{NameofCourse: data.courseName[2], Price: data.instructorName[2],LinkToCourse: data.link[2]},
-									{NameofCourse: data.courseName[3], Price: data.instructorName[3],LinkToCourse: data.link[3]},
-									{NameofCourse: data.courseName[4], Price: data.instructorName[4],LinkToCourse: data.link[4]},]
+						Courses: [ 	{NameofCourse: data.courseName[0],UrlOfImageThumbnail:data.UrlOfImageThumbnail[0], Rating:data.rating[0],Instructor:data.instructorName[0],UrlOfImageThumbnail:data.instructorImgLink[0],LinkToCourse: data.link[0]},
+									{NameofCourse: data.courseName[1],UrlOfImageThumbnail:data.UrlOfImageThumbnail[1], Rating:data.rating[1],Instructor:data.instructorName[1],UrlOfImageThumbnail:data.instructorImgLink[1],LinkToCourse: data.link[1]},
+									{NameofCourse: data.courseName[2],UrlOfImageThumbnail:data.UrlOfImageThumbnail[2], Rating:data.rating[2],Instructor:data.instructorName[2],UrlOfImageThumbnail:data.instructorImgLink[2],LinkToCourse: data.link[2]},
+									{NameofCourse: data.courseName[3],UrlOfImageThumbnail:data.UrlOfImageThumbnail[3], Rating:data.rating[3],Instructor:data.instructorName[3],UrlOfImageThumbnail:data.instructorImgLink[3],LinkToCourse: data.link[3]},
+									{NameofCourse: data.courseName[4],UrlOfImageThumbnail:data.UrlOfImageThumbnail[4], Rating:data.rating[4],Instructor:data.instructorName[4],UrlOfImageThumbnail:data.instructorImgLink[4],LinkToCourse: data.link[4]},]
 					});
 					skill
 					.save()
@@ -76,6 +87,7 @@ let data = await page.evaluate(() =>{
 								error: err
 						})
 					});
+				
 
 // console.log(data);
 browser.close();
