@@ -1,0 +1,318 @@
+#course_card_br {
+		position: absolute;
+		width: 434px;
+		height: 531px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_12 {
+		fill: rgba(255,255,255,1);
+	}
+	.Rectangle_12 {
+		filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.161));
+		position: absolute;
+		overflow: visible;
+		width: 452px;
+		height: 549px;
+		left: 0px;
+		top: 0px;
+	}
+	#Rectangle_13 {
+		fill: rgba(255,255,255,1);
+	}
+	.Rectangle_13 {
+		filter: drop-shadow(-3px 3px 6px rgba(0, 0, 0, 0.161));
+		position: absolute;
+		overflow: visible;
+		width: 452px;
+		height: 549px;
+		left: 0px;
+		top: 0px;
+	}
+	#images_1 {
+		position: absolute;
+		width: 402px;
+		height: 232px;
+		left: 16px;
+		top: 16px;
+		overflow: visible;
+	}
+	#views {
+		position: absolute;
+		width: 83.745px;
+		height: 20.352px;
+		left: 173px;
+		top: 268px;
+		overflow: visible;
+	}
+	#ID28500 {
+		left: 35.746px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 49px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: rgba(111,111,111,1);
+	}
+	#Icon_feather-eye {
+		position: absolute;
+		width: 24.422px;
+		height: 17.762px;
+		left: 0px;
+		top: 2.59px;
+		overflow: visible;
+	}
+	#Path_3 {
+		fill: transparent;
+		stroke: rgba(55,52,235,1);
+		stroke-width: 3px;
+		stroke-linejoin: round;
+		stroke-linecap: round;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_3 {
+		overflow: visible;
+		position: absolute;
+		width: 27.422px;
+		height: 20.762px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_4 {
+		fill: transparent;
+		stroke: rgba(55,52,235,1);
+		stroke-width: 3px;
+		stroke-linejoin: round;
+		stroke-linecap: round;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_4 {
+		overflow: visible;
+		position: absolute;
+		width: 9.661px;
+		height: 9.661px;
+		left: 8.881px;
+		top: 5.55px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Line_3 {
+		fill: transparent;
+		stroke: rgba(111,111,111,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_3 {
+		overflow: visible;
+		position: absolute;
+		width: 391.495px;
+		height: 1px;
+		left: 21.832px;
+		top: 304.169px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#tuts {
+		position: absolute;
+		width: 108.8px;
+		height: 21px;
+		left: 21px;
+		top: 268px;
+		overflow: visible;
+	}
+	#ID8_tutorials {
+		left: 33.8px;
+		top: 1px;
+		position: absolute;
+		overflow: visible;
+		width: 76px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: rgba(111,111,111,1);
+		text-transform: capitalize;
+	}
+	#Icon_feather-book-open {
+		position: absolute;
+		width: 23.24px;
+		height: 20.916px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Path_7 {
+		fill: transparent;
+		stroke: rgba(255,123,123,1);
+		stroke-width: 3px;
+		stroke-linejoin: round;
+		stroke-linecap: round;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_7 {
+		overflow: visible;
+		position: absolute;
+		width: 14.62px;
+		height: 23.916px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_8 {
+		fill: transparent;
+		stroke: rgba(255,123,123,1);
+		stroke-width: 3px;
+		stroke-linejoin: round;
+		stroke-linecap: round;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_8 {
+		overflow: visible;
+		position: absolute;
+		width: 14.62px;
+		height: 23.916px;
+		left: 11.62px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#best_way_to_learn_pyhton_as_a_ {
+		left: 26px;
+		top: 313px;
+		position: absolute;
+		overflow: visible;
+		width: 361px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 23px;
+		color: rgba(17,17,17,1);
+		text-transform: capitalize;
+	}
+	#upvotes {
+		position: absolute;
+		width: 117.369px;
+		height: 20px;
+		left: 300px;
+		top: 268px;
+		overflow: visible;
+	}
+	#ID123_upvotes {
+		left: 34.369px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 84px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: rgba(111,111,111,1);
+		text-transform: capitalize;
+	}
+	#Icon_feather-trending-up {
+		position: absolute;
+		width: 24.418px;
+		height: 14.219px;
+		left: 0px;
+		top: 3px;
+		overflow: visible;
+	}
+	#Path_1 {
+		fill: transparent;
+		stroke: rgba(0,189,13,1);
+		stroke-width: 3px;
+		stroke-linejoin: round;
+		stroke-linecap: round;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_1 {
+		overflow: visible;
+		position: absolute;
+		width: 28.658px;
+		height: 18.459px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_2 {
+		fill: transparent;
+		stroke: rgba(0,189,13,1);
+		stroke-width: 3px;
+		stroke-linejoin: round;
+		stroke-linecap: round;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_2 {
+		overflow: visible;
+		position: absolute;
+		width: 10.769px;
+		height: 10.769px;
+		left: 16.648px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#tutor {
+		position: absolute;
+		width: 191px;
+		height: 63px;
+		left: 26px;
+		top: 448px;
+		overflow: visible;
+	}
+	#Ellipse_5 {
+		position: absolute;
+		width: 63px;
+		height: 63px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Charles_Jones {
+		left: 75px;
+		top: 21px;
+		position: absolute;
+		overflow: visible;
+		width: 117px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 16px;
+		color: rgba(111,111,111,1);
+	}
+	#you_will_learn_pyhton_programm {
+		left: 26px;
+		top: 387px;
+		position: absolute;
+		overflow: visible;
+		width: 355px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 15px;
+		color: rgba(74,74,74,1);
+		text-transform: capitalize;
+	}
