@@ -27,6 +27,7 @@ const verblingSearchRoutes = require('./routes/verbling');
 const marketingSearchRoutes = require('./routes/marketing');
 const testRoute = require('./routes/test');
 
+const Roadmap = require('./routes/roadmap');
 
 //console.log('In routes file');
 mongoose.connect('mongodb+srv://RamuKaka:Modi@123@cluster0.d9frx.mongodb.net/Skillunga?retryWrites=true&w=majority',
@@ -75,7 +76,7 @@ app.use('/verblingSearch',verblingSearchRoutes);
 app.use('/marketing',marketingSearchRoutes);
 app.use('/test',testRoute);
 
-
+app.use('/roadmap',Roadmap);
 //console.log('aint here');
 app.use((req, res, next) =>{
 	const error = new Error('Not found');
