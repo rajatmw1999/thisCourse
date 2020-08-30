@@ -1,11 +1,12 @@
 import React, {Component} from "react";
 import "./blogPostRoadmap.css";
+import Timeline from '../timeline/index';
 
 class BlogPostRoadmap extends Component {
     render() {
         return (
             <div
-                className="crayons-layout__content grid col-sm-12 col-md-11 col-lg-8 col-xl-7">
+                className="blogpost crayons-layout__content grid col-sm-12 col-md-11 col-lg-8 col-xl-8">
                 <div class="article-wrapper">
 
                     <article
@@ -27,7 +28,8 @@ class BlogPostRoadmap extends Component {
                                     alt="Cover image for How To Become A Full Stack Developer In 2020[ROADMAP]?"></img>
                             </div>
 
-                            <div Name="crayons-article__header__meta">
+                            <div Name="crayons-article__header__meta" style={{
+    padding: "0 var(--article-padding-x) var(--article-padding-y) var(--article-padding-x)"}}>
                                 <h1 className="topic_custom_blogpostroadmap mb-4 medium">
                                     How To Become A Full Stack Developer In 2020[ROADMAP]?
                                 </h1>
@@ -37,7 +39,7 @@ class BlogPostRoadmap extends Component {
                                         className="crayons-tag mr-1"
                                         href="/t/fullstackdeveloper"
                                         style={{
-                                        backgroundColor: "#64707d"
+                                        backgroundColor: "whitesmoke"
                                     }}>
                                         <span className="crayons-tag__prefix">#</span>fullstackdeveloper</a>
                                 </div>
@@ -86,6 +88,7 @@ class BlogPostRoadmap extends Component {
                             className="crayons-article__body text-styles spec__body"
                             data-article-id="139464"
                             id="article-body">
+                                 <Timeline />
                             <p>With technological advancements in the recent years, there comes the highest
                                 demand for full stack developers than ever before.</p>
 
@@ -263,6 +266,7 @@ class BlogPostRoadmap extends Component {
                             <p>I created this list and am constantly updating it with new resources,
                                 information, and news.
                             </p>
+                           
                         </div>
 
                     </article>

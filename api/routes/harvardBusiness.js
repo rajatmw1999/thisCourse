@@ -6,11 +6,11 @@ const mongoose = require('mongoose');
 const puppeteer = require('puppeteer');
 const Search = require('../models/search');
 
-router.get('/',(req, res, next) =>{
-					const query = new Search({
-						q: req.body.q
-					});
-				console.log('Running Scrappers');
+router.get('/',(req, res, next,data1) =>{
+				// 	const query = new Search({
+				// 		q: req.body.q
+				// 	});
+				// console.log('Running Scrappers');
 
 (async () =>{
     const extractNames= async (weburl) =>{
@@ -55,7 +55,7 @@ router.get('/',(req, res, next) =>{
 
     }
 
-    console.log(detail);
+    // console.log(detail);
 	
 			res.status(200).json({
 									message:'Search Results from Havard Business!',

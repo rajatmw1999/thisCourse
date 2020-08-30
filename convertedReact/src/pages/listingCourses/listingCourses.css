@@ -1,0 +1,23 @@
+.listinCourses{
+    display: block;
+}
+
+@media only screen and (max-width:768px){
+    .filter{
+        /* display: none; */
+    }
+    .cardRow{
+        margin: auto;
+    }
+}
+
+
+/* .aradhna_listingcoursescontainer{
+    max-width: 90%;
+}
+
+@media (max-width:900px){
+    .aradhna_listingcoursescontainer{
+        max-width: 100%;
+        padding: 0;
+    }} */

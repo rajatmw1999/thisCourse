@@ -1,6 +1,6 @@
 body {
     /* background-color: #e6e6e6 !important; */
-    padding: 2% 0% !important;
+    /* padding: 2% 0% !important; */
 }
 
 .more-articles {
@@ -44,7 +44,7 @@ body{
     font-family:var(--ff-default);
     padding:0;margin:0;
     overflow-y:auto;
-    padding-top:var(--header-height);
+    /* padding-top:var(--header-height); */
     display:flex;
     flex-direction:column}
     @media (max-width: 576px){
@@ -73,7 +73,7 @@ body{
 .more-articles .single-other-article .content{display:inline-block;width:calc(100% - 70px);padding-left:4px;min-height:60px;vertical-align:top;font-size:0.8em}
 @media screen and (min-width: 480px){
     .more-articles .single-other-article .content{font-size:1em}}
-    .more-articles .single-other-article h3{margin:0px 0px 5px;padding:0px;font-size:1.4em;font-weight:500;word-break:break-word;line-height: 2rem;}
+    .more-articles .single-other-article h3{margin:0px 0px 5px;padding:0px;font-size:1.6em;font-weight:500;word-break:break-word;line-height: 2rem;}
     .more-articles .single-other-article h4{    line-height: 2rem;margin:0;font-weight:500;color:#707070;color:var(--theme-secondary-color, #707070);font-size:1em}
 @media screen and (min-width: 480px){
     .more-articles .single-other-article h4{font-size:0.88em}}
@@ -99,4 +99,6 @@ body{
 }
 
 
-
+.aradhna_readmoreheading{
+    font-size: 1.5em;
+}

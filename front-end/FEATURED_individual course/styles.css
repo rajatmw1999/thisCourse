@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+}
+.vanshika_bodytag{
+  font-family: "Muli",sans-serif;
+}
+.course_heading{
+  font-weight: bolder;
+  margin-bottom: 2%;
+}
+.stats_image{
+  float: left;
+  width:50px;
+  vertical-align: middle;
+}
+.tab2, .tab1{
+  padding: 2%;
+}
+.list-group-item{
+  margin-right: 3%;
+  color: #616161;
+  background-color: #FCE8DB;
+  border-style: none;
+  border-radius: 8px;
+  padding: 5px;
+}
+.vanshika_tabTitle1,
+.vanshika_tabTitle2{
+  margin-bottom:0;
+  padding-left: 60px;
+  font-size: 1.22rem;
+  font-family: "Muli",sans-serif;
+  font-weight: 300;
+}
+.vanshika_tabTitle2{
+  margin-top: 2.5%;
+  margin-bottom: 3%;
+}
+.course-card .vanshika_icons{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.course-card{
+  background-color: #F9F9FB;
+  margin-right: 13px;
+  margin-top: 0;
+  padding:2%;
+  height:170px;
+  width: 170px;
+  border-style: none;
+  text-align: center;
+  font-family: "Muli";
+}
+.course-card:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-style: solid;
+  border-color: #F6440E;
+  background-color: white;
+}
+.ML{
+  width:65px;
+}
+.sub-heading{
+  margin: 3% 0;
+  color: #616161;
+}
+
+.list-group-horizontal{
+  flex-direction: row;
+}
+
+.list-group-item.active {
+  box-shadow: 12px 0 15px -4px #f1f1f1, -12px 0 8px -4px #f1f1f1;
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+.list-group-item.active>.bottomBar1{
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+    margin-top:1%;
+    padding-bottom: 1%;
+    background: linear-gradient(to right, #F6440E , #EE9C14);
+}
+.list-group-item.active>.bottomBar2{
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 8px;
+    margin-top:3%;
+    padding-bottom: 1%;
+    background: linear-gradient(to right, #F6440E , #EE9C14);
+}
+@media (min-width: 200px) {
+  .course-card{
+    margin-bottom: 2.5%;
+  }
+}

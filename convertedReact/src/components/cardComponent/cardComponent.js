@@ -4,15 +4,16 @@ import "./cardComponent.css";
 class CardComponent extends Component {
     render(){
         return(
-            <div className="card mb-3" style={{maxWidth:"900px"}}>
+            <div className="">
+            <div className="card mb-3" >
                 <div className="row no-gutters">
-            <div className="col-md-4 search-course-card--card--left-col--3kKip">
+            <div className="col-md-3 search-course-card--card--left-col--3kKip">
                 <a href="/the-web-developer-bootcamp/">
-                    <img className="card-img" src="https://udemy-images.udemy.com/course/304x171/625204_436a_2.jpg" alt="course image" width="304" height="171" className="card__image">    
+                    <img className="card-img" src="https://udemy-images.udemy.com/course/304x171/625204_436a_2.jpg" alt="course image" width="304" height="171" className="aradhna_card__image">    
                     </img>
                 </a>        
             </div>
-            <div className="col-md-8">
+            <div className="col-md-9">
                 <div className="card-body">
                     <div className="from">
                         <div>
@@ -50,7 +51,9 @@ class CardComponent extends Component {
                 </div>  
             </div>
         </div>
-            </div>
+        </div>
+        </div>
+          
         );
     }
 }
