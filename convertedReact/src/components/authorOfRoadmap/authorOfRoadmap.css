@@ -1,7 +1,7 @@
-body {
+/* body {
     font-family: Montserrat, sans-serif;
     background: #28223f;
-}
+} */
 /* .container {
     user-select: none;
     margin: 100px auto;
@@ -13,6 +13,7 @@ body {
     box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.75);
 } */
 .customstyle_author{
+    color: black;
     display: inline-block;
     user-select: none;
     margin: 0px auto;
@@ -46,6 +47,7 @@ body {
 }
 
 .about-profile {
+    font-family: Arial, Helvetica, sans-serif;
     margin-top: 8%;
     text-align: center;
     margin-right: 5%;
@@ -87,8 +89,9 @@ button {
 }
 
 .heading {
-    margin-left: 5%;
-    margin-bpttom: 0;
+    margin-left: 7%;
+    margin-bottom: 2%;
+    margin-top: 1.7%;
     text-align: left;
     color: #64707d;
     filer: contrast(4.83);
@@ -98,7 +101,7 @@ button {
 .answer {
     margin-top: 0;
     padding-top: 0;
-    margin-left: 5%;
+    margin-left: 7%;
     text-align: left;
     color: #202428;
     filer: contrast(14.94);
