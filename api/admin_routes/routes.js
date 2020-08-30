@@ -15,7 +15,7 @@ router.post("/addfeaturedcourses", (req, res, next) => {
     .then((result) => {
       console.log(result);
       res.status(201).json({
-        message: "Handling POST requests to /featuredcourses",
+        message: "Handling POST requests to /addfeaturedcourses",
         createdFeaturedCourse: result,
       });
     })
@@ -71,7 +71,7 @@ router.post("/featuredCoursesByCategorySkill", (req, res) => {
 });
 
 //Route 4
-router.delete("/deleteFeaturedCoursesById", (req, res, next) => {
+router.delete("/deleteFeaturedCoursesById", (req, res) => {
   const id = req.body.productId;
   FeaturedCourses.remove({ _id: id })
     .exec()
