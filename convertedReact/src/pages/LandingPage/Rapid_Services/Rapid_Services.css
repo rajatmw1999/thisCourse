@@ -78,14 +78,17 @@
   }
   
   #services .title .vanshika_anchor {
+    font-family: Arial, Helvetica, sans-serif;
     color: #111;
   }
   
   #services .box:hover .title .vanshika_anchor {
     color: #1bb1dc;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
   #services .description {
+    
     font-size: 14px;
     line-height: 28px;
     margin-bottom: 0;

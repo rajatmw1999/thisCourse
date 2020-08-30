@@ -38,7 +38,10 @@ import ParticularRoadmapPage  from './pages/ParticularRoadmapPage/ParticularRoad
 import FilterBox from './components/FilterBox/index';
 import ParticularOuterMostCategory from './pages/ParticularOuterMostCategory'
 import LandingPage from './pages/LandingPage/index'
-import Rapid_Hero from './pages/LandingPage/Rapid_Hero/Rapid_Hero'
+import Rapid_Hero from './pages/LandingPage/Rapid_Hero/Rapid_Hero';
+import FeaturedCourseTracks from "./components/FeaturedCourseTracks/index";
+import FeaturedCourseCard from './components/FeaturedCourseCard/FeaturedCourseCard';
+import FeaturedLandingPageSection from "./components/FeaturedLandingPageSection/FeaturedLandingPageSection";
 
 function App() {
   return (
@@ -62,11 +65,14 @@ function App() {
         {/* <Signup /> */}
         {/* <SuggestionCarousel /> */}
         {/* <Timeline /> */}
-        {/* <ListingCoursesPage /> */}
-        {/* <CourseDetailPage /> */}
-        {/* <RoadmapLandingPage /> */}
-        {/* <ParticularRoadmapPage/> */}
-        {/* <ParticularOuterMostCategory /> */}
+        <ListingCoursesPage />
+        <CourseDetailPage />
+        <RoadmapLandingPage />
+        <ParticularRoadmapPage/>
+        <ParticularOuterMostCategory />
+        <FeaturedLandingPageSection/>
+        {/* <FeaturedCourseCard /> */}
+        <FeaturedCourseTracks />
         <LandingPage />
         {/* <Rapid_Hero /> */}
 

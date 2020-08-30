@@ -32,7 +32,7 @@ class navbar extends React.Component {
       <div className="container">
           <div className="row">
               <div className="col-12">
-                  <Navbar bg="light" expand="lg" className="navbar navbar-expand-md navbar-light" onToggle={this.setNavExpanded} expanded={this.state.navExpanded}>
+                  <Navbar bg="light" expand="lg" className="navbar navbar-expand-md navbar-light aradhna_navbarfont" onToggle={this.setNavExpanded} expanded={this.state.navExpanded}>
 
                    
                       <Navbar.Brand href="#home">ThisCourse</Navbar.Brand>
@@ -41,24 +41,24 @@ class navbar extends React.Component {
                       <Navbar.Collapse id="basic-navbar-nav-search">
 
                       <Nav classNameName="mr-auto" className="navbar-nav ml-auto py-md-0">
-                        <li className="navbar_nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
-                            <Nav.Link className="navbar_nav-link dropdown-toggle" href="#home" onClick={this.setNavClose}>Home
+                        <li className="navbar_nav-item pl-4 pl-md-0 ml-0 ml-md-4 active ">
+                            <Nav.Link className="navbar_nav-link dropdown-toggle aradhna_navbarfont" href="#home" onClick={this.setNavClose}>Home
                             </Nav.Link>
                         </li>
                         <li className="navbar_nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                            <Nav.Link className="navbar_nav-link dropdown-toggle" href="#" onClick={this.setNavClose}>Page 1
+                            <Nav.Link className="navbar_nav-link dropdown-toggle aradhna_navbarfont" href="#" onClick={this.setNavClose}>Page 1
                             </Nav.Link>
                         </li>
                         <li className="navbar_nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                            <Nav.Link className="navbar_nav-link dropdown-toggle" href="#" onClick={this.setNavClose}>Page 2
+                            <Nav.Link className="navbar_nav-link dropdown-toggle aradhna_navbarfont" href="#" onClick={this.setNavClose}>Page 2
                             </Nav.Link>
                         </li>
                         <li className="navbar_nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                            <Nav.Link className="navbar_nav-link dropdown-toggle" href="#" onClick={this.setNavClose}>Signup
+                            <Nav.Link className="navbar_nav-link dropdown-toggle aradhna_navbarfont" href="#" onClick={this.setNavClose}>Signup
                             </Nav.Link>
                         </li>
                         <li className="navbar_nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                            <Nav.Link className="navbar_nav-link dropdown-toggle" href="#" onClick={this.setNavClose}>Login
+                            <Nav.Link className="navbar_nav-link dropdown-toggle aradhna_navbarfont" href="#" onClick={this.setNavClose}>Login
                             </Nav.Link>
                         </li>
                       </Nav>

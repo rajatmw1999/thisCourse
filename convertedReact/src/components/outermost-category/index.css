@@ -68,6 +68,10 @@
     text-align: left;
     padding: 15px;
     display: inline-block;
+    font-family:'Work Sans';
+    /* font-weight: 600; */
+    font-size: 15px;
+    color: black;
 
   }
    .cs:hover{
