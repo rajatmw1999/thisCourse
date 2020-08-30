@@ -30,6 +30,7 @@ module.exports = (req, res, next,data1,category) => {
 						var courseName = document.querySelectorAll('div[class="field field-name-title-qs"] >h3 >a');
 						var price = document.querySelectorAll('div[class="field field-name-price"] >span');
 						var link = document.querySelectorAll('div[class="field field-name-title-qs"] >h3 >a');
+						// var courseDescription = document.queryCommandState('div[class="field field-name-field-course-summary"]');
 						//
 						//var instructorName = document.querySelectorAll('');
 						//StanfordOnline
@@ -41,6 +42,7 @@ module.exports = (req, res, next,data1,category) => {
 							json.courseName.push(JSON.stringify(courseName[i].innerText));
 							json.price.push(JSON.stringify(price[i].innerText));
 							json.link.push(JSON.stringify(link[i].href));
+							// json.courseDescription.push(JSON.stringify(courseDescription[i].innerText));
 							//json.instructorName.push(JSON.stringify(instructorName[i].innerText));
 						}
 						
@@ -74,7 +76,7 @@ module.exports = (req, res, next,data1,category) => {
 					
 					
 
-					// console.log(data);
+					console.log(data);
 					browser.close();
 						
 						
