@@ -18,7 +18,7 @@ class Roadmap extends Component{
         <div className="picture">
           <img width="100" height="100" src="1.jpg"></img>
         </div><div className="content">
-          <h3 className="fs-2xl fw-bold mb-0">Understanding Non-Relational (NoSQL) Databases (Part 1)</h3>
+          <h3 className="aradhna_readmoreheading  fw-bold mb-0">Understanding Non-Relational (NoSQL) Databases (Part 1)</h3>
           <h4 className="fs-base">
             Nyasha (Nash) Nziramasanga - <time datetime="2020-07-17T06:11:03Z" title="Friday, 17 July, 2020, 11:41:03 am">Jul 17</time>
           </h4>
@@ -30,7 +30,7 @@ class Roadmap extends Component{
         <div className="picture">
           <img width="100" height="100" src="2.jpg"></img>
         </div><div className="content">
-          <h3 className="fs-2xl fw-bold mb-0">How to Build an Alexa Skill using Python</h3>
+          <h3 className="aradhna_readmoreheading  fw-bold mb-0">How to Build an Alexa Skill using Python</h3>
           <h4 className="fs-base">
             Trilochan Parida - <time datetime="2020-07-17T04:31:51Z" title="Friday, 17 July, 2020, 10:01:51 am">Jul 17</time>
           </h4>
@@ -42,7 +42,7 @@ class Roadmap extends Component{
         <div className="picture">
           <img width="100" height="100" src="3.jpg"></img>
         </div><div className="content">
-          <h3 className="fs-2xl fw-bold mb-0">Running DPDK Forwarding Applications with Pktgen-DPDK</h3>
+          <h3 className="aradhna_readmoreheading  fw-bold mb-0">Running DPDK Forwarding Applications with Pktgen-DPDK</h3>
           <h4 className="fs-base">
             Mishal Shah - <time datetime="2020-07-16T19:09:05Z" title="Friday, 17 July, 2020, 12:39:05 am">Jul 16</time>
           </h4>
@@ -55,7 +55,7 @@ class Roadmap extends Component{
           <img width="100" height="100"  src="4.jpg">
           </img>    
         </div><div className="content">
-          <h3 className="fs-2xl fw-bold mb-0">Creating a custom name for a foreign key</h3>
+          <h3 className="aradhna_readmoreheading  fw-bold mb-0">Creating a custom name for a foreign key</h3>
           <h4 className="fs-base">
             Joe Avila - <time datetime="2020-07-16T18:41:25Z" title="Friday, 17 July, 2020, 12:11:25 am">Jul 16</time>
           </h4>

@@ -1,9 +1,10 @@
 .CourseDetail {
   padding-top: 4em;
-  margin-left: 2em;
+  margin-left: 0em;
 }
 
 .new{
+  width: 100%;
   display: inline-block;
 }
 #pfortags{
@@ -42,7 +43,7 @@
 }
 
 #coursename{
-  padding-left: 2em; 
+  padding-left: 0em; 
 }
 
 .details{
@@ -61,7 +62,7 @@
   
 }
 .infodivdetail{
-  margin-left: 2em;
+  /* margin-left: 0em; */
 }
 
 .small{
@@ -72,7 +73,7 @@
 .h2bold{
   color:black;
   font-weight: bold;
-  padding-top: 1.72em;
+  padding-top: 0em;
   padding-bottom: 0;
   margin-bottom: 0;
   
@@ -81,5 +82,20 @@
 }
 
 .gotocourse{
-  width:70%;
+  width:100%;
+  display: block;
+  width: 100%;
+  text-align: center;
 }
+
+.aradhna_rightshift{
+  float: right;
+}
+
+@media (max-width:750px){
+  .aradhna_rightshift{
+    margin-bottom: -43px;
+    float: left;
+    margin-top: 21px;
+}
+  }

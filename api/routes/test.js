@@ -4,13 +4,11 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const puppeteer = require('puppeteer-extra');
 const Search = require('../models/search');
-const coursera = require('./coursera');
-const Udacity = require('./Udacity');
-const checkAuth = require('../middleware/coursera');
+const coursera = require('../middleware/coursera');
 const udacity = require('../middleware/udacity');
 
 //
-router.get('/',checkAuth,udacity,(req, res, next) =>{
+router.get('/',udacity,(req, res, next) =>{
 					const query = new Search({
 						q: req.body.q
 					});

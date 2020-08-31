@@ -34,8 +34,14 @@ import Timeline from './components/timeline';
 import ListingCoursesPage from "./pages/listingCourses/listingCourses";
 import CourseDetailPage from "./pages/courseDetail/courseDetail";
 import RoadmapLandingPage  from './pages/RoadmapLandingPage';
-import ParticularRoadmapPage  from './pages/ParticularRoadmapPage';
+import ParticularRoadmapPage  from './pages/ParticularRoadmapPage/ParticularRoadmapPage';
 import FilterBox from './components/FilterBox/index';
+import ParticularOuterMostCategory from './pages/ParticularOuterMostCategory'
+import LandingPage from './pages/LandingPage/index'
+import Rapid_Hero from './pages/LandingPage/Rapid_Hero/Rapid_Hero';
+import FeaturedCourseTracks from "./components/FeaturedCourseTracks/index";
+import FeaturedCourseCard from './components/FeaturedCourseCard/FeaturedCourseCard';
+import FeaturedLandingPageSection from "./components/FeaturedLandingPageSection/FeaturedLandingPageSection";
 
 function App() {
   return (
@@ -63,6 +69,13 @@ function App() {
         <CourseDetailPage />
         <RoadmapLandingPage />
         <ParticularRoadmapPage/>
+        <ParticularOuterMostCategory />
+        <FeaturedLandingPageSection/>
+        {/* <FeaturedCourseCard /> */}
+        <FeaturedCourseTracks />
+        <LandingPage />
+        {/* <Rapid_Hero /> */}
+
         </div>
   );
 }

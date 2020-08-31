@@ -6,11 +6,11 @@ const puppeteer = require('puppeteer-extra');
 const Search = require('../models/search');
 const Skill = require('../models/skills');
 
-module.exports = (req, res, next) => {	
+module.exports = (req, res, next,data1,category) => {	
 	try{
-					const query = new Search({
-						q: req.body.q
-					});
+					// const query = new Search({
+					// 	q: req.body.q
+					// });
 
 
 
@@ -20,8 +20,9 @@ puppeteer.use(StealthPlugin());
 async function scrapeProduct(url) {
 	
 	puppeteer.launch({ headless: true }).then(async browser => {
-	console.log('Running middleware.. KhanAcademy');
+	console.log('Running middleware inside KhanAcademy');
 	const page = await browser.newPage();
+	await page.setDefaultNavigationTimeout(0);
 	await page.goto(url);
 	await page.waitFor(5000);
 	
@@ -36,18 +37,22 @@ let data = await page.evaluate(() =>{
 	// });
 	var courseName = document.querySelectorAll('div[class="gs-title"] >a');
 	//var price = document.querySelectorAll('div[class="field field-name-price"] >span');
+	var courseDescription = document.querySelectorAll('div[class="gs-bidi-start-align gs-snippet"]');
 	var link = document.querySelectorAll('div[class="gs-title"] >a');
+	// var UrlOfImageThumbnail = document.querySelectorAll('div[class="gsc-table-cell-thumbnail gsc-thumbnail"]>div[class="gs-image-box gs-web-image-box gs-web-image-box-landscape"]>a[class="gs-image"]>img[src]');
 	//
 	//var instructorName = document.querySelectorAll('');
 	//StanfordOnline
 	//var json = JSON.stringify(price);
 	//return courseName;
 	//,instructorName:[""]  courseName ,price:[""]
-	var json = {courseName:[],link:[]};
+	var json = {courseName:[],link:[],courseDescription:[]};
 	for(let i = 0; i < courseName.length; i++){
 		json.courseName.push(JSON.stringify(courseName[i].innerText));
 		//json.price.push(JSON.stringify(price[i].innerText));
 		json.link.push(JSON.stringify(link[i].href));
+		json.courseDescription.push(JSON.stringify(courseDescription[i].innerText));
+		// json.UrlOfImageThumbnail.push(JSON.stringify(UrlOfImageThumbnail[i].getAttribute('src')));
 		//json.instructorName.push(JSON.stringify(instructorName[i].innerText));
 	}
 	
@@ -57,25 +62,26 @@ let data = await page.evaluate(() =>{
 });
 
 
-			const skill = new Skill({
-								nameSkill: query.q,
-								Courses: [ {NameofCourse: data.courseName[1],LinkToCourse: data.link[1]},
-											{NameofCourse: data.courseName[2],LinkToCourse: data.link[2]},
-											{NameofCourse: data.courseName[3],LinkToCourse: data.link[3]},
-											{NameofCourse: data.courseName[4],LinkToCourse: data.link[4]},]
-							});
-							console.log('YYYYYYYYYYYYY');
-							skill
-							.save()
-							.then(result => {
-								console.log(result);
-							})
-							.catch(err => {
-								console.log(err);
-								res.status(500).json({
-										error: err
-								})
-							});
+			// const skill = new Skill({
+			// 					category:category,
+			// 					nameSkill: data1,
+			// 					Courses: [	{NameofCourse: data.courseName[0],CourseDescription:data.courseDescription[0],LinkToCourse: data.link[0]},
+			// 								 {NameofCourse: data.courseName[1],CourseDescription:data.courseDescription[1],LinkToCourse: data.link[1]},
+			// 								{NameofCourse: data.courseName[2],CourseDescription:data.courseDescription[2],LinkToCourse: data.link[2]},
+			// 								{NameofCourse: data.courseName[3],CourseDescription:data.courseDescription[3],LinkToCourse: data.link[3]},
+			// 								{NameofCourse: data.courseName[4],CourseDescription:data.courseDescription[4],LinkToCourse: data.link[4]},]
+			// 				});
+			// 				skill
+			// 				.save()
+			// 				.then(result => {
+			// 					console.log(result);
+			// 				})
+			// 				.catch(err => {
+			// 					console.log(err);
+			// 					res.status(500).json({
+			// 							error: err
+			// 					})
+			// 				});
 
 
 
@@ -83,17 +89,16 @@ let data = await page.evaluate(() =>{
 console.log(data);
 			browser.close();
 		});
-		
-		//browser.close();
+
 }
 
 //var query = 'science';
-scrapeProduct('https://www.khanacademy.org/search?search_again=1&page_search_query='+query.q);	
+scrapeProduct('https://www.khanacademy.org/search?search_again=1&page_search_query='+data1);	
 next();
 	}
 	catch(error){
 		return res.status(401).json({
-			message: 'Authorizationss Udacity Failed'
+			message: 'Authorizations KhanAcademy Failed'
 		});
 	}
 	

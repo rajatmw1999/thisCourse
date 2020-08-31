@@ -8,6 +8,7 @@ import Card from "../../components/cardComponent/cardComponent";
 import CardHackrio from "../../components/cardHackrio/cardHackrio";
 import FilterBox from "../../components/FilterBox/index";
 import Footer from "../../components/footer/index";
+import SuggestionCarousel from '../../components/suggestion-carousel';
 
 class listingCourses extends Component{
     render(){
@@ -20,17 +21,17 @@ class listingCourses extends Component{
                 <Navbar />
                 <AboutUs />
                 <BreadCrumb />
-                <div className="container">
+                <div className="container col-12  col-xl-10">
                     <div className="row">
-                        <div className="col-12 col-sm-4 filter">
-                            <FilterBox />
-                        </div>
-                        <div className="col-12 col-sm-8 cardRow">
+                    <div className="col-12 col-lg-3 cardRow">
+                        <FilterBox />
+                    </div>
+                        <div className="col-12 col-lg-9 cardRow">
                             {mainCards}
                         </div>
                     </div>
                 </div>
-                <CardHackrio />
+                <SuggestionCarousel />
                 <Footer />
             </div>
         );

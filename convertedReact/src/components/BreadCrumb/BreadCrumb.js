@@ -4,25 +4,22 @@ import "./BreadCrumb.css";
 class BreadCrumb extends Component {
     render() {
         return (
-            <div className="breadcrumb">
-                <a href="#">
-                    <span>Art & Design</span>
-                </a>
-                <span>|</span>
-                <a href="#">
-                    <span>Marketing</span>
-                </a>
-                <span>|</span>
-                <a href="#">
-                    <span>Personal Development</span>
-                </a>
-                <span>|</span>
-                <a href="#">
-                    <span>Computer Science</span>
-                </a>
-                <span>></span>
-                <span>Adobe Premiere Pro</span>
-            </div>
+          
+        
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+            
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Personal Development</a></li>
+                <li class="breadcrumb-item"><a href="#">Computer Science</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Adobe Premiere Pro</li>
+                
+            </ol> 
+        </nav>
+   
+         
+          
+      
         );
     }
 }

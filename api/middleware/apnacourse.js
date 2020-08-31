@@ -6,20 +6,22 @@ const puppeteer = require('puppeteer-extra');
 const Search = require('../models/search');
 const Skill = require('../models/skills');
 
-module.exports = (req, res, next) => {	
+module.exports = (req, res, next,data1,category) => {	
 	try{
-					const query = new Search({
-						q: req.body.q
-					});
+					// const query = new Search({
+					// 	q: req.body.q
+					// });
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 puppeteer.use(StealthPlugin());
-let apnaCourseSearchQuery = query.q;
+// let apnaCourseSearchQuery = query.q;
+let apnaCourseSearchQuery = data1;
 (async () => {
   
     puppeteer.launch({ headless: true }).then(async browser => {
       
       console.log('Running middleware.. apnacourse');
       const page = await browser.newPage();
+      await page.setDefaultNavigationTimeout(0);
       await page.goto(`https://www.apnacourse.com/all-online-courses/${apnaCourseSearchQuery}`);
       await page.waitFor(10000);
       
@@ -49,15 +51,15 @@ let apnaCourseSearchQuery = query.q;
         }
          return json;
       });
-	  console.log('OK');
+	  // console.log('OK');
 	  const skill = new Skill({
-								nameSkill: query.q,
+                category:category,
+								nameSkill: data1,
 								Courses: [ {NameofCourse: data.courseName[1],LinkToCourse: data.instructorImageLink[1]},
 											{NameofCourse: data.courseName[2],LinkToCourse: data.instructorImageLink[2]},
 											{NameofCourse: data.courseName[3],LinkToCourse: data.instructorImageLink[3]},
 											{NameofCourse: data.courseName[4],LinkToCourse: data.instructorImageLink[4]},]
 							});
-							console.log('YYYYYYYYYYYYY');
 							skill
 							.save()
 							.then(result => {
@@ -70,11 +72,7 @@ let apnaCourseSearchQuery = query.q;
 								})
 							});
 	  
-	  
-	  
-	  
-	  
-      console.log("apnaCourseResult",data);
+      // console.log("apnaCourseResult",data);
 	  browser.close();
 	  
     })

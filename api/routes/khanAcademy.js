@@ -4,11 +4,12 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const puppeteer = require('puppeteer-extra');
 const Search = require('../models/search');
+const Skill = require("../models/skills");
 
-router.get('/',(req, res, next) =>{
-					const query = new Search({
-						q: req.body.q
-					});
+router.get('/',(req, res, next,data1) =>{
+					// const query = new Search({
+					// 	q: req.body.q
+					// });
 
 
 
@@ -18,7 +19,7 @@ puppeteer.use(StealthPlugin());
 async function scrapeProduct(url) {
 	
 	puppeteer.launch({ headless: true }).then(async browser => {
-	console.log('Running tests..');
+	console.log('Inside Middleware of KhanAcademy');
 	const page = await browser.newPage();
 	await page.goto(url);
 	await page.waitFor(5000);
@@ -54,7 +55,27 @@ let data = await page.evaluate(() =>{
 	
 });
 
-console.log(data);
+const skill = new Skill({
+	nameSkill: data1,
+	Courses: [ {NameofCourse: data.courseName[1], Price: data.price[1],LinkToCourse: data.link[1]},
+				{NameofCourse: data.courseName[2], Price: data.price[2],LinkToCourse: data.link[2]},
+				{NameofCourse: data.courseName[3], Price: data.price[3],LinkToCourse: data.link[3]},
+				{NameofCourse: data.courseName[4], Price: data.price[4],LinkToCourse: data.link[4]},]
+});
+
+skill
+.save()
+.then(result => {
+	console.log("result");
+})
+.catch(err => {
+	console.log(err);
+	res.status(500).json({
+			error: err
+	})
+}); 
+
+// console.log(data);
 								res.status(200).json({
 									message:'Search Results from Khan Academy!',
 									query: query.q,
@@ -62,11 +83,11 @@ console.log(data);
 								});	
 		});
 		
-		//browser.close();
+		browser.close();
 }
 
 //var query = 'science';
-scrapeProduct('https://www.khanacademy.org/search?search_again=1&page_search_query='+query.q);	
+scrapeProduct('https://www.khanacademy.org/search?search_again=1&page_search_query='+data1);	
 
 	
 });
