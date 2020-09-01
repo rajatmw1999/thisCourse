@@ -22,12 +22,12 @@ const alisonSearchRoutes = require("./api/routes/alison");
 const arcademicsSearchRoutes = require("./api/routes/arcademics");
 const harvardBusinessSearchRoutes = require("./api/routes/harvardBusiness");
 const verblingSearchRoutes = require("./api/routes/verbling");
-
+const Roadmap = require('./api/routes/roadmap');
 const marketingSearchRoutes = require("./api/routes/marketing");
 const testRoute = require("./api/routes/test");
 const masterRoute = require("./api/routes/master");
 const dataRoutes = require("./api/data_routes/index");
-
+const searrch = require('./api/routes/search');
 //console.log('In routes file');
 mongoose.connect(
   "mongodb+srv://RamuKaka:Modi@123@cluster0.d9frx.mongodb.net/Skillunga?retryWrites=true&w=majority",
@@ -69,12 +69,12 @@ app.use("/alisonSearch", alisonSearchRoutes);
 app.use("/arcademicsSearch", arcademicsSearchRoutes);
 app.use("/harvardBusinessSearch", harvardBusinessSearchRoutes);
 app.use("/verblingSearch", verblingSearchRoutes);
-
+app.use('/roadmap',Roadmap);
 app.use("/marketing", marketingSearchRoutes);
 app.use("/test", testRoute);
 app.use("/master", masterRoute);
 app.use("/data", dataRoutes);
-
+app.use('/search',searrch);
 //console.log('aint here');
 app.use((req, res, next) => {
   const error = new Error("Not found");
