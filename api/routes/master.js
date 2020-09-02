@@ -25,6 +25,44 @@ const verbling = require('../middleware/verbling');
 
 
 
+//List of Skills not working
+
+					// coursera(req,res,next,'core%20it%20skills','IT');
+					// coursera(req,res,next,'mobile%20apps','IT');
+					// edx(req,res,next,'network%20security','IT');
+					// edx(req,res,next,'data%20science','IT');
+					// edx(req,res,next,'databases','IT');
+					// udacity(req,res,next,'core%20it%20skills','IT');
+					// coursera(req,res,next,'japanese','Language');
+					//  udacity(req,res,next,'chemistry','Science'); 
+					// coursera(req,res,next,'fitness','Health');
+					// coursera(req,res,next,'media%20and%20journalism','Humanities');
+					// udemy(req,res,next,'sociology','Humanities');
+					// udacity(req,res,next,'tourism%20and%20hospitality','Business');
+					// udacity(req,res,next,'entrepreneurship','Business');
+					// coursera(req,res,next,'backend','Software');
+					// edx(req,res,next,'frontend','Software');
+					// coursera(req,res,next,'art%20and%20crafts','Lifestyle');
+					// coursera(req,res,next,'management%20and%20administration','Operations');
+					// coursera(req,res,next,'critical%20operations','Operations');
+					// udacity(req,res,next,'supply%20chain%20management','Operations');
+					// udacity(req,res,next,'manufacturing','Operations');
+					// udacity(req,res,next,'quality%20control','Operations');
+					// udacity(req,res,next,'workplace%20supervision','Operations');
+					// udacity(req,res,next,'food%20technology','Operations');
+					// coursera(req,res,next,'android%20development','DataScience');
+					// coursera(req,res,next,'php','DataScience');
+					// edx(req,res,next,'javascript','DataScience');
+					// edx(req,res,next,'sql');
+					// coursera(req,res,next,'pencil%20sketching%20and%20drawing','Design');
+					// coursera(req,res,next,'film%20editing','Design');
+					// coursera(req,res,next,'pen%20sketching','Design');
+					// coursera(req,res,next,'fashion%20designing','Design');
+					// coursera(req,res,next,'architectural%20design','Design');
+					// edx(req,res,next,'graphic%20design','Design');
+					// udemy(req,res,next,'interior+design');
+					// udacity(req,res,next,'social%20media%20marketing','Marketing');
+					// udacity(req,res,next,'video%20and%20mobile%20marketing','Marketing');
 
 
 //1
@@ -33,17 +71,16 @@ router.get('/IT',(req, res, next) =>{
 					// 	q: req.body.q
 					// });
 
-					coursera(req,res,next,'network%20security','IT');
-					coursera(req,res,next,'hardware','IT');
+					// coursera(req,res,next,'network%20security','IT');
+					// coursera(req,res,next,'hardware','IT');
 					// coursera(req,res,next,'software%20development','IT');
 					// coursera(req,res,next,'game%20development','IT');
 					// coursera(req,res,next,'software%20tools','IT');
 					// coursera(req,res,next,'IT%20management','IT');
-					// coursera(req,res,next,'mobile%20apps','IT');
 					// coursera(req,res,next,'software%20engineering','IT');
 					// coursera(req,res,next,'data%20science','IT');
 					// coursera(req,res,next,'databases','IT');
-					// coursera(req,res,next,'core%20it%20skills','IT');
+
 
 					// udemy(req,res,next,'network+and+security','IT');
 					// udemy(req,res,next,'hardware','IT');
@@ -57,7 +94,7 @@ router.get('/IT',(req, res, next) =>{
 					// udemy(req,res,next,'databases','IT');
 					// udemy(req,res,next,'core+it+skills','IT');
 
-					// edx(req,res,next,'network%20security','IT');
+
 					// edx(req,res,next,'hardware','IT');
 					// edx(req,res,next,'software%20development','IT');
 					// edx(req,res,next,'game%20development','IT');
@@ -65,17 +102,13 @@ router.get('/IT',(req, res, next) =>{
 					// edx(req,res,next,'IT%20management','IT');
 					// edx(req,res,next,'mobile%20apps','IT');
 					// edx(req,res,next,'software%20engineering','IT');
-					// edx(req,res,next,'data%20science','IT');
-					// edx(req,res,next,'databases','IT');
 					// edx(req,res,next,'core%20it%20skills','IT');
 
-					// harvard(req,res,next,'network%20security','IT');
-					// harvard(req,res,next,'hardware','IT');
-					// harvard(req,res,next,'software%20development','IT');
+					
+					
+					
 					// harvard(req,res,next,'game%20development','IT');
-					// harvard(req,res,next,'software%20tools','IT');
 					// harvard(req,res,next,'IT%20management','IT');
-					// harvard(req,res,next,'software%20engineering','IT');
 					// harvard(req,res,next,'data%20science','IT');
 					// harvard(req,res,next,'databases','IT');
 					// harvard(req,res,next,'core%20it%20skills','IT');
@@ -85,10 +118,6 @@ router.get('/IT',(req, res, next) =>{
 					// skillshare(req,res,next,'software%20development','IT');
 					// skillshare(req,res,next,'game%20development','IT');
 					// skillshare(req,res,next,'software%20tools','IT');
-					// skillshare(req,res,next,'IT%20management','IT');
-					// skillshare(req,res,next,'software%20engineering','IT');
-					// skillshare(req,res,next,'data%20science','IT');
-					// skillshare(req,res,next,'databases','IT');
 					// skillshare(req,res,next,'core%20it%20skills','IT');
 
 					// udacity(req,res,next,'network%20security','IT');
@@ -100,7 +129,7 @@ router.get('/IT',(req, res, next) =>{
 					// udacity(req,res,next,'software%20engineering','IT');
 					// udacity(req,res,next,'data%20science','IT');
 					// udacity(req,res,next,'databases','IT');
-					// udacity(req,res,next,'core%20it%20skills','IT');
+
 
 
 	
@@ -123,7 +152,7 @@ router.get('/Language',(req, res, next) =>{
 					// coursera(req,res,next,'french','Language');
 					// coursera(req,res,next,'chinese','Language');
 					// coursera(req,res,next,'arabic','Language');
-					// coursera(req,res,next,'japanese','Language');
+					
 					
 					// verbling(req,res,next,'english','Language');
 					// verbling(req,res,next,'spanish','Language');
@@ -156,10 +185,10 @@ router.get('/Science',(req, res, next) =>{
 					// udemy(req,res,next,'general+science','Science');
 					// udemy(req,res,next,'chemistry','Science');
 					
-					/* udacity(req,res,next,'life%20science','Science');
-					 udacity(req,res,next,'physics','Science');
-					 udacity(req,res,next,'general%20science','Science');
-					 udacity(req,res,next,'chemistry','Science'); */
+					//  udacity(req,res,next,'life%20science','Science');
+					//  udacity(req,res,next,'physics','Science');
+					//  udacity(req,res,next,'general%20science','Science');
+					
 
 					// khanacademy(req,res,next,'life%20science','Science');
 					// khanacademy(req,res,next,'physics','Science');
@@ -188,7 +217,6 @@ router.get('/Health',(req, res, next) =>{
 					// coursera(req,res,next,'mental%20health','Health');
 					// coursera(req,res,next,'health%20care','Health');
 					// coursera(req,res,next,'nutrition','Health');
-					// coursera(req,res,next,'fitness','Health');
 					// coursera(req,res,next,'yoga','Health');
 
 					// harvard(req,res,next,'mental%20health','Health');
@@ -229,14 +257,12 @@ router.get('/Humanities',(req, res, next) =>{
 					// coursera(req,res,next,'geography','Humanities');
 					// coursera(req,res,next,'law','Humanities');					
 					// coursera(req,res,next,'psychology','Humanities');
-					// coursera(req,res,next,'media%20and%20journalism','Humanities');
 					// coursera(req,res,next,'economics','Humanities');
 					// coursera(req,res,next,'architecture','Humanities');
 
 					// udemy(req,res,next,'education','Humanities');
 					// udemy(req,res,next,'history','Humanities');
 					// udemy(req,res,next,'politics','Humanities');
-					// udemy(req,res,next,'sociology','Humanities');
 					// udemy(req,res,next,'personal+development','Humanities');
 					// udemy(req,res,next,'geography','Humanities');
 					// udemy(req,res,next,'law','Humanities');					
@@ -306,7 +332,6 @@ router.get('/Maths',(req, res, next) =>{
 					// khanacademy(req,res,next,'series%20and%20sequences','Maths');
 					// khanacademy(req,res,next,'exam%20prep','Maths');
 
-					// arcademics(req,res,next,'web');
 	
 	console.log('Inside Maths');
 	res.status(200).json({
@@ -355,11 +380,10 @@ router.get('/Business',(req, res, next) =>{
 					// udacity(req,res,next,'operations','Business');
 					// udacity(req,res,next,'ecommerce','Business');
 					// udacity(req,res,next,'leadership%20and%20management','Business');
-					// udacity(req,res,next,'entrepreneurship','Business');
+					
 					// udacity(req,res,next,'project%20management','Business');
 					// udacity(req,res,next,'sales','Business');
 					// udacity(req,res,next,'finance','Business');
-					// udacity(req,res,next,'tourism%20and%20hospitality','Business');
 					// udacity(req,res,next,'communications','Business');
 					// udacity(req,res,next,'accounting','Business');
 					// udacity(req,res,next,'law','Business');
@@ -380,11 +404,10 @@ router.get('/Software',(req, res, next) =>{
 					// });
 
 					// coursera(req,res,next,'frontend','Software');
-					// coursera(req,res,next,'backend','Software');
 					// coursera(req,res,next,'software%20testing','Software');
 					// coursera(req,res,next,'operating%20system','Software');
 
-					// edx(req,res,next,'frontend','Software');
+					
 					// edx(req,res,next,'backend','Software');
 					// edx(req,res,next,'software%20testing','Software');
 					// edx(req,res,next,'operating%20system','Software');
@@ -412,7 +435,6 @@ router.get('/Lifestyle',(req, res, next) =>{
 					// 	q: req.body.q
 					// });
 					// coursera(req,res,next,'food%20and%20beverage','Lifestyle');
-					// coursera(req,res,next,'art%20and%20crafts','Lifestyle');
 					// coursera(req,res,next,'music','Lifestyle');
 					// coursera(req,res,next,'literature','Lifestyle');
 					// coursera(req,res,next,'skilled%20trades','Lifestyle');
@@ -448,13 +470,11 @@ router.get('/Operations',(req, res, next) =>{
 					// coursera(req,res,next,'business%20process%20management','Operations');
 					// coursera(req,res,next,'risk%20management','Operations');
 					// coursera(req,res,next,'service%20management','Operations');
-					// coursera(req,res,next,'management%20and%20administration','Operations');
 					// coursera(req,res,next,'customer%20service','Operations');
 					// coursera(req,res,next,'manufacturing','Operations');
 					// coursera(req,res,next,'health%20and%20safety','Operations');
 					// coursera(req,res,next,'quality%20control','Operations');
 					// coursera(req,res,next,'workplace%20supervision','Operations');
-					// coursera(req,res,next,'critical%20operations','Operations');
 					// coursera(req,res,next,'food%20technology','Operations');
 
 					// edx(req,res,next,'supply%20chain%20management','Operations');
@@ -480,21 +500,18 @@ router.get('/Operations',(req, res, next) =>{
 					// udemy(req,res,next,'health+and+safety','Operations');
 					// udemy(req,res,next,'quality+control','Operations');
 					// udemy(req,res,next,'workplace+supervision','Operations');
-					// udemy(req,res,next,'quality+control','Operations');
-					// udemy(req,res,next,'quality+control','Operations');
+					// udemy(req,res,next,'critical%20operations','Operations');
+					// udemy(req,res,next,'food%20technology','Operations');
 
-					// udacity(req,res,next,'supply%20chain%20management','Operations');
+
 					// udacity(req,res,next,'business%20process%20management','Operations');
 					// udacity(req,res,next,'risk%20management','Operations');
 					// udacity(req,res,next,'service%20management','Operations');
 					// udacity(req,res,next,'management%20and%20administration','Operations');
 					// udacity(req,res,next,'customer%20service','Operations');
-					// udacity(req,res,next,'manufacturing','Operations');
 					// udacity(req,res,next,'health%20and%20safety','Operations');
-					// udacity(req,res,next,'quality%20control','Operations');
-					// udacity(req,res,next,'workplace%20supervision','Operations');
 					// udacity(req,res,next,'critical%20operations','Operations');
-					// udacity(req,res,next,'food%20technology','Operations');
+					
 
 					
 	
@@ -514,10 +531,8 @@ router.get('/DataScience',(req, res, next) =>{
 					// coursera(req,res,next,'python','DataScience');
 					// coursera(req,res,next,'javascript','DataScience');
 					// coursera(req,res,next,'java','DataScience');
-					// coursera(req,res,next,'android%20development','DataScience');
 					// coursera(req,res,next,'C','DataScience');
 					// coursera(req,res,next,'C++','DataScience');
-					// coursera(req,res,next,'php','DataScience');
 					// coursera(req,res,next,'sql','DataScience');
 					// coursera(req,res,next,'statistics','DataScience');
 					// coursera(req,res,next,'machine%20learning','DataScience');
@@ -526,13 +541,11 @@ router.get('/DataScience',(req, res, next) =>{
 
 					// edx(req,res,next,'data%20structures%20and%20algorithms','DataScience');
 					// edx(req,res,next,'python','DataScience');
-					// edx(req,res,next,'javascript','DataScience');
 					// edx(req,res,next,'java','DataScience');
 					// edx(req,res,next,'android%20development','DataScience');
 					// edx(req,res,next,'C','DataScience');
 					// edx(req,res,next,'C++','DataScience');
 					// edx(req,res,next,'php','DataScience','DataScience');
-					// edx(req,res,next,'sql');
 					// edx(req,res,next,'statistics','DataScience');
 					// edx(req,res,next,'machine%20learning','DataScience');
 					// edx(req,res,next,'artificial%20intelligence','DataScience');
@@ -583,16 +596,11 @@ router.get('/Design',(req, res, next) =>{
 					// coursera(req,res,next,'user%20experience','Design');
 					// coursera(req,res,next,'game%20design','Design');
 					// coursera(req,res,next,'3d%20animation','Design');
-					// coursera(req,res,next,'fashion%20designing','Design');
-					// coursera(req,res,next,'architectural%20design','Design');
 					// coursera(req,res,next,'interior%20design','Design');
 					// coursera(req,res,next,'video%20making','Design');
-					// coursera(req,res,next,'pencil%20sketching%20and%20drawing','Design');
-					// coursera(req,res,next,'film%20editing','Design');
-					// coursera(req,res,next,'pen%20sketching','Design');
+
 
 					// edx(req,res,next,'web%20design','Design');
-					// edx(req,res,next,'graphic%20design','Design');
 					// edx(req,res,next,'user%20experience','Design');
 					// edx(req,res,next,'game%20design','Design');
 					// edx(req,res,next,'3d%20animation','Design');
@@ -611,14 +619,12 @@ router.get('/Design',(req, res, next) =>{
 					// udemy(req,res,next,'3d+animation','Design');
 					// udemy(req,res,next,'fashion+designing','Design');
 					// udemy(req,res,next,'architectural+design','Design','Design');
-					// udemy(req,res,next,'interior+design');
 					// udemy(req,res,next,'video+making','Design');
 					// udemy(req,res,next,'pencil+sketching+and+drawing','Design');
 					// udemy(req,res,next,'film+editing','Design');
 					// udemy(req,res,next,'pen+sketching','Design');
 
 					// skillshare(req,res,next,'web%20design','Design');
-					// skillshare(req,res,next,'graphic%20design','Design');
 					// skillshare(req,res,next,'user%20experience','Design');
 					// skillshare(req,res,next,'game%20design','Design');
 					// skillshare(req,res,next,'3d%20animation','Design');
@@ -626,7 +632,6 @@ router.get('/Design',(req, res, next) =>{
 					// skillshare(req,res,next,'architectural%20design','Design');
 					// skillshare(req,res,next,'interior%20design','Design');
 					// skillshare(req,res,next,'video%20making','Design');
-					// skillshare(req,res,next,'pencil%20sketching%20and%20drawing','Design');
 					// skillshare(req,res,next,'film%20editing','Design');
 					// skillshare(req,res,next,'pen%20sketching','Design');
 
@@ -667,11 +672,9 @@ router.get('/Design',(req, res, next) =>{
 
 					// udacity(req,res,next,'digital%20marketing','Marketing');
 					// udacity(req,res,next,'SEO','Marketing');
-					// udacity(req,res,next,'social%20media%20marketing','Marketing');
 					// udacity(req,res,next,'brand%20creation','Marketing');
 					// udacity(req,res,next,'public%20relations','Marketing');
 					// udacity(req,res,next,'advertising','Marketing');
-					// udacity(req,res,next,'video%20and%20mobile%20marketing','Marketing');
 					// udacity(req,res,next,'growth%20hacking','Marketing');
 					// udacity(req,res,next,'affiliate%20marketing','Marketing');
 
@@ -680,8 +683,7 @@ router.get('/Design',(req, res, next) =>{
 		message:'Search Results for marketing !'
 		// query: query.q,
 	});
-}
-);
+});
 
 
 module.exports = router;

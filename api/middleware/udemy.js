@@ -30,16 +30,16 @@ module.exports = (req, res, next,data1,category) => {
 								var link = document.querySelectorAll('a[class="udlite-custom-focus-visible course-card-link--link--3uQEZ"]');
 								var instructorName = document.querySelectorAll('div[class="udlite-text-xs course-card--instructor-list--lIA4f"]');
 								var Rating = document.querySelectorAll('span[class="udlite-heading-sm star-rating--rating-number--3lVe8"]');
-								var NumberofHours = document.querySelectorAll('div[class="udlite-text-xs course-card--row--1OMjg course-card--course-meta-info--1hHb3"]>span:nth-child(1)');
+								// var NumberofHours = document.querySelectorAll('div[class="udlite-text-xs course-card--row--1OMjg course-card--course-meta-info--1hHb3"]>span:nth-child(1)');
                                 // var imageLink = document.querySelectorAll('div[class="course-card--container--3w8Zm course-card--large--1BVxY"]>div[class="course-card--image-wrapper--Sxd90"] > img[src]');
-								var json = {courseName:[],link:[],instructorName:[],Price:[],Rating:[],NumberofHours:[]};
+								var json = {courseName:[],link:[],instructorName:[],Price:[],Rating:[]};
 								for(let i = 0; i < courseName.length; i++){
 									json.courseName.push(JSON.stringify(courseName[i].innerText));		
 									json.instructorName.push(JSON.stringify(instructorName[i].innerText));
                                     json.link.push(JSON.stringify(link[i].href));
 									json.Price.push(JSON.stringify(Price[i].innerText));
 									json.Rating.push(JSON.stringify(Rating[i].innerText));
-									json.NumberofHours.push(JSON.stringify(NumberofHours[i].innerText));
+									// json.NumberofHours.push(JSON.stringify(NumberofHours[i].innerText));
                                     // json.imageLink.push(JSON.stringify(imageLink[i].getAttribute('src')));
 								}
 								
@@ -52,11 +52,12 @@ module.exports = (req, res, next,data1,category) => {
 							const skill = new Skill({
 								category:category,
 								nameSkill: data1,
-								Courses: [ 	{NameofCourse: data.courseName[1],Instructor: data.instructorName[0],LinkToCourse: data.link[0],Price:data.Price[0],Rating:data.Rating[0],NumberofHours:data.NumberofHours[0]},
-											{NameofCourse: data.courseName[1],Instructor: data.instructorName[1],LinkToCourse: data.link[1],Price:data.Price[1],Rating:data.Rating[1],NumberofHours:data.NumberofHours[1]},
-											{NameofCourse: data.courseName[2], Instructor: data.instructorName[2],LinkToCourse: data.link[2],Price:data.Price[2],Rating:data.Rating[2],NumberofHours:data.NumberofHours[2]},
-											{NameofCourse: data.courseName[3], Instructor: data.instructorName[3],LinkToCourse: data.link[3],Price:data.Price[3],Rating:data.Rating[3],NumberofHours:data.NumberofHours[3]},
-											{NameofCourse: data.courseName[4], Instructor: data.instructorName[4],LinkToCourse: data.link[4],Price:data.Price[4],Rating:data.Rating[4],NumberofHours:data.NumberofHours[4]}]
+								platform:'udemy',
+								Courses: [ 	{NameofCourse: data.courseName[1],Instructor: data.instructorName[0],LinkToCourse: data.link[0],Price:data.Price[0],Rating:data.Rating[0]},
+											{NameofCourse: data.courseName[1],Instructor: data.instructorName[1],LinkToCourse: data.link[1],Price:data.Price[1],Rating:data.Rating[1]},
+											{NameofCourse: data.courseName[2], Instructor: data.instructorName[2],LinkToCourse: data.link[2],Price:data.Price[2],Rating:data.Rating[2]},
+											{NameofCourse: data.courseName[3], Instructor: data.instructorName[3],LinkToCourse: data.link[3],Price:data.Price[3],Rating:data.Rating[3]},
+											{NameofCourse: data.courseName[4], Instructor: data.instructorName[4],LinkToCourse: data.link[4],Price:data.Price[4],Rating:data.Rating[4]}]
 							});
 							skill
 							.save()

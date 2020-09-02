@@ -54,6 +54,7 @@ let skillShareSearchQuery = data1;
 	  	const skill = new Skill({
 								category:category,
 								nameSkill: data1,
+								platform:'skillShare',
 								Courses: [ 	{NameofCourse: data.courseName[0],Instructor: data.instructorName[0],UrlOfImageThumbnail:data.UrlOfImageThumbnail[0],StudentsEnrolled:data.studentsEnrolled[0]},
 											{NameofCourse: data.courseName[1],Instructor: data.instructorName[1],UrlOfImageThumbnail:data.UrlOfImageThumbnail[1],StudentsEnrolled:data.studentsEnrolled[1]}, 
 											{NameofCourse: data.courseName[2],Instructor: data.instructorName[2],UrlOfImageThumbnail:data.UrlOfImageThumbnail[2],StudentsEnrolled:data.studentsEnrolled[2]},

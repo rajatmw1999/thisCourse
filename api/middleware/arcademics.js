@@ -49,6 +49,7 @@ module.exports = (req, res, next,data1,category) => {
 		
 		const skill = new Skill({
 								category : category,
+								platform:'arcademics',
 								nameSkill: data1,
 								Courses: [ {NameofCourse: data.courseName[1],LinkToCourse: data.link[1]},
 											{NameofCourse: data.courseName[2],LinkToCourse: data.link[2]},

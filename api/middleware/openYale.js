@@ -46,6 +46,7 @@ let data = await page.evaluate(() =>{
 
 						const skill = new Skill({
 								category:category,
+								platform:'openYale',
 								nameSkill: data1,
 								Courses: [ {NameofCourse: data.courseName[1],LinkToCourse: data.link[1]},
 											{NameofCourse: data.courseName[2],LinkToCourse: data.link[2]},
