@@ -62,6 +62,7 @@ let verblingSearchQuery = data1;
 	
 						const skill = new Skill({
                 category:category,
+                platform:'verbling',
 								nameSkill: data1,
 								Courses: [ { UrlOfImageThumbnail:data.UrlOfImageThumbnail[0],Price: data.price[0],Rating: data.rating[0],Instructor: data.instructorName[0],CourseDescription:data.CourseDescription[0]},
                   { UrlOfImageThumbnail:data.UrlOfImageThumbnail[1],Price: data.price[1],Rating: data.rating[1],Instructor: data.instructorName[1],CourseDescription:data.CourseDescription[1]},

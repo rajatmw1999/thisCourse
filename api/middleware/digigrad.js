@@ -58,6 +58,7 @@ let data = await page.evaluate(() =>{
 
 						  const skill = new Skill({
 								category:category,
+								platform:'digigrad',
 								nameSkill: data1,
 								Courses: [ {NameofCourse: data.courseName[1],Instructor: data.instructorName[1], NumberofHours: data.date[1]}, 
 											{NameofCourse: data.courseName[2],Instructor: data.instructorName[1], NumberofHours: data.date[2]},

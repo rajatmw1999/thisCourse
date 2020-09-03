@@ -28,6 +28,8 @@ const testRoute = require("./api/routes/test");
 const masterRoute = require("./api/routes/master");
 const dataRoutes = require("./api/data_routes/index");
 const searrch = require('./api/routes/search');
+const likeRoute = require('./api/routes/likes');
+const deleteSkills = require("./api/routes/deleteSkills");
 //console.log('In routes file');
 mongoose.connect(
   "mongodb+srv://RamuKaka:Modi@123@cluster0.d9frx.mongodb.net/Skillunga?retryWrites=true&w=majority",
@@ -75,6 +77,8 @@ app.use("/test", testRoute);
 app.use("/master", masterRoute);
 app.use("/data", dataRoutes);
 app.use('/search',searrch);
+app.use("/like",likeRoute);
+app.use("/deleteSkills",deleteSkills);
 //console.log('aint here');
 app.use((req, res, next) => {
   const error = new Error("Not found");

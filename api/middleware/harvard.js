@@ -56,10 +56,11 @@ module.exports = (req, res, next,data1,category) => {
 					const skill = new Skill({
 						category:category,
 						nameSkill: data1,
+						platform:'harvard',
 						Courses: [ {NameofCourse: data.courseName[1], Price: data.price[1],LinkToCourse: data.link[1]},
 									{NameofCourse: data.courseName[2], Price: data.price[2],LinkToCourse: data.link[2]},
 									{NameofCourse: data.courseName[3], Price: data.price[3],LinkToCourse: data.link[3]},
-									{NameofCourse: data.courseName[4], Price: data.price[4],LinkToCourse: data.link[4]},]
+									{NameofCourse: data.courseName[4], Price: data.price[4],LinkToCourse: data.link[4]}]
 					});
 					
 					skill
@@ -76,7 +77,7 @@ module.exports = (req, res, next,data1,category) => {
 					
 					
 
-					console.log(data);
+					// console.log(data);
 					browser.close();
 						
 						

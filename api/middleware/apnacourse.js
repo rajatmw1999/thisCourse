@@ -54,6 +54,7 @@ let apnaCourseSearchQuery = data1;
 	  // console.log('OK');
 	  const skill = new Skill({
                 category:category,
+                platform:'apnaCourse',
 								nameSkill: data1,
 								Courses: [ {NameofCourse: data.courseName[1],LinkToCourse: data.instructorImageLink[1]},
 											{NameofCourse: data.courseName[2],LinkToCourse: data.instructorImageLink[2]},

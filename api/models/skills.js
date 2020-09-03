@@ -12,7 +12,8 @@ const courseSchema = mongoose.Schema({
 	PlatformName:{type: String},
 	LinkToCourse: {type: String},
 	Language: {type: String},
-	StudentsEnrolled: {type: String}
+	StudentsEnrolled: {type: String},
+	likes:{type:Number}
 });
 
 
