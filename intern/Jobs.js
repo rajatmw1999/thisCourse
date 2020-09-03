@@ -54,12 +54,9 @@ var Jobs = [];
       jobDetails.Url = `https://www.amazon.jobs/en/jobs/${id.slice(
         jobIdUrl + 4
       )}/${jobTitleDash}`;
-      if (title && id) {
-        // console.log(`Title : ${title}`);
-        // console.log(`Id : ${id}`);
-        // console.log(`Description : ${description}`);
-        Jobs.push(jobDetails);
-      }
+
+      Jobs.push(jobDetails);
+
       if (pageno == 8 && i == 8) {
         break;
       }
