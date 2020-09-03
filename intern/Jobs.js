@@ -70,30 +70,7 @@ var Jobs = [];
   }
 })().then(function () {
   for (var key in Jobs) {
-    console.log(key + " -> " + Jobs[key]["Url"]);
-    (async () => {
-      const browser = await puppeteer.launch();
-      const page = await browser.newPage();
-
-      await page.goto(Jobs[key]["Url"]);
-
-      await page.waitFor(2000);
-      await page.waitForSelector(".section description");
-      await navigationPromise;
-
-      const jobddescription = `.row > .col-12 > .content > .description > p`;
-
-      await page.waitForSelector(jobddescription);
-      jobescription = await getElText(page, jobddescription);
-      jobDetails.ddescription = jobescription;
-
-      /* Outputting what we scraped */
-      // console.log(data);
-
-      await browser.close();
-    })();
-
     console.log(key + " -> " + Jobs[key]["title"]);
-    console.log(key + " -> " + Jobs[key]["ddescription"]);
+    console.log(key + " -> " + Jobs[key]["Url"]);
   }
 });
