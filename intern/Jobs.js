@@ -1,6 +1,6 @@
 const puppeteer = require("puppeteer");
 
-async function getElText(page, selector) {
+async function getText(page, selector) {
   return await page.evaluate((selector) => {
     return document.querySelector(selector).innerText;
   }, selector);
@@ -35,11 +35,11 @@ var Jobs = [];
       const jobId = `.job-tile:nth-child(${i}) > .job-link > .job > .row > .info > .location-and-id`;
 
       await page.waitForSelector(jobTitle);
-      const title = await getElText(page, jobTitle);
+      const title = await getText(page, jobTitle);
       jobDetails.title = title;
 
       await page.waitForSelector(jobId);
-      const id = await getElText(page, jobId);
+      const id = await getText(page, jobId);
       jobDetails.id = id;
 
       var jobTitleDash = jobDetails.title;
