@@ -5,8 +5,8 @@ const router = express.Router();
 const RoadmapData = require("../models/roadmap/RoadmapData");
 
 //ROUTE 1
-router.post("/coursesByCategory", (req, res) => {
-  const category = req.body.Category;
+router.get("/coursesByCategory/:categoryName", (req, res) => {
+  const category = req.params.categoryName;
   RoadmapData.find({ Category: category })
     .exec()
     .then((doc) => {
@@ -26,8 +26,8 @@ router.post("/coursesByCategory", (req, res) => {
 });
 
 // ROUTE 2
-router.post("/coursesByNameOfRoapmap", (req, res) => {
-  const nameOfRoapmap = req.body.NameofRoapmap;
+router.get("/:roadmapId", (req, res) => {
+  const nameOfRoapmap = req.params.roadmapId;
   RoadmapData.find({ NameofRoapmap: nameOfRoapmap })
     .exec()
     .then((doc) => {
@@ -68,8 +68,8 @@ router.post("/coursesByTags", (req, res) => {
 });
 
 //ROUTE 4
-router.patch("/likesOfNameofRoapmap", (req, res) => {
-  const nameOfRoapmap = req.body.NameofRoapmap;
+router.patch("/:likesOfIdofRoapmap", (req, res) => {
+  const nameOfRoapmap = req.params.likesOfIdofRoapmap;
   const updateOps = {};
   for (const ops of req.body) {
     updateOps[ops.propName] = ops.value;
