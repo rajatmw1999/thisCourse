@@ -58,7 +58,7 @@ var Jobs = [];
       }
     }
 
-    // console.log(Jobs);
+    // console.log(Jobs);//
     await browser.close();
   }
 })().then(function () {
