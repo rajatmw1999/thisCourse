@@ -63,7 +63,9 @@ var Jobs = [];
   }
 })().then(function () {
   for (var key in Jobs) {
-    console.log(key + " -> " + Jobs[key]["title"]);
-    console.log(key + " -> " + Jobs[key]["Url"]);
+    console.log("S No. -> " + key);
+    console.log("Title -> " + Jobs[key]["title"]);
+    console.log("Details -> " + Jobs[key]["id"]);
+    console.log("URL -> " + Jobs[key]["Url"]);
   }
 });
