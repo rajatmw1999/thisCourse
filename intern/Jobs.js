@@ -33,7 +33,6 @@ var Jobs = [];
       const jobDetails = {};
       const jobTitle = `.job-tile:nth-child(${i}) > .job-link > .job > .row > .info > .job-title`;
       const jobId = `.job-tile:nth-child(${i}) > .job-link > .job > .row > .info > .location-and-id`;
-      // const jobDescription = `.job-tile:nth-child(${i}) > .job-link > .job > .row > .description > span:nth-child(1)`;
 
       await page.waitForSelector(jobTitle);
       const title = await getElText(page, jobTitle);
@@ -43,9 +42,6 @@ var Jobs = [];
       const id = await getElText(page, jobId);
       jobDetails.id = id;
 
-      // await page.waitForSelector(jobDescription);
-      // const description = await getElText(page, jobDescription);
-      // jobDetails.description = description;
       var jobTitleDash = jobDetails.title;
       jobTitleDash = title.replace(/\s+/g, "-").toLowerCase();
       jobTitleDash = jobTitleDash.replace(/-{2,}/g, "-");
