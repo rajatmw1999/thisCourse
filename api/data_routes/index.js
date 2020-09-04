@@ -101,8 +101,6 @@ router.get("/coursedetails/:skillName/:courseId", async (req, res, next) => {
     }
     res.status(200).json({
       data: finalarr.length > 0 ? finalarr : "Not Found !",
-      id: req.params.courseId,
-      name: req.params.skillName,
     });
   } catch (err) {
     res.status(500).json({
