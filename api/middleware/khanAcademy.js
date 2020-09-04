@@ -62,31 +62,32 @@ let data = await page.evaluate(() =>{
 });
 
 
-			// const skill = new Skill({
-			// 					category:category,
-			// 					nameSkill: data1,
-			// 					Courses: [	{NameofCourse: data.courseName[0],CourseDescription:data.courseDescription[0],LinkToCourse: data.link[0]},
-			// 								 {NameofCourse: data.courseName[1],CourseDescription:data.courseDescription[1],LinkToCourse: data.link[1]},
-			// 								{NameofCourse: data.courseName[2],CourseDescription:data.courseDescription[2],LinkToCourse: data.link[2]},
-			// 								{NameofCourse: data.courseName[3],CourseDescription:data.courseDescription[3],LinkToCourse: data.link[3]},
-			// 								{NameofCourse: data.courseName[4],CourseDescription:data.courseDescription[4],LinkToCourse: data.link[4]},]
-			// 				});
-			// 				skill
-			// 				.save()
-			// 				.then(result => {
-			// 					console.log(result);
-			// 				})
-			// 				.catch(err => {
-			// 					console.log(err);
-			// 					res.status(500).json({
-			// 							error: err
-			// 					})
-			// 				});
+			const skill = new Skill({
+								category:category,
+								nameSkill: data1,
+								platform:'khanAcademy',
+								Courses: [	{NameofCourse: data.courseName[0],CourseDescription:data.courseDescription[0],LinkToCourse: data.link[0]},
+											 {NameofCourse: data.courseName[1],CourseDescription:data.courseDescription[1],LinkToCourse: data.link[1]},
+											{NameofCourse: data.courseName[2],CourseDescription:data.courseDescription[2],LinkToCourse: data.link[2]},
+											{NameofCourse: data.courseName[3],CourseDescription:data.courseDescription[3],LinkToCourse: data.link[3]},
+											{NameofCourse: data.courseName[4],CourseDescription:data.courseDescription[4],LinkToCourse: data.link[4]},]
+							});
+							skill
+							.save()
+							.then(result => {
+								console.log(result);
+							})
+							.catch(err => {
+								console.log(err);
+								res.status(500).json({
+										error: err
+								})
+							});
 
 
 
 
-console.log(data);
+// console.log(data);
 			browser.close();
 		});
 

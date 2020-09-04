@@ -14,7 +14,7 @@ const Roadmap_Data = new mongoose.Schema({
     type: Number,
   },
   ImageLink: {
-    type: URL,
+    type: String,
   },
   Category: {
     type: String,

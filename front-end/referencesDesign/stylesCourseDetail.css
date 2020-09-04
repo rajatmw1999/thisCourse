@@ -1,0 +1,338 @@
+	#course_card_bus {
+		position: absolute;
+		width: 434px;
+		height: 531px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_12_but {
+		fill: rgba(255,255,255,1);
+	}
+	.Rectangle_12_but {
+		filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.161));
+		position: absolute;
+		overflow: visible;
+		width: 452px;
+		height: 549px;
+		left: 0px;
+		top: 0px;
+	}
+	#Rectangle_13_buu {
+		fill: rgba(255,255,255,1);
+	}
+	.Rectangle_13_buu {
+		filter: drop-shadow(-3px 3px 6px rgba(0, 0, 0, 0.161));
+		position: absolute;
+		overflow: visible;
+		width: 452px;
+		height: 549px;
+		left: 0px;
+		top: 0px;
+	}
+	#images_5 {
+		position: absolute;
+		width: 402px;
+		height: 232px;
+		left: 16px;
+		top: 16px;
+		overflow: visible;
+	}
+	#card_stats_buw {
+		position: absolute;
+		width: 388.153px;
+		height: 22.202px;
+		left: 21.462px;
+		top: 266.426px;
+		overflow: visible;
+	}
+	#rating_bux {
+		position: absolute;
+		width: 94.747px;
+		height: 21.114px;
+		left: 0px;
+		top: 0.544px;
+		overflow: visible;
+	}
+	#Icon_feather-star_buy {
+		fill: transparent;
+		stroke: rgba(255,179,0,1);
+		stroke-width: 3px;
+		stroke-linejoin: round;
+		stroke-linecap: round;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Icon_feather-star_buy {
+		overflow: visible;
+		position: absolute;
+		width: 25.202px;
+		height: 24.114px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#ID45_120_buz {
+		left: 33.747px;
+		top: 0.566px;
+		position: absolute;
+		overflow: visible;
+		width: 62px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: rgba(111,111,111,1);
+	}
+	#views_bu {
+		position: absolute;
+		width: 83.745px;
+		height: 20.352px;
+		left: 144.535px;
+		top: 1.11px;
+		overflow: visible;
+	}
+	#ID28500_bu {
+		left: 35.745px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 49px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: rgba(111,111,111,1);
+	}
+	#Icon_feather-eye_bu {
+		position: absolute;
+		width: 24.422px;
+		height: 17.762px;
+		left: 0px;
+		top: 2.59px;
+		overflow: visible;
+	}
+	#Path_3_bu {
+		fill: transparent;
+		stroke: rgba(55,52,235,1);
+		stroke-width: 3px;
+		stroke-linejoin: round;
+		stroke-linecap: round;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_3_bu {
+		overflow: visible;
+		position: absolute;
+		width: 27.422px;
+		height: 20.762px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_4_bu {
+		fill: transparent;
+		stroke: rgba(55,52,235,1);
+		stroke-width: 3px;
+		stroke-linejoin: round;
+		stroke-linecap: round;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_4_bu {
+		overflow: visible;
+		position: absolute;
+		width: 9.661px;
+		height: 9.661px;
+		left: 8.881px;
+		top: 5.551px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#lssons_bu {
+		position: absolute;
+		width: 101.747px;
+		height: 22.202px;
+		left: 286.406px;
+		top: 0px;
+		overflow: visible;
+	}
+	#ID9_lessons_bu {
+		left: 33.747px;
+		top: 1.11px;
+		position: absolute;
+		overflow: visible;
+		width: 69px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: rgba(111,111,111,1);
+		text-transform: capitalize;
+	}
+	#Icon_feather-play-circle_bu {
+		position: absolute;
+		width: 22.202px;
+		height: 22.202px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Path_5_bu {
+		fill: transparent;
+		stroke: rgba(0,153,46,1);
+		stroke-width: 3px;
+		stroke-linejoin: round;
+		stroke-linecap: round;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_5_bu {
+		overflow: visible;
+		position: absolute;
+		width: 25.202px;
+		height: 25.202px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_6_bu {
+		fill: transparent;
+		stroke: rgba(0,153,46,1);
+		stroke-width: 3px;
+		stroke-linejoin: round;
+		stroke-linecap: round;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_6_bu {
+		overflow: visible;
+		position: absolute;
+		width: 9.661px;
+		height: 11.881px;
+		left: 8.881px;
+		top: 6.661px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Line_3_bva {
+		fill: transparent;
+		stroke: rgba(111,111,111,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_3_bva {
+		overflow: visible;
+		position: absolute;
+		width: 391.495px;
+		height: 1px;
+		left: 21.832px;
+		top: 304.169px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#ultimate_web_developer_course__bvb {
+		left: 22px;
+		top: 323px;
+		position: absolute;
+		overflow: visible;
+		width: 379px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 23px;
+		color: rgba(17,17,17,1);
+		text-transform: capitalize;
+	}
+	#tutor_bvc {
+		position: absolute;
+		width: 191px;
+		height: 63px;
+		left: 16px;
+		top: 433px;
+		overflow: visible;
+	}
+	#Ellipse_5_bvd {
+		position: absolute;
+		width: 63px;
+		height: 63px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Charles_Jones_bve {
+		left: 75px;
+		top: 21px;
+		position: absolute;
+		overflow: visible;
+		width: 117px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 16px;
+		color: rgba(111,111,111,1);
+	}
+	#price_bvf {
+		position: absolute;
+		width: 136.246px;
+		height: 32px;
+		left: 269.754px;
+		top: 449px;
+		overflow: visible;
+	}
+	#ID9999_bvg {
+		left: 4.246px;
+		top: 7px;
+		position: absolute;
+		overflow: visible;
+		width: 45px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 13px;
+		color: rgba(165,165,165,1);
+	}
+	#ID3965_bvh {
+		left: 57.246px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 80px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 23px;
+		color: rgba(55,52,235,1);
+	}
+	#Line_4_bvi {
+		fill: transparent;
+		stroke: rgba(161,161,161,1);
+		stroke-width: 2px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_4_bvi {
+		overflow: visible;
+		position: absolute;
+		width: 54.025px;
+		height: 2px;
+		left: 0px;
+		top: 16.504px;
+		transform: matrix(1,0,0,1,0,0);
+	}

@@ -60,6 +60,7 @@ let data = await page.evaluate(() =>{
 
 					const skill = new Skill({
 						category:category,
+						platform:'bitdegree',
 						nameSkill: data1,
 						Courses: [ {NameofCourse: data.courseName[1], Price: data.price[1],LinkToCourse: data.link[1],Instructor: data.instructorName[1]},
 									{NameofCourse: data.courseName[2], Price: data.price[2],LinkToCourse: data.link[2],Instructor: data.instructorName[2]},

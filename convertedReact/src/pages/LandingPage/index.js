@@ -9,6 +9,7 @@ import OutermostCategory from "../../components/outermost-category/index";
 import Navbar from '../../components/Navbar/index'
 import Footer from "../../components/footer";
 import Cta from './Cta/index'
+import FeaturedCourseTracks from "../../components/FeaturedCourseTracks/index";
 
 class LandingPage extends React.Component {
     render() {
@@ -17,6 +18,7 @@ class LandingPage extends React.Component {
             <Navbar />
             <RapidHero />
             <OutermostCategory />
+            <FeaturedCourseTracks />
             <Cta />
             {/* <RapidNumbers /> */}
             <RapidServices />

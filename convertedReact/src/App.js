@@ -39,7 +39,6 @@ import FilterBox from './components/FilterBox/index';
 import ParticularOuterMostCategory from './pages/ParticularOuterMostCategory'
 import LandingPage from './pages/LandingPage/index'
 import Rapid_Hero from './pages/LandingPage/Rapid_Hero/Rapid_Hero';
-import FeaturedCourseTracks from "./components/FeaturedCourseTracks/index";
 import FeaturedCourseCard from './components/FeaturedCourseCard/FeaturedCourseCard';
 import FeaturedLandingPageSection from "./components/FeaturedLandingPageSection/FeaturedLandingPageSection";
 
@@ -55,8 +54,8 @@ function App() {
         {/* <CardHackrio /> */}
         {/* <CourseDetail /> */}
         {/* <Footer /> */}
-       {/* <Navsearch /> */}
-       {/* <FilterBox /> */}
+        {/* <Navsearch /> */}
+        {/* <FilterBox /> */}
         {/* <Navbar /> */}
         {/* <OutermostCategory /> */}
         {/* <Roadmap /> */}
@@ -65,16 +64,18 @@ function App() {
         {/* <Signup /> */}
         {/* <SuggestionCarousel /> */}
         {/* <Timeline /> */}
-        <ListingCoursesPage />
-        <CourseDetailPage />
-        <RoadmapLandingPage />
-        <ParticularRoadmapPage/>
-        <ParticularOuterMostCategory />
-        <FeaturedLandingPageSection/>
+      
+        {/* <FeaturedLandingPageSection/> */}
         {/* <FeaturedCourseCard /> */}
-        <FeaturedCourseTracks />
-        <LandingPage />
-        {/* <Rapid_Hero /> */}
+        {/* <FeaturedCourseTracks /> */}
+
+        {/* <LandingPage /> */}
+        {/* <ParticularOuterMostCategory /> */}
+        {/* <ListingCoursesPage /> */}
+        {/* <CourseDetailPage /> */}
+
+        {/* <RoadmapLandingPage /> */}
+        {/* <ParticularRoadmapPage/> */}
 
         </div>
   );
