@@ -69,21 +69,6 @@ router.get("/coursedetails/:skillName/:courseId", async (req, res, next) => {
   try {
     let result = await Skill.find({});
     let arr = [];
-    // for (let elm of result) {
-    //   let nameSkillStr = elm.nameSkill.toLowerCase();
-    //   const regex = /%20/gi;
-    //   nameSkillStr = nameSkillStr.replace(regex, " ");
-    //   if (nameSkillStr === req.params.skillName.toLowerCase()) {
-    //     let test = elm.Courses.map((obj) => {
-    //       let str = obj.NameofCourse.toLowerCase();
-    //       str = str.replace(/[\/\\#,+()$~%.'":*?<>{}]/g, "");
-    //       str = str.replace(/\s\s+/g, " ");
-    //       if (str === req.params.courseId.toLowerCase()) {
-    //         arr.push(obj);
-    //       }
-    //     });
-    //   }
-    // }
     var finalarr = [];
     arr = req.params.skillName.toLowerCase().split("-");
     for (var j = 0; j < arr.length; j++) {
