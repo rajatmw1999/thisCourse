@@ -63,7 +63,7 @@ router.get("/category/:categoryName", async (req, res, next) => {
 });
 
 //ROUTE 3
-//RETREIVE THE DETAILS OF A PARTICULAR COURSE OF A PARTICULAR SKILL
+//RETREIVE THE DETAILS OF A PARTICULAR COURSE BY A PARTICULAR SKILL AND ITS COURSE ID
 router.get("/coursedetails/:skillName/:courseId", async (req, res, next) => {
   try {
     let result = await Skill.find({});
