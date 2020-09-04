@@ -92,8 +92,6 @@ router.get("/coursedetails/:skillName/:courseId", async (req, res, next) => {
         if (skillStr.search(arr[j]) != -1) {
           let test = elm.Courses.map((obj) => {
             let str = obj._id;
-            // str = str.replace(/[\/\\#,+()$~%.'":*?<>{}]/g, "");
-            // str = str.replace(/\s\s+/g, " ");
             if (str == req.params.courseId) {
               finalarr.push(obj);
             }
