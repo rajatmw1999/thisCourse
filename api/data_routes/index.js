@@ -38,7 +38,7 @@ router.get("/:skillName", async (req, res, next) => {
 });
 
 //ROUTE 5
-//RETREIVE ALL COURSES OF A PARTICULAR SKILL(And Condition)
+//Retrive All Courses Having All Mentioned Skills
 router.get("/search/:skillName", async (req, res, next) => {
   try {
     let result = await Skill.find({});
