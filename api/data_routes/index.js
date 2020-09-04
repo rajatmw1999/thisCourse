@@ -11,8 +11,35 @@ router.get("/all", async (req, res, next) => {
 });
 
 //ROUTE 1
-//RETREIVE ALL COURSES OF A PARTICULAR SKILL
+//RETREIVE ALL COURSES OF A PARTICULAR SKILL(OR Condition)
 router.get("/:skillName", async (req, res, next) => {
+  try {
+    let result = await Skill.find({});
+    var arr = [];
+    var finalarr = [];
+    arr = req.params.skillName.toLowerCase().split("-");
+    for (var j = 0; j < arr.length; j++) {
+      for (let elm of result) {
+        let skillStr = elm.nameSkill.toLowerCase();
+        if (skillStr.search(arr[j]) != -1) {
+          finalarr.push(elm);
+        }
+      }
+    }
+
+    res.status(200).json({
+      data: finalarr.length > 0 ? finalarr : "Not Found !",
+    });
+  } catch (err) {
+    res.status(500).json({
+      error: next(err),
+    });
+  }
+});
+
+//ROUTE 5
+//RETREIVE ALL COURSES OF A PARTICULAR SKILL(And Condition)
+router.get("/search/:skillName", async (req, res, next) => {
   try {
     let result = await Skill.find({});
     var arr = [];
