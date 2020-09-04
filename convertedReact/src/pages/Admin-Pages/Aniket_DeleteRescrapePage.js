@@ -10,15 +10,13 @@ import {
   Col
 } from "reactstrap";
 
-const Aniket_DeleteRescrapePage = () => {
-    <div>
-        <h1>EDIT AN EXISTING FEATURED COURSE</h1>
-    </div>
+class Aniket_DeleteRescrapeData extends React.Component {
+    render(){
     return (
         <Container fluid className="mt-5">
       <Row>
         <Col md="6" className="offset-md-3 p-2">
-          <Form onSubmit={handleSubmit}>
+          <Form>
             <FormGroup>
               <Input
                 type="textarea"
@@ -34,7 +32,8 @@ const Aniket_DeleteRescrapePage = () => {
       </Row>
     </Container>
 
-    )
+    )}
+}
 
 
-export default Aniket_DeleteRescrapePage;
+export default Aniket_DeleteRescrapeData;

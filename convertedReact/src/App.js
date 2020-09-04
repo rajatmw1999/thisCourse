@@ -41,6 +41,13 @@ import LandingPage from './pages/LandingPage/index'
 import Rapid_Hero from './pages/LandingPage/Rapid_Hero/Rapid_Hero';
 import FeaturedCourseCard from './components/FeaturedCourseCard/FeaturedCourseCard';
 import FeaturedLandingPageSection from "./components/FeaturedLandingPageSection/FeaturedLandingPageSection";
+
+import Admin_ChangePassword from './pages/Admin-Pages/Aniket_ChangePassword'
+import Admin_DeleteRescrape from './pages/Admin-Pages/Aniket_DeleteRescrapePage'
+import Admin_EditFeaturedCourse from './pages/Admin-Pages/Aniket_EditFeaturedPage'
+import Admin_NewFeaturedCourse from './pages/Admin-Pages/Aniket_NewFeaturedPage'
+import Admin_Profile from './pages/Admin-Pages/Aniket_ProfilePage'
+ 
 import {categoryData} from './data/category';
 import {skillsData} from './data/skills';
 import {
@@ -66,10 +73,18 @@ function App() {
   return (
 
     <div>
-        <Route exact path="/:skillName/:id" component={CourseDetailPage} />
+        {/* <Route exact path="/:skillName/:id" component={CourseDetailPage} />
         {categoryPath}
         {skillsPath}
-        <Route exact path='/' component={LandingPage} />
+        <Route exact path='/' component={LandingPage} /> */}
+
+        {/* <Admin_ChangePassword /> */}
+        {/* <Admin_DeleteRescrape /> */}
+        {/* <Admin_EditFeaturedCourse /> */}
+        {/* <Admin_NewFeaturedCourse /> */}
+        <Admin_Profile />
+
+
         {/* <Aboutsection /> */}
         {/* <AuthorOfRoadmap /> */}
         {/* <Blogpost /> */}
