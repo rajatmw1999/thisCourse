@@ -1,14 +1,23 @@
 import React,{Component} from "react";
 import "./cardComponent.css";
-
+import CourseDetail from '../../pages/courseDetail/courseDetail'
+import {
+    Route,
+    Link
+  } from 'react-router-dom';
 class CardComponent extends Component {
+    constructor(props) {
+        super(props);
+        // console.log(this.props);
+    }
+
     render(){
         return(
             <div className="">
             <div className="card mb-3" >
                 <div className="row no-gutters">
             <div className="col-md-3 search-course-card--card--left-col--3kKip">
-                <a href="/the-web-developer-bootcamp/">
+                <a href={`${this.props.LinkToCourse}`}>
                     <img className="card-img" src="https://udemy-images.udemy.com/course/304x171/625204_436a_2.jpg" alt="course image" width="304" height="171" className="aradhna_card__image">    
                     </img>
                 </a>        
@@ -20,11 +29,16 @@ class CardComponent extends Component {
                             <img className='iconDetails' src="https://www.vectorlogo.zone/logos/udemy/udemy-icon.svg" alt="udemy" >
                             </img>
                         </div>
-                       <p>udemy</p>
+                       <p>{this.props.platform}</p>
                     </div>
                     <div className="card__head">
-                        <a href="/the-web-developer-bootcamp/" className="card__title">Web Dev 101: Zero To Hero</a>
-                        <div className="col-right-0 time"><span className="star" aria-hidden="true">★★★★★</span></div>
+                        <a href={`${this.props.LinkToCourse}`} className="card__title">{this.props.NameofCourse}</a>
+                        {/* <div className="col-right-0 time"><span className="star" aria-hidden="true">★★★★★</span></div> */}
+                        {
+                        this.props.Rating?
+                        <div className="col-right-0 time"><span className="star" aria-hidden="true">{this.props.Rating}★</span></div>
+                        :""
+                        }
                     </div>
                    
                     <p className="summary">
@@ -34,7 +48,7 @@ class CardComponent extends Component {
                     <div className="fluid-row">
                             <div className="col-left-0 upvotes">
                                 {/* <i className="fa fa-chalkboard-teacher"></i>  */}
-                                Michel Ray
+                                {this.props.Instructor}
                             </div>
                             <div className="col-left-0 upvotes">
                             {/* <span><i className="fa fa-stopwatch"></i></span> */}
@@ -44,9 +58,10 @@ class CardComponent extends Component {
                             <div className="col-left-0 upvotes" style={{color:"green"}}>
                                 Price: $13   
                             </div>
-                            <a href="https://betapage.co/startup/time-continuum-app" className="read_more"> 
+                            <Link to={`/${this.props.nameOfSkill}/${this.props.Id}`} className="read_more">                          
                                 SEE DETAILS
-                            </a>
+                            </Link>
+                            
                     </div>
                 </div>  
             </div>

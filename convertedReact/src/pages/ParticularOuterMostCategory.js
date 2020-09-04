@@ -9,13 +9,17 @@ import CardHackrio from '../components/cardHackrio/cardHackrio';
 import Footer from '../components/footer/index';
 
 class ParticularOuterMostCategory extends React.Component {
+    constructor(props) {
+        super(props);
+        console.log(this.props.displayName);
+      }
     render() {
         return (
         <div>
             <Navbar/>
-            <Aboutsection />
+            <Aboutsection displayName={this.props.displayName} />
             <BreadCrumb />  
-            <CardHackrio />
+            <CardHackrio category={this.props.displayName}/> 
             <Footer />
         </div>
         );

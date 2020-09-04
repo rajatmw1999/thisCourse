@@ -10,6 +10,7 @@ import Navbar from '../../components/Navbar/index'
 import Footer from "../../components/footer";
 import Cta from './Cta/index'
 import FeaturedCourseTracks from "../../components/FeaturedCourseTracks/index";
+import categoryData from '../../data/category';
 
 class LandingPage extends React.Component {
     render() {

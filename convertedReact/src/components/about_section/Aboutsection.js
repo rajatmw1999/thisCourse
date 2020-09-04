@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom';
 import "./about_section.css";
 
 class Aboutsection extends React.Component {
+    constructor(props) {
+        super(props);
+      }
     render() {
         return (
             <div className="bg">
                 <div className="container col-12 col-md-10">
                     <div id="text">
-                        <h1 className="about_h1">ThisCourse</h1>
+                        <h1 className="about_h1">{this.props.displayName}</h1>
                         <p className="tag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>
                             Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/>
                             <br/>
