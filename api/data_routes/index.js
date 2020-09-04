@@ -29,7 +29,6 @@ router.get("/:skillName", async (req, res, next) => {
 
     res.status(200).json({
       data: finalarr.length > 0 ? finalarr : "Not Found !",
-      arr: req.params.skillName.toLowerCase(),
     });
   } catch (err) {
     res.status(500).json({
