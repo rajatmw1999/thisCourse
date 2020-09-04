@@ -45,12 +45,16 @@ router.get("/search/:skillName", async (req, res, next) => {
     var arr = [];
     var finalarr = [];
     arr = req.params.skillName.toLowerCase().split("-");
-    for (var j = 0; j < arr.length; j++) {
-      for (let elm of result) {
-        let skillStr = elm.nameSkill.toLowerCase();
-        if (skillStr.search(arr[j]) != -1) {
-          finalarr.push(elm);
+    for (let elm of result) {
+      var flag = 0;
+      let skillStr = elm.nameSkill.toLowerCase();
+      for (var j = 0; j < arr.length; j++) {
+        if (skillStr.search(arr[j]) === -1) {
+          flag = 1;
         }
+      }
+      if (flag === 0) {
+        finalarr.push(elm);
       }
     }
 
