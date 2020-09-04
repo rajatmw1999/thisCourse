@@ -28,7 +28,7 @@ router.get("/:skillName", async (req, res, next) => {
     }
 
     res.status(200).json({
-      data: finalarr.length > 0 ? finalarr : "Not BOSS Found.",
+      data: finalarr.length > 0 ? finalarr : "Not Found !",
       arr: req.params.skillName.toLowerCase(),
     });
   } catch (err) {
@@ -54,7 +54,7 @@ router.get("/category/:categoryName", async (req, res, next) => {
       }
     }
     res.status(200).json({
-      data: arr.length > 0 ? arr : "Not Found.",
+      data: arr.length > 0 ? arr : "Not Found !",
     });
   } catch (err) {
     res.status(500).json({
@@ -100,7 +100,7 @@ router.get("/coursedetails/:skillName/:courseId", async (req, res, next) => {
       }
     }
     res.status(200).json({
-      data: finalarr.length > 0 ? finalarr : "Not Found.",
+      data: finalarr.length > 0 ? finalarr : "Not Found !",
       id: req.params.courseId,
       name: req.params.skillName,
     });
