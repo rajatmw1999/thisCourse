@@ -12,7 +12,7 @@ router.get("/all", async (req, res, next) => {
 
 //ROUTE 1
 //Retrive All Courses Having Some of The Mentioned Skills
-router.get("/:skillName", async (req, res, next) => {
+router.get("/searchsome/:skillName", async (req, res, next) => {
   try {
     let result = await Skill.find({});
     var arr = [];
@@ -39,7 +39,7 @@ router.get("/:skillName", async (req, res, next) => {
 
 //ROUTE 5
 //Retrive All Courses Having All Mentioned Skills
-router.get("/search/:skillName", async (req, res, next) => {
+router.get("/searchall/:skillName", async (req, res, next) => {
   try {
     let result = await Skill.find({});
     var arr = [];
