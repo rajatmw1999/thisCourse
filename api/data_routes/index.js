@@ -11,8 +11,8 @@ router.get("/all", async (req, res, next) => {
 });
 
 //ROUTE 1
-//RETREIVE ALL COURSES OF A PARTICULAR SKILL
-router.get("/:skillName", async (req, res, next) => {
+//Retrive All Courses Having Some of The Mentioned Skills
+router.get("/searchsome/:skillName", async (req, res, next) => {
   try {
     let result = await Skill.find({});
     var arr = [];
@@ -24,6 +24,37 @@ router.get("/:skillName", async (req, res, next) => {
         if (skillStr.search(arr[j]) != -1) {
           finalarr.push(elm);
         }
+      }
+    }
+
+    res.status(200).json({
+      data: finalarr.length > 0 ? finalarr : "Not Found !",
+    });
+  } catch (err) {
+    res.status(500).json({
+      error: next(err),
+    });
+  }
+});
+
+//ROUTE 5
+//Retrive All Courses Having All Mentioned Skills
+router.get("/searchall/:skillName", async (req, res, next) => {
+  try {
+    let result = await Skill.find({});
+    var arr = [];
+    var finalarr = [];
+    arr = req.params.skillName.toLowerCase().split("-");
+    for (let elm of result) {
+      var flag = 0;
+      let skillStr = elm.nameSkill.toLowerCase();
+      for (var j = 0; j < arr.length; j++) {
+        if (skillStr.search(arr[j]) === -1) {
+          flag = 1;
+        }
+      }
+      if (flag === 0) {
+        finalarr.push(elm);
       }
     }
 
