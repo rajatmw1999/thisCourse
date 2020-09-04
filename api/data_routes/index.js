@@ -15,25 +15,25 @@ router.get("/all", async (req, res, next) => {
 router.get("/search/:skillName", async (req, res, next) => {
   try {
     let result = await Skill.find({});
-    let arr = [];
+    var arr = [];
+    var finalarr = [];
     arr = req.params.skillName.toLowerCase().split("-");
-    for (var j = 0; j < arr.length; j++){
-
+    for (var j = 0; j < arr.length; j++) {
       // console.log(myArray[j]);
       for (let elm of result) {
         let skillStr = elm.nameSkill.toLowerCase();
         // const regex = /%20/gi;
         // skillStr = skillStr.replace(regex, " ");
-  
-        if (skillStr.search(arr[j])!=-1) {
-        arr.push(elm);
-        // }
+
+        if (skillStr.search(arr[j]) != -1) {
+          finalarr.push(elm);
+          // }
+        }
       }
-      
-      }
+    }
 
     res.status(200).json({
-      data: arr.length > 0 ? arr : "Not BOSS Found.",
+      data: finalarr.length > 0 ? finalarr : "Not BOSS Found.",
       arr: req.params.skillName.toLowerCase(),
     });
   } catch (err) {
