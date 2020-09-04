@@ -3,23 +3,32 @@ const router = express.Router();
 const Skill = require("../models/skills");
 const { run_v1alpha1 } = require("googleapis");
 
+//ROUTE 4
+//RETURN ALL THE SCRAPPED COURSES STORED IN THE DATABASE.
+router.get("/all", async (req, res, next) => {
+  let result = await Skill.find({});
+  res.json(result);
+});
+
 //ROUTE 1
 //RETREIVE ALL COURSES OF A PARTICULAR SKILL
-router.get("/:skillName", async (req, res, next) => {
+router.get("/search/:skillName", async (req, res, next) => {
   try {
     let result = await Skill.find({});
     let arr = [];
-    for (let elm of result) {
-      let skillStr = elm.nameSkill.toLowerCase();
-      const regex = /%20/gi;
-      skillStr = skillStr.replace(regex, " ");
+    // for (let elm of result) {
+    //   let skillStr = elm.nameSkill.toLowerCase();
+    //   // const regex = /%20/gi;
+    //   // skillStr = skillStr.replace(regex, " ");
 
-      if (skillStr === req.params.skillName.toLowerCase()) {
-        arr.push(elm);
-      }
-    }
+    //   // if (skillStr === req.params.skillName.toLowerCase()) {
+    //   arr.push(skillStr);
+    //   // }
+    // }
+    arr = req.params.skillName.toLowerCase().split("-");
     res.status(200).json({
-      data: arr.length > 0 ? arr : "Not Found.",
+      data: arr.length > 0 ? arr : "Not BOSS Found.",
+      arr: req.params.skillName.toLowerCase(),
     });
   } catch (err) {
     res.status(500).json({
@@ -82,13 +91,6 @@ router.get("/coursedetails/:skillName/:courseId", async (req, res, next) => {
       error: next(err),
     });
   }
-});
-
-//ROUTE 4
-//RETURN ALL THE SCRAPPED COURSES STORED IN THE DATABASE.
-router.get("/all", async (req, res, next) => {
-  let result = await Skill.find({});
-  res.json(result);
 });
 
 module.exports = router;
