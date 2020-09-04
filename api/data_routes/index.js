@@ -19,15 +19,10 @@ router.get("/search/:skillName", async (req, res, next) => {
     var finalarr = [];
     arr = req.params.skillName.toLowerCase().split("-");
     for (var j = 0; j < arr.length; j++) {
-      // console.log(myArray[j]);
       for (let elm of result) {
         let skillStr = elm.nameSkill.toLowerCase();
-        // const regex = /%20/gi;
-        // skillStr = skillStr.replace(regex, " ");
-
         if (skillStr.search(arr[j]) != -1) {
           finalarr.push(elm);
-          // }
         }
       }
     }
