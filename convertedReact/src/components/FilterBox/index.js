@@ -102,6 +102,22 @@ class FilterBox extends React.Component {
                             <div class="col-4 text-right caption">
                                 <span id="slider-range-value21"></span>
                             </div>
+
+                            
+
+
+                            <div class="col-4 aradhna_filterinputbox" style={{border: '1px black'}}>
+                                        <span id=""><input type="text" placeholder="MIN"></input></span>
+                                        </div>
+
+                                        <div class="col-4 aradhna_filterinputbox" style={{border: '1px black'}}>
+                                        </div>
+
+                                        <div class="col-4 text-right aradhna_filterinputbox">
+                                        <span id=""><input type="text" placeholder="MAX"></input></span>
+                                        </div>
+                            
+
                             </div>
                         </div>
                         </div>
@@ -164,6 +180,17 @@ class FilterBox extends React.Component {
                                         <div class="col-3 text-right caption">
                                             <span id="slider-range-hour-value21"></span>
                                             </div>
+
+                                        <div class="col-4 aradhna_filterinputbox" style={{border: '1px black'}}>
+                                        <span id=""><input type="text" placeholder="MIN"></input></span>
+                                        </div>
+
+                                        <div class="col-4 aradhna_filterinputbox" style={{border: '1px black'}}>
+                                        </div>
+
+                                        <div class="col-4 text-right aradhna_filterinputbox">
+                                        <span id=""><input type="text" placeholder="MAX"></input></span>
+                                        </div>
                                         
                                 </div>
                             </div>
@@ -217,10 +244,10 @@ class FilterBox extends React.Component {
                                
                                 <ul id="providers">
                                     <li>
-                                        <input class="provider" value="Udemy" type="checkbox" name="provider" id="checkbox1"/>
+                                        <input class="provider" value="Apnacourse" type="checkbox" name="provider" id="checkbox1"/>
                                         <label class="checkbox-label" for="checkbox1">
                                             <span class="el:m-checkbox__label">
-                                                <a>Udemy</a>
+                                                <a>Apnacourse</a>
                                             <span class="el:m-checkbox__summary">
                                                 (571)
                                             </span>
@@ -228,10 +255,10 @@ class FilterBox extends React.Component {
                                         </label>
                                     </li>
                                     <li>
-                                        <input class="provider"  value="Pluralsight" type="checkbox" name="provider" id="checkbox2"/>
+                                        <input class="provider"  value="Arcademics" type="checkbox" name="provider" id="checkbox2"/>
                                         <label class="checkbox-label" for="checkbox2">
                                             <span class="el:m-checkbox__label">
-                                                <a>Pluralsight</a>
+                                                <a>Arcademics</a>
                                             <span class="el:m-checkbox__summary">
                                                 (184)
                                             </span>
@@ -239,65 +266,59 @@ class FilterBox extends React.Component {
                                         </label>
                                     </li>
                                     <li>
-                                        <input class="provider" type="checkbox" value="Linkedin Learning" name="provider" id="checkbox3"/>
+                                        <input class="provider" type="checkbox" value="Bitdegree" name="provider" id="checkbox3"/>
                                         <label class="checkbox-label" for="checkbox3">
-                                            <span class="el:m-checkbox__label"><a>Linkedin Learning</a><span class="el:m-checkbox__summary">
+                                            <span class="el:m-checkbox__label"><a>Bitdegree</a><span class="el:m-checkbox__summary">
                                                 (45)</span></span>
                                         </label>
                                     </li>
                                     <li>
-                                        <input class="provider" type="checkbox" value="Egghead" name="provider" id="checkbox4"/>
+                                        <input class="provider" type="checkbox" value="Udemy" name="provider" id="checkbox4"/>
                                         <label class="checkbox-label" for="checkbox4">
-                                            <span class="el:m-checkbox__label"><a>Egghead</a><span class="el:m-checkbox__summary">
+                                            <span class="el:m-checkbox__label"><a>Udemy</a><span class="el:m-checkbox__summary">
                                                 (33)</span></span>
                                         </label>
                                     </li>
                                     
                                                       
                                     <li>
-                                        <input class="provider" type="checkbox" value="Frontend Masters" name="provider" id="checkbox5"/>
+                                        <input class="provider" type="checkbox" value="Coursera" name="provider" id="checkbox5"/>
                                         <label class="checkbox-label" for="checkbox5">
-                                            <span class="el:m-checkbox__label"><a>Frontend Masters</a><span class="el:m-checkbox__summary">
+                                            <span class="el:m-checkbox__label"><a>Coursera</a><span class="el:m-checkbox__summary">
                                                 (11)</span></span>
                                         </label>
                                     </li>
                                     
                                     <li>
-                                        <input class="provider" type="checkbox" value="Platzi" name="provider" id="checkbox6"/>
+                                        <input class="provider" type="checkbox" value="Digigrad" name="provider" id="checkbox6"/>
                                         <label class="checkbox-label" for="checkbox6">
-                                            <span class="el:m-checkbox__label"><a>Platzi</a><span class="el:m-checkbox__summary">
+                                            <span class="el:m-checkbox__label"><a>Digigrad</a><span class="el:m-checkbox__summary">
                                                 (9)</span></span>
                                         </label>
                                     </li>
                                   
                                     <li>
-                                        <input class="provider" type="checkbox" value="Alison" name="provider" id="checkbox7"/>
+                                        <input class="provider" type="checkbox" value="Skillshare" name="provider" id="checkbox7"/>
                                         <label class="checkbox-label" for="checkbox7">
-                                            <span class="el:m-checkbox__label"><a>Alison</a><span class="el:m-checkbox__summary">
+                                            <span class="el:m-checkbox__label"><a>Skillshare</a><span class="el:m-checkbox__summary">
                                                 (7)</span></span>
                                         </label>
                                     </li>
                                  
                                     <li>
-                                        <input class="provider" type="checkbox" value="Ultimate Courses" name="provider" id="checkbox8"/>
+                                        <input class="provider" type="checkbox" value="Harvard" name="provider" id="checkbox8"/>
                                         <label class="checkbox-label" for="checkbox8">
-                                            <span class="el:m-checkbox__label"><a>Ultimate Courses</a><span class="el:m-checkbox__summary">
+                                            <span class="el:m-checkbox__label"><a>Harvard</a><span class="el:m-checkbox__summary">
                                                 (6)</span></span>
                                         </label>
                                     </li>
                                    
-                                    <li>
-                                        <input class="provider" type="checkbox" value="Coursera" name="provider" id="checkbox9"/>
-                                        <label class="checkbox-label" for="checkbox9">
-                                            <span class="el:m-checkbox__label"><a>Coursera</a><span class="el:m-checkbox__summary">
-                                                (5)</span></span>
-                                        </label>
-                                    </li>
+                               
                                     
                                     <li>
-                                        <input class="provider" type="checkbox" value="Alura" name="provider" id="checkbox10"/>
+                                        <input class="provider" type="checkbox" value="OpenYale" name="provider" id="checkbox10"/>
                                         <label class="checkbox-label" for="checkbox10">
-                                            <span class="el:m-checkbox__label"><a>Alura</a><span class="el:m-checkbox__summary">
+                                            <span class="el:m-checkbox__label"><a>OpenYale</a><span class="el:m-checkbox__summary">
                                                 (5)</span></span>
                                         </label>
                                     </li>
@@ -311,9 +332,9 @@ class FilterBox extends React.Component {
                                     </li>
                                     
                                     <li>
-                                        <input class="provider" type="checkbox" value="Treehouse" name="provider" id="checkbox12"/>
+                                        <input class="provider" type="checkbox" value="Udacity" name="provider" id="checkbox12"/>
                                         <label class="checkbox-label" for="checkbox12">
-                                            <span class="el:m-checkbox__label"><a>Treehouse</a><span class="el:m-checkbox__summary">
+                                            <span class="el:m-checkbox__label"><a>Udacity</a><span class="el:m-checkbox__summary">
                                                 (2)</span></span>
                                         </label>
                                     </li>
@@ -327,20 +348,14 @@ class FilterBox extends React.Component {
                                     </li>
                                    
                                     <li>
-                                        <input class="provider" type="checkbox" value="Edureka" name="provider" id="checkbox14"/>
+                                        <input class="provider" type="checkbox" value="Verbling" name="provider" id="checkbox14"/>
                                         <label class="checkbox-label" for="checkbox14">
-                                            <span class="el:m-checkbox__label"><a>Edureka</a><span class="el:m-checkbox__summary">
+                                            <span class="el:m-checkbox__label"><a>Verbling</a><span class="el:m-checkbox__summary">
                                                 (1)</span></span>
                                         </label>
                                     </li>
                                     
-                                    <li>
-                                        <input class="provider" type="checkbox" value="Codecademy" name="provider" id="checkbox15"/>
-                                        <label class="checkbox-label" for="checkbox15">
-                                            <span class="el:m-checkbox__label"><a>Codecademy</a><span class="el:m-checkbox__summary">
-                                                (1)</span></span>
-                                        </label>
-                                    </li>
+                                  
                                 </ul>
                             </div>
                         </div>
@@ -655,6 +670,10 @@ class FilterBox extends React.Component {
                         <a href="#" onclick="uncheckAll4()" class="filter-clear el:amx-C_er el:amx-Fw(b) el:amx-Fs(0.625em)" style={{margin: 'auto 0', textAlign: 'right'}} data-v-7cc4708a="">
                       Clear all filters
                     </a>
+                    <button href="#" class="btn btn-block" style={{backgroundColor: 'lightblue'}} >
+                      Apply Filters
+                    </button>
+                   
                     </div>
                     <form  data-v-7cc4708a="">
                         <hr />
@@ -686,6 +705,18 @@ class FilterBox extends React.Component {
                                         <div class="col-4 text-right caption">
                                            <span id="slider-range-value2"></span>
                                           </div>
+
+                                        <div class="col-4 aradhna_filterinputbox" style={{border: '1px black'}}>
+                                        <span id=""><input type="text" placeholder="MIN"></input></span>
+                                        </div>
+
+                                        <div class="col-4 aradhna_filterinputbox" style={{border: '1px black'}}>
+                                        </div>
+
+                                        <div class="col-4 text-right aradhna_filterinputbox">
+                                        <span id=""><input type="text" placeholder="MAX"></input></span>
+                                        </div>
+                                          
                                         
                                 </div>
                             </div>
@@ -726,7 +757,18 @@ class FilterBox extends React.Component {
                                        <div class="col-3 text-right caption">
                                           <span id="slider-range-hour-value2"></span>
                                          </div>
-                                       
+
+
+                                         <div class="col-4 aradhna_filterinputbox" style={{border: '1px black'}}>
+                                        <span id=""><input type="text" placeholder="MIN"></input></span>
+                                        </div>
+
+                                        <div class="col-4 aradhna_filterinputbox" style={{border: '1px black'}}>
+                                        </div>
+
+                                        <div class="col-4 text-right aradhna_filterinputbox">
+                                        <span id=""><input type="text" placeholder="MAX"></input></span>
+                                        </div>
                                </div>
                            </div>
 
@@ -759,10 +801,10 @@ class FilterBox extends React.Component {
                                    
                                     <ul id="providerss">
                                         <li>
-                                            <input class="provider" value="Udemy" type="checkbox" name="provider" id="checkbox1"/>
+                                            <input class="provider" value="Apnacourse" type="checkbox" name="provider" id="checkbox1"/>
                                             <label class="checkbox-label" for="checkbox1">
                                                 <span class="el:m-checkbox__label">
-                                                    <a>Udemy</a>
+                                                    <a>Apnacourse</a>
                                                 <span class="el:m-checkbox__summary">
                                                     (571)
                                                 </span>
@@ -770,10 +812,10 @@ class FilterBox extends React.Component {
                                             </label>
                                         </li>
                                         <li>
-                                            <input class="provider"  value="Pluralsight" type="checkbox" name="provider" id="checkbox2"/>
+                                            <input class="provider"  value="Arcademics" type="checkbox" name="provider" id="checkbox2"/>
                                             <label class="checkbox-label" for="checkbox2">
                                                 <span class="el:m-checkbox__label">
-                                                    <a>Pluralsight</a>
+                                                    <a>Arcademics</a>
                                                 <span class="el:m-checkbox__summary">
                                                     (184)
                                                 </span>
@@ -781,81 +823,74 @@ class FilterBox extends React.Component {
                                             </label>
                                         </li>
                                         <li>
-                                            <input class="provider" type="checkbox" value="Linkedin Learning" name="provider" id="checkbox3"/>
+                                            <input class="provider" type="checkbox" value="Bitdegree" name="provider" id="checkbox3"/>
                                             <label class="checkbox-label" for="checkbox3">
-                                                <span class="el:m-checkbox__label"><a>Linkedin Learning</a><span class="el:m-checkbox__summary">
+                                                <span class="el:m-checkbox__label"><a>Bitdegree</a><span class="el:m-checkbox__summary">
                                                     (45)</span></span>
                                             </label>
                                         </li>
                                         <li>
-                                            <input class="provider" type="checkbox" value="Egghead" name="provider" id="checkbox4"/>
+                                            <input class="provider" type="checkbox" value="Udemy" name="provider" id="checkbox4"/>
                                             <label class="checkbox-label" for="checkbox4">
-                                                <span class="el:m-checkbox__label"><a>Egghead</a><span class="el:m-checkbox__summary">
+                                                <span class="el:m-checkbox__label"><a>Udemy</a><span class="el:m-checkbox__summary">
                                                     (33)</span></span>
                                             </label>
                                         </li>
                                         
                                                           
                                         <li>
-                                            <input class="provider" type="checkbox" value="Frontend Masters" name="provider" id="checkbox5"/>
+                                            <input class="provider" type="checkbox" value="Coursera" name="provider" id="checkbox5"/>
                                             <label class="checkbox-label" for="checkbox5">
-                                                <span class="el:m-checkbox__label"><a>Frontend Masters</a><span class="el:m-checkbox__summary">
+                                                <span class="el:m-checkbox__label"><a>Coursera</a><span class="el:m-checkbox__summary">
                                                     (11)</span></span>
                                             </label>
                                         </li>
                                         
                                         <li>
-                                            <input class="provider" type="checkbox" value="Platzi" name="provider" id="checkbox6"/>
+                                            <input class="provider" type="checkbox" value="Digigrad" name="provider" id="checkbox6"/>
                                             <label class="checkbox-label" for="checkbox6">
-                                                <span class="el:m-checkbox__label"><a>Platzi</a><span class="el:m-checkbox__summary">
+                                                <span class="el:m-checkbox__label"><a>Digigrad</a><span class="el:m-checkbox__summary">
                                                     (9)</span></span>
                                             </label>
                                         </li>
                                       
                                         <li>
-                                            <input class="provider" type="checkbox" value="Alison" name="provider" id="checkbox7"/>
+                                            <input class="provider" type="checkbox" value="Edx" name="provider" id="checkbox7"/>
                                             <label class="checkbox-label" for="checkbox7">
-                                                <span class="el:m-checkbox__label"><a>Alison</a><span class="el:m-checkbox__summary">
+                                                <span class="el:m-checkbox__label"><a>Edx </a><span class="el:m-checkbox__summary">
                                                     (7)</span></span>
                                             </label>
                                         </li>
                                      
                                         <li>
-                                            <input class="provider" type="checkbox" value="Ultimate Courses" name="provider" id="checkbox8"/>
+                                            <input class="provider" type="checkbox" value="Harvard" name="provider" id="checkbox8"/>
                                             <label class="checkbox-label" for="checkbox8">
-                                                <span class="el:m-checkbox__label"><a>Ultimate Courses</a><span class="el:m-checkbox__summary">
+                                                <span class="el:m-checkbox__label"><a>Harvard </a><span class="el:m-checkbox__summary">
                                                     (6)</span></span>
                                             </label>
                                         </li>
                                        
+                                     
                                         <li>
-                                            <input class="provider" type="checkbox" value="Coursera" name="provider" id="checkbox9"/>
-                                            <label class="checkbox-label" for="checkbox9">
-                                                <span class="el:m-checkbox__label"><a>Coursera</a><span class="el:m-checkbox__summary">
-                                                    (5)</span></span>
-                                            </label>
-                                        </li>
-                                        
-                                        <li>
-                                            <input class="provider" type="checkbox" value="Alura" name="provider" id="checkbox10"/>
+                                            <input class="provider" type="checkbox" value="OpenYale" name="provider" id="checkbox10"/>
                                             <label class="checkbox-label" for="checkbox10">
-                                                <span class="el:m-checkbox__label"><a>Alura</a><span class="el:m-checkbox__summary">
+                                                <span class="el:m-checkbox__label"><a>OpenYale </a><span class="el:m-checkbox__summary">
                                                     (5)</span></span>
                                             </label>
                                         </li>
                                        
                                         <li>
-                                            <input class="provider" type="checkbox" value="Edx" name="provider" id="checkbox11"/>
+                                            <input class="provider" type="checkbox" value="Skillshare" name="provider" id="checkbox11"/>
                                             <label class="checkbox-label" for="checkbox11">
-                                                <span class="el:m-checkbox__label"><a>Edx</a><span class="el:m-checkbox__summary">
+                                                <span class="el:m-checkbox__label"><a>Skillshare </a><span class="el:m-checkbox__summary">
                                                     (4)</span></span>
                                             </label>
                                         </li>
                                         
                                         <li>
-                                            <input class="provider" type="checkbox" value="Treehouse" name="provider" id="checkbox12"/>
+                                            <input class="provider" type="checkbox" value="Udacity" name="provider" id="checkbox12"/>
                                             <label class="checkbox-label" for="checkbox12">
-                                                <span class="el:m-checkbox__label"><a>Treehouse</a><span class="el:m-checkbox__summary">
+                                                <span class="el:m-checkbox__label"><a>Udacity</a><span class="el:m-checkbox__summary">
                                                     (2)</span></span>
                                             </label>
                                         </li>
@@ -869,20 +904,14 @@ class FilterBox extends React.Component {
                                         </li>
                                        
                                         <li>
-                                            <input class="provider" type="checkbox" value="Edureka" name="provider" id="checkbox14"/>
+                                            <input class="provider" type="checkbox" value="Verbling" name="provider" id="checkbox14"/>
                                             <label class="checkbox-label" for="checkbox14">
-                                                <span class="el:m-checkbox__label"><a>Edureka</a><span class="el:m-checkbox__summary">
+                                                <span class="el:m-checkbox__label"><a>Verbling</a><span class="el:m-checkbox__summary">
                                                     (1)</span></span>
                                             </label>
                                         </li>
                                         
-                                        <li>
-                                            <input class="provider" type="checkbox" value="Codecademy" name="provider" id="checkbox15"/>
-                                            <label class="checkbox-label" for="checkbox15">
-                                                <span class="el:m-checkbox__label"><a>Codecademy</a><span class="el:m-checkbox__summary">
-                                                    (1)</span></span>
-                                            </label>
-                                        </li>
+                                       
                                     </ul>
                                 </div>
                             </div>
@@ -1133,6 +1162,7 @@ class FilterBox extends React.Component {
                         </fieldset>
                         
                     </form>
+                   
                 </div>
             </div>
             <div class="col-12 el:amx-D(n)@>lg el:amx-Mb(1em)" data-v-7cc4708a="">
@@ -1151,6 +1181,8 @@ class FilterBox extends React.Component {
                   </a>
                 </div>
             </div>
+
+          
            
          </div>
 //     </div>

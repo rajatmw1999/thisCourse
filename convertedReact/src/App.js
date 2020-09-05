@@ -41,6 +41,9 @@ import LandingPage from './pages/LandingPage/index'
 import Rapid_Hero from './pages/LandingPage/Rapid_Hero/Rapid_Hero';
 import FeaturedCourseCard from './components/FeaturedCourseCard/FeaturedCourseCard';
 import FeaturedLandingPageSection from "./components/FeaturedLandingPageSection/FeaturedLandingPageSection";
+import ReferenceHome from './components/ReferenceHome/ReferenceHome';
+import ReferenceCourseTag from './components/ReferenceCourseTag/ReferenceCourseTag';
+import ReferenceCourseDetail from './components/ReferenceCourseDetail/ReferenceCourseDetail'
 
 import Admin_ChangePassword from './pages/Admin-Pages/Aniket_ChangePassword'
 import Admin_DeleteRescrape from './pages/Admin-Pages/Aniket_DeleteRescrapePage'
@@ -116,6 +119,9 @@ function App() {
 
         {/* <RoadmapLandingPage /> */}
         {/* <ParticularRoadmapPage/> */}
+        {/* <ReferenceCourseTag/> */}
+        {/* <ReferenceCourseDetail /> */}
+        {/* <ReferenceHome/> */}
 
         </div>
   );

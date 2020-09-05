@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 #Rectangle_50 {
 		fill: rgba(255,255,255,1);
 	}
@@ -641,62 +641,102 @@
 		color: rgba(74,74,74,1);
 		text-transform: capitalize;
 	}
-	.enclose{
+	
+
+.referencehomecontainer{
+    position: relative;
+}
+
+
+	.rect{
+		width:90%; 
+		height:381px;
+	}
+
+
+
+	@media(max-width:1000px){
+		.rect{
+			width:113%; 
+			height:381px;
+		}
+    }
+    
+    @media(max-width:767px){
+        
+		.rect{
+			width:85%; 
+			height:381px;
+		}
+	}
+
+    /* @media(max-width:572px){
+		.rect{
+			width:110%; 
+			height:381px;
+		}
+    } */
+
+    .enclose{
 		padding: inherit;
 		height: 400px;
 	}
 
-
-
-
-	.rect{
-		width:89%; 
-		height:381px;
-	}
-
-	/* @media(max-width:1200px){
+	@media(max-width:580px){
+        .referencehomecontainer{
+            padding: 0 40px;
+        }
+        .enclose{
+            padding-left: 10px;
+            height: 400px;
+        }
 		.rect{
-			width:240px; 
-			height:381px;
-		}
-	}
-
-
-	@media(max-width:1200px){
-		.rect{
-			width:240px; 
-			height:381px;
-		}
-	} */
-
-
-	@media(max-width:500px){
-		.rect{
-			width:130%; 
+			width:140%; 
 			height:381px;
 		}
 	}
 
 	@media(max-width:450px){
+        .referencehomecontainer{
+            padding: 20px;
+        }
+		.rect{
+			width:125%; 
+			height:381px;
+		}
+    }
+    
+    @media(max-width:400px){
 		.rect{
 			width:110%; 
 			height:381px;
 		}
-	}
+    }
 
 
-	@media(max-width:330px){
+	@media(max-width:350px){
+		.rect{
+			width:100%; 
+			height:381px;
+		}
+    }
+
+    @media(max-width:320px){
 		.rect{
 			width:97%; 
 			height:381px;
 		}
-	}
+    }
+    
 
 
 
+    .enclose span{
+        font-family: 'Roboto', sans-serif;
+    }
 
 
 
-	
-
-																																																
+    svg:not(:root) {
+        overflow: visible;
+      }
