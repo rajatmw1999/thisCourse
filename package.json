@@ -1,7 +1,6 @@
 {
   "name": "youtube-api",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -38,5 +37,15 @@
     "react-script-tag": "^1.1.2",
     "request": "^2.88.2",
     "request-promise": "^4.2.5"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivam7374/thisCourse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shivam7374/thisCourse/issues"
+  },
+  "homepage": "https://github.com/shivam7374/thisCourse#readme",
+  "description": ""
 }

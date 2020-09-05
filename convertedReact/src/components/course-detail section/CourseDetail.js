@@ -1,10 +1,47 @@
 import React , {Component} from 'react';
 import './CourseDetail.css';
-
+import {domain} from '../../data/hosted'
 
 
 class CourseDetail extends Component{
-  
+  constructor(props) {
+    super(props);
+    var IdofCourse = this.props.Id;
+    var nameOfSkill = this.props.nameOfSkill;
+    this.state={
+      Id:IdofCourse,
+      nameOfSkill:nameOfSkill,
+      items:[],
+      error:null
+    }
+    // /coursedetails/:skillName/:courseId
+}
+
+componentDidMount() {
+  console.log(this.state.nameOfSkill);
+  var fetchSkills = domain + "data/coursedetails/" + this.state.nameOfSkill + '/' + this.state.Id;
+  console.log(fetchSkills);
+  fetch(`${fetchSkills}`)
+    .then(res => res.json())
+    .then(
+      (result) => {
+      console.log(result.data);
+        this.setState({
+          items: result
+        });
+      },
+      // Note: it's important to handle errors here
+      // instead of a catch() block so that we don't swallow
+      // exceptions from actual bugs in components.
+      (error) => {
+        this.setState({
+          error
+        });
+      }
+    )
+  //   console.log(this.state.items);
+}
+
   render(){
     
     return (

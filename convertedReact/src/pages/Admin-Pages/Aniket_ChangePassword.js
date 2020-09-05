@@ -10,15 +10,14 @@ import {
   Col
 } from "reactstrap";
 
-const Aniket_ChangePassword = () => {
-    <div>
-        <h1>UPDATE YOUR PASSWORD</h1>
-    </div>
+class Aniket_ChangePassword extends React.Component {
+  render()
+  {
     return (
         <Container fluid className="mt-5">
       <Row>
         <Col md="6" className="offset-md-3 p-2">
-          <Form onSubmit={handleSubmit}>
+          <Form>
             <FormGroup>
               <Input
                 type="text"
@@ -49,7 +48,8 @@ const Aniket_ChangePassword = () => {
       </Row>
     </Container>
 
-    )
+    )}
+}
 
 
 export default Aniket_ChangePassword;
