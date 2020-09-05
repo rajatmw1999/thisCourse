@@ -35397,3 +35397,19 @@ summary {
   [disabled].noUi-origin,[disabled] .noUi-handle {
     cursor: not-allowed;
   }
+
+
+
+  .aradhna_filterinputbox input[type="text"] {
+    -webkit-appearance: none;
+    width: 100%;
+    border: 1px solid #96969c;
+    text-align: center;
+}
+
+
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 3px;
+    margin-right: 10px;
+}

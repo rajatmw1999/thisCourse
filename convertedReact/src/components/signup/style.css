@@ -1,13 +1,15 @@
 body {font-family: Arial, Helvetica, sans-serif;
 color: black;}
-input[type=text], input[type=password] {
-  width: 100%;
+.aradhna_signupinput{
+  width: 70%;
   padding: 15px;
   display: inline-block;
   border: none;
   background: #f1f1f1;
   margin-bottom: 10px;
 }
+
+
 
 .btn-G{
   background-color: white;
@@ -17,11 +19,13 @@ input[type=text], input[type=password] {
   border-radius: 4px;
   width:70%;
   font-size: 20px;
-  margin-left: 15px;
+  margin-left: 0px;
   cursor: pointer;
   margin-bottom: 1%;
   margin-top: 1%;
 }
+
+
 
 /* .lower{
 padding-left:100px;
@@ -34,7 +38,7 @@ padding-left:100px;
   border-radius: 4px;
   width:70%;
   font-size: 22px;
-  margin-left: 15px;
+  margin-left: 0px;
   cursor: pointer;
   margin-bottom: 1%;
   margin-top: 1%;
@@ -46,11 +50,90 @@ border: 1px solid rgb(0, 119, 181);
   border-radius: 4px;
   width:70%;
   font-size: 20px;
-  margin-left: 15px;
+  margin-left: 0px;
   cursor: pointer;
   margin-bottom: 2%;
   margin-top: 1%;
 
+  }
+  .signupbtn{
+    text-align: center;
+    width: 70%;
+    border-radius: 2px;
+  background-color: #007aff;
+  color: white;
+  box-shadow: 0px;
+  }
+
+
+
+
+  @media(max-width:500px){
+    .aradhna_signupinput{
+      width: 100%;
+      padding: 15px;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+      margin-bottom: 10px;
+    }
+
+
+    
+.btn-G{
+  background-color: white;
+  color: black;
+  border: 1px solid;
+  border-color: #474e5d;
+  border-radius: 4px;
+  width:100%;
+  font-size: 22px;
+  margin-left: 0px;
+  cursor: pointer;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+
+
+/* .lower{
+padding-left:100px;
+} */
+
+.btn-fb {
+  background-color: #3B5998;
+  border: 1px solid;
+  color: white;
+  border-radius: 4px;
+  width:100%;
+  font-size: 22px;
+  margin-left: 0px;
+  cursor: pointer;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+.btn-ld{
+background-color: rgb(255,255,255);
+border: 1px solid rgb(0, 119, 181);
+  color: rgb(0, 119, 181);
+  border-radius: 4px;
+  width:100%;
+  font-size: 22px;
+  margin-left: 0px;
+  cursor: pointer;
+  margin-bottom: 1%;
+  margin-top: 1%;
+
+  }
+
+  .signupbtn{
+    text-align: center;
+    width: 100%;
+    border-radius: 2px;
+  background-color: #3B5998;
+  color: white;
+  box-shadow: 0px;
+  }
   }
 
   .btn-G:hover{
@@ -65,9 +148,10 @@ border: 1px solid rgb(0, 119, 181);
 
 .psw-char{
   padding-top: 0px;
-  margin-top:0px;
+  margin-top:1rem;
   font-size: 13px;
-  margin-left: 70%;
+  text-align: right;
+  width: 70%;
   color: #474e5d;
 }
 
@@ -95,14 +179,7 @@ input:hover,
 .btn:hover {
   opacity: 1;
 }
-.signupbtn{
-  text-align: center;
-  width: 70%;
-  border-radius: 2px;
-background-color: #007aff;
-color: white;
-box-shadow: 0px;
-}
+
 .signin{
   text-align: center;
 }
@@ -119,4 +196,20 @@ box-shadow: 0px;
   font-size: 17px;
 }
 
+}
+
+
+.aradhna_signupbutton{
+  background-color: #3B5998;
+}
+
+.signupbtn:hover{
+  border-radius: 2px;
+background-color: #2d4270;
+color: white;
+box-shadow: 0px;
+}
+
+.or{
+  margin-top: 1rem;
 }
