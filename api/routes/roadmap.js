@@ -130,7 +130,7 @@ router.get('/all',(req, res, next) =>{
 //ROUTE 6
 //GET ALL ROADMAPS OF A PARTICULAR CATEGORY
 router.get("/category/:categoryName", (req, res) => {
-	const category = req.params.categoryName;
+	const category = req.params.find({ "Category": { "$regex": category, "$options": "i" }})//.categoryName;
 	RoadmapData.find({ Category: category })
 	  .exec()
 	  .then((doc) => {
@@ -193,6 +193,54 @@ router.get("/category/:categoryName", (req, res) => {
 	  });
   });
   
+
+//ROUTE9
+//INCREASE LIKE COUNT
+	router.patch('/likecount/:roadmapId',(req, res, next) =>{
+
+	const id = req.params.roadmapId;
+	//	const updateOps = {};
+		//for(const ops of req.body){
+		//	updateOps[ops.propName] = ops.value; // name: req.body.newName, price: req.body.newPrice
+		//}
+		RoadmapData.update({ _id: id}, { $inc: { Likes: 1 } })//{$set: updateOps}
+		.exec()
+		.then(result => {
+			console.log(result);
+			res.status(200).json({
+				message: 'Liked !',
+			});
+		})
+		.catch(err => {
+			console.log(err);
+			res.status(500).json({
+				error: err
+			})
+		});
+
+	});
+
+//ROUTE 10
+//Search by roadmap name
+router.get("/name/:roadName", (req, res) => {
+	const category = req.params.roadName;
+	RoadmapData.find({ "NameOfRoadmap": { "$regex": category, "$options": "i" }})//{$match: {NameOfRoadmap: {$regex: category,'$options': 'i'}}}//({ $text:{ $search: category }})
+	  .exec()
+	  .then((doc) => {
+		console.log("ALLLLLL", doc);
+		if (doc) {
+		  res.status(200).json(doc);
+		} else {
+		  res
+			.status(404)
+			.json({ message: "No valid entry found for provided Roadname" });
+		}
+	  })
+	  .catch((err) => {
+		console.log(err);
+		res.status(500).json({ error: err });
+	  });
+  });
 
 
 
