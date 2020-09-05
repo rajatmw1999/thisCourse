@@ -130,8 +130,10 @@ router.get('/all',(req, res, next) =>{
 //ROUTE 6
 //GET ALL ROADMAPS OF A PARTICULAR CATEGORY
 router.get("/category/:categoryName", (req, res) => {
-	const category = req.params.find({ "Category": { "$regex": category, "$options": "i" }})//.categoryName;
-	RoadmapData.find({ Category: category })
+	//const category = req.params.find({ "Category": { "$regex": category, "$options": "i" }})//.categoryName;
+	//RoadmapData.find({ Category: category })
+	const category = req.params.categoryName;
+	RoadmapData.find({ "Category": { "$regex": category, "$options": "i" }})
 	  .exec()
 	  .then((doc) => {
 		console.log("From database", doc);
@@ -173,9 +175,10 @@ router.get("/category/:categoryName", (req, res) => {
   
   // ROUTE 8
   //GET ROADMAPS OF THE GIVEN TAGS
-  router.post("/coursesByTags", (req, res) => {
+  router.post("/courseTag/tag", (req, res) => {
 	const tags = req.body.Tags;
-	RoadmapData.find({ Tags: { $all: tags } })
+	//RoadmapData.find({ Tags: { $all: tags } })
+	  RoadmapData.find({ "Tags": { "$regex": tags, "$options": "i" }})
 	  .exec()
 	  .then((doc) => {
 		console.log("From database", doc);
