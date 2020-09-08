@@ -72,3 +72,39 @@
     background: #0a98c0;
   }
   
+  form.rajat_rapid_hero_example input[type=text] {
+    padding: 3px;
+    font-size: 17px;
+    border: 1px solid silver;
+    float: left;
+    width: 60%;
+    background: #f1f1f1;
+  }
+  
+  /* Style the submit button */
+  form.rajat_rapid_hero_example button {
+    float: left;
+    width: 20%;
+    padding: 3px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid white;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+    margin-top : 0;
+  }
+  
+  form.rajat_rapid_hero_example button:hover {
+    background: #0b7dda;
+  }
+  
+  /* Clear floats */
+  form.rajat_rapid_hero_example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  html {
+    scroll-behavior: smooth;
+  }

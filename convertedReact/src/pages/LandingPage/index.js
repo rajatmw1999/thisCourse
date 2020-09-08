@@ -11,6 +11,7 @@ import Footer from "../../components/footer";
 import Cta from './Cta/index'
 import FeaturedCourseTracks from "../../components/FeaturedCourseTracks/index";
 import categoryData from '../../data/category';
+import ReferenceHome from '../../components/ReferenceHome/ReferenceHome'
 
 class LandingPage extends React.Component {
     render() {
@@ -18,7 +19,14 @@ class LandingPage extends React.Component {
         <div>
             <Navbar />
             <RapidHero />
-            <OutermostCategory />
+            <br />
+            <br />
+            <section id="categories">
+            <ReferenceHome />
+            </section>
+            <br />
+            <br />
+            {/* <OutermostCategory /> */}
             <FeaturedCourseTracks />
             <Cta />
             {/* <RapidNumbers /> */}

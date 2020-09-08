@@ -21,3 +21,10 @@
         max-width: 100%;
         padding: 0;
     }} */
+
+    .rajat_listing_loadmore_btn{
+        border:1px solid blue !important;
+    }
+    .rajat_listing_loadmore_btn:hover{
+        color:white;
+    }

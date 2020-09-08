@@ -73,11 +73,13 @@ router.get("/searchall/:skillName", async (req, res, next) => {
 router.get("/category/:categoryName", async (req, res, next) => {
   try {
     let result = await Skill.find({});
+    console.log(result);
     let arr = [];
     for (let elm of result) {
-      let categoryStr = elm.category.toLowerCase();
+      console.log(elm);
+      let categoryStr = await elm.category.toLowerCase();
       const regex = /%20/gi;
-      categoryStr = categoryStr.replace(regex, " ");
+      categoryStr = await categoryStr.replace(regex, " ");
 
       if (categoryStr === req.params.categoryName.toLowerCase()) {
         arr.push(elm);
