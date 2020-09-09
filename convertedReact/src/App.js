@@ -41,10 +41,53 @@ import LandingPage from './pages/LandingPage/index'
 import Rapid_Hero from './pages/LandingPage/Rapid_Hero/Rapid_Hero';
 import FeaturedCourseCard from './components/FeaturedCourseCard/FeaturedCourseCard';
 import FeaturedLandingPageSection from "./components/FeaturedLandingPageSection/FeaturedLandingPageSection";
+import ReferenceHome from './components/ReferenceHome/ReferenceHome';
+import ReferenceCourseTag from './components/ReferenceCourseTag/ReferenceCourseTag';
+import ReferenceCourseDetail from './components/ReferenceCourseDetail/ReferenceCourseDetail'
+
+import Admin_ChangePassword from './pages/Admin-Pages/Aniket_ChangePassword'
+import Admin_DeleteRescrape from './pages/Admin-Pages/Aniket_DeleteRescrapePage'
+import Admin_EditFeaturedCourse from './pages/Admin-Pages/Aniket_EditFeaturedPage'
+import Admin_NewFeaturedCourse from './pages/Admin-Pages/Aniket_NewFeaturedPage'
+import Admin_Profile from './pages/Admin-Pages/Aniket_ProfilePage'
+
+import {categoryData} from './data/category';
+import {skillsData} from './data/skills';
+import {
+  Route,
+  Link
+} from 'react-router-dom';
 
 function App() {
+  var regex = /course[a-z]/;
+  const categoryPath = categoryData.map((data) =>  
+  // console.log(data.redirectLink);
+  <Route exact path={`${data.redirectLink}-c`} render={()=><ParticularOuterMostCategory name={data.name} displayName={data.displayName} />} />
+  )
+  var skillsPath;
+  skillsData.forEach(function(category){
+    let categoryName = category.category;
+  skillsPath = category.skills.map((data) =>
+    <Route exact path={`${data.redirectLink}`} render={()=><ListingCoursesPage dbQuery={data.db} displayName={data.displayName} categoryName={categoryName} />} />
+    // console.log(`skill${data.redirectLink}`)
+    )
+});
+
   return (
+
     <div>
+        <Route exact path="/:skillName/:id" component={CourseDetailPage} />
+        {categoryPath}
+        {skillsPath}
+        <Route exact path='/' component={LandingPage} />
+
+        {/* <Admin_ChangePassword /> */}
+        {/* <Admin_DeleteRescrape /> */}
+        {/* <Admin_EditFeaturedCourse /> */}
+        {/* <Admin_NewFeaturedCourse /> */}
+        {/* <Admin_Profile /> */}
+
+
         {/* <Aboutsection /> */}
         {/* <AuthorOfRoadmap /> */}
         {/* <Blogpost /> */}
@@ -54,8 +97,8 @@ function App() {
         {/* <CardHackrio /> */}
         {/* <CourseDetail /> */}
         {/* <Footer /> */}
-       {/* <Navsearch /> */}
-       {/* <FilterBox /> */}
+        {/* <Navsearch /> */}
+        {/* <FilterBox /> */}
         {/* <Navbar /> */}
         {/* <OutermostCategory /> */}
         {/* <Roadmap /> */}
@@ -64,16 +107,23 @@ function App() {
         {/* <Signup /> */}
         {/* <SuggestionCarousel /> */}
         {/* <Timeline /> */}
-        {/* <ListingCoursesPage /> */}
-        {/* <CourseDetailPage /> */}
-        {/* <RoadmapLandingPage /> */}
-        {/* <ParticularRoadmapPage/> */}
-        {/* <ParticularOuterMostCategory /> */}
+      
         {/* <FeaturedLandingPageSection/> */}
         {/* <FeaturedCourseCard /> */}
         {/* <FeaturedCourseTracks /> */}
+
         {/* <LandingPage /> */}
-        {/* <Rapid_Hero /> */}
+        {/* <ParticularOuterMostCategory /> */}
+        {/* <ListingCoursesPage /> */}
+        {/* <CourseDetailPage /> */}
+
+        {/* <RoadmapLandingPage /> */}
+        {/* <ParticularRoadmapPage/> */}
+
+
+        {/* <ReferenceCourseTag/> */}
+        {/* <ReferenceCourseDetail /> */}
+        {/* <ReferenceHome/> */}
 
         </div>
   );

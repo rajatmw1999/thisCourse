@@ -3,9 +3,9 @@
 		fill: rgba(255,255,255,1);
 	}
 	#category_card {
-		/* position: absolute; */
-		width: 1398px;
-		height: 785px;
+		position: absolute;
+		/* width: 1398px;
+		height: 785px; */
 		left: 261px;
 		top: 1234px;
 		overflow: visible;
@@ -13,8 +13,8 @@
 
 	#category_card_bql {
 		position: absolute;
-		width: 332px;
-		height: 381px;
+		width: auto;
+		height: auto;
 		left: 0px;
 		top: 0px;
 		overflow: visible;
@@ -22,8 +22,8 @@
 
 	#category_card_bqr {
 		position: absolute;
-		width: 332px;
-		height: 381px;
+		width: auto;
+		height: auto;
 		left: 711px;
 		top: 404px;
 		overflow: visible;
@@ -31,8 +31,8 @@
 
 	#category_card_bqx {
 		position: absolute;
-		width: 332px;
-		height: 381px;
+		width: auto;
+		height: auto;
 		left: 355px;
 		top: 0px;
 		overflow: visible;
@@ -40,8 +40,8 @@
 
 	#category_card_bq {
 		position: absolute;
-		width: 332px;
-		height: 381px;
+		width: auto;
+		height: auto;
 		left: 1066px;
 		top: 404px;
 		overflow: visible;
@@ -49,8 +49,8 @@
 
 	#category_card_bra {
 		position: absolute;
-		width: 332px;
-		height: 381px;
+		width: auto;
+		height: auto;
 		left: 711px;
 		top: 0px;
 		overflow: visible;
@@ -58,8 +58,8 @@
 
 	#category_card_brf {
 		position: absolute;
-		width: 332px;
-		height: 381px;
+		width: auto;
+		height: auto;
 		left: 0px;
 		top: 404px;
 		overflow: visible;
@@ -67,8 +67,8 @@
 
 	#category_card_brl {
 		position: absolute;
-		width: 332px;
-		height: 381px;
+		width: auto;
+		height: auto;
 		left: 1066px;
 		top: 0px;
 		overflow: visible;
@@ -76,8 +76,8 @@
 
 	#category_card_brr {
 		position: absolute;
-		width: 332px;
-		height: 381px;
+		width: auto;
+		height: auto;
 		left: 355px;
 		top: 404px;
 		overflow: visible;
@@ -87,10 +87,11 @@
 		fill: rgba(252,232,252,1);
 	}
 	.Rectangle_43 {
-		position: absolute;
+		
+		position: relative;
 		overflow: visible;
-		width: 332px;
-		height: 381px;
+		width: auto;
+		height: auto;
 		left: 0px;
 		top: 0px;
 	}
@@ -99,10 +100,10 @@
 		fill: rgba(232,232,252,1);
 	}
 	.Rectangle_43_brs {
-		position: absolute;
+		position: relative;
 		overflow: visible;
-		width: 332px;
-		height: 381px;
+		width: auto;
+		height: auto;
 		left: 0px;
 		top: 0px;
 	}
@@ -111,10 +112,10 @@
 		fill: rgba(252,232,252,1);
 	}
 	.Rectangle_43_bqs {
-		position: absolute;
+		position: relative;
 		overflow: visible;
-		width: 332px;
-		height: 381px;
+		width: auto;
+		height: auto;
 		left: 0px;
 		top: 0px;
 	}
@@ -123,10 +124,10 @@
 		fill: rgba(254,243,233,1);
 	}
 	.Rectangle_43_bqy {
-		position: absolute;
+		position: relative;
 		overflow: visible;
-		width: 332px;
-		height: 381px;
+		width: auto;
+		height: auto;
 		left: 0px;
 		top: 0px;
 	}
@@ -135,10 +136,10 @@
 		fill: rgba(254,243,233,1);
 	}
 	.Rectangle_43_bq {
-		position: absolute;
+		position: relative;
 		overflow: visible;
-		width: 332px;
-		height: 381px;
+		width: auto;
+		height: auto;
 		left: 0px;
 		top: 0px;
 	}
@@ -147,10 +148,10 @@
 		fill: rgba(232,252,232,1);
 	}
 	.Rectangle_43_bra {
-		position: absolute;
+		position: relative;
 		overflow: visible;
-		width: 332px;
-		height: 381px;
+		width: auto;
+		height: auto;
 		left: 0px;
 		top: 0px;
 	}
@@ -159,10 +160,10 @@
 		fill: rgba(232,252,232,1);
 	}
 	.Rectangle_43_brg {
-		position: absolute;
+		position: relative;
 		overflow: visible;
-		width: 332px;
-		height: 381px;
+		width: auto;
+		height: auto;
 		left: 0px;
 		top: 0px;
 	}
@@ -171,10 +172,10 @@
 		fill: rgba(232,232,252,1);
 	}
 	.Rectangle_43_brm {
-		position: absolute;
+		position: relative;
 		overflow: visible;
-		width: 332px;
-		height: 381px;
+		width: auto;
+		height: auto;
 		left: 0px;
 		top: 0px;
 	}
@@ -640,5 +641,62 @@
 		color: rgba(74,74,74,1);
 		text-transform: capitalize;
 	}
+	.enclose{
+		padding: inherit;
+		height: 400px;
+	}
+
+
+
+
+	.rect{
+		width:89%; 
+		height:381px;
+	}
+
+	/* @media(max-width:1200px){
+		.rect{
+			width:240px; 
+			height:381px;
+		}
+	}
+
+
+	@media(max-width:1200px){
+		.rect{
+			width:240px; 
+			height:381px;
+		}
+	} */
+
+
+	@media(max-width:500px){
+		.rect{
+			width:130%; 
+			height:381px;
+		}
+	}
+
+	@media(max-width:450px){
+		.rect{
+			width:110%; 
+			height:381px;
+		}
+	}
+
+
+	@media(max-width:330px){
+		.rect{
+			width:97%; 
+			height:381px;
+		}
+	}
+
+
+
+
+
+
+	
 
 																																																
