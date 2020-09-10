@@ -34,22 +34,35 @@ let data = await page.evaluate(() =>{
 
 	// });div[class=class="col-12 col-sm-8 col-md-12 card-content"] >
 	 //var courseName = document.querySelectorAll('div[class="col-12 col-sm-8 col-md-12 card-content"] >h5');
-	var price = document.querySelectorAll('div[class="col-12 col-sm-8 col-md-12 ml-auto price"]');
-	var link = document.querySelectorAll('div[class="card course-card "] >a');
+	//
+	var rating = document.querySelectorAll('div[class="score d-flex ml-1 align-items-center"]');
+	var price = document.querySelectorAll('span[class="old-price mr-2"]');
+	var link = document.querySelectorAll('div[class="col-12 col-sm-8 col-md-12 ml-auto course-hover-details p-md-0"] >a');
 	var instructorName = document.querySelectorAll('div[class="col-12 col-sm-8 col-md-12 card-content"] >div >span[class="course-author"]');
-	//StanfordOnline
+	var UrlOfImageThumbnail = document.querySelectorAll('div[class="col-12 col-sm-4 col-md-12 course-img p-0"] >img[src]');
+	var courseName = document.querySelectorAll('div[class="col-12 col-sm-8 col-md-12 py-2 card-content"] >h5');
+	
+	//
 	//var json = JSON.stringify(price);
 	//return courseName;
 	//  courseNamecourseName:[""],price:[""],link:[""],courseNamecourseName:[],
 	var j=0;//link.length
-	var json = {courseName:[],price:[],link:[],instructorName:[]};
+	//var json = {courseName:[],price:[],link:[],instructorName:[]};
+		var json = {courseName:[],price:[],link:[],instructorName:[],courseDescription:[],UrlOfImageThumbnail:[],NumberofHours:[],StudentsEnrolled:[],Rating:[]};
+	
 	for(let i = 0; i < 10; i++){
-		//json.courseName.push(JSON.stringify(link[i].href.substring(30)));
+		json.Rating.push(JSON.stringify(rating[i].innerText));
+		json.courseName.push(JSON.stringify(courseName[i].innerText));//.href.substring(30)
 		json.price.push(JSON.stringify(price[i].innerText));
+		json.instructorName.push("BitDegree");
 		//json.link.push(JSON.stringify(courseName[i].href).substring(34));
 		json.link.push(JSON.stringify(link[i].href));
-		json.courseName.push(json.link[i].substring(34));
-		json.instructorName.push(JSON.stringify(instructorName[i].innerText));
+		//json.courseName.push(json.link[i].substring(34));
+		//json.instructorName.push(JSON.stringify(instructorName[i].innerText));
+		json.courseDescription.push(null);
+		json.UrlOfImageThumbnail.push(JSON.stringify(UrlOfImageThumbnail[i].getAttribute('src'))); 
+		json.StudentsEnrolled.push(null);
+		json.NumberofHours.push(null);
 		j+=3;
 	}
 	
@@ -62,11 +75,20 @@ let data = await page.evaluate(() =>{
 						category:category,
 						platform:'bitdegree',
 						nameSkill: data1,
-						Courses: [ {NameofCourse: data.courseName[1], Price: data.price[1],LinkToCourse: data.link[1],Instructor: data.instructorName[1]},
-									{NameofCourse: data.courseName[2], Price: data.price[2],LinkToCourse: data.link[2],Instructor: data.instructorName[2]},
-									{NameofCourse: data.courseName[3], Price: data.price[3],LinkToCourse: data.link[3],Instructor: data.instructorName[3]},
-									{NameofCourse: data.courseName[4], Price: data.price[4],LinkToCourse: data.link[4],Instructor: data.instructorName[4]},]
+						Courses: [ {NameofCourse: data.courseName[0], Price: data.price[0],LinkToCourse: data.link[0],Instructor:data.instructorName[0],CourseDescription: data.courseDescription[0],UrlOfImageThumbnail:data.UrlOfImageThumbnail[0],NumberofHours:data.NumberofHours[0],StudentsEnrolled:data.StudentsEnrolled[0],Rating:data.Rating[0]},//
+									{NameofCourse: data.courseName[1], Price: data.price[1],LinkToCourse: data.link[1],Instructor:data.instructorName[1],CourseDescription: data.courseDescription[1],UrlOfImageThumbnail:data.UrlOfImageThumbnail[1],NumberofHours:data.NumberofHours[1],StudentsEnrolled:data.StudentsEnrolled[1],Rating:data.Rating[1]},
+									{NameofCourse: data.courseName[2], Price: data.price[2],LinkToCourse: data.link[2],Instructor:data.instructorName[2],CourseDescription: data.courseDescription[2],UrlOfImageThumbnail:data.UrlOfImageThumbnail[2],NumberofHours:data.NumberofHours[2],StudentsEnrolled:data.StudentsEnrolled[2],Rating:data.Rating[2]},
+									{NameofCourse: data.courseName[3], Price: data.price[3],LinkToCourse: data.link[3],Instructor:data.instructorName[3],CourseDescription: data.courseDescription[3],UrlOfImageThumbnail:data.UrlOfImageThumbnail[3],NumberofHours:data.NumberofHours[3],StudentsEnrolled:data.StudentsEnrolled[3],Rating:data.Rating[3]}]
+
+
+						// Courses: [ {NameofCourse: data.courseName[1], Price: data.price[1],LinkToCourse: data.link[1],Instructor: data.instructorName[1]},
+									// {NameofCourse: data.courseName[2], Price: data.price[2],LinkToCourse: data.link[2],Instructor: data.instructorName[2]},
+									// {NameofCourse: data.courseName[3], Price: data.price[3],LinkToCourse: data.link[3],Instructor: data.instructorName[3]},
+									// {NameofCourse: data.courseName[4], Price: data.price[4],LinkToCourse: data.link[4],Instructor: data.instructorName[4]},]
 					});
+					
+					
+					//console.log(skill);
 					skill
 					.save()
 					.then(result => {
