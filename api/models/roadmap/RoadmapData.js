@@ -8,7 +8,7 @@ const Roadmap_Data = new mongoose.Schema({
     type: String,
   },
   DatePublished: {
-    type: Date,
+    type: String,
   },
   Likes: {
     type: Number,
@@ -19,13 +19,11 @@ const Roadmap_Data = new mongoose.Schema({
   Category: {
     type: String,
   },
-  Tags: [
-    {
-      type: String,
-    },
-  ],
+  Tags: {
+    type:String
+  },
   Text: {
-    type: String,
+    type:String,
   },
   Timeline: [
     {

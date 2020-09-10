@@ -373,7 +373,7 @@ body.dark .navbar_navbar-toggler[aria-expanded="true"] .navbar_navbar-toggler-ic
 	margin-bottom: 0px;
 }
 
-input[type=text], input[type=password] {
+.input_navsearch input[type=text], .input_navsearch input[type=password] {
     width: 100%;
     padding: 15px;
     display: inline-block;

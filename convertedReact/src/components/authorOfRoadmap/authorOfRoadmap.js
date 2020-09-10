@@ -19,7 +19,21 @@ class AuthorOfRoadmap extends Component {
                     | Small &amp; Medium Business IT Support - We founded ***IT Solutions in 2007 to
                     provide IT services
                 </p>
-                <button className="follownow-btn">Follow</button>
+                {/* <button className="follownow-btn">Follow</button> */}
+                <div className="col-sm-4 col-md-4  col-lg-3 item social">
+                                <a href="#" className="fb-col">
+                                    <i className="icon ion-social-facebook"></i>
+                                </a>
+                                <a href="#"className="tw-col">
+                                    <i className="icon ion-social-twitter"></i>
+                                </a>
+                                <a href="#" className="lin-col">
+                                    <i className="icon ion-social-linkedin"></i>
+                                </a><a href="#" className="ins-col">
+                                    <i className="icon ion-social-instagram"></i>
+                                </a>
+                              
+                    </div>
                 <p className="heading">WORK</p>
                 <p className="answer">Full Stack Devloper at CA</p>
                 <p className="heading">LOCATION</p>

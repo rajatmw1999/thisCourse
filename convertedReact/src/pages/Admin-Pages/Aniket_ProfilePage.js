@@ -10,15 +10,13 @@ import {
   Col
 } from "reactstrap";
 
-const Aniket_ProfilePage = () => {
-    <div>
-        <h1>PROFILE</h1>
-    </div>
+class Aniket_ProfilePage extends React.Component {
+render(){
     return (
         <Container fluid className="mt-5">
       <Row>
         <Col md="6" className="offset-md-3 p-2">
-          <Form onSubmit={handleSubmit}>
+          <Form >
             <FormGroup>
               <Input
                 type="text"
@@ -50,6 +48,5 @@ const Aniket_ProfilePage = () => {
     </Container>
 
     )
-
-
+    }}
 export default Aniket_ProfilePage;

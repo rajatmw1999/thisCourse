@@ -10,15 +10,13 @@ import {
   Col
 } from "reactstrap";
 
-const Aniket_EditFeaturedPage = () => {
-    <div>
-        <h1>EDIT AN EXISTING FEATURED COURSE</h1>
-    </div>
+class Aniket_EditFeaturedPage extends React.Component {
+render(){
     return (
         <Container fluid className="mt-5">
       <Row>
         <Col md="6" className="offset-md-3 p-2">
-          <Form onSubmit={handleSubmit}>
+          <Form>
             <FormGroup>
               <Input
                 type="text"
@@ -105,7 +103,7 @@ const Aniket_EditFeaturedPage = () => {
       </Row>
     </Container>
 
-    )
-
+    )}
+    }
 
 export default Aniket_EditFeaturedPage;
