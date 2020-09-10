@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import "./index.css";
 import FeaturedCourseCard from '../FeaturedCourseCard/FeaturedCourseCard';
-
-
+import Navbar from '../Navbar/index'
+import Footer from '../footer/index'
 
 class FeaturedLandingPageSection extends Component {
 
@@ -16,7 +16,9 @@ class FeaturedLandingPageSection extends Component {
         }
 
 
-        return <div class="popular_courses">
+        return (<div>
+        <Navbar />
+        <div class="popular_courses">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
@@ -211,6 +213,8 @@ class FeaturedLandingPageSection extends Component {
             </div>
         </div>
     </div>
+    <Footer />
+    </div>);
     }
 }
 

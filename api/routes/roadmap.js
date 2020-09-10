@@ -6,25 +6,31 @@ const RoadmapData = require('../models/roadmap/RoadmapData');
 const puppeteer = require('puppeteer');
 const Search = require('../models/search');
 const Skill = require('../models/skills');
-
+var bodyParser = require('body-parser');
+router.use(bodyParser.json());
+router.use(bodyParser.urlencoded({ extended: false }));
 //ROUTE 1
 //CREATE A NEW ROADMAP
 router.post('/create',(req, res, next) =>{
-	
+	// console.log("Req.body = " + req.body.data.NameOfRoadmap);
+	var data = req.body.data;
+	// console.log("Req.body.data = " + data);
+	// console.log("Req.body.data.Text = " + data.Text);
 	const roadmap = new RoadmapData({
-		NameOfRoadmap: req.body.NameOfRoadmap,
-		NameofAuthor: req.body.NameofAuthor,
-		Likes:req.body.Likes,
+		NameOfRoadmap: req.body.data.NameOfRoadmap,
+		NameofAuthor: req.body.data.NameofAuthor,
+		Likes:req.body.data.Likes,
 		// DatePublished:req.body.DatePublished,
-		ImageLink: req.body.ImageLink,
-		Category: req.body.Category,
-		Text: req.body.Text,
+		ImageLink: req.body.data.ImageLink,
+		Category: req.body.data.Category,
+		Text: req.body.data.Text,
+		Tags: req.body.data.Tags
 	 });
 	
 	roadmap
 	.save()
 	.then(result => {
-		console.log(result);
+		console.log("Result = " + result);
 		res.status(201).json({
 		message:'Succesfully created RoadMap',
 		createdRoadmap: {
@@ -52,10 +58,15 @@ router.post('/create',(req, res, next) =>{
 router.patch('/edit/:roadmapId',(req, res, next) =>{
 
 	const id = req.params.roadmapId;
-		const updateOps = {};
-		for(const ops of req.body){
-			updateOps[ops.propName] = ops.value; // name: req.body.newName, price: req.body.newPrice
-		}
+		const updateOps = {
+			"NameofAuthor":req.body.data.NameofAuthor,
+			"NameOfRoadmap":req.body.data.NameOfRoadmap,
+			"Text":req.body.data.Text,
+			"ImageLink":req.body.data.ImageLink,
+			"Category":req.body.data.Category,
+			"Tags":req.body.data.Tags
+		};
+		console.log(updateOps);
 		RoadmapData.update({ _id: id}, {$set: updateOps})
 		.exec()
 		.then(result => {

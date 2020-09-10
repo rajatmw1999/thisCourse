@@ -53,6 +53,7 @@ import Admin_Profile from './pages/Admin-Pages/Aniket_ProfilePage'
 
 import {categoryData} from './data/category';
 import {skillsData} from './data/skills';
+import roadmapCategory from './data/roadmapCategory'
 import {
   Route,
   Link
@@ -73,14 +74,23 @@ function App() {
     )
 });
 
+var roadmapPath;
+roadmapPath = roadmapCategory.map((category) => 
+  <Route exact path={`${category.redirectLink}/rp`}  render={()=><RoadmapLandingPage dbQuery={category.displayName.toLowerCase()} displayName={category.displayName} />} />
+);
+
   return (
 
     <div>
-        <Route exact path="/:skillName/:id" component={CourseDetailPage} />
+        <Route exact path="/roadmap/:id" component={ParticularRoadmapPage} />
         {categoryPath}
         {skillsPath}
+        {roadmapPath}
         <Route exact path='/' component={LandingPage} />
-
+        <Route exact path='/roadmaps' render={()=><RoadmapLandingPage dbQuery={null} displayName={null} />} />
+        <Route exact path='/featured' component={FeaturedLandingPageSection} />
+        
+        
         {/* <Admin_ChangePassword /> */}
         {/* <Admin_DeleteRescrape /> */}
         {/* <Admin_EditFeaturedCourse /> */}

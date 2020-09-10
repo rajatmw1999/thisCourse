@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import ReactDOM from 'react-dom';
-
+import './ParticularOuterMostCategory.css'
 
 import Aboutsection from  '../components/about_section/Aboutsection'
 import BreadCrumb from '../components/BreadCrumb/BreadCrumb';
