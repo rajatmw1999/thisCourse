@@ -28,24 +28,21 @@ let skillShareSearchQuery = data1;
       await page.waitFor(10000);
       
       let data = await page.evaluate(() => {
-		let instructorName = (document.querySelectorAll('p[class="title ellipsis"]'));
-		let UrlOfImageThumbnail = (document.querySelectorAll('div[class="ss-card__thumbnail-img-holder"]>img[src]'));
-        let courseName = (document.querySelectorAll('p[class="ss-card__title"] >a'));
-        let courseDuration = (document.querySelectorAll('div[class="ss-class__stats__duration"]'));
-        let studentsEnrolled = (document.querySelectorAll('span[class="ss-class__stats__stud-count"]'));
-        // let price = (document.querySelectorAll('span[class="currency-converter "]'));
-        // let rating = (document.querySelectorAll('div[class="text-bold text-large"]'));
-        // let lessons = (document.querySelectorAll('div[class="flex flex-direction-column ProfileBase--truncate flex-direction-column"] >div >span'));
+		// let instructorName = (document.querySelectorAll('p[class="title ellipsis"]'));
+		let NameofCourse = (document.querySelectorAll('p[class="title"]'));;
+		let instructorName = (document.querySelectorAll('div[class="user-information small"]>a'));
+        let StudentsEnrolled = (document.querySelectorAll('div[class="stats"]>span[class="student-count"]'));
+        let NumberofHours = (document.querySelectorAll('div[class="stats"]>div[class="duration"]>span'));
         
-        var json = {instructorName:[],courseName:[],courseDuration:[],studentsEnrolled:[],UrlOfImageThumbnail:[]};
+        
+        var json = {NameofCourse:[],instructorName:[],StudentsEnrolled:[],NumberofHours:[]};
   
   
         for(let i=0;i<instructorName.length;i++){
           json.instructorName.push(JSON.stringify(instructorName[i].innerText));       
-          json.courseName.push(JSON.stringify(courseName[i].innerText));
-          json.courseDuration.push(JSON.stringify(courseDuration[i].innerText));
-		  json.studentsEnrolled.push(JSON.stringify(studentsEnrolled[i].innerText));
-		  json.UrlOfImageThumbnail.push(JSON.stringify(UrlOfImageThumbnail[i].getAttribute('src')));
+          json.NameofCourse.push(JSON.stringify(NameofCourse[i].innerText));
+		  json.StudentsEnrolled.push(JSON.stringify(StudentsEnrolled[i].innerText));
+		  json.NumberofHours.push(JSON.stringify(NumberofHours[i].innerText));
         }
         
          return json;
@@ -55,11 +52,11 @@ let skillShareSearchQuery = data1;
 								category:category,
 								nameSkill: data1,
 								platform:'skillShare',
-								Courses: [ 	{NameofCourse: data.courseName[0],Instructor: data.instructorName[0],UrlOfImageThumbnail:data.UrlOfImageThumbnail[0],StudentsEnrolled:data.studentsEnrolled[0]},
-											{NameofCourse: data.courseName[1],Instructor: data.instructorName[1],UrlOfImageThumbnail:data.UrlOfImageThumbnail[1],StudentsEnrolled:data.studentsEnrolled[1]}, 
-											{NameofCourse: data.courseName[2],Instructor: data.instructorName[2],UrlOfImageThumbnail:data.UrlOfImageThumbnail[2],StudentsEnrolled:data.studentsEnrolled[2]},
-											{NameofCourse: data.courseName[3],Instructor: data.instructorName[3],UrlOfImageThumbnail:data.UrlOfImageThumbnail[3],StudentsEnrolled:data.studentsEnrolled[3]},
-											{NameofCourse: data.courseName[4],Instructor: data.instructorName[4],UrlOfImageThumbnail:data.UrlOfImageThumbnail[4],StudentsEnrolled:data.studentsEnrolled[4]}]
+								Courses: [ 	{NameofCourse: data.NameofCourse[0],Instructor: data.instructorName[0],StudentsEnrolled:data.StudentsEnrolled[0],NumberofHours:data.NumberofHours[0]},
+											{NameofCourse: data.NameofCourse[1],Instructor: data.instructorName[1],StudentsEnrolled:data.StudentsEnrolled[1],NumberofHours:data.NumberofHours[1]}, 
+											{NameofCourse: data.NameofCourse[2],Instructor: data.instructorName[2],StudentsEnrolled:data.StudentsEnrolled[2],NumberofHours:data.NumberofHours[2]},
+											{NameofCourse: data.NameofCourse[3],Instructor: data.instructorName[3],StudentsEnrolled:data.StudentsEnrolled[3],NumberofHours:data.NumberofHours[3]},
+											{NameofCourse: data.NameofCourse[4],Instructor: data.instructorName[4],StudentsEnrolled:data.StudentsEnrolled[4],NumberofHours:data.NumberofHours[4]}]
 							});
 							skill
 							.save()
@@ -74,12 +71,13 @@ let skillShareSearchQuery = data1;
 							});
 
 	  
-    //   console.log("skillShareResult",data);
+	//   console.log("skillShareResult",data);
+	  browser.close();
 	 
 
     })
     
-    browser.close();
+    
   })();
 next();
 	}

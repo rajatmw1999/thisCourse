@@ -39,21 +39,14 @@ let data = await page.evaluate(() =>{
 	//var price = document.querySelectorAll('div[class="field field-name-price"] >span');
 	var courseDescription = document.querySelectorAll('div[class="gs-bidi-start-align gs-snippet"]');
 	var link = document.querySelectorAll('div[class="gs-title"] >a');
-	// var UrlOfImageThumbnail = document.querySelectorAll('div[class="gsc-table-cell-thumbnail gsc-thumbnail"]>div[class="gs-image-box gs-web-image-box gs-web-image-box-landscape"]>a[class="gs-image"]>img[src]');
-	//
-	//var instructorName = document.querySelectorAll('');
-	//StanfordOnline
-	//var json = JSON.stringify(price);
-	//return courseName;
-	//,instructorName:[""]  courseName ,price:[""]
+	// var UrlOfImageThumbnail = document.querySelectorAll('div[class="gs-image-box gs-web-image-box gs-web-image-box-landscape"]>a[class="gs-image"]>img[src]');
+
 	var json = {courseName:[],link:[],courseDescription:[]};
 	for(let i = 0; i < courseName.length; i++){
 		json.courseName.push(JSON.stringify(courseName[i].innerText));
-		//json.price.push(JSON.stringify(price[i].innerText));
 		json.link.push(JSON.stringify(link[i].href));
 		json.courseDescription.push(JSON.stringify(courseDescription[i].innerText));
 		// json.UrlOfImageThumbnail.push(JSON.stringify(UrlOfImageThumbnail[i].getAttribute('src')));
-		//json.instructorName.push(JSON.stringify(instructorName[i].innerText));
 	}
 	
 		return json;
