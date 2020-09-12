@@ -27,6 +27,7 @@ class listingCourses extends Component{
             listNo:3
         }
         this.clickedLoadMore = this.clickedLoadMore.bind(this);
+        console.log("Hi");
     }
 
     async clickedLoadMore(){
@@ -49,6 +50,7 @@ class listingCourses extends Component{
     }
 
     componentDidMount() {
+      console.log("dbQuery = " + this.props.dbQuery);
         var fetchSkills = domain + "data/searchsome/" + this.props.dbQuery;
         console.log(fetchSkills);
        

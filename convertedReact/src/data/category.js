@@ -1,82 +1,61 @@
+// development
+// business
+// finance 
+// IT
+// Personal Development
+// Design
+// Marketing
+// Academics
+
 const categoryData = [
+{
+    name:"development",
+    imageUrl:"#",
+    redirectLink: "/development-c",
+    displayName: "Development",
+    desc:""
+},
 {
     name:"IT",
     imageUrl:"#",
-    redirectLink: "/it",
+    redirectLink: "/it-c",
     displayName: "IT",
     desc:""
 },
 {
-    name:"Language",
-    imageUrl:"#",
-    redirectLink: "/language",
-    displayName: "Language"
-},
-{
-    name:"Science",
-    imageUrl:"#",
-    redirectLink: "/science",
-    displayName: "Science"
-},
-{
-    name:"Health",
-    imageUrl:"#",
-    redirectLink: "/health",
-    displayName: "Health"
-},
-{
-    name:"Humanities",
-    imageUrl:"#",
-    redirectLink: "/humanities",
-    displayName: "Humanities"
-},
-{
-    name:"Math",
-    imageUrl:"#",
-    redirectLink: "/math",
-    displayName: "Mathematics"
-},
-{
     name:"Business",
     imageUrl:"#",
-    redirectLink: "/business",
-    displayName: "Business"
+    redirectLink: "/business-c",
+    displayName: "Business",
+    desc:""
 },
 {
-    name:"Software-Development",
+    name:"Personal Development",
     imageUrl:"#",
-    redirectLink: "/software-development",
-    displayName: "Software Development"
-},
-{
-    name:"Lifestyle",
-    imageUrl:"#",
-    redirectLink: "/lifestyle",
-    displayName: "LifeStyle"
-},
-{
-    name:"Operations",
-    imageUrl:"#",
-    redirectLink: "/operations",
-    displayName: "Operations"
-},
-{
-    name:"data-science",
-    imageUrl:"#",
-    redirectLink: "/data-science",
-    displayName: "Data Science"
+    redirectLink: "/personal-development-c",
+    displayName: "Personal",
+    desc:""
 },
 {
     name:"Design",
     imageUrl:"#",
-    redirectLink: "/design",
-    displayName: "Design"
+    redirectLink: "/design-c",
+    displayName: "Design",
+    desc:""
 },
 {
     name:"Marketing",
     imageUrl:"#",
-    redirectLink: "/marketing",
-    displayName: "Marketing"
+    redirectLink: "/marketing-c",
+    displayName: "Marketing",
+    desc:""
+},
+{
+    name:"Academics",
+    imageUrl:"#",
+    redirectLink: "/academics-c",
+    displayName: "Academics",
+    desc:""
 },
 ];
 

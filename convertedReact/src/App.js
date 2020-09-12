@@ -44,6 +44,7 @@ import FeaturedLandingPageSection from "./components/FeaturedLandingPageSection/
 import ReferenceHome from './components/ReferenceHome/ReferenceHome';
 import ReferenceCourseTag from './components/ReferenceCourseTag/ReferenceCourseTag';
 import ReferenceCourseDetail from './components/ReferenceCourseDetail/ReferenceCourseDetail'
+import listingCourses_search from './pages/listingCourses_search/listingCourses_search'
 
 import Admin_ChangePassword from './pages/Admin-Pages/Aniket_ChangePassword'
 import Admin_DeleteRescrape from './pages/Admin-Pages/Aniket_DeleteRescrapePage'
@@ -54,27 +55,44 @@ import Admin_Profile from './pages/Admin-Pages/Aniket_ProfilePage'
 import {categoryData} from './data/category';
 import {skillsData} from './data/skills';
 import roadmapCategory from './data/roadmapCategory'
+
+
 import {
   Route,
   Link
 } from 'react-router-dom';
+import listingCourses from './pages/listingCourses/listingCourses';
 
 function App() {
   var regex = /course[a-z]/;
   const categoryPath = categoryData.map((data) =>  
   // console.log(data.redirectLink);
-  <Route exact path={`${data.redirectLink}-c`} render={()=><ParticularOuterMostCategory name={data.name} displayName={data.displayName} />} />
+  <Route exact path={`${data.redirectLink}`} render={()=><ParticularOuterMostCategory name={data.name} displayName={data.displayName} />} />
   )
   var skillsPath;
+  var links = [];
+  var cat = [];
   skillsData.forEach(function(category){
-    let categoryName = category.category;
-  skillsPath = category.skills.map((data) =>
-    <Route exact path={`${data.redirectLink}`} render={()=><ListingCoursesPage dbQuery={data.db} displayName={data.displayName} categoryName={categoryName} />} />
-    // console.log(`skill${data.redirectLink}`)
-    )
+    let categoryName = category.category.split('-')[0];
+    
+    // console.log(category);
+  skillsPath = category.skills.map((data) => {
+    // console.log(data.redirectLink);
+    cat.push(categoryName);
+    links.push(data);
+  //  return <Route exact path={`${data.redirectLink}`} render={()=><ListingCoursesPage dbQuery={data.db} displayName={data.displayName} categoryName={categoryName} />} />
+  })
+  
 });
-
+console.log(links);
+let i=-1;
+skillsPath = links.map((data) => {
+  ++i;
+return <Route exact path={`${data.redirectLink}`} render={()=><ListingCoursesPage dbQuery={data.db} displayName={data.displayName} categoryName={cat[i]} />} />
+}
+)
 var roadmapPath;
+
 roadmapPath = roadmapCategory.map((category) => 
   <Route exact path={`${category.redirectLink}/rp`}  render={()=><RoadmapLandingPage dbQuery={category.displayName.toLowerCase()} displayName={category.displayName} />} />
 );
@@ -84,11 +102,12 @@ roadmapPath = roadmapCategory.map((category) =>
     <div>
         <Route exact path="/roadmap/:id" component={ParticularRoadmapPage} />
         {categoryPath}
-        {skillsPath}
+        {skillsPath?skillsPath:""}
         {roadmapPath}
         <Route exact path='/' component={LandingPage} />
         <Route exact path='/roadmaps' render={()=><RoadmapLandingPage dbQuery={null} displayName={null} />} />
         <Route exact path='/featured' component={FeaturedLandingPageSection} />
+        <Route path='/search' component={listingCourses_search} />
         
         
         {/* <Admin_ChangePassword /> */}

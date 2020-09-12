@@ -1,234 +1,171 @@
 const skillsData = [
     {
-        category:"IT",
+        category:"Development-Web",
         skills:[
             {
-                displayName:"Network and Security",
-                imageUrl:"#",
-                redirectLink:"/network-security",
+                displayName:"Javascript",
+                imageUrl:"https://img.icons8.com/color/48/000000/javascript.png",
+                redirectLink:"/javascript",
                 desc:"",
-                db:"network-security"
+                db:"javascript"
             },
             {
-                displayName:"Hardware",
+                displayName:"React",
                 imageUrl:"#",
-                redirectLink:"/hardware",
+                redirectLink:"/react",
                 desc:"",
-                db:"hardware"
+                db:"react"
             },
             {
-                displayName:"Software Development",
+                displayName:"Angular",
                 imageUrl:"#",
-                redirectLink:"/hardware",
+                redirectLink:"/angular",
                 desc:"",
-                db:"software-development"
+                db:"angular"
             },
             {
-                displayName:"Game Development",
+                displayName:"CSS",
                 imageUrl:"#",
-                redirectLink:"/game-development",
+                redirectLink:"/css",
                 desc:"",
-                db:"game-development"
+                db:"css"
             },
             {
-                displayName:"Software Tools",
+                displayName:"PHP",
                 imageUrl:"#",
-                redirectLink:"/software-tools",
+                redirectLink:"/php",
                 desc:"",
-                db:"software-tools"
+                db:"php"
             },
             {
-                displayName:"IT Management",
+                displayName:"Node Js",
                 imageUrl:"#",
-                redirectLink:"/it-management",
+                redirectLink:"/node-js",
                 desc:"",
-                db:"it-management"
+                db:"node-js"
             },
             {
-                displayName:"Mobile Apps",
+                displayName:"Python",
                 imageUrl:"#",
-                redirectLink:"/mobile-apps",
+                redirectLink:"/python-django",
                 desc:"",
-                db:"mobile-apps"
+                db:"python-django"
             },
             {
-                displayName:"Software Engineering",
+                displayName:"Wordpress",
                 imageUrl:"#",
-                redirectLink:"/software-engineering",
+                redirectLink:"/wordpress",
                 desc:"",
-                db:"software-engineering"
-            },
-            {
-                displayName:"Data Science",
-                imageUrl:"#",
-                redirectLink:"/data-science",
-                desc:"",
-                db:"data-science"
-            },
-            {
-                displayName:"Databases",
-                imageUrl:"#",
-                redirectLink:"/databases",
-                desc:"",
-                db:"databases"
-            },
-            {
-                displayName:"Core IT Skills",
-                imageUrl:"#",
-                redirectLink:"/core-it-skills",
-                desc:"",
-                db:"it-skills"
+                db:"wordpress"
             },
         ],
         imageUrl:"#",
-        redirectLink: "/it",
-        displayName: "IT",
+        redirectLink: "/development",
+        displayName: "Web Development",
         desc:""
     },
     {
-        category:"Language",
+        category:"Development-Mobile",
         skills:[
             {
-                displayName:"Network and Security",
+                displayName:"Android",
                 imageUrl:"#",
-                redirectLink:"/network-security",
+                redirectLink:"/android-app",
                 desc:"",
-                db:"network-security"
+                db:"android-app"
             },
             {
-                displayName:"Hardware",
+                displayName:"Flutter",
                 imageUrl:"#",
-                redirectLink:"/hardware",
+                redirectLink:"/flutter",
                 desc:"",
-                db:"hardware"
+                db:"flutter"
             },
             {
-                displayName:"Software Development",
+                displayName:"Ios App",
                 imageUrl:"#",
-                redirectLink:"/hardware",
+                redirectLink:"/ios-app",
                 desc:"",
-                db:"software-development"
+                db:"ios-app"
             },
             {
-                displayName:"Game Development",
+                displayName:"React Native",
                 imageUrl:"#",
-                redirectLink:"/game-development",
+                redirectLink:"/react-native",
                 desc:"",
-                db:"game-development"
+                db:"react-native"
             },
             {
-                displayName:"Software Tools",
+                displayName:"Dart",
                 imageUrl:"#",
-                redirectLink:"/software-tools",
+                redirectLink:"/dart-mobile",
                 desc:"",
-                db:"software-tools"
+                db:"dart-mobile"
             },
             {
-                displayName:"IT Management",
+                displayName:"Kotlin",
                 imageUrl:"#",
-                redirectLink:"/it-management",
+                redirectLink:"/kotlin",
                 desc:"",
-                db:"it-management"
-            },
-            {
-                displayName:"Mobile Apps",
-                imageUrl:"#",
-                redirectLink:"/mobile-apps",
-                desc:"",
-                db:"mobile-apps"
-            },
-            {
-                displayName:"Software Engineering",
-                imageUrl:"#",
-                redirectLink:"/software-engineering",
-                desc:"",
-                db:"software-engineering"
-            },
-            {
-                displayName:"Data Science",
-                imageUrl:"#",
-                redirectLink:"/data-science",
-                desc:"",
-                db:"data-science"
-            },
-            {
-                displayName:"Databases",
-                imageUrl:"#",
-                redirectLink:"/databases",
-                desc:"",
-                db:"databases"
-            },
-            {
-                displayName:"Core IT Skills",
-                imageUrl:"#",
-                redirectLink:"/core-it-skills",
-                desc:"",
-                db:"it-skills"
+                db:"kotlin"
             },
         ],
         imageUrl:"#",
-        redirectLink: "/it",
-        displayName: "IT",
+        redirectLink: "/development",
+        displayName: "Mobile Apps",
         desc:""
     },
     {
-        category:"Science",
+        category:"Development-DataScience",
         skills:[
             {
-                displayName:"Network and Security",
+                displayName:"Python",
                 imageUrl:"#",
-                redirectLink:"/network-security",
+                redirectLink:"/python",
                 desc:"",
-                db:"network-security"
+                db:"python"
             },
             {
-                displayName:"Hardware",
+                displayName:"Machine Learning",
                 imageUrl:"#",
-                redirectLink:"/hardware",
+                redirectLink:"/machine-learning",
                 desc:"",
-                db:"hardware"
+                db:"machine-learning"
             },
             {
-                displayName:"Software Development",
+                displayName:"Deep Learning",
                 imageUrl:"#",
-                redirectLink:"/hardware",
+                redirectLink:"/deep-learning",
                 desc:"",
-                db:"software-development"
+                db:"deep-learning"
             },
             {
-                displayName:"Game Development",
+                displayName:"Data Analysis",
                 imageUrl:"#",
-                redirectLink:"/game-development",
+                redirectLink:"/data-analysis",
                 desc:"",
-                db:"game-development"
+                db:"data-analysis"
             },
             {
-                displayName:"Software Tools",
+                displayName:"R",
                 imageUrl:"#",
-                redirectLink:"/software-tools",
+                redirectLink:"/r-programming",
                 desc:"",
-                db:"software-tools"
+                db:"r-programming"
             },
             {
-                displayName:"IT Management",
+                displayName:"Tensorflow",
                 imageUrl:"#",
-                redirectLink:"/it-management",
+                redirectLink:"/tensor-flow",
                 desc:"",
-                db:"it-management"
+                db:"tensor-flow"
             },
             {
-                displayName:"Mobile Apps",
+                displayName:"Artifical Intelligence",
                 imageUrl:"#",
-                redirectLink:"/mobile-apps",
+                redirectLink:"/artificial-intelligence",
                 desc:"",
-                db:"mobile-apps"
-            },
-            {
-                displayName:"Software Engineering",
-                imageUrl:"#",
-                redirectLink:"/software-engineering",
-                desc:"",
-                db:"software-engineering"
+                db:"artificial-intelligence"
             },
             {
                 displayName:"Data Science",
@@ -236,887 +173,957 @@ const skillsData = [
                 redirectLink:"/data-science",
                 desc:"",
                 db:"data-science"
-            },
-            {
-                displayName:"Databases",
-                imageUrl:"#",
-                redirectLink:"/databases",
-                desc:"",
-                db:"databases"
-            },
-            {
-                displayName:"Core IT Skills",
-                imageUrl:"#",
-                redirectLink:"/core-it-skills",
-                desc:"",
-                db:"it-skills"
-            },
+            }
         ],
         imageUrl:"#",
-        redirectLink: "/it",
-        displayName: "IT",
+        redirectLink: "/development",
+        displayName: "Data Science",
         desc:""
     },
     {
-        category:"Health",
+        category:"Development-Programming",
         skills:[
             {
-                displayName:"Network and Security",
+                displayName:"C",
                 imageUrl:"#",
-                redirectLink:"/network-security",
+                redirectLink:"/c-programming",
                 desc:"",
-                db:"network-security"
+                db:"c-programming"
             },
             {
-                displayName:"Hardware",
+                displayName:"CPP",
                 imageUrl:"#",
-                redirectLink:"/hardware",
+                redirectLink:"/cpp-programming",
                 desc:"",
-                db:"hardware"
+                db:"cpp-programming"
             },
             {
-                displayName:"Software Development",
+                displayName:"Java",
                 imageUrl:"#",
-                redirectLink:"/hardware",
+                redirectLink:"/java-programming",
                 desc:"",
-                db:"software-development"
+                db:"java-programming"
             },
             {
-                displayName:"Game Development",
+                displayName:"C#",
                 imageUrl:"#",
-                redirectLink:"/game-development",
+                redirectLink:"/c#",
                 desc:"",
-                db:"game-development"
+                db:"c#"
             },
             {
-                displayName:"Software Tools",
+                displayName:"Spring",
                 imageUrl:"#",
-                redirectLink:"/software-tools",
+                redirectLink:"/spring-programming",
                 desc:"",
-                db:"software-tools"
-            },
-            {
-                displayName:"IT Management",
-                imageUrl:"#",
-                redirectLink:"/it-management",
-                desc:"",
-                db:"it-management"
-            },
-            {
-                displayName:"Mobile Apps",
-                imageUrl:"#",
-                redirectLink:"/mobile-apps",
-                desc:"",
-                db:"mobile-apps"
-            },
-            {
-                displayName:"Software Engineering",
-                imageUrl:"#",
-                redirectLink:"/software-engineering",
-                desc:"",
-                db:"software-engineering"
-            },
-            {
-                displayName:"Data Science",
-                imageUrl:"#",
-                redirectLink:"/data-science",
-                desc:"",
-                db:"data-science"
-            },
-            {
-                displayName:"Databases",
-                imageUrl:"#",
-                redirectLink:"/databases",
-                desc:"",
-                db:"databases"
-            },
-            {
-                displayName:"Core IT Skills",
-                imageUrl:"#",
-                redirectLink:"/core-it-skills",
-                desc:"",
-                db:"it-skills"
+                db:"spring-programming"
             },
         ],
         imageUrl:"#",
-        redirectLink: "/it",
-        displayName: "IT",
+        redirectLink: "/development",
+        displayName: "Programming Languages",
         desc:""
     },
     {
-        category:"Humanities",
+        category:"Development-Game",
         skills:[
             {
-                displayName:"Network and Security",
+                displayName:"Unity",
                 imageUrl:"#",
-                redirectLink:"/network-security",
+                redirectLink:"/unity",
                 desc:"",
-                db:"network-security"
+                db:"unity"
             },
             {
-                displayName:"Hardware",
+                displayName:"Unreal Engine",
                 imageUrl:"#",
-                redirectLink:"/hardware",
+                redirectLink:"/unreal-engine",
                 desc:"",
-                db:"hardware"
+                db:"unreal-engine"
             },
             {
-                displayName:"Software Development",
+                displayName:"Blender",
                 imageUrl:"#",
-                redirectLink:"/hardware",
+                redirectLink:"/blender",
                 desc:"",
-                db:"software-development"
+                db:"blender"
             },
             {
-                displayName:"Game Development",
+                displayName:"3D Game Development",
                 imageUrl:"#",
-                redirectLink:"/game-development",
+                redirectLink:"/3d-game-development",
                 desc:"",
-                db:"game-development"
+                db:"3d-game-development"
             },
             {
-                displayName:"Software Tools",
+                displayName:"2D Game Development",
                 imageUrl:"#",
-                redirectLink:"/software-tools",
+                redirectLink:"/2d-game-development",
                 desc:"",
-                db:"software-tools"
-            },
-            {
-                displayName:"IT Management",
-                imageUrl:"#",
-                redirectLink:"/it-management",
-                desc:"",
-                db:"it-management"
-            },
-            {
-                displayName:"Mobile Apps",
-                imageUrl:"#",
-                redirectLink:"/mobile-apps",
-                desc:"",
-                db:"mobile-apps"
-            },
-            {
-                displayName:"Software Engineering",
-                imageUrl:"#",
-                redirectLink:"/software-engineering",
-                desc:"",
-                db:"software-engineering"
-            },
-            {
-                displayName:"Data Science",
-                imageUrl:"#",
-                redirectLink:"/data-science",
-                desc:"",
-                db:"data-science"
-            },
-            {
-                displayName:"Databases",
-                imageUrl:"#",
-                redirectLink:"/databases",
-                desc:"",
-                db:"databases"
-            },
-            {
-                displayName:"Core IT Skills",
-                imageUrl:"#",
-                redirectLink:"/core-it-skills",
-                desc:"",
-                db:"it-skills"
+                db:"2d-game-development"
             },
         ],
         imageUrl:"#",
-        redirectLink: "/it",
-        displayName: "IT",
+        redirectLink: "/development",
+        displayName: "Game Development",
         desc:""
     },
     {
-        category:"Math",
+        category:"Development-Databases",
         skills:[
             {
-                displayName:"Network and Security",
+                displayName:"SQL",
                 imageUrl:"#",
-                redirectLink:"/network-security",
+                redirectLink:"/sql",
                 desc:"",
-                db:"network-security"
+                db:"sql"
             },
             {
-                displayName:"Hardware",
+                displayName:"NoSQL",
                 imageUrl:"#",
-                redirectLink:"/hardware",
+                redirectLink:"/no-sql",
                 desc:"",
-                db:"hardware"
+                db:"no-sql"
             },
             {
-                displayName:"Software Development",
+                displayName:"MySQL",
                 imageUrl:"#",
-                redirectLink:"/hardware",
+                redirectLink:"/my-sql",
                 desc:"",
-                db:"software-development"
+                db:"my-sql"
             },
             {
-                displayName:"Game Development",
+                displayName:"PostgreSQL",
                 imageUrl:"#",
-                redirectLink:"/game-development",
+                redirectLink:"/postgre-sql",
                 desc:"",
-                db:"game-development"
-            },
-            {
-                displayName:"Software Tools",
-                imageUrl:"#",
-                redirectLink:"/software-tools",
-                desc:"",
-                db:"software-tools"
-            },
-            {
-                displayName:"IT Management",
-                imageUrl:"#",
-                redirectLink:"/it-management",
-                desc:"",
-                db:"it-management"
-            },
-            {
-                displayName:"Mobile Apps",
-                imageUrl:"#",
-                redirectLink:"/mobile-apps",
-                desc:"",
-                db:"mobile-apps"
-            },
-            {
-                displayName:"Software Engineering",
-                imageUrl:"#",
-                redirectLink:"/software-engineering",
-                desc:"",
-                db:"software-engineering"
-            },
-            {
-                displayName:"Data Science",
-                imageUrl:"#",
-                redirectLink:"/data-science",
-                desc:"",
-                db:"data-science"
-            },
-            {
-                displayName:"Databases",
-                imageUrl:"#",
-                redirectLink:"/databases",
-                desc:"",
-                db:"databases"
-            },
-            {
-                displayName:"Core IT Skills",
-                imageUrl:"#",
-                redirectLink:"/core-it-skills",
-                desc:"",
-                db:"it-skills"
+                db:"postgre-sql"
             },
         ],
         imageUrl:"#",
-        redirectLink: "/it",
-        displayName: "IT",
+        redirectLink: "/development",
+        displayName: "Databases",
         desc:""
     },
     {
-        category:"Business",
+        category:"Development-DevOps",
         skills:[
             {
-                displayName:"Network and Security",
+                displayName:"AWS",
                 imageUrl:"#",
-                redirectLink:"/network-security",
+                redirectLink:"/aws",
                 desc:"",
-                db:"network-security"
+                db:"aws"
             },
             {
-                displayName:"Hardware",
+                displayName:"Kubernetes",
                 imageUrl:"#",
-                redirectLink:"/hardware",
+                redirectLink:"/kubernetes",
                 desc:"",
-                db:"hardware"
+                db:"kubernetes"
             },
             {
-                displayName:"Software Development",
+                displayName:"Microservices",
                 imageUrl:"#",
-                redirectLink:"/hardware",
+                redirectLink:"/microservices",
                 desc:"",
-                db:"software-development"
+                db:"microservices"
             },
             {
-                displayName:"Game Development",
+                displayName:"Docker",
                 imageUrl:"#",
-                redirectLink:"/game-development",
+                redirectLink:"/docker",
                 desc:"",
-                db:"game-development"
+                db:"docker"
             },
             {
-                displayName:"Software Tools",
+                displayName:"Git",
                 imageUrl:"#",
-                redirectLink:"/software-tools",
+                redirectLink:"/git-github",
                 desc:"",
-                db:"software-tools"
+                db:"git-github"
             },
             {
-                displayName:"IT Management",
+                displayName:"Jenkins",
                 imageUrl:"#",
-                redirectLink:"/it-management",
+                redirectLink:"/jenkins",
                 desc:"",
-                db:"it-management"
-            },
-            {
-                displayName:"Mobile Apps",
-                imageUrl:"#",
-                redirectLink:"/mobile-apps",
-                desc:"",
-                db:"mobile-apps"
-            },
-            {
-                displayName:"Software Engineering",
-                imageUrl:"#",
-                redirectLink:"/software-engineering",
-                desc:"",
-                db:"software-engineering"
-            },
-            {
-                displayName:"Data Science",
-                imageUrl:"#",
-                redirectLink:"/data-science",
-                desc:"",
-                db:"data-science"
-            },
-            {
-                displayName:"Databases",
-                imageUrl:"#",
-                redirectLink:"/databases",
-                desc:"",
-                db:"databases"
-            },
-            {
-                displayName:"Core IT Skills",
-                imageUrl:"#",
-                redirectLink:"/core-it-skills",
-                desc:"",
-                db:"it-skills"
+                db:"jenkins"
             },
         ],
         imageUrl:"#",
-        redirectLink: "/it",
-        displayName: "IT",
+        redirectLink: "/development",
+        displayName: "DevOps",
         desc:""
     },
     {
-        category:"Software Development",
+        category:"Business-Finance",
         skills:[
             {
-                displayName:"Network and Security",
+                displayName:"Stock Trading",
                 imageUrl:"#",
-                redirectLink:"/network-security",
+                redirectLink:"/stock-trading",
                 desc:"",
-                db:"network-security"
+                db:"stock-trading"
             },
             {
-                displayName:"Hardware",
+                displayName:"Investing",
                 imageUrl:"#",
-                redirectLink:"/hardware",
+                redirectLink:"/investing",
                 desc:"",
-                db:"hardware"
+                db:"investing"
             },
             {
-                displayName:"Software Development",
+                displayName:"Accounting",
                 imageUrl:"#",
-                redirectLink:"/hardware",
+                redirectLink:"/accounting",
                 desc:"",
-                db:"software-development"
+                db:"accounting"
             },
             {
-                displayName:"Game Development",
+                displayName:"MS Excel",
                 imageUrl:"#",
-                redirectLink:"/game-development",
+                redirectLink:"/ms-excel",
                 desc:"",
-                db:"game-development"
+                db:"ms-excel"
             },
             {
-                displayName:"Software Tools",
+                displayName:"Financial Analysis",
                 imageUrl:"#",
-                redirectLink:"/software-tools",
+                redirectLink:"/financial-analysis",
                 desc:"",
-                db:"software-tools"
+                db:"financial-analysis"
             },
             {
-                displayName:"IT Management",
+                displayName:"Tally",
                 imageUrl:"#",
-                redirectLink:"/it-management",
+                redirectLink:"/tally-",
                 desc:"",
-                db:"it-management"
+                db:"tally"
             },
             {
-                displayName:"Mobile Apps",
+                displayName:"Book Keeping",
                 imageUrl:"#",
-                redirectLink:"/mobile-apps",
+                redirectLink:"/book-keeping",
                 desc:"",
-                db:"mobile-apps"
-            },
-            {
-                displayName:"Software Engineering",
-                imageUrl:"#",
-                redirectLink:"/software-engineering",
-                desc:"",
-                db:"software-engineering"
-            },
-            {
-                displayName:"Data Science",
-                imageUrl:"#",
-                redirectLink:"/data-science",
-                desc:"",
-                db:"data-science"
-            },
-            {
-                displayName:"Databases",
-                imageUrl:"#",
-                redirectLink:"/databases",
-                desc:"",
-                db:"databases"
-            },
-            {
-                displayName:"Core IT Skills",
-                imageUrl:"#",
-                redirectLink:"/core-it-skills",
-                desc:"",
-                db:"it-skills"
+                db:"book-keeping"
             },
         ],
         imageUrl:"#",
-        redirectLink: "/it",
-        displayName: "IT",
+        redirectLink: "/business",
+        displayName: "Finance",
         desc:""
     },
     {
-        category:"Lifestyle",
+        category:"Business-Communication",
         skills:[
             {
-                displayName:"Network and Security",
+                displayName:"Writing",
                 imageUrl:"#",
-                redirectLink:"/network-security",
+                redirectLink:"/writing",
                 desc:"",
-                db:"network-security"
+                db:"writing"
             },
             {
-                displayName:"Hardware",
+                displayName:"Public Speaking",
                 imageUrl:"#",
-                redirectLink:"/hardware",
+                redirectLink:"/public-speaking",
                 desc:"",
-                db:"hardware"
+                db:"public-speaking"
             },
             {
-                displayName:"Software Development",
+                displayName:"Selling",
                 imageUrl:"#",
-                redirectLink:"/hardware",
+                redirectLink:"/selling-sales",
                 desc:"",
-                db:"software-development"
+                db:"selling-sales"
             },
             {
-                displayName:"Game Development",
+                displayName:"Technical Writing",
                 imageUrl:"#",
-                redirectLink:"/game-development",
+                redirectLink:"/technical-writing",
                 desc:"",
-                db:"game-development"
+                db:"technical-writing"
             },
             {
-                displayName:"Software Tools",
+                displayName:"Presentational Skills",
                 imageUrl:"#",
-                redirectLink:"/software-tools",
+                redirectLink:"/presentation-skills",
                 desc:"",
-                db:"software-tools"
-            },
-            {
-                displayName:"IT Management",
-                imageUrl:"#",
-                redirectLink:"/it-management",
-                desc:"",
-                db:"it-management"
-            },
-            {
-                displayName:"Mobile Apps",
-                imageUrl:"#",
-                redirectLink:"/mobile-apps",
-                desc:"",
-                db:"mobile-apps"
-            },
-            {
-                displayName:"Software Engineering",
-                imageUrl:"#",
-                redirectLink:"/software-engineering",
-                desc:"",
-                db:"software-engineering"
-            },
-            {
-                displayName:"Data Science",
-                imageUrl:"#",
-                redirectLink:"/data-science",
-                desc:"",
-                db:"data-science"
-            },
-            {
-                displayName:"Databases",
-                imageUrl:"#",
-                redirectLink:"/databases",
-                desc:"",
-                db:"databases"
-            },
-            {
-                displayName:"Core IT Skills",
-                imageUrl:"#",
-                redirectLink:"/core-it-skills",
-                desc:"",
-                db:"it-skills"
+                db:"presentation-skills"
             },
         ],
         imageUrl:"#",
-        redirectLink: "/it",
-        displayName: "IT",
+        redirectLink: "/business",
+        displayName: "Communication",
         desc:""
     },
     {
-        category:"Operations",
+        category:"Business-Management",
         skills:[
             {
-                displayName:"Network and Security",
+                displayName:"Product Management",
                 imageUrl:"#",
-                redirectLink:"/network-security",
+                redirectLink:"/product-management",
                 desc:"",
-                db:"network-security"
+                db:"product-management"
             },
             {
-                displayName:"Hardware",
+                displayName:"Business Process",
                 imageUrl:"#",
-                redirectLink:"/hardware",
+                redirectLink:"/business-process",
                 desc:"",
-                db:"hardware"
+                db:"business-process"
             },
             {
-                displayName:"Software Development",
+                displayName:"Risk Management",
                 imageUrl:"#",
-                redirectLink:"/hardware",
+                redirectLink:"/risk-management",
                 desc:"",
-                db:"software-development"
+                db:"risk-management"
             },
             {
-                displayName:"Game Development",
+                displayName:"Leadership",
                 imageUrl:"#",
-                redirectLink:"/game-development",
+                redirectLink:"/leadership",
                 desc:"",
-                db:"game-development"
+                db:"leadership"
             },
             {
-                displayName:"Software Tools",
+                displayName:"Suplly Chains",
                 imageUrl:"#",
-                redirectLink:"/software-tools",
+                redirectLink:"/supply-chains",
                 desc:"",
-                db:"software-tools"
+                db:"supply-chains"
             },
             {
-                displayName:"IT Management",
+                displayName:"Agile",
                 imageUrl:"#",
-                redirectLink:"/it-management",
+                redirectLink:"/agile",
                 desc:"",
-                db:"it-management"
-            },
-            {
-                displayName:"Mobile Apps",
-                imageUrl:"#",
-                redirectLink:"/mobile-apps",
-                desc:"",
-                db:"mobile-apps"
-            },
-            {
-                displayName:"Software Engineering",
-                imageUrl:"#",
-                redirectLink:"/software-engineering",
-                desc:"",
-                db:"software-engineering"
-            },
-            {
-                displayName:"Data Science",
-                imageUrl:"#",
-                redirectLink:"/data-science",
-                desc:"",
-                db:"data-science"
-            },
-            {
-                displayName:"Databases",
-                imageUrl:"#",
-                redirectLink:"/databases",
-                desc:"",
-                db:"databases"
-            },
-            {
-                displayName:"Core IT Skills",
-                imageUrl:"#",
-                redirectLink:"/core-it-skills",
-                desc:"",
-                db:"it-skills"
+                db:"agile"
             },
         ],
         imageUrl:"#",
-        redirectLink: "/it",
-        displayName: "IT",
+        redirectLink: "/business",
+        displayName: "Management",
         desc:""
     },
     {
-        category:"Data Science",
+        category:"Business-HumanResources",
         skills:[
             {
-                displayName:"Network and Security",
+                displayName:"Hiring",
                 imageUrl:"#",
-                redirectLink:"/network-security",
+                redirectLink:"/hiring-hr",
                 desc:"",
-                db:"network-security"
+                db:"hiring-hr"
             },
             {
-                displayName:"Hardware",
+                displayName:"Emotional Intelligence",
                 imageUrl:"#",
-                redirectLink:"/hardware",
+                redirectLink:"/emotional-intelligence",
                 desc:"",
-                db:"hardware"
+                db:"emotional-intelligence"
             },
             {
-                displayName:"Software Development",
+                displayName:"Conflict Resolution",
                 imageUrl:"#",
-                redirectLink:"/hardware",
+                redirectLink:"/conflict-resolution",
                 desc:"",
-                db:"software-development"
+                db:"conflict-resolution"
             },
             {
-                displayName:"Game Development",
+                displayName:"Talent Management",
                 imageUrl:"#",
-                redirectLink:"/game-development",
+                redirectLink:"/talent-management",
                 desc:"",
-                db:"game-development"
-            },
-            {
-                displayName:"Software Tools",
-                imageUrl:"#",
-                redirectLink:"/software-tools",
-                desc:"",
-                db:"software-tools"
-            },
-            {
-                displayName:"IT Management",
-                imageUrl:"#",
-                redirectLink:"/it-management",
-                desc:"",
-                db:"it-management"
-            },
-            {
-                displayName:"Mobile Apps",
-                imageUrl:"#",
-                redirectLink:"/mobile-apps",
-                desc:"",
-                db:"mobile-apps"
-            },
-            {
-                displayName:"Software Engineering",
-                imageUrl:"#",
-                redirectLink:"/software-engineering",
-                desc:"",
-                db:"software-engineering"
-            },
-            {
-                displayName:"Data Science",
-                imageUrl:"#",
-                redirectLink:"/data-science",
-                desc:"",
-                db:"data-science"
-            },
-            {
-                displayName:"Databases",
-                imageUrl:"#",
-                redirectLink:"/databases",
-                desc:"",
-                db:"databases"
-            },
-            {
-                displayName:"Core IT Skills",
-                imageUrl:"#",
-                redirectLink:"/core-it-skills",
-                desc:"",
-                db:"it-skills"
+                db:"talent-management"
             },
         ],
         imageUrl:"#",
-        redirectLink: "/it",
-        displayName: "IT",
+        redirectLink: "/business",
+        displayName: "Human Resources",
         desc:""
     },
     {
-        category:"Design",
+        category:"Business-Media",
         skills:[
             {
-                displayName:"Network and Security",
+                displayName:"Podcast",
+                imageUrl:"#",
+                redirectLink:"/podcast-media",
+                desc:"",
+                db:"podcast-media"
+            },
+            {
+                displayName:"Youtube",
+                imageUrl:"#",
+                redirectLink:"/youtube",
+                desc:"",
+                db:"youtube"
+            },
+            {
+                displayName:"Journalism",
+                imageUrl:"#",
+                redirectLink:"/journalism",
+                desc:"",
+                db:"journalism"
+            },
+            {
+                displayName:"SEO",
+                imageUrl:"#",
+                redirectLink:"/seo-optimization",
+                desc:"",
+                db:"seo-optimization"
+            },
+            {
+                displayName:"Amazon Kindle",
+                imageUrl:"#",
+                redirectLink:"/amazon-kindle",
+                desc:"",
+                db:"amazon-kindle"
+            },
+            {
+                displayName:"Adobe",
+                imageUrl:"#",
+                redirectLink:"/adobe-design",
+                desc:"",
+                db:"adobe-design"
+            },
+        ],
+        imageUrl:"#",
+        redirectLink: "/business",
+        displayName: "Media",
+        desc:""
+    },
+    {
+        category:"IT-NetworkSecurity",
+        skills:[
+            {
+                displayName:"Ethical Hacking",
+                imageUrl:"#",
+                redirectLink:"/ethical-hacking",
+                desc:"",
+                db:"ethical-hacking"
+            },
+            {
+                displayName:"Cyber Security",
+                imageUrl:"#",
+                redirectLink:"/cyber-security",
+                desc:"",
+                db:"cyber-security"
+            },
+            {
+                displayName:"Penetration Testing",
+                imageUrl:"#",
+                redirectLink:"/penetration-testing",
+                desc:"",
+                db:"penetration-testing"
+            },
+            {
+                displayName:"Network Security",
                 imageUrl:"#",
                 redirectLink:"/network-security",
                 desc:"",
                 db:"network-security"
             },
             {
-                displayName:"Hardware",
+                displayName:"IT networking",
                 imageUrl:"#",
-                redirectLink:"/hardware",
+                redirectLink:"/it-networking",
                 desc:"",
-                db:"hardware"
-            },
-            {
-                displayName:"Software Development",
-                imageUrl:"#",
-                redirectLink:"/hardware",
-                desc:"",
-                db:"software-development"
-            },
-            {
-                displayName:"Game Development",
-                imageUrl:"#",
-                redirectLink:"/game-development",
-                desc:"",
-                db:"game-development"
-            },
-            {
-                displayName:"Software Tools",
-                imageUrl:"#",
-                redirectLink:"/software-tools",
-                desc:"",
-                db:"software-tools"
-            },
-            {
-                displayName:"IT Management",
-                imageUrl:"#",
-                redirectLink:"/it-management",
-                desc:"",
-                db:"it-management"
-            },
-            {
-                displayName:"Mobile Apps",
-                imageUrl:"#",
-                redirectLink:"/mobile-apps",
-                desc:"",
-                db:"mobile-apps"
-            },
-            {
-                displayName:"Software Engineering",
-                imageUrl:"#",
-                redirectLink:"/software-engineering",
-                desc:"",
-                db:"software-engineering"
-            },
-            {
-                displayName:"Data Science",
-                imageUrl:"#",
-                redirectLink:"/data-science",
-                desc:"",
-                db:"data-science"
-            },
-            {
-                displayName:"Databases",
-                imageUrl:"#",
-                redirectLink:"/databases",
-                desc:"",
-                db:"databases"
-            },
-            {
-                displayName:"Core IT Skills",
-                imageUrl:"#",
-                redirectLink:"/core-it-skills",
-                desc:"",
-                db:"it-skills"
+                db:"it-networking"
             },
         ],
         imageUrl:"#",
         redirectLink: "/it",
-        displayName: "IT",
+        displayName: "Network and Security",
+        desc:""
+    },
+    {
+        category:"IT-hardware",
+        skills:[
+            {
+                displayName:"Arduino",
+                imageUrl:"#",
+                redirectLink:"/arduino",
+                desc:"",
+                db:"arduino"
+            },
+            {
+                displayName:"PLC",
+                imageUrl:"#",
+                redirectLink:"/plc",
+                desc:"",
+                db:"plc"
+            },
+            {
+                displayName:"MicroControllers",
+                imageUrl:"#",
+                redirectLink:"/pmicro-controllers",
+                desc:"",
+                db:"micro-controllers"
+            },
+            {
+                displayName:"Raspberry Pi",
+                imageUrl:"#",
+                redirectLink:"/raspberry-pi",
+                desc:"",
+                db:"raspberry-pi"
+            },
+            {
+                displayName:"Embedded Systems",
+                imageUrl:"#",
+                redirectLink:"/embedded-systems",
+                desc:"",
+                db:"embedded-systems"
+            },
+            {
+                displayName:"Embedded C",
+                imageUrl:"#",
+                redirectLink:"/embedded-c",
+                desc:"",
+                db:"embedded-c"
+            },
+        ],
+        imageUrl:"#",
+        redirectLink: "/it",
+        displayName: "Embedded Systems",
+        desc:""
+    },
+    {
+        category:"Personal",
+        skills:[
+            {
+                displayName:"Meditation",
+                imageUrl:"#",
+                redirectLink:"/meditation",
+                desc:"",
+                db:"meditation"
+            },
+            {
+                displayName:"Time Management",
+                imageUrl:"#",
+                redirectLink:"/time-management",
+                desc:"",
+                db:"time-management"
+            },
+            {
+                displayName:"Organization",
+                imageUrl:"#",
+                redirectLink:"/organization",
+                desc:"",
+                db:"organization"
+            },
+            {
+                displayName:"Pesonal Management",
+                imageUrl:"#",
+                redirectLink:"/personal-management",
+                desc:"",
+                db:"personal-management"
+            },
+            {
+                displayName:"Resume Writing",
+                imageUrl:"#",
+                redirectLink:"/resume-writing",
+                desc:"",
+                db:"resume-writing"
+            },
+            {
+                displayName:"Life Coaching",
+                imageUrl:"#",
+                redirectLink:"/life-coaching",
+                desc:"",
+                db:"life-coaching"
+            },
+            {
+                displayName:"Personal Branding",
+                imageUrl:"#",
+                redirectLink:"/personal-branding",
+                desc:"",
+                db:"personal-branding"
+            },
+            {
+                displayName:"Digital Marketing",
+                imageUrl:"#",
+                redirectLink:"/digital-marketing",
+                desc:"",
+                db:"digital-marketing"
+            },
+            {
+                displayName:"Stress Management",
+                imageUrl:"#",
+                redirectLink:"/stress-management",
+                desc:"",
+                db:"stress-management"
+            },
+            {
+                displayName:"Photography",
+                imageUrl:"#",
+                redirectLink:"/photography-photo",
+                desc:"",
+                db:"photography-photo"
+            },
+        ],
+        imageUrl:"#",
+        redirectLink: "/personal",
+        displayName: "Personal Development",
+        desc:""
+    },
+    {
+        category:"Design-Web",
+        skills:[
+            {
+                displayName:"HTML",
+                imageUrl:"#",
+                redirectLink:"/html-design",
+                desc:"",
+                db:"html-design"
+            },
+            {
+                displayName:"CSS",
+                imageUrl:"#",
+                redirectLink:"/css-design",
+                desc:"",
+                db:"css-design"
+            },
+            {
+                displayName:"Adobe Illustration",
+                imageUrl:"#",
+                redirectLink:"/adobe-illustrator",
+                desc:"",
+                db:"adobe-illustrator"
+            },
+            {
+                displayName:"PhotoShop",
+                imageUrl:"#",
+                redirectLink:"/photoshop-design",
+                desc:"",
+                db:"photoshop-design"
+            },
+        ],
+        imageUrl:"#",
+        redirectLink: "/design",
+        displayName: "Web Design",
+        desc:""
+    },
+    {
+        category:"Design-Graphic",
+        skills:[
+            {
+                displayName:"Photoshop",
+                imageUrl:"#",
+                redirectLink:"/photoshop-design",
+                desc:"",
+                db:"photoshop-design"
+            },
+            {
+                displayName:"Logo Design",
+                imageUrl:"#",
+                redirectLink:"/logo-design",
+                desc:"",
+                db:"logo-design"
+            },
+            {
+                displayName:"Adobe After Effects",
+                imageUrl:"#",
+                redirectLink:"/after-effects",
+                desc:"",
+                db:"after-effects"
+            },
+            {
+                displayName:"AutoCAD",
+                imageUrl:"#",
+                redirectLink:"/autocad-design",
+                desc:"",
+                db:"autocad-design"
+            },
+            {
+                displayName:"Video Editing",
+                imageUrl:"#",
+                redirectLink:"/video-editing",
+                desc:"",
+                db:"video-editing"
+            },
+            {
+                displayName:"Blender",
+                imageUrl:"#",
+                redirectLink:"/blender",
+                desc:"",
+                db:"blender"
+            },
+            {
+                displayName:"Circuit Design",
+                imageUrl:"#",
+                redirectLink:"/circuit-design",
+                desc:"",
+                db:"circuit-design"
+            },
+        ],
+        imageUrl:"#",
+        redirectLink: "/design",
+        displayName: "Graphic Design",
         desc:""
     },
     {
         category:"Marketing",
         skills:[
             {
-                displayName:"Network and Security",
+                displayName:"Google Ads",
                 imageUrl:"#",
-                redirectLink:"/network-security",
+                redirectLink:"/google-ads",
                 desc:"",
-                db:"network-security"
+                db:"google-ads"
             },
             {
-                displayName:"Hardware",
+                displayName:"Facebook Ads",
                 imageUrl:"#",
-                redirectLink:"/hardware",
+                redirectLink:"/facebook-ads",
                 desc:"",
-                db:"hardware"
+                db:"facebook-ads"
             },
             {
-                displayName:"Software Development",
+                displayName:"Social Media Marketing",
                 imageUrl:"#",
-                redirectLink:"/hardware",
+                redirectLink:"/social-marketing",
                 desc:"",
-                db:"software-development"
+                db:"social-marketing"
             },
             {
-                displayName:"Game Development",
+                displayName:"Email Marketing",
                 imageUrl:"#",
-                redirectLink:"/game-development",
+                redirectLink:"/email-marketing",
                 desc:"",
-                db:"game-development"
+                db:"email-marketing"
             },
             {
-                displayName:"Software Tools",
+                displayName:"SEO",
                 imageUrl:"#",
-                redirectLink:"/software-tools",
+                redirectLink:"/seo-optimization",
                 desc:"",
-                db:"software-tools"
+                db:"seo-optimization"
             },
             {
-                displayName:"IT Management",
+                displayName:"Affiliate Marketing",
                 imageUrl:"#",
-                redirectLink:"/it-management",
+                redirectLink:"/affiliate-marketing",
                 desc:"",
-                db:"it-management"
+                db:"affiliate-marketing"
             },
             {
-                displayName:"Mobile Apps",
+                displayName:"Content Marketing",
                 imageUrl:"#",
-                redirectLink:"/mobile-apps",
+                redirectLink:"/content-marketing",
                 desc:"",
-                db:"mobile-apps"
+                db:"content-marketing"
             },
             {
-                displayName:"Software Engineering",
+                displayName:"Free Lancing",
                 imageUrl:"#",
-                redirectLink:"/software-engineering",
+                redirectLink:"/freelancing-freelancer",
                 desc:"",
-                db:"software-engineering"
+                db:"freelancing-freelancer"
             },
             {
-                displayName:"Data Science",
+                displayName:"Growth Hacking",
                 imageUrl:"#",
-                redirectLink:"/data-science",
+                redirectLink:"/growth-strategy",
                 desc:"",
-                db:"data-science"
-            },
-            {
-                displayName:"Databases",
-                imageUrl:"#",
-                redirectLink:"/databases",
-                desc:"",
-                db:"databases"
-            },
-            {
-                displayName:"Core IT Skills",
-                imageUrl:"#",
-                redirectLink:"/core-it-skills",
-                desc:"",
-                db:"it-skills"
+                db:"growth-strategy"
             },
         ],
         imageUrl:"#",
-        redirectLink: "/it",
-        displayName: "IT",
+        redirectLink: "/marketing",
+        displayName: "Marketing",
         desc:""
+    },{
+    category:"Academics-Engineering",
+    skills:[
+        {
+            displayName:"Data Structure",
+            imageUrl:"#",
+            redirectLink:"/data-structure",
+            desc:"",
+            db:"data-structure"
+        },
+        {
+            displayName:"Algorithms",
+            imageUrl:"#",
+            redirectLink:"/algorithms-dsa",
+            desc:"",
+            db:"algorithms-dsa"
+        },
+        {
+            displayName:"Electronics",
+            imageUrl:"#",
+            redirectLink:"/electronics-circuit",
+            desc:"",
+            db:"electronics-circuit"
+        },
+        {
+            displayName:"Robotics",
+            imageUrl:"#",
+            redirectLink:"/robotics-electronics",
+            desc:"",
+            db:"robotics-electronics"
+        },
+        {
+            displayName:"Structural Engineering",
+            imageUrl:"#",
+            redirectLink:"/structural-engineering",
+            desc:"",
+            db:"structural-engineering"
+        },
+        {
+            displayName:"Mechanical Engineering",
+            imageUrl:"#",
+            redirectLink:"/mechanical-engineering",
+            desc:"",
+            db:"mechanical-engineering"
+        },
+    ],
+    imageUrl:"#",
+    redirectLink: "/academics",
+    displayName: "Engineering",
+    desc:""
+},
+{
+category:"Academics-Math",
+skills:[
+    {
+        displayName:"Calculus",
+        imageUrl:"#",
+        redirectLink:"/calculus",
+        desc:"",
+        db:"calculus"
+    },
+    {
+        displayName:"Trigonometry",
+        imageUrl:"#",
+        redirectLink:"/trigonometry",
+        desc:"",
+        db:"trigonometry"
+    },
+    {
+        displayName:"Geometry",
+        imageUrl:"#",
+        redirectLink:"/geometry-math",
+        desc:"",
+        db:"geometry-math"
+    },
+    {
+        displayName:"Algebra",
+        imageUrl:"#",
+        redirectLink:"/algebra",
+        desc:"",
+        db:"algebra"
+    },
+    {
+        displayName:"Discrete Math",
+        imageUrl:"#",
+        redirectLink:"/discrete-math",
+        desc:"",
+        db:"discrete-math"
+    },
+],
+imageUrl:"#",
+redirectLink: "/academics",
+displayName: "Math",
+desc:""
+},{
+category:"Academics-Science",
+skills:[
+    {
+        displayName:"Physics",
+        imageUrl:"#",
+        redirectLink:"/physics",
+        desc:"",
+        db:"physics"
+    },
+    {
+        displayName:"Biology",
+        imageUrl:"#",
+        redirectLink:"/biology",
+        desc:"",
+        db:"biology"
+    },
+    {
+        displayName:"Chemistry",
+        imageUrl:"#",
+        redirectLink:"/chemistry",
+        desc:"",
+        db:"chemistry"
+    },
+    {
+        displayName:"Anatomy",
+        imageUrl:"#",
+        redirectLink:"/anatomy",
+        desc:"",
+        db:"anatomy"
+    },
+    {
+        displayName:"Astronomy",
+        imageUrl:"#",
+        redirectLink:"/astronomy",
+        desc:"",
+        db:"astronomy"
+    },
+    {
+        displayName:"Research Paper",
+        imageUrl:"#",
+        redirectLink:"/research-paper",
+        desc:"",
+        db:"research-paper"
+    },
+],
+imageUrl:"#",
+redirectLink: "/academics",
+displayName: "Science",
+desc:""
+},{
+    category:"Academics-Language",
+    skills:[
+        {
+            displayName:"English",
+            imageUrl:"#",
+            redirectLink:"/english-language",
+            desc:"",
+            db:"english-language"
+        },
+        {
+            displayName:"German",
+            imageUrl:"#",
+            redirectLink:"/german-language",
+            desc:"",
+            db:"german-language"
+        },
+        {
+            displayName:"Spanish",
+            imageUrl:"#",
+            redirectLink:"/spanish-language",
+            desc:"",
+            db:"spanish-language"
+        },
+        {
+            displayName:"France",
+            imageUrl:"#",
+            redirectLink:"/france-language",
+            desc:"",
+            db:"france-language"
+        },
+        {
+            displayName:"Japanese",
+            imageUrl:"#",
+            redirectLink:"/japanese-language",
+            desc:"",
+            db:"japanese-language"
+        },
+    ],
+    imageUrl:"#",
+    redirectLink: "/academics",
+    displayName: "Science",
+    desc:""
     },
     ];
-    
     export {skillsData};

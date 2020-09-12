@@ -2,32 +2,56 @@ import React,{Component} from "react";
 import "./cardHackrio.css";
 import ScriptTag from 'react-script-tag';
 import {skillsData} from '../../data/skills'
-
+import {categoryData} from '../../data/category'
 class CardHackrio extends Component{
     constructor(props) {
         super(props);
         console.log(this.props.category);
         this.handleChangeSearch = this.handleChangeSearch.bind(this);
-        var skills;
+        var skills = [];
         let categoryName=this.props.category;
+        var categoriesTabs = [];
         skillsData.forEach(function(data){
-             if(data.category == categoryName)
-                skills = data.skills;
+            var afterSplit = data.category.split('-')[0];
+            
+             if(afterSplit == categoryName)
+             {
+                skills.push(data.skills);
+                if(data.category.split('-')[1])
+                    categoriesTabs.push(data.category.split('-')[1]);
+             }
             // console.log(data.category);
         });
         // console.log(skills);
-
-        const ret = skills.map((data) =>  
-        <a href={`${data.redirectLink}`} className="topic-grid-item js-topic-grid-item">
+        console.log(categoriesTabs);
+        var one = [];
+        skills.forEach(function(skillDataOne){
+            skillDataOne.forEach(function(final){
+                one.push(final);
+            });
+            
+        }); 
+        console.log(one);
+        const ret = one.map((data) =>  
+        <a href={`${data.redirectLink}`} target="_blank" className="topic-grid-item js-topic-grid-item">
             <img className="topic-thumbnail" alt="Python Tutorials and Courses" src="https://hackr.io/tutorials/python/logo-python.svg?ver=1562823957" />
             <p className="js-topic">{data.displayName}</p>
         </a>
+        )
+        const categoryPath =  categoryData.map((data) =>  
+        <li class="nav-item">
+             <a 
+             onClick={() => this.handleCategoryChange(data.redirectLink)} 
+             class="nav-link akruti-a" id="home-tab" data-toggle="tab" href="#" role="tab"
+            aria-controls="home" aria-selected="true">{data.displayName}</a>
+        </li>
         ) 
         this.state={
             allSkills:ret,
             dataToDisplay:ret,
             search:null,
-            items:skills
+            items:one,
+            navTabs:categoryPath
         }
       }
 
@@ -72,8 +96,58 @@ class CardHackrio extends Component{
           dataToDisplay:display
       });
     }
+  
     }
 
+    // async componentDidMount(){
+    //     const categoryPath = await categoryData.map((data) =>  
+    //     <li class="nav-item">
+    //          <a 
+    //         //  onClick={() => this.handleCategoryChange(data.redirectLink)} 
+    //          class="nav-link active akruti-a" id="home-tab" data-toggle="tab" href="#" role="tab"
+    //         aria-controls="home" aria-selected="true">{data.displayName}</a>
+    //     </li>
+    //     )
+    //     this.setState({navTabs:categoryPath});
+    //     console.log(this.state.navTabs);
+    // }
+
+    async handleCategoryChange(link){
+        var skills = [];
+        skillsData.forEach(async(data) => {
+            var afterSplit = data.redirectLink;
+            
+             if(afterSplit == link.split('-')[0])
+             {
+                skills.push(data.skills);
+                // if(data.category.split('-')[1])
+                //     categoriesTabs.push(data.category.split('-')[1]);
+             }
+            // console.log(data.category);
+        });
+
+
+        // console.log(link);
+        var one = [];
+        skills.forEach(async(skillDataOne) => {
+             skillDataOne.forEach(function(final){
+                //  console.log(final);
+                one.push(final);
+            });
+        }); 
+        console.log(one);
+        const ret = one.map((data) =>  
+        <a href={`${data.redirectLink}`} target="_blank" className="topic-grid-item js-topic-grid-item">
+            <img className="topic-thumbnail" alt="Python Tutorials and Courses" src="https://hackr.io/tutorials/python/logo-python.svg?ver=1562823957" />
+            <p className="js-topic">{data.displayName}</p>
+        </a>
+        )
+        this.setState({
+            allSkills:ret,
+            dataToDisplay:ret,
+            items:one
+        });
+    }
 
     render(){
         return(
@@ -84,11 +158,12 @@ class CardHackrio extends Component{
                     <div class="course_nav">
                         <nav>
                             <ul class="nav" id="myTab" role="tablist">
-                                <li class="nav-item">
+                                {this.state.navTabs}
+                                 {/* <li class="nav-item">
                                     <a class="nav-link active akruti-a" id="home-tab" data-toggle="tab" href="#home" role="tab"
                                         aria-controls="home" aria-selected="true">All Courses</a>
-                                </li>
-                                <li class="nav-item">
+                                </li> */}
+                                {/*<li class="nav-item">
                                     <a class="nav-link akruti-a" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
                                         aria-controls="profile" aria-selected="false">Photoshop</a>
                                 </li>
@@ -119,7 +194,7 @@ class CardHackrio extends Component{
                                 <li class="nav-item">
                                     <a class="nav-link akruti-a" id="Adobe-XD-tab9" data-toggle="tab" href="#Adobe-XD9" role="tab"
                                         aria-controls="design" aria-selected="false">Illustrator</a>
-                                </li>
+                                </li> */}
                             </ul>
                         </nav>
                     </div>
@@ -135,7 +210,7 @@ class CardHackrio extends Component{
                     <div className="desktop-search-bar search-bar">
                         <div className="form-holder">
                             <div className="navbarSearch">
-                                <input onChange={this.handleChangeSearch} id="myInput" onkeyup="myFunction()" className="form-control navbar-search-input js-navbar-search-input nav-input js-filter-topics" type="text" placeholder="Search for the language you want to learn: " />
+                                <input onChange={this.handleChangeSearch} id="myInput" onkeyup="myFunction()" className="form-control navbar-search-input js-navbar-search-input nav-input js-filter-topics" type="text" placeholder="Search for the skill you want to learn: " />
                             </div>
                             <img className="card-hackrioicon color-filter" src="https://hackr.io/assets/images/header-icons/search-header.svg" width="17" height="17" />
                         </div>
