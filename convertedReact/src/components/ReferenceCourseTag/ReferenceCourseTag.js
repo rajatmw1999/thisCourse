@@ -9,30 +9,7 @@ constructor(props){
   this.state={
     loading:true,
     roadmaps:[
-      {
-        ImageLink:"https://images.unsplash.com/photo-1530789253388-582c481c54b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-        NameofAuthor:"Admin",
-        NameOfRoadmap:"Roadmap1",
-        Likes:0,
-        Category:"category",
-        Text:""
-      },
-      {
-        ImageLink:"https://images.unsplash.com/photo-1530789253388-582c481c54b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-        NameofAuthor:"Admin",
-        NameOfRoadmap:"Roadmap2",
-        Likes:0,
-        Category:"category",
-        Text:""
-      },
-      {
-        ImageLink:"https://images.unsplash.com/photo-1530789253388-582c481c54b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-        NameofAuthor:"Admin",
-        NameOfRoadmap:"Roadmap3",
-        Likes:0,
-        Category:"category",
-        Text:""
-      },
+      
     ], 
     error:null
   }
@@ -49,6 +26,7 @@ componentDidMount(){
             (result) => {
             console.log(result);
             resultFetch=result;
+            if(result.length)
             this.setState({
               loading: false,
               roadmaps:resultFetch
@@ -69,8 +47,8 @@ componentDidMount(){
 }
 
   render() {
+    if(this.state.roadmaps.length >= 2)
         return (
-         
           <div  className="rajat_referencetag_outermostdiv">
         <div className="rajat_referencetag_outermostdiv">
         <div class="team rajat_card1">
@@ -170,9 +148,12 @@ componentDidMount(){
          <br />
          
          </div>
-        
+         
         );
-  
+  else
+  return(
+    <div></div>
+  );
   }
 }
 

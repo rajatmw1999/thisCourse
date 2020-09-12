@@ -1,10 +1,8 @@
 import React , {Component} from 'react';
-
+import {domain} from '../../data/hosted'
 
 import './style.css';
-class RoadmapMore extends Component{
-    
-
+class RoadmapMore extends React.Component{
     render() {
       return(
     <div className="roadmapmore col-12">
