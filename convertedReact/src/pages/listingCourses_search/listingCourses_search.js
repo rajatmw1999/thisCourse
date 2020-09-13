@@ -48,38 +48,60 @@ class listingCourses extends Component{
 
     }
 
-    componentDidMount() {
-        var fetchSkills = domain + "data/searchsome/" + this.props.dbQuery;
-        console.log(fetchSkills);
-       
-        fetch(`${fetchSkills}`)
-          .then(res => res.json())
-          .then(
-            (result) => {
-            console.log(result.data);
-            var list = [];
-            for (var i=(this.state.listNo - 3); i<this.state.listNo; ++i)
-            {
-              if(result.data[i] != undefined)
-              list[i] = result.data[i];
-            }
-            console.log(list);
-              this.setState({
-                loaded: true,
-                items: result.data,
-                list:list
-              });
-            },
-            // Note: it's important to handle errors here
-            // instead of a catch() block so that we don't swallow
-            // exceptions from actual bugs in components.
-            (error) => {
-              this.setState({
-                loaded: true,
-                error
-              });
-            }
-          )
+    async componentDidMount() {
+        var searchQuery = window.location.pathname.split('/');
+        var allFetch = [];
+        for(let i=2; i<searchQuery.length; ++i)
+          {
+            var fetchSkills = domain + "data/searchsome/" + searchQuery[i];
+            allFetch.push(fetchSkills);
+          }
+          // console.log(allFetch);
+        
+        // console.log(fetchSkills);
+        var listAll = [];
+        var list = [];
+      allFetch.forEach(async(url) => {
+        // console.log(url);
+      await fetch(`${url}`)
+        .then(res => res.json())
+        .then(
+          (result) => {
+            // console.log(result.data);
+            result.data.forEach(async(course) => {
+              // console.log(course);
+              if(course != undefined)
+                listAll.push(course);
+                for(var i=(this.state.listNo - 3); i<this.state.listNo; ++i)
+                  {
+                    if(listAll[i] != undefined)
+                      list[i] = listAll[i];
+                  }
+                  this.setState({
+                    loaded: true,
+                    items: listAll,
+                    list:list
+                  });
+            });
+          // console.log(result.data);
+         
+          },
+          (error) => {
+            this.setState({
+              loaded: true,
+              error
+            });
+          }
+        )
+        
+       });
+       console.log(listAll);
+          console.log(list);
+            // this.setState({
+            //   loaded: true,
+            //   items: listAll,
+            //   list:list
+            // });
         //   console.log(this.state.items);
       }
 
@@ -89,19 +111,20 @@ class listingCourses extends Component{
         //     mainCards.push(<Card />);
         // }
         return(
+          
             <div className="listinCourses">
+              {/* {this.state.loaded?console.log(this.state.list):""} */}
                 <Navbar />
-                <AboutUs displayName={this.props.displayName}/>
+                <AboutUs displayName="Search Results"/>
                 <BreadCrumb />
-                <ReferenceCourseTag category={this.props.displayName} />
+                {this.props.displayName? <ReferenceCourseTag category={this.props.displayName} />: ""}
+                
                 <div className="container col-12  col-xl-10">
                     <div className="row">
                     <div className="col-12 col-lg-3 cardRow">
                         <FilterBox />
                     </div>
-                        {/* <div className="col-12 col-lg-9 cardRow">
-                            {mainCards}
-                        </div> */}
+                       
                         <div className="col-12 col-lg-9 cardRow">
                         {
                             this.state.loaded?
@@ -114,12 +137,12 @@ class listingCourses extends Component{
                             )
                             ):"Loading!!"
                         }
-                        <button className="btn btn-outline-primary rajat_listing_loadmore_btn" onClick={this.clickedLoadMore}>Load More!</button>
+                       {this.state.loaded?<button className="btn btn-outline-primary rajat_listing_loadmore_btn" onClick={this.clickedLoadMore}>Load More!</button>:""} 
                         </div>
                     </div>
                 </div>
-                <SuggestionCarousel category={this.props.displayName} />
-                
+                {/* {this.state.loaded?<SuggestionCarousel category={this.props.displayName} /> :""} */}
+                <br />
                 <Cta />
                 <Footer />
             </div>

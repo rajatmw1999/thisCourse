@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import ReactDOM from 'react-dom';
-
+import '../cardHackrio/cardHackrio.css'
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 import TabPane from 'react-bootstrap/TabPane'
@@ -26,6 +26,7 @@ class Navtabs extends React.Component {
         }
         this.handleClick = this.handleClick.bind(this);
         this.handleChangeSearch = this.handleChangeSearch.bind(this);
+        this.goToRoadmap  = this.goToRoadmap.bind(this);
         // this.wrapper = React.createRef();
     }
     
@@ -38,7 +39,7 @@ class Navtabs extends React.Component {
         if(!searchQuery)
             {
                 var display = this.state.items.map((data)=>
-          <RoadmapCard name={data.NameOfRoadmap} author={data.NameofAuthor} image={data.ImageLink} likes={data.Likes} text={data.Text}/>
+          <RoadmapCard onClick={() => this.goToRoadmap(data._id)} Id={data._id} name={data.NameOfRoadmap} author={data.NameofAuthor} image={data.ImageLink} likes={data.Likes} text={data.Text}/>
         );
       this.setState({
           dataToDisplay:display
@@ -61,7 +62,7 @@ class Navtabs extends React.Component {
             // }
           }
           var display = arr.map((data)=>
-          <RoadmapCard name={data.NameOfRoadmap} author={data.NameofAuthor} image={data.ImageLink} likes={data.Likes} text={data.Text}/>
+          <RoadmapCard onClick={() => this.goToRoadmap(data._id)}  Id={data._id} name={data.NameOfRoadmap} author={data.NameofAuthor} image={data.ImageLink} likes={data.Likes} text={data.Text}/>
         );
       this.setState({
           dataToDisplay:display
@@ -93,7 +94,7 @@ class Navtabs extends React.Component {
           )
       
             var display = dataFetch.map((data)=>
-               <RoadmapCard name={data.NameOfRoadmap} author={data.NameofAuthor} image={data.ImageLink} likes={data.Likes} text={data.Text}/>
+            <RoadmapCard onClick={() => this.goToRoadmap(data._id)} Id={data._id} name={data.NameOfRoadmap} author={data.NameofAuthor} image={data.ImageLink} likes={data.Likes} text={data.Text}/>
              );
            this.setState({
                items:dataFetch,
@@ -103,7 +104,10 @@ class Navtabs extends React.Component {
       
         
     }
-    
+    async goToRoadmap(id){
+        console.log(id);
+        window.location = '/roadmap/' + id;
+    }
     async componentDidMount  ()  {
         this.load();
         
@@ -133,17 +137,25 @@ class Navtabs extends React.Component {
           )
             if(this.state.items){
          var display = this.state.items.map((data)=>
-            <RoadmapCard name={data.NameOfRoadmap} author={data.NameofAuthor} image={data.ImageLink} likes={data.Likes} text={data.Text}/>
+          <RoadmapCard onClick={() => this.goToRoadmap(data._id)}Id={data._id}   name={data.NameOfRoadmap} author={data.NameofAuthor} image={data.ImageLink} likes={data.Likes} text={data.Text}/>
           );
         this.setState({
             dataToDisplay:display
         });
     }     
-          var displayNavTabs = roadmapCategory.map((data) => 
-            <li class="nav-item rajat_navtabs_buttonmargin" onClick={() => this.handleClick(data.displayName)}>
-                <a class="nav-link active btn btn-light btn-xs">{data.displayName}</a>
-            </li>
-          );
+        //   var displayNavTabs = roadmapCategory.map((data) => 
+        //     <li class="nav-item rajat_navtabs_buttonmargin" onClick={() => this.handleClick(data.displayName)}>
+        //         <a class="nav-link active btn btn-light btn-xs">{data.displayName}</a>
+        //     </li>
+        //   );
+        var displayNavTabs = roadmapCategory.map((data) => 
+        <li class="nav-item">
+        <a 
+        onClick={() => this.handleClick(data.displayName)} 
+        class="nav-link akruti-a" id="home-tab" data-toggle="tab" href="#" role="tab"
+       aria-controls="home" aria-selected="true">{data.displayName}</a>
+        </li>
+        );
     this.setState({display:displayNavTabs});
       };
 
@@ -220,18 +232,33 @@ class Navtabs extends React.Component {
                       
                            
                     </TabPane> */}
-                    <div className="rajat_navtabs_center">
+                    {/* <div className="rajat_navtabs_center">
                         
                         <ul class="nav">
                         {this.state.display}
                         </ul>
+                    </div> */}
+                    
+                      <div class="col-xl-12">
+                    <div class="course_nav">
+                        <nav>
+                        <div className="container">
+                            <ul class="nav" id="myTab" role="tablist">
+                                {this.state.display}
+                            </ul>
+                            </div>
+                        </nav>
                     </div>
+                </div>
+                </div>
+            
                     <br />
                     <div className="rajat_navtabs_center">
                         
                     <h3>{this.state.category}</h3>
                     </div>
-                    
+                            <div class="row">
+              
                     
                 {/* </div> */}
                 

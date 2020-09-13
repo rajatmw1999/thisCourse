@@ -86,7 +86,7 @@ router.patch('/edit/:roadmapId',(req, res, next) =>{
 
 //ROUTE 3
 //DELETE A PARTICULAR ROADMAP
-router.delete('/delete/:roadmapId',(req, res, next) =>{
+router.get('/delete/:roadmapId',(req, res, next) =>{
 	const id = req.params.roadmapId;
 		RoadmapData.remove({_id: id})
 		.exec()

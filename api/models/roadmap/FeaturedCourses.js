@@ -1,34 +1,37 @@
 const mongoose = require("mongoose");
 
 const Featured_Courses = new mongoose.Schema({
-  Name: {
+  name: {
     type: String,
   },
-  Link: {
-    type: URL,
-  },
-  Company: {
+  link: {
     type: String,
   },
-  ImageURL: {
-    type: URL,
-  },
-  NumberOfHours: {
-    type: Number,
-  },
-  Description: {
+  company: {
     type: String,
   },
-  Price: {
-    type: Number,
-  },
-  Duration: {
-    type: Number,
-  },
-  NameOfSkill: {
+  imageURL: {
     type: String,
   },
-  Category: {
+  numberOfHours: {
+    type: String,
+  },
+  desc: {
+    type: String,
+  },
+  price: {
+    type: String,
+  },
+  priceDiscount:{
+    type:String,
+  },
+  duration: {
+    type: String,
+  },
+  nameOfSkill: {
+    type: String,
+  },
+  category: {
     type: String,
   },
 });

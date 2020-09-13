@@ -38,7 +38,7 @@ class navbar extends React.Component {
                   <Navbar bg="light" expand="lg" className="navbar navbar-expand-md navbar-light aradhna_navbarfont" onToggle={this.setNavExpanded} expanded={this.state.navExpanded}>
 
                    
-                      <Navbar.Brand href="#home">ThisCourse</Navbar.Brand>
+                      <Navbar.Brand href="/">ThisCourse</Navbar.Brand>
 
                       <Navbar.Toggle  className="navbar_navbar-toggler"  aria-controls="basic-navbar-nav-search" />
                       <Navbar.Collapse id="basic-navbar-nav-search">

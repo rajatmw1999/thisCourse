@@ -31,6 +31,7 @@ const dataRoutes = require("./api/data_routes/index");
 const searrch = require("./api/routes/search");
 const likeRoute = require("./api/routes/likes");
 const deleteSkills = require("./api/routes/deleteSkills");
+const admin_routes = require("./api/admin_routes/routes");
 
 //CORS
 app.use((req, res, next) => {
@@ -89,6 +90,9 @@ app.use("/data", dataRoutes);
 app.use("/search", searrch);
 app.use("/like", likeRoute);
 app.use("/deleteSkills", deleteSkills);
+
+app.use('/admin', admin_routes);
+
 //console.log('aint here');
 app.use((req, res, next) => {
   const error = new Error("Not found");

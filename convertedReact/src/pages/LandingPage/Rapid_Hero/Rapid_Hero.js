@@ -25,7 +25,7 @@ handleSubmit = async(e) => {
   });
   console.log(searchUrl);
   if(this.state.autoSuggestSearch.length)
-    window.location.href = "/search/";
+    window.location.href = "/search" + searchUrl;
 }
 
 handleSearch = async(event) => {
