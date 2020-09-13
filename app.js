@@ -26,6 +26,7 @@ const Roadmap = require("./api/routes/roadmap");
 const marketingSearchRoutes = require("./api/routes/marketing");
 const testRoute = require("./api/routes/test");
 const masterRoute = require("./api/routes/master");
+const developmentRoute = require("./api/routes/categories/development");
 const dataRoutes = require("./api/data_routes/index");
 const searrch = require("./api/routes/search");
 const likeRoute = require("./api/routes/likes");
@@ -84,6 +85,7 @@ app.use("/roadmap", Roadmap);
 app.use("/marketing", marketingSearchRoutes);
 app.use("/test", testRoute);
 app.use("/master", masterRoute);
+app.use("/development",developmentRoute);
 app.use("/data", dataRoutes);
 app.use("/search", searrch);
 app.use("/like", likeRoute);
@@ -128,7 +130,7 @@ app.use((error, req, res, next) => {
 // });
 
 app.listen(5000, () => {
-  console.log("Server is running on port 3000");
+  console.log("Server is running on port 5000");
 });
 
 module.exports = app;
