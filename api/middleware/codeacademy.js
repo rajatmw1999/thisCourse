@@ -16,7 +16,8 @@ module.exports = (req, res, next,data1,category) => {
 
 (async () =>{
     const extractNames= async (weburl) =>{
-        let page = await browser.newPage();
+		let page = await browser.newPage();
+		console.log('Running middleware inside Codecademy');
         await page.goto(weburl);
         
         const data = await page.evaluate(() =>{
