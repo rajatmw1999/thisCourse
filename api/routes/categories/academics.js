@@ -37,8 +37,8 @@ router.get("/", (req, res, next) => {
 
   //   apnacourse(req, res, next, "algorithms", "academics");
   //   arcademics(req, res, next, "algorithms", "academics");
-  bitdegree(req, res, next, "algorithms", "academics");
-  //   codecademy(req, res, next, "algorithms", "academics");
+  //   bitdegree(req, res, next, "algorithms", "academics");
+  codecademy(req, res, next, "algorithms", "academics");
   // coursera(req,res,next,'algorithms','academics');
   //   digigrad(req, res, next, "algorithms", "academics");
   //   edx(req, res, next, "algorithms", "academics");
