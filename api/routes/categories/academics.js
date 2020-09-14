@@ -31,6 +31,7 @@ const verbling = require("../../middleware/verbling");
 // codecademy(req, res, next, "calculus", "academics");
 // skillshare(req, res, next, "calculus", "academics");
 // udacity(req, res, next, "calculus", "academics");
+// bitdegree(req, res, next, "trigonometry", "academics");
 
 router.get("/", (req, res, next) => {
   //   apnacourse(req, res, next, "data structure", "academics");
@@ -139,9 +140,9 @@ router.get("/", (req, res, next) => {
   // verbling(req, res, next, "calculus", "academics");
 
   // apnacourse(req, res, next, "trigonometry", "academics");
-  arcademics(req, res, next, "trigonometry", "academics");
-  //   bitdegree(req, res, next, "trigonometry", "academics");
-  //   codecademy(req, res, next, "trigonometry", "academics");
+  // arcademics(req, res, next, "trigonometry", "academics");
+  // bitdegree(req, res, next, "trigonometry", "academics");
+  codecademy(req, res, next, "trigonometry", "academics");
   // coursera(req,res,next,'trigonometry','academics');
   //   digigrad(req, res, next, "trigonometry", "academics");
   //   edx(req, res, next, "trigonometry", "academics");
