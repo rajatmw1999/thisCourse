@@ -29,7 +29,8 @@ class listingCourses extends Component{
             displaysuggestion:null
         }
         this.clickedLoadMore = this.clickedLoadMore.bind(this);
-        console.log("Hi");
+        this.onFilterClick  = this.onFilterClick.bind(this);
+        // console.log("Hi");
     }
 
     async clickedLoadMore(){
@@ -53,7 +54,7 @@ class listingCourses extends Component{
 
     componentDidMount() {
       console.log("dbQuery = " + this.props.dbQuery);
-        var fetchSkills = domain + "data/searchall/" + this.props.dbQuery;
+        var fetchSkills = domain + "data/searchsome/" + this.props.dbQuery;
         console.log(fetchSkills);
        
         fetch(`${fetchSkills}`)
@@ -86,6 +87,44 @@ class listingCourses extends Component{
           )
         //   console.log(this.state.items);
       }
+ 
+      async onFilterClick(data){
+        var final = [];
+        // console.log(data);
+        var all = this.state.items;
+        data.provider.forEach(async function(eachprovider){
+          await all.forEach(async function(eachitem){        
+              if(eachitem.platform == eachprovider)
+                final.push(eachitem);
+          });
+        });
+        // all = this.state.items;
+        // if(data.rating == 1)
+        // {
+        //   await all.forEach(async function(eachitem){
+        //     if((eachitem.provider == "udemy")||(eachitem.provider == "udacity")||(eachitem.provider == "coursera")||(eachitem.provider == "edx")||(eachitem.provider == "skillShare"))
+        //     {
+        //       var flag = 1;
+        //       final.forEach(async function(eachfinal){
+        //         console.log(eachfinal);
+        //         if(eachfinal.platform == eachitem.platform)
+        //           {
+        //             flag = 0;
+        //           }
+        //       });
+        //       if(flag == 1)
+        //       {
+        //         final.push(eachitem);
+        //         console.log(final);
+        //       }
+              
+        //     }
+        //   });
+        // }
+        if(final.length)
+          this.setState({list:final});
+        // console.log(final);
+      }
 
     render(){
         // let mainCards = [];
@@ -101,8 +140,8 @@ class listingCourses extends Component{
                 <ReferenceCourseTag category={this.props.displayName} />
                 <div className="container col-12  col-xl-10">
                     <div className="row">
-                    <div className="col-12 col-lg-3 cardRow">
-                        <FilterBox />
+                    <div className="col-12 col-lg-3 cardRow" id="filterbox_mobile">
+                        <FilterBox clicked={this.onFilterClick}/>
                     </div>
                         {/* <div className="col-12 col-lg-9 cardRow">
                             {mainCards}
@@ -117,9 +156,12 @@ class listingCourses extends Component{
                                 UrlOfImageThumbnail={course.UrlOfImageThumbnail} Instructor={course.Instructor} Id={course._id}
                                 />
                             )
-                            ):"Loading!!"
+                            ):<h1>Loading</h1>
                         }
+                        {
+                            this.state.loaded?
                         <button className="btn btn-outline-primary rajat_listing_loadmore_btn" onClick={this.clickedLoadMore}>Load More!</button>
+                        :""}
                         </div>
                     </div>
                 </div>

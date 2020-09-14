@@ -115,7 +115,7 @@ class Roadmap extends Component{
             <div className="content">
             <h3 className="aradhna_readmoreheading  fw-bold mb-0">{data.NameOfRoadmap}</h3>
             <h4 className="fs-base">
-            {data.NameofAuthor} - <time datetime="2020-07-17T06:11:03Z" title="Friday, 17 July, 2020, 11:41:03 am">Jul 17</time>
+            {data.NameofAuthor} - <time datetime="2020-07-17T06:11:03Z" title="Friday, 17 July, 2020, 11:41:03 am">{data.DatePublished}</time>
           </h4>
         </div>
       </div>
@@ -132,10 +132,13 @@ class Roadmap extends Component{
     <div>
         <div className="crayons-layout__content grid col-sm-12 col-md-12 col-lg-4 col-xl-4">     
         <div className="more-articles crayons-card crayons-card--secondary">
-  <h1 className="fs-4xl fw-bold mb-4">
+  {/* <h1 className="fs-4xl fw-bold mb-4">
     
     Read Next
-  </h1>
+  </h1> */}
+  {this.state.display}
+    {this.state.tdisplay}
+    
     {/* <a href="#" >
       <div className="single-other-article">
         <div className="picture">
@@ -185,8 +188,7 @@ class Roadmap extends Component{
         </div>
       </div>
     </a> */}
-    {this.state.display}
-    {this.state.tdisplay}
+    
 </div>
 </div>
         

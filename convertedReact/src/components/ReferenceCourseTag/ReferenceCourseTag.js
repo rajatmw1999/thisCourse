@@ -124,10 +124,12 @@ componentDidMount(){
           </p>
         </div>
         </div>
-
+        {this.state.roadmaps[2]?
         <div class="team rajat_card3">
         <div class="team-img">
+          
           <img src={`${this.state.roadmaps[2].ImageLink}`} alt="Team Image"/>
+  
         </div>
         
         <div class="team-content">
@@ -153,7 +155,9 @@ componentDidMount(){
           {this.state.roadmaps[2].Text.substring(0,50)}...
           </p>
         </div>
+        
         </div>
+        :""}
         </div>
         
          <a className="btn btn-outline-primary rajat_explore_roadmap_button rajat_card1" target="_blank" href="/roadmaps">Explore More Roadmaps</a>

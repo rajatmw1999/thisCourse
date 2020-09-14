@@ -5,7 +5,7 @@ import renderHtml from 'react-render-html';
 class BlogPostRoadmap extends Component {
     constructor(props){
         super(props);
-        console.log(this.props);
+        // console.log(this.props);
     }
     render() {
         return (
@@ -63,7 +63,7 @@ class BlogPostRoadmap extends Component {
                                         }}>
                                             <img
                                                 class="crayons-avatar__image"
-                                                src="https://res.cloudinary.com/practicaldev/image/fetch/s--dtfmt9Ke--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/194160/21c019c6-26a2-41e4-ba4b-307631717363.jpg"
+                                                src={this.props.data.ImageofAuthor}
                                                 alt="blog profile image"></img>
                                         </span>
                                         {this.props.data.NameofAuthor}
@@ -93,7 +93,7 @@ class BlogPostRoadmap extends Component {
                             className="crayons-article__body text-styles spec__body"
                             data-article-id="139464"
                             id="article-body">
-                                 <Timeline />
+                                 <Timeline topics={this.props.data.TimelineTopics} data={this.props.data.TimelineData} />
                             {/* <p>With technological advancements in the recent years, there comes the highest
                                 demand for full stack developers than ever before.</p>
 

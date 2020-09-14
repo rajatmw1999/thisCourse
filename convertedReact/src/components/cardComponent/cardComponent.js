@@ -54,13 +54,13 @@ class CardComponent extends Component {
         var picUrl;
         if(this.props.platform == "udemy")
             picUrl = "https://www.vectorlogo.zone/logos/udemy/udemy-icon.svg";
-        else if(this.props.platform == "apnacourse")
+        else if(this.props.platform == "apnaCourse")
             picUrl = "https://www.apnacourse.com/assets/img/mobile_logo.png";
         else if(this.props.platform == "arcademics")
             picUrl = arcademics;
         else if(this.props.platform == "bitdegree")
             picUrl = "https://cdn.bitdegree.org/assets/bitdegree-logo-black.svg";
-        else if(this.props.platform == "codeacademy")
+        else if(this.props.platform == "Code Academy")
             picUrl = "https://kgo.googleusercontent.com/profile_vrt_raw_bytes_1587515403_10914.png";
         else if(this.props.platform == "coursera")
             picUrl = "https://lh3.googleusercontent.com/13U5Vnio6xeZwOUzpOqf6lCq3phOUw80y4e9VLAONVfkEqYbME5ySDvg28CPien5dHs";
@@ -120,7 +120,9 @@ class CardComponent extends Component {
                     </div>
                    
                     <p className="summary">
-                        The only course you need to learn <strong>web</strong> <strong>development</strong> - HTML, CSS, JS, Node, and More!
+                        {
+                            this.props.CourseDescription?this.props.CourseDescription:"Level up your skills by taking the best courses online. Now! Check out the course by clicking on See Details."
+                        }
                     </p>
                     
                     <div className="fluid-row">
