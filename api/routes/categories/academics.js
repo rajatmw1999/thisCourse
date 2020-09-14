@@ -30,8 +30,8 @@ router.get("/", (req, res, next) => {
   //   khanacademy(req, res, next, "data structure", "academics");
   //   openyale(req, res, next, "data structure", "academics");
   //   skillshare(req, res, next, "data structure", "academics");
-  udacity(req, res, next, "data structure", "academics");
-  // verbling(req,res,next,'data structure','academics');
+  //   udacity(req, res, next, "data structure", "academics");
+  verbling(req, res, next, "data structure", "academics");
 
   // coursera(req,res,next,'data structure','academics');
   // udemy(req, res, next, "data structure", "academics");
