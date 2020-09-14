@@ -20,6 +20,7 @@ componentDidMount(){
   var resultFetch;
   console.log(category);
   var fetchRoadmaps = domain + "roadmap/category/" + category;
+  var top10 = domain + "roadmap/10";
         fetch(`${fetchRoadmaps}`)
           .then(res => res.json())
           .then(
@@ -31,6 +32,19 @@ componentDidMount(){
               loading: false,
               roadmaps:resultFetch
             });
+            else
+            {
+              fetch(`${top10}`)
+              .then(res => res.json())
+              .then((res) => {
+                // console.log(res.slice(0,3));
+                resultFetch = res.slice(0,3);
+                this.setState({
+                  loading: false,
+                  roadmaps:resultFetch
+                });
+              });
+            }
             },
             // Note: it's important to handle errors here
             // instead of a catch() block so that we don't swallow
@@ -76,7 +90,7 @@ componentDidMount(){
         <h3 className="col-12 heading_refcoursedetail" style={{textAlign:"left"}}>{this.state.roadmaps[0].NameOfRoadmap}</h3>
           {/* <h3>CEO &amp; Founder</h3> */}
           <p className="col-12" style={{textAlign:"left"}}>
-          {this.state.roadmaps[0].Text.substring(0,50)}...
+          {this.state.roadmaps[0].Text?this.state.roadmaps[0].Text.substring(0,50):""}...
           </p>
         </div>
         </div>
@@ -142,7 +156,7 @@ componentDidMount(){
         </div>
         </div>
         
-         <a className="btn btn-outline-primary rajat_explore_roadmap_button rajat_card1" href="#">Explore More Roadmaps</a>
+         <a className="btn btn-outline-primary rajat_explore_roadmap_button rajat_card1" target="_blank" href="/roadmaps">Explore More Roadmaps</a>
          <br />
          <br />
          <br />

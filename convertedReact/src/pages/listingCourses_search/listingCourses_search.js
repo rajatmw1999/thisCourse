@@ -53,7 +53,7 @@ class listingCourses extends Component{
         var allFetch = [];
         for(let i=2; i<searchQuery.length; ++i)
           {
-            var fetchSkills = domain + "data/searchsome/" + searchQuery[i];
+            var fetchSkills = domain + "data/searchall/" + searchQuery[i];
             allFetch.push(fetchSkills);
           }
           // console.log(allFetch);

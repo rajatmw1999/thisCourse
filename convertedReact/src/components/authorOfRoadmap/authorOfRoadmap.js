@@ -2,46 +2,62 @@ import React, {Component} from "react"
 import "./authorOfRoadmap.css";
 
 class AuthorOfRoadmap extends Component {
+    constructor(props)
+    {
+        super(props);
+        console.log(this.props);
+    }
     render() {
         return (
             <div className="authorroadmap container col-sm-12 col-md-12 col-lg-4 col-xl-4">
                 <div className="customstyle_author">
                 <div className="cover-photo"><br/>
                     <img
-                        src="https://images.unsplash.com/photo-1565464027194-7957a2295fb7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
+                        src={this.props.data.ImageofAuthor?`${this.props.data.ImageofAuthor}`:"https://img.icons8.com/fluent/48/000000/user-male.png"}
                         className="profile"></img>
                 </div>
                 <div className="profile-name">
-                    <strong>Larson Reever</strong>
+                    <strong>{this.props.data.NameofAuthor}</strong>
                 </div>
                 <p className="about-profile">
-                    I am the Vice President @ *** Solutions. | Technology Expert | Author | Speaker
-                    | Small &amp; Medium Business IT Support - We founded ***IT Solutions in 2007 to
-                    provide IT services
+                    {this.props.data.DescofAuthor?this.props.data.DescofAuthor:""}
                 </p>
                 {/* <button className="follownow-btn">Follow</button> */}
-                <div className="col-sm-4 col-md-4  col-lg-3 item social">
+                {/* <div className="col-sm-4 col-md-4  col-lg-3 item social">
                                 <a href="#" className="fb-col">
-                                    <i className="icon ion-social-facebook"></i>
+                                    
+                                    <ion-icon name="logo-facebook" className="icon" style={{fontSize:"42px"}}></ion-icon>
                                 </a>
                                 <a href="#"className="tw-col">
-                                    <i className="icon ion-social-twitter"></i>
+                                    
+                                    <ion-icon name="logo-twitter" className="icon" style={{fontSize:"35px"}}></ion-icon>
                                 </a>
                                 <a href="#" className="lin-col">
-                                    <i className="icon ion-social-linkedin"></i>
+                                    
+                                    <ion-icon name="logo-linkedin" className="icon" style={{fontSize:"35px"}}></ion-icon>
                                 </a><a href="#" className="ins-col">
-                                    <i className="icon ion-social-instagram"></i>
+                                   
+                                    <ion-icon name="logo-instagram" className="icon" style={{fontSize:"35px"}}></ion-icon>
                                 </a>
                               
-                    </div>
-                <p className="heading">WORK</p>
-                <p className="answer">Full Stack Devloper at CA</p>
-                <p className="heading">LOCATION</p>
-                <p className="answer">San Francisco</p>
-                <p className="heading">EDUCATION</p>
-                <p className="answer">M.Tech</p>
-                <p className="heading">JOINED</p>
-                <p className="answer">July 12, 2019</p>
+                    </div> */}
+    
+                    {this.props.data.WorkofAuthor?
+                    <span>
+                    <p className="heading">WORK</p>
+                    <p className="answer">{this.props.data.WorkofAuthor}</p>
+                    </span>
+                    :""
+                    }
+                    {this.props.data.DatePublished?
+                    <span>
+                    <p className="heading">JOINED</p>
+                <p className="answer">{this.props.data.DatePublished}</p>
+                    </span>
+                    :
+                    ""
+                    }
+                
                 <br /></div></div>
         );
     }

@@ -40,14 +40,14 @@ class Rapid_Services extends Component {
       <div className="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
         <div className="box">
           <div className="icon" style={{background:"#fceef3"}}><i className=" icons ion-ios-analytics-outline" style={{color:"#ff689b"}}></i></div>
-          <h4 className="title"><a href="google.com" className="vanshika_anchor">Lorem Ipsum</a></h4>
+          <h4 className="title"><span className="vanshika_anchor">Lorem Ipsum</span></h4>
           <p className="description vanshika_para">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
         </div>
       </div>
       <div className="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
         <div className="box">
           <div className="icon" style={{background:"#fff0da"}}><i className=" icons ion-ios-bookmarks-outline" style={{color:"#e98e06"}} ></i></div>
-          <h4 className="title"><a href="google.com" className="vanshika_anchor">Dolor Sitema</a></h4>
+          <h4 className="title"><span  className="vanshika_anchor">Dolor Sitema</span></h4>
           <p className="description vanshika_para">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
         </div>
       </div>
@@ -55,14 +55,14 @@ class Rapid_Services extends Component {
       <div className="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
         <div className="box">
           <div className="icon" style={{background:"#e6fdfc"}} ><i className=" icons ion-ios-paper-outline" style={{color:"#3fcdc7"}} ></i></div>
-          <h4 className="title"><a href="google.com" className="vanshika_anchor">Sed ut perspiciatis</a></h4>
+          <h4 className="title"><span  className="vanshika_anchor">Sed ut perspiciatis</span></h4>
           <p className="description vanshika_para">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
         </div>
       </div>
       <div className="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
         <div className="box">
           <div className="icon" style={{background:"#eafde7"}} ><i className=" icons ion-ios-speedometer-outline" style={{color:"#41cf2e"}}  ></i></div>
-          <h4 className="title"><a href="google.com" className="vanshika_anchor">Magni Dolores</a></h4>
+          <h4 className="title"><span  className="vanshika_anchor">Magni Dolores</span></h4>
           <p className="description vanshika_para">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
         </div>
       </div>
@@ -70,14 +70,14 @@ class Rapid_Services extends Component {
       <div className="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
         <div className="box">
           <div className="icon"style={{background:"#e1eeff"}}  ><i className=" icons ion-ios-world-outline" style={{color:"#2282ff"}}  ></i></div>
-          <h4 className="title"><a href="google.com" className="vanshika_anchor">Nemo Enim</a></h4>
+          <h4 className="title"><span  className="vanshika_anchor">Nemo Enim</span></h4>
           <p className="description vanshika_para">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
         </div>
       </div>
       <div className="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
         <div className="box">
           <div className="icon" style={{background:"#ecebff"}} ><i className=" icons ion-ios-clock-outline" style={{color:"#8660fe"}} ></i></div>
-          <h4 className="title"><a href="google.com" className="vanshika_anchor">Eiusmod Tempor</a></h4>
+          <h4 className="title"><span  className="vanshika_anchor">Eiusmod Tempor</span></h4>
           <p className="vanshika_para description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
         </div>
       </div>

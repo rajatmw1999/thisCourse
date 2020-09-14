@@ -677,7 +677,7 @@ class FilterBox extends React.Component {
                     </div>
                     <form  data-v-7cc4708a="">
                         <hr />
-                        <fieldset class="el:o-fieldset-frame" >
+                        {/*<fieldset class="el:o-fieldset-frame" >
                             <div class="el:o-fieldset-frame__header">
                                 <legend class="el:o-fieldset-frame__title el:o-fieldset-frame__title--stand-out">Price</legend>
                                  <a href="#" onclick="uncheckAll5()" class="el:o-fieldset-frame__action el:amx-Ws(nw)" >
@@ -685,7 +685,7 @@ class FilterBox extends React.Component {
                                 </a>
                             </div>
                             
-                            <div class="priceslider el:o-fieldset-frame__item" >
+                             <div class="priceslider el:o-fieldset-frame__item" >
                                  <div class="col-sm-12">
                                     <div id="slider-range" ></div>
                                   </div>
@@ -719,13 +719,13 @@ class FilterBox extends React.Component {
                                           
                                         
                                 </div>
-                            </div>
+                            </div> 
                         
                             
 
 
                         </fieldset>
-                        <hr />
+                        <hr />*/}
 
                         {/* <fieldset class="el:o-fieldset-frame" >
                             <div class="el:o-fieldset-frame__header">
@@ -775,7 +775,7 @@ class FilterBox extends React.Component {
 
                         </fieldset> */}
                         
-                        <fieldset class="el:o-fieldset-frame" >
+                        {/* <fieldset class="el:o-fieldset-frame" >
                             <div class="el:o-fieldset-frame__header">
                                 <legend class="el:o-fieldset-frame__title el:o-fieldset-frame__title--stand-out">Hours</legend>
                                  
@@ -842,7 +842,7 @@ class FilterBox extends React.Component {
                                             </label>
                                         </li>
                                       
-                                       {/* <li>
+                                       <li>
                                             <input class="language" type="checkbox" value="Thai" name="language" id="language7"/>
                                             <label class="checkbox-label" for="language7">
                                                 <span class="el:m-checkbox__label"><a>Thai</a><span class="el:m-checkbox__summary">
@@ -873,13 +873,13 @@ class FilterBox extends React.Component {
                                                     (4)</span></span>
                                             </label>
                                         </li>
-                                        */}
+                                       
                                         
                                     </ul>
                                 </div>
                             </div>
-                        </fieldset>
-                        <hr />
+                        </fieldset> 
+                        <hr />*/}
 
                         <fieldset class="el:o-fieldset-frame" >
                             <div class="el:o-fieldset-frame__header">
@@ -888,7 +888,7 @@ class FilterBox extends React.Component {
                                     Clear
                                 </a>
                             </div>
-                            <div class="el:o-fieldset-frame__item" >
+                            {/* <div class="el:o-fieldset-frame__item" >
                                 <div class="el:m-search-suggest" >
                                     <div id="suggestions.provider_name">
                                         
@@ -898,7 +898,7 @@ class FilterBox extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                             <div class="el:o-fieldset-frame__item" >
                                 <div >
                                     

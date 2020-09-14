@@ -13,7 +13,7 @@ import {domain} from '../../data/hosted'
 import { skillsData } from "../../data/skills";
 import { Link } from "react-router-dom";
 import Cta from '../../pages/LandingPage/Cta/index'
-
+import FeaturedCourseCard  from '../../components/FeaturedCourseCard/FeaturedCourseCard'
 import ReferenceCourseTag from '../../components/ReferenceCourseTag/ReferenceCourseTag'
 
 class listingCourses extends Component{
@@ -24,7 +24,9 @@ class listingCourses extends Component{
             items:[],
             error:null,
             list:[],
-            listNo:3
+            listNo:3,
+            suggestions:null,
+            displaysuggestion:null
         }
         this.clickedLoadMore = this.clickedLoadMore.bind(this);
         console.log("Hi");
@@ -51,7 +53,7 @@ class listingCourses extends Component{
 
     componentDidMount() {
       console.log("dbQuery = " + this.props.dbQuery);
-        var fetchSkills = domain + "data/searchsome/" + this.props.dbQuery;
+        var fetchSkills = domain + "data/searchall/" + this.props.dbQuery;
         console.log(fetchSkills);
        
         fetch(`${fetchSkills}`)
@@ -94,7 +96,8 @@ class listingCourses extends Component{
             <div className="listinCourses">
                 <Navbar />
                 <AboutUs displayName={this.props.displayName}/>
-                <BreadCrumb />
+                {this.state.loaded?<BreadCrumb criteria="courses" displayName={this.state.list}  />: ""}
+                
                 <ReferenceCourseTag category={this.props.displayName} />
                 <div className="container col-12  col-xl-10">
                     <div className="row">
@@ -120,7 +123,13 @@ class listingCourses extends Component{
                         </div>
                     </div>
                 </div>
-                <SuggestionCarousel category={this.props.displayName} />
+                <br />
+                {this.state.loaded? 
+                // <SuggestionCarousel category={this.props.displayName} dbQuery={this.props.dbQuery} category={this.state.list[0].category} />
+                <FeaturedCourseCard 
+                category={this.state.list[0].category} criteria="listingcourse"
+                />
+                :""}
                 
                 <Cta />
                 <Footer />

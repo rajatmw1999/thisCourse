@@ -18,46 +18,125 @@ class SuggestionCarousel extends React.Component {
       this.state={
         skills:[],
         suggestion:[],
-        error:null
+        error:null,
+        display:null,
+        loading:true
       }
     }
     
     async componentDidMount(){
-      var skillName = this.props.category;
-      var i=0,j=0;
-      console.log(skillName);
-      skillsData.forEach(function(data){
-        data.skills.forEach(function(data2){
-          var name2 = data2.displayName.toLowerCase();
-          var name1 = skillName.toLowerCase();
-          if(name1 == name2)
-            j=i;
-        });
-        i=i+1;
-        // console.log(data.category);
-      });
-      console.log(j);
-      var suggest0 = skillsData[j].skills[0].redirectLink;
-      var suggest0 = skillsData[j].skills[1].redirectLink;
-      var fetchSkills = domain + "data/searchsome" + suggest0;
+      var fetchAgain = 0;
+      console.log(this.props.category);
+      // var skillName = this.props.category;
+      // var i=0,j=0;
+      // console.log(skillName);
+      // skillsData.forEach(function(data){
+      //   data.skills.forEach(function(data2){
+      //     var name2 = data2.displayName.toLowerCase();
+      //     var name1 = skillName.toLowerCase();
+      //     if(name1 == name2)
+      //       j=i;
+      //   });
+      //   i=i+1;
+      // });
+      // console.log(j);
+      // var suggest0 = skillsData[j].skills[0].redirectLink;
+      // var suggest0 = skillsData[j].skills[1].redirectLink;
+      var fetchSkills = domain + "admin/featuredCoursesBySkill/" + this.props.dbQuery;
         console.log(fetchSkills);
        
-        fetch(`${fetchSkills}`)
+        await fetch(`${fetchSkills}`)
           .then(res => res.json())
           .then(
-            (result) => {
-              var skills = [];
-            console.log(result.data);
-            skills.push(result.data[0].Courses[0]);
-            skills.push(result.data[0].Courses[1]);
-            skills.push(result.data[1].Courses[0]);
-            skills.push(result.data[1].Courses[1]);
-            skills.push(result.data[2].Courses[0]);
-            skills.push(result.data[2].Courses[1]);
+            async(result) => {
+              // console.log("Suggestion result = " + result);
+              // var skills = [];
+            // console.log(result.data);
+            // skills.push(result.data[0].Courses[0]);
+            // skills.push(result.data[0].Courses[1]);
+            // skills.push(result.data[1].Courses[0]);
+            // skills.push(result.data[1].Courses[1]);
+            // skills.push(result.data[2].Courses[0]);
+            // skills.push(result.data[2].Courses[1]);
+            var displayData = result.map((data) => 
+            <div className="item" >
+                        <div className="video-media">
+                          <img src={photo} alt="Image" className="img-fluid"/>
+                          <a href="#" className="d-flex play-button align-items-center" data-fancybox>
+                            <span className="icon mr-3">
+                              <span className="icon-play"></span>
+                            </span>
+                            <div className="caption">
+                              <h3 className="m-0">{data.name}</h3>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+            )
             this.setState({
-              suggestion:skills
+              suggestion:result,
+              display:displayData,
+              loading:false
             });
-            console.log(this.state.suggestion);
+            if(this.state.suggestion.length<2)
+             {
+              // /admin/featuredCoursesByCategory
+//////////////////////////////
+fetchSkills = domain + "admin/featuredCoursesByCategory" + this.props.category;
+
+ await fetch(`${fetchSkills}`)
+.then(res2 => res2.json())
+.then(
+  (result2) => {
+    // console.log("Suggestion result = " + result);
+    // var skills = [];
+  // console.log(result.data);
+  // skills.push(result.data[0].Courses[0]);
+  // skills.push(result.data[0].Courses[1]);
+  // skills.push(result.data[1].Courses[0]);
+  // skills.push(result.data[1].Courses[1]);
+  // skills.push(result.data[2].Courses[0]);
+  // skills.push(result.data[2].Courses[1]);
+  if(result2.length>2){
+  var displayData = result2.map((data) => 
+  <div className="item" >
+              <div className="video-media">
+                <img src={photo} alt="Image" className="img-fluid"/>
+                <a href="#" className="d-flex play-button align-items-center" data-fancybox>
+                  <span className="icon mr-3">
+                    <span className="icon-play"></span>
+                  </span>
+                  <div className="caption">
+                    <h3 className="m-0">{data.name}</h3>
+                  </div>
+                </a>
+              </div>
+            </div>
+  )
+  this.setState({
+    suggestion:result2,
+    display:displayData,
+    loading:false
+  });
+}
+  // console.log();
+  // console.log("Suggestions = " + this.state.suggestion);
+  },
+  // Note: it's important to handle errors here
+  // instead of a catch() block so that we don't swallow
+  // exceptions from actual bugs in components.
+  (error) => {
+    this.setState({
+      error,
+      loading:false
+    });
+  }
+)
+
+
+//////////////////////////////
+             }
+            // console.log("Suggestions = " + this.state.suggestion);
             },
             // Note: it's important to handle errors here
             // instead of a catch() block so that we don't swallow
@@ -88,7 +167,8 @@ class SuggestionCarousel extends React.Component {
     
     
           <div className="owl-4-slider owl-carousel" >
-            <div className="item" >
+            {this.state.loading?"":this.state.display}
+            {/* <div className="item" >
               <div className="video-media">
                 <img src={photo} alt="Image" className="img-fluid"/>
                 <a href="#" className="d-flex play-button align-items-center" data-fancybox>
@@ -167,7 +247,7 @@ class SuggestionCarousel extends React.Component {
                 </a>
               </div>
             </div>
-    
+     */}
           </div>
     
         </div>

@@ -61,7 +61,7 @@ class navbar extends React.Component {
                             </Nav.Link>
                         </ul> */}
                         <li className="navbar_nav-item pl-4 pl-md-0 ml-0 ml-md-4" onClick={this.setNavClose}>
-                        <Nav.Link className="navbar_nav-link dropdown-toggle aradhna_navbarfont" href="/#categories">Compare Courses
+                        <Nav.Link className="navbar_nav-link dropdown-toggle aradhna_navbarfont" href="/development-c">Compare Courses
 
                             </Nav.Link>
                         {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
@@ -73,10 +73,10 @@ class navbar extends React.Component {
                           </NavDropdown> */}
                         </li>
                         
-                        <li className="navbar_nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                        {/* <li className="navbar_nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                             <Nav.Link className="navbar_nav-link dropdown-toggle aradhna_navbarfont" href="#" onClick={this.setNavClose}>Login
                             </Nav.Link>
-                        </li>
+                        </li> */}
                       </Nav>
                       </Navbar.Collapse>
 

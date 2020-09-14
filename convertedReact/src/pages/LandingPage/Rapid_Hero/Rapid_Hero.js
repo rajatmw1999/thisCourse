@@ -17,6 +17,7 @@ constructor(props)
 
 handleSubmit = async(e) => {
   e.preventDefault();
+  if(this.state.search){
   console.log("Form submitted " + this.state.search);
   var searchUrl = "";
   this.state.autoSuggestSearch.forEach(function(link)
@@ -26,6 +27,7 @@ handleSubmit = async(e) => {
   console.log(searchUrl);
   if(this.state.autoSuggestSearch.length)
     window.location.href = "/search" + searchUrl;
+}
 }
 
 handleSearch = async(event) => {

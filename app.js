@@ -30,6 +30,7 @@ const developmentRoute = require("./api/routes/categories/development");
 const academicsRoute = require("./api/routes/categories/academics");
 const itRoute = require("./api/routes/categories/it");
 const designRoute = require("./api/routes/categories/design");
+const personalRoute = require("./api/routes/categories/personal");
 const dataRoutes = require("./api/data_routes/index");
 const searrch = require("./api/routes/search");
 const likeRoute = require("./api/routes/likes");
@@ -92,7 +93,7 @@ app.use("/development",developmentRoute);
 app.use("/academics",academicsRoute);
 app.use("/it",itRoute);
 app.use("/design",designRoute);
-
+app.use("/personal",personalRoute);
 app.use("/data", dataRoutes);
 app.use("/search", searrch);
 app.use("/like", likeRoute);

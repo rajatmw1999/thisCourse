@@ -19,7 +19,7 @@ class ParticularOuterMostCategory extends React.Component {
         <div>
             <Navbar/>
             <Aboutsection displayName={this.props.displayName} />
-            <BreadCrumb />  
+            <BreadCrumb criteria="outermost" displayName={this.props.displayName}/>  
             <CardHackrio category={this.props.displayName}/>
             <ReferenceCourseTag category={this.props.displayName} />
             <Footer />

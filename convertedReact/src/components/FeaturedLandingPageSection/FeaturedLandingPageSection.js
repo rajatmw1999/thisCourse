@@ -3,10 +3,98 @@ import "./index.css";
 import FeaturedCourseCard from '../FeaturedCourseCard/FeaturedCourseCard';
 import Navbar from '../Navbar/index'
 import Footer from '../footer/index'
+import {categoryData} from '../../data/category'
+import Cta from '../../pages/LandingPage/Cta/index'
+import {domain} from '../../data/hosted'
 
 class FeaturedLandingPageSection extends Component {
 
+    constructor(props)
+    {
+        super(props);
+        this.state={
+            loading:true,
+            allCourses:null
+        }
+        this.handleCategoryChange = this.handleCategoryChange.bind(this);
+    }
     
+    async componentDidMount(){
+        const categoryPath =  categoryData.map((data) =>  
+        <li class="nav-item">
+             <a 
+             onClick={() => this.handleCategoryChange(data.redirectLink.split('-')[0])} 
+             class="nav-link akruti-a" id="home-tab" data-toggle="tab" href="#" role="tab"
+            aria-controls="home" aria-selected="true">{data.displayName}</a>
+        </li>
+        ) 
+        this.setState({
+            navTabs:categoryPath,
+            loading:false
+        });
+
+        var fetchAllFeatured = domain + 'admin/courses/all';
+        await fetch(`${fetchAllFeatured}`)
+        .then(res => res.json())
+        .then(
+          (result) => {
+          console.log(result);
+          const display = result.map((data) => 
+            <FeaturedCourseCard  data={data}/>
+          );
+          this.setState({
+              allCourses:display,
+              categoryCourses:display
+          });
+          },
+          // Note: it's important to handle errors here
+          // instead of a catch() block so that we don't swallow
+          // exceptions from actual bugs in components.
+          (error) => {
+            this.setState({
+              loaded: true,
+              error
+            });
+          }
+        )
+    }
+
+    async handleCategoryChange(link){
+        if(link != "all"){
+        var featured = link + '-featured';
+        var fetchCategoryFeatured = domain + 'admin/featuredCoursesByCategory' + link;
+        console.log(featured);
+        // /admin/featuredCoursesByCategory/TeCh
+        await fetch(`${fetchCategoryFeatured}`)
+        .then(res => res.json())
+        .then(
+          (result) => {
+          console.log(result);
+          const display = result.map((data) => 
+            <FeaturedCourseCard data={result}/>
+          );
+          this.setState({
+              categoryCourses:display
+          });
+          },
+          // Note: it's important to handle errors here
+          // instead of a catch() block so that we don't swallow
+          // exceptions from actual bugs in components.
+          (error) => {
+            this.setState({
+              loaded: true,
+              error
+            });
+          }
+        )
+        }
+        else
+        {
+            this.setState({
+                categoryCourses:this.state.allCourses
+            });
+        }
+    }
 
     render() {
 
@@ -35,7 +123,15 @@ class FeaturedLandingPageSection extends Component {
                     <div class="course_nav">
                         <nav>
                             <ul class="nav" id="myTab" role="tablist">
-                                <li class="nav-item">
+                            <li class="nav-item">
+                                    <a class="nav-link active akruti-a" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                        aria-controls="home" aria-selected="true"
+                                        onClick={() => this.handleCategoryChange("all")} 
+                                        >All Courses</a>
+                                </li>
+                               {this.state.loading?"":this.state.navTabs}
+                               
+                                {/* <li class="nav-item">
                                     <a class="nav-link active akruti-a" id="home-tab" data-toggle="tab" href="#home" role="tab"
                                         aria-controls="home" aria-selected="true">All Courses</a>
                                 </li>
@@ -70,7 +166,7 @@ class FeaturedLandingPageSection extends Component {
                                 <li class="nav-item">
                                     <a class="nav-link akruti-a" id="Adobe-XD-tab9" data-toggle="tab" href="#Adobe-XD9" role="tab"
                                         aria-controls="design" aria-selected="false">Illustrator</a>
-                                </li>
+                                </li> */}
                             </ul>
                         </nav>
                     </div>
@@ -85,21 +181,21 @@ class FeaturedLandingPageSection extends Component {
                             <div class="row">
                                     
                                     {/* courses card */}
-                                    {courseCards}
-
+                                    {/* {courseCards} */}
+                                    {this.state.categoryCourses? this.state.categoryCourses : "" }
 
                                     <div class="col-xl-12">
                                         <div class="more_courses text-center">
-                                            <a class="akruti-a" href="#" class="boxed_btn_rev">More Courses</a>
+                                            <a class="akruti-a" href="/roadmaps" target="_blank" class="boxed_btn_rev">Check Related Roadmaps</a>
                                         </div>
                                     </div>
                                 </div>
                     </div>
-                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    {/* <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                             <div class="row">
                                     
 
-                                    {courseCards}
+                                    
 
 
                                     <div class="col-xl-12">
@@ -208,11 +304,12 @@ class FeaturedLandingPageSection extends Component {
                                         </div>
                                     </div>
                                 </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
     </div>
+    <Cta />
     <Footer />
     </div>);
     }
