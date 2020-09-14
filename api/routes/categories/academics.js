@@ -25,6 +25,7 @@ const verbling = require("../../middleware/verbling");
 //   bitdegree(req, res, next, "robotics", "academics");
 //   codecademy(req, res, next, "robotics", "academics");
 //   codecademy(req, res, next, "structural engineering", "academics");
+//   codecademy(req, res, next, "mechanical engineering", "academics");
 
 router.get("/", (req, res, next) => {
   //   apnacourse(req, res, next, "data structure", "academics");
@@ -103,16 +104,16 @@ router.get("/", (req, res, next) => {
   //   verbling(req, res, next, "structural engineering", "academics");
 
   //   apnacourse(req, res, next, "mechanical engineering", "academics");
-  arcademics(req, res, next, "mechanical engineering", "academics");
+  //   arcademics(req, res, next, "mechanical engineering", "academics");
   //   bitdegree(req, res, next, "mechanical engineering", "academics");
   //   codecademy(req, res, next, "mechanical engineering", "academics");
-  // coursera(req,res,next,'mechanical engineering','academics');
+  //   coursera(req, res, next, "mechanical engineering", "academics");
   //   digigrad(req, res, next, "mechanical engineering", "academics");
   //   edx(req, res, next, "mechanical engineering", "academics");
   //   harvard(req, res, next, "mechanical engineering", "academics");
   //   khanacademy(req, res, next, "mechanical engineering", "academics");
   //   openyale(req, res, next, "mechanical engineering", "academics");
-  //   skillshare(req, res, next, "mechanical engineering", "academics");
+  skillshare(req, res, next, "mechanical engineering", "academics");
   //   udacity(req, res, next, "mechanical engineering", "academics");
   // udemy(req, res, next, "mechanical engineering", "academics");
   //   verbling(req, res, next, "mechanical engineering", "academics");
