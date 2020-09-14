@@ -29,7 +29,6 @@ router.get("/", (req, res, next) => {
   // skillshare(req,res,next,'data structure','academics');
   // udacity(req,res,next,'data structure','academics');
   // verbling(req,res,next,'data structure','academics');
-
   // coursera(req,res,next,'data structure','academics');
   // udemy(req, res, next, "data structure", "academics");
 
