@@ -135,11 +135,11 @@ router.get("/", (req, res, next) => {
   // openyale(req, res, next, "calculus", "academics");
   // skillshare(req, res, next, "calculus", "academics");
   // udacity(req, res, next, "calculus", "academics");
-  udemy(req, res, next, "calculus", "academics");
-  //   verbling(req, res, next, "calculus", "academics");
+  // udemy(req, res, next, "calculus", "academics");
+  // verbling(req, res, next, "calculus", "academics");
 
-  //   apnacourse(req, res, next, "trigonometry", "academics");
-  //   arcademics(req, res, next, "trigonometry", "academics");
+  // apnacourse(req, res, next, "trigonometry", "academics");
+  arcademics(req, res, next, "trigonometry", "academics");
   //   bitdegree(req, res, next, "trigonometry", "academics");
   //   codecademy(req, res, next, "trigonometry", "academics");
   // coursera(req,res,next,'trigonometry','academics');
