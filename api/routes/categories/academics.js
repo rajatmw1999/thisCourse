@@ -35,7 +35,7 @@ router.get("/", (req, res, next) => {
   // udemy(req, res, next, "data structure", "academics");
   //   verbling(req, res, next, "data structure", "academics");
 
-  //   apnacourse(req, res, next, "algorithms", "academics");
+  apnacourse(req, res, next, "algorithms", "academics");
   //   arcademics(req, res, next, "algorithms", "academics");
   //   bitdegree(req, res, next, "algorithms", "academics");
   //   codecademy(req, res, next, "algorithms", "academics");
