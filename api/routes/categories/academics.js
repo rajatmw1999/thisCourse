@@ -172,9 +172,9 @@ router.get("/", (req, res, next) => {
   // skillshare(req, res, next, "geometry", "academics");
   // udacity(req, res, next, "geometry", "academics");
   // udemy(req, res, next, "geometry", "academics");
-  verbling(req, res, next, "geometry", "academics");
+  // verbling(req, res, next, "geometry", "academics");
 
-  //   apnacourse(req, res, next, "algebra", "academics");
+  apnacourse(req, res, next, "algebra", "academics");
   //   arcademics(req, res, next, "algebra", "academics");
   //   bitdegree(req, res, next, "algebra", "academics");
   //   codecademy(req, res, next, "algebra", "academics");
