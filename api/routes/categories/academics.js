@@ -24,6 +24,7 @@ const verbling = require("../../middleware/verbling");
 //   codecademy(req, res, next, "electronics", "academics");
 //   bitdegree(req, res, next, "robotics", "academics");
 //   codecademy(req, res, next, "robotics", "academics");
+//   codecademy(req, res, next, "structural engineering", "academics");
 
 router.get("/", (req, res, next) => {
   //   apnacourse(req, res, next, "data structure", "academics");
@@ -87,10 +88,10 @@ router.get("/", (req, res, next) => {
   //   verbling(req, res, next, "robotics", "academics");
 
   //   apnacourse(req, res, next, "structural engineering", "academics");
-  arcademics(req, res, next, "structural engineering", "academics");
+  //   arcademics(req, res, next, "structural engineering", "academics");
   //   bitdegree(req, res, next, "structural engineering", "academics");
   //   codecademy(req, res, next, "structural engineering", "academics");
-  // coursera(req,res,next,'structural engineering','academics');
+  //   coursera(req, res, next, "structural engineering", "academics");
   //   digigrad(req, res, next, "structural engineering", "academics");
   //   edx(req, res, next, "structural engineering", "academics");
   //   harvard(req, res, next, "structural engineering", "academics");
@@ -98,10 +99,10 @@ router.get("/", (req, res, next) => {
   //   openyale(req, res, next, "structural engineering", "academics");
   //   skillshare(req, res, next, "structural engineering", "academics");
   //   udacity(req, res, next, "structural engineering", "academics");
-  // udemy(req, res, next, "structural engineering", "academics");
+  //   udemy(req, res, next, "structural engineering", "academics");
   //   verbling(req, res, next, "structural engineering", "academics");
 
-  //   apnacourse(req, res, next, "mechanical engineering", "academics");
+  apnacourse(req, res, next, "mechanical engineering", "academics");
   //   arcademics(req, res, next, "mechanical engineering", "academics");
   //   bitdegree(req, res, next, "mechanical engineering", "academics");
   //   codecademy(req, res, next, "mechanical engineering", "academics");
