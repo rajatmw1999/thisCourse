@@ -42,8 +42,8 @@ router.get("/", (req, res, next) => {
   //   codecademy(req, res, next, "algorithms", "academics");
   //   coursera(req, res, next, "algorithms", "academics");
   //   digigrad(req, res, next, "algorithms", "academics");
-  edx(req, res, next, "algorithms", "academics");
-  //   harvard(req, res, next, "algorithms", "academics");
+  //   edx(req, res, next, "algorithms", "academics");
+  harvard(req, res, next, "algorithms", "academics");
   //   khanacademy(req, res, next, "algorithms", "academics");
   //   openyale(req, res, next, "algorithms", "academics");
   //   skillshare(req, res, next, "algorithms", "academics");
