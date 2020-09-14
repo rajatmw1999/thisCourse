@@ -16,12 +16,15 @@ const udacity = require("../../middleware/udacity");
 const udemy = require("../../middleware/udemy");
 const verbling = require("../../middleware/verbling");
 
+// Not Working
+//   codecademy(req, res, next, "data structure", "academics");
+
 router.get("/", (req, res, next) => {
   //   apnacourse(req, res, next, "data structure", "academics");
   //   arcademics(req, res, next, "data structure", "academics");
   //   bitdegree(req, res, next, "data structure", "academics");
-  codecademy(req, res, next, "data structure", "academics");
-  // digigrad(req,res,next,'data structure','academics');
+  //   codecademy(req, res, next, "data structure", "academics");
+  digigrad(req, res, next, "data structure", "academics");
   // edx(req,res,next,'data structure','academics');
   // harvard(req,res,next,'data structure','academics');
   // khanacademy(req,res,next,'data structure','academics');
