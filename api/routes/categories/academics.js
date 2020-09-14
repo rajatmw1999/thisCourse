@@ -26,6 +26,7 @@ const verbling = require("../../middleware/verbling");
 //   codecademy(req, res, next, "robotics", "academics");
 //   codecademy(req, res, next, "structural engineering", "academics");
 //   codecademy(req, res, next, "mechanical engineering", "academics");
+//   skillshare(req, res, next, "mechanical engineering", "academics");
 
 router.get("/", (req, res, next) => {
   //   apnacourse(req, res, next, "data structure", "academics");
@@ -113,8 +114,8 @@ router.get("/", (req, res, next) => {
   //   harvard(req, res, next, "mechanical engineering", "academics");
   //   khanacademy(req, res, next, "mechanical engineering", "academics");
   //   openyale(req, res, next, "mechanical engineering", "academics");
-  skillshare(req, res, next, "mechanical engineering", "academics");
-  //   udacity(req, res, next, "mechanical engineering", "academics");
+  //   skillshare(req, res, next, "mechanical engineering", "academics");
+  udacity(req, res, next, "mechanical engineering", "academics");
   // udemy(req, res, next, "mechanical engineering", "academics");
   //   verbling(req, res, next, "mechanical engineering", "academics");
 
