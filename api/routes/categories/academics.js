@@ -19,6 +19,7 @@ const verbling = require("../../middleware/verbling");
 // Not Working
 //   codecademy(req, res, next, "data structure", "academics");
 //   codecademy(req, res, next, "algorithms", "academics");
+//   harvard(req, res, next, "algorithms", "academics");
 
 router.get("/", (req, res, next) => {
   //   apnacourse(req, res, next, "data structure", "academics");
@@ -43,8 +44,8 @@ router.get("/", (req, res, next) => {
   //   coursera(req, res, next, "algorithms", "academics");
   //   digigrad(req, res, next, "algorithms", "academics");
   //   edx(req, res, next, "algorithms", "academics");
-  harvard(req, res, next, "algorithms", "academics");
-  //   khanacademy(req, res, next, "algorithms", "academics");
+  //   harvard(req, res, next, "algorithms", "academics");
+  khanacademy(req, res, next, "algorithms", "academics");
   //   openyale(req, res, next, "algorithms", "academics");
   //   skillshare(req, res, next, "algorithms", "academics");
   //   udacity(req, res, next, "algorithms", "academics");
