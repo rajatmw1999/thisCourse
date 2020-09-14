@@ -84,9 +84,9 @@ router.get("/", (req, res, next) => {
   //   skillshare(req, res, next, "robotics", "academics");
   //   udacity(req, res, next, "robotics", "academics");
   //   udemy(req, res, next, "robotics", "academics");
-  verbling(req, res, next, "robotics", "academics");
+  //   verbling(req, res, next, "robotics", "academics");
 
-  //   apnacourse(req, res, next, "structural engineering", "academics");
+  apnacourse(req, res, next, "structural engineering", "academics");
   //   arcademics(req, res, next, "structural engineering", "academics");
   //   bitdegree(req, res, next, "structural engineering", "academics");
   //   codecademy(req, res, next, "structural engineering", "academics");
