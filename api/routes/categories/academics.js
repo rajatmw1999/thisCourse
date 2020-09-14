@@ -182,16 +182,16 @@ router.get("/", (req, res, next) => {
   // codecademy(req, res, next, "algebra", "academics");
   // coursera(req, res, next, "algebra", "academics");
   // digigrad(req, res, next, "algebra", "academics");
-  edx(req, res, next, "algebra", "academics");
-  //   harvard(req, res, next, "algebra", "academics");
-  //   khanacademy(req, res, next, "algebra", "academics");
-  //   openyale(req, res, next, "algebra", "academics");
-  //   skillshare(req, res, next, "algebra", "academics");
-  //   udacity(req, res, next, "algebra", "academics");
+  // edx(req, res, next, "algebra", "academics");
+  // harvard(req, res, next, "algebra", "academics");
+  // khanacademy(req, res, next, "algebra", "academics");
+  // openyale(req, res, next, "algebra", "academics");
+  // skillshare(req, res, next, "algebra", "academics");
+  // udacity(req, res, next, "algebra", "academics");
   // udemy(req, res, next, "algebra", "academics");
-  //   verbling(req, res, next, "algebra", "academics");
+  // verbling(req, res, next, "algebra", "academics");
 
-  //   apnacourse(req, res, next, "discrete math", "academics");
+  apnacourse(req, res, next, "discrete math", "academics");
   //   arcademics(req, res, next, "discrete math", "academics");
   //   bitdegree(req, res, next, "discrete math", "academics");
   //   codecademy(req, res, next, "discrete math", "academics");
