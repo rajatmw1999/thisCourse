@@ -27,8 +27,8 @@ router.get("/", (req, res, next) => {
   //   digigrad(req, res, next, "data structure", "academics");
   //   edx(req, res, next, "data structure", "academics");
   //   harvard(req, res, next, "data structure", "academics");
-  khanacademy(req, res, next, "data structure", "academics");
-  // openyale(req,res,next,'data structure','academics');
+  //   khanacademy(req, res, next, "data structure", "academics");
+  openyale(req, res, next, "data structure", "academics");
   // skillshare(req,res,next,'data structure','academics');
   // udacity(req,res,next,'data structure','academics');
   // verbling(req,res,next,'data structure','academics');
