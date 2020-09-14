@@ -67,9 +67,9 @@ router.get("/", (req, res, next) => {
   //   skillshare(req, res, next, "electronics", "academics");
   //   udacity(req, res, next, "electronics", "academics");
   //   udemy(req, res, next, "electronics", "academics");
-  verbling(req, res, next, "electronics", "academics");
+  //   verbling(req, res, next, "electronics", "academics");
 
-  //   apnacourse(req, res, next, "robotics", "academics");
+  apnacourse(req, res, next, "robotics", "academics");
   //   arcademics(req, res, next, "robotics", "academics");
   //   bitdegree(req, res, next, "robotics", "academics");
   //   codecademy(req, res, next, "robotics", "academics");
