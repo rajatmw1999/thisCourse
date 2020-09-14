@@ -153,8 +153,8 @@ router.get("/", (req, res, next) => {
   // openyale(req, res, next, "trigonometry", "academics");
   // skillshare(req, res, next, "trigonometry", "academics");
   // udacity(req, res, next, "trigonometry", "academics");
-  udemy(req, res, next, "trigonometry", "academics");
-  //   verbling(req, res, next, "trigonometry", "academics");
+  // udemy(req, res, next, "trigonometry", "academics");
+  verbling(req, res, next, "trigonometry", "academics");
 
   //   apnacourse(req, res, next, "geometry", "academics");
   //   arcademics(req, res, next, "geometry", "academics");
