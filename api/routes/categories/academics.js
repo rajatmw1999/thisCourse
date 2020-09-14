@@ -147,8 +147,8 @@ router.get("/", (req, res, next) => {
   // coursera(req, res, next, "trigonometry", "academics");
   // digigrad(req, res, next, "trigonometry", "academics");
   // edx(req, res, next, "trigonometry", "academics");
-  harvard(req, res, next, "trigonometry", "academics");
-  //   khanacademy(req, res, next, "trigonometry", "academics");
+  // harvard(req, res, next, "trigonometry", "academics");
+  khanacademy(req, res, next, "trigonometry", "academics");
   //   openyale(req, res, next, "trigonometry", "academics");
   //   skillshare(req, res, next, "trigonometry", "academics");
   //   udacity(req, res, next, "trigonometry", "academics");
