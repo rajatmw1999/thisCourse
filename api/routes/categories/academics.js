@@ -27,6 +27,8 @@ const verbling = require("../../middleware/verbling");
 //   codecademy(req, res, next, "structural engineering", "academics");
 //   codecademy(req, res, next, "mechanical engineering", "academics");
 //   skillshare(req, res, next, "mechanical engineering", "academics");
+// bitdegree(req, res, next, "calculus", "academics");
+// codecademy(req, res, next, "calculus", "academics");
 
 router.get("/", (req, res, next) => {
   //   apnacourse(req, res, next, "data structure", "academics");
@@ -119,11 +121,11 @@ router.get("/", (req, res, next) => {
   // udemy(req, res, next, "mechanical engineering", "academics");
   // verbling(req, res, next, "mechanical engineering", "academics");
 
-  apnacourse(req, res, next, "calculus", "academics");
-  //   arcademics(req, res, next, "calculus", "academics");
-  //   bitdegree(req, res, next, "calculus", "academics");
-  //   codecademy(req, res, next, "calculus", "academics");
-  // coursera(req,res,next,'calculus','academics');
+  // apnacourse(req, res, next, "calculus", "academics");
+  // arcademics(req, res, next, "calculus", "academics");
+  // bitdegree(req, res, next, "calculus", "academics");
+  // codecademy(req, res, next, "calculus", "academics");
+  coursera(req, res, next, "calculus", "academics");
   //   digigrad(req, res, next, "calculus", "academics");
   //   edx(req, res, next, "calculus", "academics");
   //   harvard(req, res, next, "calculus", "academics");
