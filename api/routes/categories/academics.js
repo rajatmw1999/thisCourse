@@ -24,6 +24,7 @@ router.get("/", (req, res, next) => {
   //   arcademics(req, res, next, "data structure", "academics");
   //   bitdegree(req, res, next, "data structure", "academics");
   //   codecademy(req, res, next, "data structure", "academics");
+  // coursera(req,res,next,'data structure','academics');
   //   digigrad(req, res, next, "data structure", "academics");
   //   edx(req, res, next, "data structure", "academics");
   //   harvard(req, res, next, "data structure", "academics");
@@ -31,10 +32,8 @@ router.get("/", (req, res, next) => {
   //   openyale(req, res, next, "data structure", "academics");
   //   skillshare(req, res, next, "data structure", "academics");
   //   udacity(req, res, next, "data structure", "academics");
-  //   verbling(req, res, next, "data structure", "academics");
-
-  // coursera(req,res,next,'data structure','academics');
   // udemy(req, res, next, "data structure", "academics");
+  //   verbling(req, res, next, "data structure", "academics");
 
   console.log("Inside Academics");
   res.status(200).json({
