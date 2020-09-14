@@ -103,7 +103,7 @@ router.get("/deleteFeaturedCoursesById/:id", (req, res) => {
 //Route 5
 //GET ALL COURSES OF A CATEGORY
 router.get("/featuredCoursesByCategory/:category", (req, res) => {
-  const category = req.params.category.toLowerCase();
+  const category = req.params.category.toLowerCase().split('-')[0];
   FeaturedCourses.find({ category: category })
     .exec()
     .then((doc) => {
@@ -125,7 +125,7 @@ router.get("/featuredCoursesByCategory/:category", (req, res) => {
 //ROUTE 6
 //GET ALL COURSES OF A PARTICULAR SKILL
 router.get("/featuredCoursesBySkill/:skillName", (req, res) => {
-  const skillname = req.params.skillName.toLowerCase();
+  const skillname = req.params.skillName.toLowerCase().split('-')[0];
   FeaturedCourses.find({ nameOfSkill: skillname })
     .exec()
     .then((doc) => {
