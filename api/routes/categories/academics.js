@@ -17,7 +17,7 @@ const udemy = require("../../middleware/udemy");
 const verbling = require("../../middleware/verbling");
 
 router.get("/", (req, res, next) => {
-  // apnacourse(req,res,next,'data structure','academics');
+  apnacourse(req, res, next, "data structure", "academics");
   // arcademics(req,res,next,'data structure','academics');
   // bitdegree(req,res,next,'data structure','academics');
   // codecademy(req,res,next,'data structure','academics');
@@ -29,6 +29,7 @@ router.get("/", (req, res, next) => {
   // skillshare(req,res,next,'data structure','academics');
   // udacity(req,res,next,'data structure','academics');
   // verbling(req,res,next,'data structure','academics');
+
   // coursera(req,res,next,'data structure','academics');
   // udemy(req, res, next, "data structure", "academics");
 
