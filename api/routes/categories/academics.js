@@ -168,8 +168,8 @@ router.get("/", (req, res, next) => {
   // harvard(req, res, next, "geometry", "academics");
   // khanacademy(req, res, next, "geometry", "academics");
   // openyale(req, res, next, "geometry", "academics");
-  skillshare(req, res, next, "geometry", "academics");
-  //   udacity(req, res, next, "geometry", "academics");
+  // skillshare(req, res, next, "geometry", "academics");
+  udacity(req, res, next, "geometry", "academics");
   // udemy(req, res, next, "geometry", "academics");
   //   verbling(req, res, next, "geometry", "academics");
 
