@@ -227,16 +227,16 @@ router.get("/", (req, res, next) => {
   // codecademy(req, res, next, "biology", "academics");**
   // coursera(req, res, next, "biology", "academics");**
   // digigrad(req, res, next, "biology", "academics");
-  edx(req, res, next, "biology", "academics");
-  //   harvard(req, res, next, "biology", "academics");
-  //   khanacademy(req, res, next, "biology", "academics");
-  //   openyale(req, res, next, "biology", "academics");
-  //   skillshare(req, res, next, "biology", "academics");
-  //   udacity(req, res, next, "biology", "academics");
+  // edx(req, res, next, "biology", "academics");**
+  // harvard(req, res, next, "biology", "academics");**
+  // khanacademy(req, res, next, "biology", "academics");
+  // openyale(req, res, next, "biology", "academics");
+  // skillshare(req, res, next, "biology", "academics");
+  // udacity(req, res, next, "biology", "academics");
   // udemy(req, res, next, "biology", "academics");
-  //   verbling(req, res, next, "biology", "academics");
+  // verbling(req, res, next, "biology", "academics");
 
-  //   apnacourse(req, res, next, "chemistry", "academics");
+  apnacourse(req, res, next, "chemistry", "academics");
   //   arcademics(req, res, next, "chemistry", "academics");
   //   bitdegree(req, res, next, "chemistry", "academics");
   //   codecademy(req, res, next, "chemistry", "academics");
