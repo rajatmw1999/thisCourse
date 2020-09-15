@@ -354,9 +354,9 @@ router.get("/", (req, res, next) => {
   // skillshare(req, res, next, "france", "academics");
   // udacity(req, res, next, "france", "academics");
   // udemy(req, res, next, "france", "academics");
-  verbling(req, res, next, "france", "academics");
+  // verbling(req, res, next, "france", "academics");
 
-  //   apnacourse(req, res, next, "japanese", "academics");
+  apnacourse(req, res, next, "japanese", "academics");
   //   arcademics(req, res, next, "japanese", "academics");
   //   bitdegree(req, res, next, "japanese", "academics");
   //   codecademy(req, res, next, "japanese", "academics");
