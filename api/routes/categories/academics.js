@@ -236,8 +236,8 @@ router.get("/", (req, res, next) => {
   // udemy(req, res, next, "biology", "academics");
   // verbling(req, res, next, "biology", "academics");
 
-  apnacourse(req, res, next, "chemistry", "academics");
-  //   arcademics(req, res, next, "chemistry", "academics");
+  // apnacourse(req, res, next, "chemistry", "academics");
+  arcademics(req, res, next, "chemistry", "academics");
   //   bitdegree(req, res, next, "chemistry", "academics");
   //   codecademy(req, res, next, "chemistry", "academics");
   // coursera(req,res,next,'chemistry','academics');
