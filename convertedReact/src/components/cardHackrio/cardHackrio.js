@@ -34,7 +34,7 @@ class CardHackrio extends Component{
         console.log(one);
         const ret = one.map((data) =>  
         <a href={`${data.redirectLink}`} target="_blank" className="topic-grid-item js-topic-grid-item">
-            <img className="topic-thumbnail" alt="Python Tutorials and Courses" src="https://hackr.io/tutorials/python/logo-python.svg?ver=1562823957" />
+            <img className="topic-thumbnail" alt="Python Tutorials and Courses" src={`${data.imageUrl}`} />
             <p className="js-topic">{data.displayName}</p>
         </a>
         )
@@ -62,7 +62,7 @@ class CardHackrio extends Component{
             {
                 var display = this.state.items.map((data)=>
                 <a href={`${data.redirectLink}`} className="topic-grid-item js-topic-grid-item">
-                <img className="topic-thumbnail" alt="Python Tutorials and Courses" src="https://hackr.io/tutorials/python/logo-python.svg?ver=1562823957" />
+                <img className="topic-thumbnail" alt="Python Tutorials and Courses" src={`${data.imageUrl}`} />
                 <p className="js-topic">{data.displayName}</p>
             </a>
         );
@@ -88,7 +88,7 @@ class CardHackrio extends Component{
           }
           var display = arr.map((data)=>
           <a href={`${data.redirectLink}`} className="topic-grid-item js-topic-grid-item">
-                <img className="topic-thumbnail" alt="Python Tutorials and Courses" src="https://hackr.io/tutorials/python/logo-python.svg?ver=1562823957" />
+                <img className="topic-thumbnail" alt="Python Tutorials and Courses" src={`${data.imageUrl}`} />
                 <p className="js-topic">{data.displayName}</p>
             </a>
         );
@@ -138,7 +138,7 @@ class CardHackrio extends Component{
         console.log(one);
         const ret = one.map((data) =>  
         <a href={`${data.redirectLink}`} target="_blank" className="topic-grid-item js-topic-grid-item">
-            <img className="topic-thumbnail" alt="Python Tutorials and Courses" src="https://hackr.io/tutorials/python/logo-python.svg?ver=1562823957" />
+            <img className="topic-thumbnail" alt="Python Tutorials and Courses" src={`${data.imageUrl}`} />
             <p className="js-topic">{data.displayName}</p>
         </a>
         )
@@ -212,6 +212,7 @@ class CardHackrio extends Component{
                             <div className="navbarSearch">
                                 <input onChange={this.handleChangeSearch} id="myInput" onkeyup="myFunction()" className="form-control navbar-search-input js-navbar-search-input nav-input js-filter-topics" type="text" placeholder="Search for the skill you want to learn: " />
                             </div>
+                            
                             <img className="card-hackrioicon color-filter" src="https://hackr.io/assets/images/header-icons/search-header.svg" width="17" height="17" />
                         </div>
                     </div>
@@ -231,15 +232,15 @@ class CardHackrio extends Component{
                                 {this.state.dataToDisplay?this.state.dataToDisplay:""}
                                 
                                 {this.state.dataToDisplay? <a href="" className="topic-grid-item js-topic-grid-item">
-                <img className="topic-thumbnail" alt="Python Tutorials and Courses" src="https://hackr.io/tutorials/python/logo-python.svg?ver=1562823957" />
+                <img className="topic-thumbnail" alt="Python Tutorials and Courses" src="https://img.icons8.com/cute-clipart/64/000000/hot-article.png" />
                 <p className="js-topic">Check Roadmaps</p>
             </a>:""}
             {this.state.dataToDisplay?<a href="" className="topic-grid-item js-topic-grid-item">
-                <img className="topic-thumbnail" alt="Python Tutorials and Courses" src="https://hackr.io/tutorials/python/logo-python.svg?ver=1562823957" />
+                <img className="topic-thumbnail" alt="Python Tutorials and Courses" src="https://img.icons8.com/cute-clipart/64/000000/hot-article.png" />
                 <p className="js-topic">Check More Categories</p>
             </a>:""}
             {this.state.dataToDisplay?<a href="" className="topic-grid-item js-topic-grid-item">
-                <img className="topic-thumbnail" alt="Python Tutorials and Courses" src="https://hackr.io/tutorials/python/logo-python.svg?ver=1562823957" />
+                <img className="topic-thumbnail" alt="Python Tutorials and Courses" src="https://img.icons8.com/cute-clipart/64/000000/hot-article.png" />
                 <p className="js-topic">Check Discounted Courses</p>
             </a>:""}               
                               

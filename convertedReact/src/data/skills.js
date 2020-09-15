@@ -667,7 +667,7 @@ const skillsData = [
             },
             {
                 displayName:"Raspberry Pi",
-                imageUrl:"https://img.icons8.com/color/64/000000/raspberry-pi.png"
+                imageUrl:"https://img.icons8.com/color/64/000000/raspberry-pi.png",
                 redirectLink:"/raspberry-pi",
                 desc:"",
                 db:"raspberry-pi"
