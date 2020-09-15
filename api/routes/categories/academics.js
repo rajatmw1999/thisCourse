@@ -247,11 +247,11 @@ router.get("/", (req, res, next) => {
   // khanacademy(req, res, next, "chemistry", "academics");
   // openyale(req, res, next, "chemistry", "academics");
   // skillshare(req, res, next, "chemistry", "academics");
-  udacity(req, res, next, "chemistry", "academics");
+  // udacity(req, res, next, "chemistry", "academics");**
   // udemy(req, res, next, "chemistry", "academics");
-  //   verbling(req, res, next, "chemistry", "academics");
+  // verbling(req, res, next, "chemistry", "academics");
 
-  //   apnacourse(req, res, next, "anatomy", "academics");
+  apnacourse(req, res, next, "anatomy", "academics");
   //   arcademics(req, res, next, "anatomy", "academics");
   //   bitdegree(req, res, next, "anatomy", "academics");
   //   codecademy(req, res, next, "anatomy", "academics");
