@@ -16,17 +16,19 @@ const udacity = require('../../middleware/udacity');
 const udemy = require('../../middleware/udemy');
 const verbling = require('../../middleware/verbling');
 
+
+// coursera(req,res,next,'javascript','development');
+
 router.get("/",(req,res,next) => {
 
-    // apnacourse(req, res,next, 'html', 'design');
-    // udemy(req, res, next, 'html', 'design');
-    // coursera(req,res,next,'html','design');
-    // bitdegree(req,res,next,'html','design');
-    // codecademy(req,res,next,'html','design');
-
-    // -------------left here------------------
+    // apnacourse(req,res,next,'meditation','personal');
+    // coursera(req,res,next,'meditation','personal');
+    //----------------------left here ----------------------------------
 
 
+
+    
+    // codecademy(req,res,next,'javascript','development');
     // edx(req,res,next,'javascript','development');
     // khanacademy(req,res,next,'javascript','development');
     // skillshare(req,res,next,'javascript','development');
@@ -325,9 +327,9 @@ router.get("/",(req,res,next) => {
     // udacity(req,res,next,'Jenkins','development');
     // udemy(req,res,next,'Jenkins','development');
     
-    console.log('Inside Design');
+    console.log('Inside Personal');
 	res.status(200).json({
-		message:'Search Results for design !'
+		message:'Search Results for peronsal !'
 		// query: query.q,
 	});
 });

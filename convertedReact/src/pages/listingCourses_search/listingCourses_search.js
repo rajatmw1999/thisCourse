@@ -27,6 +27,7 @@ class listingCourses extends Component{
             listNo:3
         }
         this.clickedLoadMore = this.clickedLoadMore.bind(this);
+        this.onFilterClick = this.onFilterClick.bind(this);
     }
 
     async clickedLoadMore(){
@@ -105,6 +106,44 @@ class listingCourses extends Component{
         //   console.log(this.state.items);
       }
 
+      async onFilterClick(data){
+        var final = [];
+        // console.log(data);
+        var all = this.state.items;
+        data.provider.forEach(async function(eachprovider){
+          await all.forEach(async function(eachitem){        
+              if(eachitem.platform == eachprovider)
+                final.push(eachitem);
+          });
+        });
+        // all = this.state.items;
+        // if(data.rating == 1)
+        // {
+        //   await all.forEach(async function(eachitem){
+        //     if((eachitem.provider == "udemy")||(eachitem.provider == "udacity")||(eachitem.provider == "coursera")||(eachitem.provider == "edx")||(eachitem.provider == "skillShare"))
+        //     {
+        //       var flag = 1;
+        //       final.forEach(async function(eachfinal){
+        //         console.log(eachfinal);
+        //         if(eachfinal.platform == eachitem.platform)
+        //           {
+        //             flag = 0;
+        //           }
+        //       });
+        //       if(flag == 1)
+        //       {
+        //         final.push(eachitem);
+        //         console.log(final);
+        //       }
+              
+        //     }
+        //   });
+        // }
+        if(final.length)
+          this.setState({list:final});
+        // console.log(final);
+      }
+
     render(){
         // let mainCards = [];
         // for(let i=0;i<5;i++){
@@ -122,7 +161,8 @@ class listingCourses extends Component{
                 <div className="container col-12  col-xl-10">
                     <div className="row">
                     <div className="col-12 col-lg-3 cardRow">
-                        <FilterBox />
+                        <FilterBox clicked={this.onFilterClick}/>
+                        
                     </div>
                        
                         <div className="col-12 col-lg-9 cardRow">
