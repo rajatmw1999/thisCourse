@@ -326,20 +326,20 @@ router.get("/", (req, res, next) => {
   // udemy(req, res, next, "german", "academics");
   // verbling(req, res, next, "german", "academics");
 
-  apnacourse(req, res, next, "spanish", "academics");
-  //   arcademics(req, res, next, "spanish", "academics");
-  //   bitdegree(req, res, next, "spanish", "academics");
-  //   codecademy(req, res, next, "spanish", "academics");
-  // coursera(req,res,next,'spanish','academics');
-  //   digigrad(req, res, next, "spanish", "academics");
-  //   edx(req, res, next, "spanish", "academics");
-  //   harvard(req, res, next, "spanish", "academics");
-  //   khanacademy(req, res, next, "spanish", "academics");
-  //   openyale(req, res, next, "spanish", "academics");
-  //   skillshare(req, res, next, "spanish", "academics");
-  //   udacity(req, res, next, "spanish", "academics");
+  // apnacourse(req, res, next, "spanish", "academics");
+  // arcademics(req, res, next, "spanish", "academics");
+  // bitdegree(req, res, next, "spanish", "academics");**
+  // codecademy(req, res, next, "spanish", "academics");**
+  // coursera(req, res, next, "spanish", "academics");
+  // digigrad(req, res, next, "spanish", "academics");
+  // edx(req, res, next, "spanish", "academics");
+  // harvard(req, res, next, "spanish", "academics");
+  // khanacademy(req, res, next, "spanish", "academics");
+  // openyale(req, res, next, "spanish", "academics");
+  // skillshare(req, res, next, "spanish", "academics");
+  // udacity(req, res, next, "spanish", "academics");
   // udemy(req, res, next, "spanish", "academics");
-  //   verbling(req, res, next, "spanish", "academics");
+  verbling(req, res, next, "spanish", "academics");
 
   //   apnacourse(req, res, next, "france", "academics");
   //   arcademics(req, res, next, "france", "academics");
