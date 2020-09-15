@@ -237,17 +237,17 @@ router.get("/", (req, res, next) => {
   // verbling(req, res, next, "biology", "academics");
 
   // apnacourse(req, res, next, "chemistry", "academics");
-  arcademics(req, res, next, "chemistry", "academics");
-  //   bitdegree(req, res, next, "chemistry", "academics");
-  //   codecademy(req, res, next, "chemistry", "academics");
-  // coursera(req,res,next,'chemistry','academics');
-  //   digigrad(req, res, next, "chemistry", "academics");
-  //   edx(req, res, next, "chemistry", "academics");
-  //   harvard(req, res, next, "chemistry", "academics");
-  //   khanacademy(req, res, next, "chemistry", "academics");
-  //   openyale(req, res, next, "chemistry", "academics");
-  //   skillshare(req, res, next, "chemistry", "academics");
-  //   udacity(req, res, next, "chemistry", "academics");
+  // arcademics(req, res, next, "chemistry", "academics");
+  // bitdegree(req, res, next, "chemistry", "academics");**
+  // codecademy(req, res, next, "chemistry", "academics");**
+  // coursera(req, res, next, "chemistry", "academics");
+  // digigrad(req, res, next, "chemistry", "academics");
+  // edx(req, res, next, "chemistry", "academics");**
+  // harvard(req, res, next, "chemistry", "academics");
+  // khanacademy(req, res, next, "chemistry", "academics");
+  // openyale(req, res, next, "chemistry", "academics");
+  // skillshare(req, res, next, "chemistry", "academics");
+  udacity(req, res, next, "chemistry", "academics");
   // udemy(req, res, next, "chemistry", "academics");
   //   verbling(req, res, next, "chemistry", "academics");
 
