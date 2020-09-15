@@ -111,7 +111,7 @@ router.get("/", (req, res, next) => {
   //   arcademics(req, res, next, "content marketing", "academics");
   //   bitdegree(req, res, next, "content marketing", "academics");
   //   codecademy(req, res, next, "content marketing", "academics");
-  // coursera(req,res,next,'content marketing','academics');
+  //   coursera(req,res,next,'content marketing','academics');
   //   digigrad(req, res, next, "content marketing", "academics");
   //   edx(req, res, next, "content marketing", "academics");
   //   harvard(req, res, next, "content marketing", "academics");
