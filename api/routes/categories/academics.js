@@ -251,7 +251,7 @@ router.get("/", (req, res, next) => {
   // udemy(req, res, next, "chemistry", "academics");
   // verbling(req, res, next, "chemistry", "academics");
 
-  // amlagvniihss
+  // amlagvniihss   edyabm
   // apnacourse(req, res, next, "anatomy", "academics");
   // arcademics(req, res, next, "anatomy", "academics");
   // bitdegree(req, res, next, "anatomy", "academics");**
@@ -364,13 +364,13 @@ router.get("/", (req, res, next) => {
   // coursera(req, res, next, "japanese", "academics");**
   // digigrad(req, res, next, "japanese", "academics");
   // edx(req, res, next, "japanese", "academics");
-  harvard(req, res, next, "japanese", "academics");
-  //   khanacademy(req, res, next, "japanese", "academics");
-  //   openyale(req, res, next, "japanese", "academics");
-  //   skillshare(req, res, next, "japanese", "academics");
-  //   udacity(req, res, next, "japanese", "academics");
+  // harvard(req, res, next, "japanese", "academics");
+  // khanacademy(req, res, next, "japanese", "academics");
+  // openyale(req, res, next, "japanese", "academics");
+  // skillshare(req, res, next, "japanese", "academics");
+  // udacity(req, res, next, "japanese", "academics");
   // udemy(req, res, next, "japanese", "academics");
-  //   verbling(req, res, next, "japanese", "academics");
+  // verbling(req, res, next, "japanese", "academics");
 
   console.log("Inside Academics");
   res.status(200).json({
