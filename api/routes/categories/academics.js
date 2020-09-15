@@ -319,9 +319,9 @@ router.get("/", (req, res, next) => {
   // digigrad(req, res, next, "german", "academics");
   // edx(req, res, next, "german", "academics");
   // harvard(req, res, next, "german", "academics");
-  khanacademy(req, res, next, "german", "academics");
-  //   openyale(req, res, next, "german", "academics");
-  //   skillshare(req, res, next, "german", "academics");
+  // khanacademy(req, res, next, "german", "academics");
+  // openyale(req, res, next, "german", "academics");
+  skillshare(req, res, next, "german", "academics");
   //   udacity(req, res, next, "german", "academics");
   // udemy(req, res, next, "german", "academics");
   //   verbling(req, res, next, "german", "academics");
