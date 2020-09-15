@@ -272,16 +272,16 @@ router.get("/", (req, res, next) => {
   // codecademy(req, res, next, "astronomy", "academics");**
   // coursera(req, res, next, "astronomy", "academics");
   // digigrad(req, res, next, "astronomy", "academics");
-  edx(req, res, next, "astronomy", "academics");
-  //   harvard(req, res, next, "astronomy", "academics");
-  //   khanacademy(req, res, next, "astronomy", "academics");
-  //   openyale(req, res, next, "astronomy", "academics");
-  //   skillshare(req, res, next, "astronomy", "academics");
-  //   udacity(req, res, next, "astronomy", "academics");
+  // edx(req, res, next, "astronomy", "academics");
+  // harvard(req, res, next, "astronomy", "academics");
+  // khanacademy(req, res, next, "astronomy", "academics");
+  // openyale(req, res, next, "astronomy", "academics");
+  // skillshare(req, res, next, "astronomy", "academics");
+  // udacity(req, res, next, "astronomy", "academics");
   // udemy(req, res, next, "astronomy", "academics");
-  //   verbling(req, res, next, "astronomy", "academics");
+  // verbling(req, res, next, "astronomy", "academics");
 
-  //   apnacourse(req, res, next, "research paper writing", "academics");
+  apnacourse(req, res, next, "research paper writing", "academics");
   //   arcademics(req, res, next, "research paper writing", "academics");
   //   bitdegree(req, res, next, "research paper writing", "academics");
   //   codecademy(req, res, next, "research paper writing", "academics");
