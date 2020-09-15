@@ -289,9 +289,9 @@ router.get("/", (req, res, next) => {
   // digigrad(req, res, next, "research paper writing", "academics");
   // edx(req, res, next, "research paper writing", "academics");
   // harvard(req, res, next, "research paper writing", "academics");
-  khanacademy(req, res, next, "research paper writing", "academics");
-  //   openyale(req, res, next, "research paper writing", "academics");
-  //   skillshare(req, res, next, "research paper writing", "academics");
+  // khanacademy(req, res, next, "research paper writing", "academics");
+  // openyale(req, res, next, "research paper writing", "academics");
+  skillshare(req, res, next, "research paper writing", "academics");
   //   udacity(req, res, next, "research paper writing", "academics");
   // udemy(req, res, next, "research paper writing", "academics");
   //   verbling(req, res, next, "research paper writing", "academics");
