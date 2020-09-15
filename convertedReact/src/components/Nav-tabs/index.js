@@ -9,7 +9,7 @@ import "./index.css";
 import roadmapCategory from '../../data/roadmapCategory';
 import {domain} from '../../data/hosted'
 import Roadmap from "../read-more-roadmap/Roadmap";
-
+import renderHtml from 'react-render-html'
 class Navtabs extends React.Component {
 
     constructor(props){
@@ -264,7 +264,7 @@ class Navtabs extends React.Component {
                 
             </div>
             <br />
-            {this.state.dataToDisplay}
+            {this.state.dataToDisplay ? this.state.dataToDisplay : <h1>Loading</h1>}
             {/* <div className="tab-content">
                 <div id="home" className="tab-pane fade in active">
                 <h3>HOME HERE</h3>
