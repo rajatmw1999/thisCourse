@@ -221,13 +221,13 @@ router.get("/", (req, res, next) => {
   // udemy(req, res, next, "physics", "academics");
   // verbling(req, res, next, "physics", "academics");
 
-  apnacourse(req, res, next, "biology", "academics");
-  //   arcademics(req, res, next, "biology", "academics");
-  //   bitdegree(req, res, next, "biology", "academics");
-  //   codecademy(req, res, next, "biology", "academics");
-  // coursera(req,res,next,'biology','academics');
-  //   digigrad(req, res, next, "biology", "academics");
-  //   edx(req, res, next, "biology", "academics");
+  // apnacourse(req, res, next, "biology", "academics");
+  // arcademics(req, res, next, "biology", "academics");
+  // bitdegree(req, res, next, "biology", "academics");**
+  // codecademy(req, res, next, "biology", "academics");**
+  // coursera(req, res, next, "biology", "academics");**
+  // digigrad(req, res, next, "biology", "academics");
+  edx(req, res, next, "biology", "academics");
   //   harvard(req, res, next, "biology", "academics");
   //   khanacademy(req, res, next, "biology", "academics");
   //   openyale(req, res, next, "biology", "academics");
