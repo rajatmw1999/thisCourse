@@ -309,14 +309,14 @@ router.get("/", (req, res, next) => {
   // skillshare(req, res, next, "english", "academics");**
   // udacity(req, res, next, "english", "academics");
   // udemy(req, res, next, "english", "academics");
-  verbling(req, res, next, "english", "academics");
+  // verbling(req, res, next, "english", "academics");
 
-  //   apnacourse(req, res, next, "german", "academics");
-  //   arcademics(req, res, next, "german", "academics");
-  //   bitdegree(req, res, next, "german", "academics");
-  //   codecademy(req, res, next, "german", "academics");
-  // coursera(req,res,next,'german','academics');
-  //   digigrad(req, res, next, "german", "academics");
+  // apnacourse(req, res, next, "german", "academics");
+  // arcademics(req, res, next, "german", "academics");
+  // bitdegree(req, res, next, "german", "academics");**
+  // codecademy(req, res, next, "german", "academics");**
+  // coursera(req, res, next, "german", "academics");
+  digigrad(req, res, next, "german", "academics");
   //   edx(req, res, next, "german", "academics");
   //   harvard(req, res, next, "german", "academics");
   //   khanacademy(req, res, next, "german", "academics");
