@@ -11,6 +11,13 @@
     }
 }
 
+@media only screen and (max-width:990px){
+    #filterbox_mobile
+    {
+        display:none;
+    }
+}
+
 
 /* .aradhna_listingcoursescontainer{
     max-width: 90%;
@@ -28,3 +35,4 @@
     .rajat_listing_loadmore_btn:hover{
         color:white;
     }
+    

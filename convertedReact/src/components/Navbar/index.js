@@ -38,7 +38,7 @@ class navbar extends React.Component {
                   <Navbar bg="light" expand="lg" className="navbar navbar-expand-md navbar-light aradhna_navbarfont" onToggle={this.setNavExpanded} expanded={this.state.navExpanded}>
 
                    
-                      <Navbar.Brand href="#home">ThisCourse</Navbar.Brand>
+                      <Navbar.Brand href="/">ThisCourse</Navbar.Brand>
 
                       <Navbar.Toggle  className="navbar_navbar-toggler"  aria-controls="basic-navbar-nav-search" />
                       <Navbar.Collapse id="basic-navbar-nav-search">
@@ -61,7 +61,7 @@ class navbar extends React.Component {
                             </Nav.Link>
                         </ul> */}
                         <li className="navbar_nav-item pl-4 pl-md-0 ml-0 ml-md-4" onClick={this.setNavClose}>
-                        <Nav.Link className="navbar_nav-link dropdown-toggle aradhna_navbarfont" href="/#categories">Compare Courses
+                        <Nav.Link className="navbar_nav-link dropdown-toggle aradhna_navbarfont" href="/development-c">Compare Courses
 
                             </Nav.Link>
                         {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
@@ -73,10 +73,10 @@ class navbar extends React.Component {
                           </NavDropdown> */}
                         </li>
                         
-                        <li className="navbar_nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                        {/* <li className="navbar_nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                             <Nav.Link className="navbar_nav-link dropdown-toggle aradhna_navbarfont" href="#" onClick={this.setNavClose}>Login
                             </Nav.Link>
-                        </li>
+                        </li> */}
                       </Nav>
                       </Navbar.Collapse>
 

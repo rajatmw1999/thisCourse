@@ -26,10 +26,17 @@ const Roadmap = require("./api/routes/roadmap");
 const marketingSearchRoutes = require("./api/routes/marketing");
 const testRoute = require("./api/routes/test");
 const masterRoute = require("./api/routes/master");
+const developmentRoute = require("./api/routes/categories/development");
+const businessRoute = require("./api/routes/categories/business");
+const academicsRoute = require("./api/routes/categories/academics");
+const itRoute = require("./api/routes/categories/it");
+const designRoute = require("./api/routes/categories/design");
+const personalRoute = require("./api/routes/categories/personal");
 const dataRoutes = require("./api/data_routes/index");
 const searrch = require("./api/routes/search");
 const likeRoute = require("./api/routes/likes");
 const deleteSkills = require("./api/routes/deleteSkills");
+const admin_routes = require("./api/admin_routes/routes");
 
 //CORS
 app.use((req, res, next) => {
@@ -83,10 +90,19 @@ app.use("/roadmap", Roadmap);
 app.use("/marketing", marketingSearchRoutes);
 app.use("/test", testRoute);
 app.use("/master", masterRoute);
+app.use("/development",developmentRoute);
+app.use("/business",businessRoute);
+app.use("/academics",academicsRoute);
+app.use("/it",itRoute);
+app.use("/design",designRoute);
+app.use("/personal",personalRoute);
 app.use("/data", dataRoutes);
 app.use("/search", searrch);
 app.use("/like", likeRoute);
 app.use("/deleteSkills", deleteSkills);
+
+app.use('/admin', admin_routes);
+
 //console.log('aint here');
 app.use((req, res, next) => {
   const error = new Error("Not found");
@@ -124,7 +140,7 @@ app.use((error, req, res, next) => {
 // });
 
 app.listen(5000, () => {
-  console.log("Server is running on port 3000");
+  console.log("Server is running on port 5000");
 });
 
 module.exports = app;

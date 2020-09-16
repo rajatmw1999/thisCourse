@@ -55,15 +55,13 @@ let data = await page.evaluate(() =>{
 		json.courseName.push(JSON.stringify(courseName[i].innerText));//.href.substring(30)
 		json.price.push(JSON.stringify(price[i].innerText));
 		json.instructorName.push("BitDegree");
-		//json.link.push(JSON.stringify(courseName[i].href).substring(34));
 		json.link.push(JSON.stringify(link[i].href));
-		//json.courseName.push(json.link[i].substring(34));
 		//json.instructorName.push(JSON.stringify(instructorName[i].innerText));
 		json.courseDescription.push(null);
 		json.UrlOfImageThumbnail.push(JSON.stringify(UrlOfImageThumbnail[i].getAttribute('src'))); 
 		json.StudentsEnrolled.push(null);
 		json.NumberofHours.push(null);
-		j+=3;
+		// j+=3;
 	}
 	
 		return json;
@@ -102,6 +100,7 @@ let data = await page.evaluate(() =>{
 					});
 
 // console.log(data);
+browser.close();
 							//res.status(200).json({
 								//	message:'Search Results from BitDegree !',
 								//	query: query.q,
@@ -109,7 +108,7 @@ let data = await page.evaluate(() =>{
 								//});
 		});
 		
-		browser.close();
+		
 }
 
 //var query = 'blockchain';

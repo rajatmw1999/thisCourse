@@ -18,18 +18,22 @@ router.get("/searchsome/:skillName", async (req, res, next) => {
     var arr = [];
     var finalarr = [];
     arr = req.params.skillName.toLowerCase().split("-");
-    for (var j = 0; j < arr.length; j++) {
+    var j;
+    for (j = 0; j < arr.length; j++) {
       for (let elm of result) {
-        let skillStr = elm.nameSkill.toLowerCase();
+        let skillStr = await elm.nameSkill.toLowerCase();
+        console.log(elm);
         if (skillStr.search(arr[j]) != -1) {
           finalarr.push(elm);
         }
       }
     }
-
+    if(j == arr.length)
+    {
     res.status(200).json({
       data: finalarr.length > 0 ? finalarr : "Not Found !",
     });
+  }
   } catch (err) {
     res.status(500).json({
       error: next(err),
@@ -45,11 +49,12 @@ router.get("/searchall/:skillName", async (req, res, next) => {
     var arr = [];
     var finalarr = [];
     arr = req.params.skillName.toLowerCase().split("-");
+    console.log(arr);
     for (let elm of result) {
       var flag = 0;
-      let skillStr = elm.nameSkill.toLowerCase();
+      let skillStr = await elm.nameSkill.toLowerCase();
       for (var j = 0; j < arr.length; j++) {
-        if (skillStr.search(arr[j]) === -1) {
+        if (skillStr.search(arr[j]) == -1) {
           flag = 1;
         }
       }
