@@ -120,9 +120,9 @@ router.get("/", (req, res, next) => {
   // skillshare(req, res, next, "content marketing", "marketing");
   // udacity(req, res, next, "content marketing", "marketing");
   // udemy(req, res, next, "content marketing", "marketing");
-  verbling(req, res, next, "content marketing", "marketing");
+  // verbling(req, res, next, "content marketing", "marketing");
 
-  //   apnacourse(req, res, next, "freelancing", "marketing");
+  apnacourse(req, res, next, "freelancing", "marketing");
   //   arcademics(req, res, next, "freelancing", "marketing");
   //   bitdegree(req, res, next, "freelancing", "marketing");
   //   codecademy(req, res, next, "freelancing", "marketing");
