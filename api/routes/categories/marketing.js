@@ -92,20 +92,20 @@ router.get("/", (req, res, next) => {
   // udemy(req, res, next, "seo", "marketing");
   // verbling(req, res, next, "seo", "marketing");
 
-  apnacourse(req, res, next, "affiliate marketing", "marketing");
-  //   arcademics(req, res, next, "affiliate marketing", "marketing");
-  //   bitdegree(req, res, next, "affiliate marketing", "marketing");
-  //   codecademy(req, res, next, "affiliate marketing", "marketing");
-  // coursera(req,res,next,'affiliate marketing','marketing');
-  //   digigrad(req, res, next, "affiliate marketing", "marketing");
-  //   edx(req, res, next, "affiliate marketing", "marketing");
-  //   harvard(req, res, next, "affiliate marketing", "marketing");
-  //   khanacademy(req, res, next, "affiliate marketing", "marketing");
-  //   openyale(req, res, next, "affiliate marketing", "marketing");
-  //   skillshare(req, res, next, "affiliate marketing", "marketing");
-  //   udacity(req, res, next, "affiliate marketing", "marketing");
+  // apnacourse(req, res, next, "affiliate marketing", "marketing");
+  // arcademics(req, res, next, "affiliate marketing", "marketing");
+  // bitdegree(req, res, next, "affiliate marketing", "marketing");
+  // codecademy(req, res, next, "affiliate marketing", "marketing");**
+  // coursera(req, res, next, "affiliate marketing", "marketing");**
+  // digigrad(req, res, next, "affiliate marketing", "marketing");
+  // edx(req, res, next, "affiliate marketing", "marketing");
+  // harvard(req, res, next, "affiliate marketing", "marketing");
+  // khanacademy(req, res, next, "affiliate marketing", "marketing");
+  // openyale(req, res, next, "affiliate marketing", "marketing");
+  // skillshare(req, res, next, "affiliate marketing", "marketing");
+  // udacity(req, res, next, "affiliate marketing", "marketing");
   // udemy(req, res, next, "affiliate marketing", "marketing");
-  //   verbling(req, res, next, "affiliate marketing", "marketing");
+  verbling(req, res, next, "affiliate marketing", "marketing");
 
   //   apnacourse(req, res, next, "content marketing", "marketing");
   //   arcademics(req, res, next, "content marketing", "marketing");
