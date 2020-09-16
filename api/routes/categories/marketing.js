@@ -81,10 +81,10 @@ router.get("/", (req, res, next) => {
   // arcademics(req, res, next, "seo", "marketing");
   // bitdegree(req, res, next, "seo", "marketing");
   // codecademy(req, res, next, "seo", "marketing");
-  coursera(req, res, next, "seo", "marketing");
-  //   digigrad(req, res, next, "seo", "marketing");
-  //   edx(req, res, next, "seo", "marketing");
-  //   harvard(req, res, next, "seo", "marketing");
+  // coursera(req, res, next, "seo", "marketing");
+  // digigrad(req, res, next, "seo", "marketing");
+  // edx(req, res, next, "seo", "marketing");**
+  harvard(req, res, next, "seo", "marketing");
   //   khanacademy(req, res, next, "seo", "marketing");
   //   openyale(req, res, next, "seo", "marketing");
   //   skillshare(req, res, next, "seo", "marketing");
