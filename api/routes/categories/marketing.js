@@ -16,6 +16,29 @@ const udacity = require("../../middleware/udacity");
 const udemy = require("../../middleware/udemy");
 const verbling = require("../../middleware/verbling");
 
+//NOT WORKING
+
+// codecademy(req, res, next, "google ads", "marketing");**
+// coursera(req, res, next, "google ads", "marketing");**
+// codecademy(req, res, next, "facebook ads", "marketing");**
+// coursera(req, res, next, "facebook ads", "marketing");**
+// skillshare(req, res, next, "facebook ads", "marketing");**
+// codecademy(req, res, next, "social media marketing", "marketing");**
+// coursera(req, res, next, "social media marketing", "marketing");**
+// codecademy(req, res, next, "email marketing", "marketing");**
+// edx(req, res, next, "seo", "marketing");**
+// skillshare(req, res, next, "seo", "marketing");**
+// codecademy(req, res, next, "affiliate marketing", "marketing");**
+// coursera(req, res, next, "affiliate marketing", "marketing");**
+// codecademy(req, res, next, "content marketing", "marketing");**
+// edx(req, res, next, "content marketing", "marketing");**
+// codecademy(req, res, next, "freelancing", "marketing");**
+// coursera(req, res, next, "freelancing", "marketing");**
+// digigrad(req, res, next, "freelancing", "marketing");**
+// edx(req, res, next, "freelancing", "marketing");**
+// skillshare(req, res, next, "freelancing", "marketing");**
+// codecademy(req, res, next, "growth hacking", "marketing");**
+
 router.get("/", (req, res, next) => {
   // apnacourse(req, res, next, "google ads", "marketing");
   // arcademics(req, res, next, "google ads", "marketing");
