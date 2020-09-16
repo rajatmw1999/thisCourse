@@ -107,20 +107,20 @@ router.get("/", (req, res, next) => {
   // udemy(req, res, next, "affiliate marketing", "marketing");
   // verbling(req, res, next, "affiliate marketing", "marketing");
 
-  apnacourse(req, res, next, "content marketing", "marketing");
-  //   arcademics(req, res, next, "content marketing", "marketing");
-  //   bitdegree(req, res, next, "content marketing", "marketing");
-  //   codecademy(req, res, next, "content marketing", "marketing");
-  //   coursera(req,res,next,'content marketing','marketing');
-  //   digigrad(req, res, next, "content marketing", "marketing");
-  //   edx(req, res, next, "content marketing", "marketing");
-  //   harvard(req, res, next, "content marketing", "marketing");
-  //   khanacademy(req, res, next, "content marketing", "marketing");
-  //   openyale(req, res, next, "content marketing", "marketing");
-  //   skillshare(req, res, next, "content marketing", "marketing");
-  //   udacity(req, res, next, "content marketing", "marketing");
+  // apnacourse(req, res, next, "content marketing", "marketing");
+  // arcademics(req, res, next, "content marketing", "marketing");
+  // bitdegree(req, res, next, "content marketing", "marketing");
+  // codecademy(req, res, next, "content marketing", "marketing");**
+  // coursera(req, res, next, "content marketing", "marketing");
+  // digigrad(req, res, next, "content marketing", "marketing");
+  // edx(req, res, next, "content marketing", "marketing");**
+  // harvard(req, res, next, "content marketing", "marketing");
+  // khanacademy(req, res, next, "content marketing", "marketing");
+  // openyale(req, res, next, "content marketing", "marketing");
+  // skillshare(req, res, next, "content marketing", "marketing");
+  // udacity(req, res, next, "content marketing", "marketing");
   // udemy(req, res, next, "content marketing", "marketing");
-  //   verbling(req, res, next, "content marketing", "marketing");
+  verbling(req, res, next, "content marketing", "marketing");
 
   //   apnacourse(req, res, next, "freelancing", "marketing");
   //   arcademics(req, res, next, "freelancing", "marketing");
