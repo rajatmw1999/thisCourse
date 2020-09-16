@@ -60,22 +60,22 @@ router.get("/", (req, res, next) => {
   // skillshare(req, res, next, "social media marketing", "marketing");
   // udacity(req, res, next, "social media marketing", "marketing");
   // udemy(req, res, next, "social media marketing", "marketing");
-  verbling(req, res, next, "social media marketing", "marketing");
+  // verbling(req, res, next, "social media marketing", "marketing");
 
-  //   apnacourse(req, res, next, "email marketing", "marketing");
-  //   arcademics(req, res, next, "email marketing", "marketing");
-  //   bitdegree(req, res, next, "email marketing", "marketing");
-  //   codecademy(req, res, next, "email marketing", "marketing");
-  // coursera(req,res,next,'email marketing','marketing');
-  //   digigrad(req, res, next, "email marketing", "marketing");
-  //   edx(req, res, next, "email marketing", "marketing");
-  //   harvard(req, res, next, "email marketing", "marketing");
-  //   khanacademy(req, res, next, "email marketing", "marketing");
-  //   openyale(req, res, next, "email marketing", "marketing");
-  //   skillshare(req, res, next, "email marketing", "marketing");
-  //   udacity(req, res, next, "email marketing", "marketing");
+  // apnacourse(req, res, next, "email marketing", "marketing");
+  // arcademics(req, res, next, "email marketing", "marketing");
+  // bitdegree(req, res, next, "email marketing", "marketing");
+  // codecademy(req, res, next, "email marketing", "marketing");**
+  // coursera(req, res, next, "email marketing", "marketing");
+  // digigrad(req, res, next, "email marketing", "marketing");
+  // edx(req, res, next, "email marketing", "marketing");
+  // harvard(req, res, next, "email marketing", "marketing");
+  // khanacademy(req, res, next, "email marketing", "marketing");
+  // openyale(req, res, next, "email marketing", "marketing");
+  // skillshare(req, res, next, "email marketing", "marketing");
+  // udacity(req, res, next, "email marketing", "marketing");
   // udemy(req, res, next, "email marketing", "marketing");
-  //   verbling(req, res, next, "email marketing", "marketing");
+  verbling(req, res, next, "email marketing", "marketing");
 
   //   apnacourse(req, res, next, "seo", "marketing");
   //   arcademics(req, res, next, "seo", "marketing");
