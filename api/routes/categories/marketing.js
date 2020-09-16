@@ -84,11 +84,11 @@ router.get("/", (req, res, next) => {
   // coursera(req, res, next, "seo", "marketing");
   // digigrad(req, res, next, "seo", "marketing");
   // edx(req, res, next, "seo", "marketing");**
-  harvard(req, res, next, "seo", "marketing");
-  //   khanacademy(req, res, next, "seo", "marketing");
-  //   openyale(req, res, next, "seo", "marketing");
-  //   skillshare(req, res, next, "seo", "marketing");
-  //   udacity(req, res, next, "seo", "marketing");
+  // harvard(req, res, next, "seo", "marketing");
+  // khanacademy(req, res, next, "seo", "marketing");
+  // openyale(req, res, next, "seo", "marketing");
+  // skillshare(req, res, next, "seo", "marketing");**
+  udacity(req, res, next, "seo", "marketing");
   // udemy(req, res, next, "seo", "marketing");
   //   verbling(req, res, next, "seo", "marketing");
 
