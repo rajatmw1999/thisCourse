@@ -107,6 +107,7 @@ router.get("/", (req, res, next) => {
   // udemy(req, res, next, "affiliate marketing", "marketing");
   // verbling(req, res, next, "affiliate marketing", "marketing");
 
+  // amlagvniihss   edyabm
   // apnacourse(req, res, next, "content marketing", "marketing");
   // arcademics(req, res, next, "content marketing", "marketing");
   // bitdegree(req, res, next, "content marketing", "marketing");
@@ -122,35 +123,35 @@ router.get("/", (req, res, next) => {
   // udemy(req, res, next, "content marketing", "marketing");
   // verbling(req, res, next, "content marketing", "marketing");
 
-  apnacourse(req, res, next, "freelancing", "marketing");
-  //   arcademics(req, res, next, "freelancing", "marketing");
-  //   bitdegree(req, res, next, "freelancing", "marketing");
-  //   codecademy(req, res, next, "freelancing", "marketing");
-  // coursera(req,res,next,'freelancing','marketing');
-  //   digigrad(req, res, next, "freelancing", "marketing");
-  //   edx(req, res, next, "freelancing", "marketing");
-  //   harvard(req, res, next, "freelancing", "marketing");
-  //   khanacademy(req, res, next, "freelancing", "marketing");
-  //   openyale(req, res, next, "freelancing", "marketing");
-  //   skillshare(req, res, next, "freelancing", "marketing");
-  //   udacity(req, res, next, "freelancing", "marketing");
+  // apnacourse(req, res, next, "freelancing", "marketing");
+  // arcademics(req, res, next, "freelancing", "marketing");
+  // bitdegree(req, res, next, "freelancing", "marketing");
+  // codecademy(req, res, next, "freelancing", "marketing");**
+  // coursera(req, res, next, "freelancing", "marketing");**
+  // digigrad(req, res, next, "freelancing", "marketing");**
+  // edx(req, res, next, "freelancing", "marketing");**
+  // harvard(req, res, next, "freelancing", "marketing");
+  // khanacademy(req, res, next, "freelancing", "marketing");
+  // openyale(req, res, next, "freelancing", "marketing");
+  // skillshare(req, res, next, "freelancing", "marketing");**
+  // udacity(req, res, next, "freelancing", "marketing");
   // udemy(req, res, next, "freelancing", "marketing");
-  //   verbling(req, res, next, "freelancing", "marketing");
+  // verbling(req, res, next, "freelancing", "marketing");
 
-  //   apnacourse(req, res, next, "growth hacking", "marketing");
-  //   arcademics(req, res, next, "growth hacking", "marketing");
-  //   bitdegree(req, res, next, "growth hacking", "marketing");
-  //   codecademy(req, res, next, "growth hacking", "marketing");
-  // coursera(req,res,next,'growth hacking','marketing');
-  //   digigrad(req, res, next, "growth hacking", "marketing");
-  //   edx(req, res, next, "growth hacking", "marketing");
-  //   harvard(req, res, next, "growth hacking", "marketing");
-  //   khanacademy(req, res, next, "growth hacking", "marketing");
-  //   openyale(req, res, next, "growth hacking", "marketing");
-  //   skillshare(req, res, next, "growth hacking", "marketing");
-  //   udacity(req, res, next, "growth hacking", "marketing");
+  // apnacourse(req, res, next, "growth hacking", "marketing");
+  // arcademics(req, res, next, "growth hacking", "marketing");
+  // bitdegree(req, res, next, "growth hacking", "marketing");
+  // codecademy(req, res, next, "growth hacking", "marketing");**
+  // coursera(req, res, next, "growth hacking", "marketing");
+  // digigrad(req, res, next, "growth hacking", "marketing");
+  // edx(req, res, next, "growth hacking", "marketing");
+  // harvard(req, res, next, "growth hacking", "marketing");
+  // khanacademy(req, res, next, "growth hacking", "marketing");
+  // openyale(req, res, next, "growth hacking", "marketing");
+  // skillshare(req, res, next, "growth hacking", "marketing");
+  // udacity(req, res, next, "growth hacking", "marketing");
   // udemy(req, res, next, "growth hacking", "marketing");
-  //   verbling(req, res, next, "growth hacking", "marketing");
+  // verbling(req, res, next, "growth hacking", "marketing");
 
   console.log("Inside Marketing");
   res.status(200).json({
