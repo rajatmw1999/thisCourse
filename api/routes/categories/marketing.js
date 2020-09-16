@@ -45,9 +45,9 @@ router.get("/", (req, res, next) => {
   // skillshare(req, res, next, "facebook ads", "marketing");**
   // udacity(req, res, next, "facebook ads", "marketing");
   // udemy(req, res, next, "facebook ads", "marketing");
-  verbling(req, res, next, "facebook ads", "marketing");
+  // verbling(req, res, next, "facebook ads", "marketing");
 
-  //   apnacourse(req, res, next, "social media marketing", "marketing");
+  apnacourse(req, res, next, "social media marketing", "marketing");
   //   arcademics(req, res, next, "social media marketing", "marketing");
   //   bitdegree(req, res, next, "social media marketing", "marketing");
   //   codecademy(req, res, next, "social media marketing", "marketing");
