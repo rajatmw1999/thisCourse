@@ -47,20 +47,20 @@ router.get("/", (req, res, next) => {
   // udemy(req, res, next, "facebook ads", "marketing");
   // verbling(req, res, next, "facebook ads", "marketing");
 
-  apnacourse(req, res, next, "social media marketing", "marketing");
-  //   arcademics(req, res, next, "social media marketing", "marketing");
-  //   bitdegree(req, res, next, "social media marketing", "marketing");
-  //   codecademy(req, res, next, "social media marketing", "marketing");
-  // coursera(req,res,next,'social media marketing','marketing');
-  //   digigrad(req, res, next, "social media marketing", "marketing");
-  //   edx(req, res, next, "social media marketing", "marketing");
-  //   harvard(req, res, next, "social media marketing", "marketing");
-  //   khanacademy(req, res, next, "social media marketing", "marketing");
-  //   openyale(req, res, next, "social media marketing", "marketing");
-  //   skillshare(req, res, next, "social media marketing", "marketing");
-  //   udacity(req, res, next, "social media marketing", "marketing");
+  // apnacourse(req, res, next, "social media marketing", "marketing");
+  // arcademics(req, res, next, "social media marketing", "marketing");
+  // bitdegree(req, res, next, "social media marketing", "marketing");
+  // codecademy(req, res, next, "social media marketing", "marketing");**
+  // coursera(req, res, next, "social media marketing", "marketing");**
+  // digigrad(req, res, next, "social media marketing", "marketing");
+  // edx(req, res, next, "social media marketing", "marketing");
+  // harvard(req, res, next, "social media marketing", "marketing");
+  // khanacademy(req, res, next, "social media marketing", "marketing");
+  // openyale(req, res, next, "social media marketing", "marketing");
+  // skillshare(req, res, next, "social media marketing", "marketing");
+  // udacity(req, res, next, "social media marketing", "marketing");
   // udemy(req, res, next, "social media marketing", "marketing");
-  //   verbling(req, res, next, "social media marketing", "marketing");
+  verbling(req, res, next, "social media marketing", "marketing");
 
   //   apnacourse(req, res, next, "email marketing", "marketing");
   //   arcademics(req, res, next, "email marketing", "marketing");
