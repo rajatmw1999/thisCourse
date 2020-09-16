@@ -87,7 +87,7 @@ app.use("/arcademicsSearch", arcademicsSearchRoutes);
 app.use("/harvardBusinessSearch", harvardBusinessSearchRoutes);
 app.use("/verblingSearch", verblingSearchRoutes);
 app.use("/roadmap", Roadmap);
-app.use("/marketing", marketingSearchRoutes);
+app.use("/marketingSearch", marketingSearchRoutes);
 app.use("/test", testRoute);
 app.use("/master", masterRoute);
 app.use("/development", developmentRoute);
