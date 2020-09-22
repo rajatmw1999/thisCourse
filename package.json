@@ -14,9 +14,13 @@
     "body-parser": "^1.19.0",
     "cheerio": "^1.0.0-rc.3",
     "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "googleapis": "^52.1.0",
+    "imagemin": "^7.0.1",
+    "imagemin-jpegtran": "^6.0.0",
+    "imagemin-pngquant": "^8.0.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.22",
     "mongoose-findorcreate": "^3.0.0",
@@ -36,7 +40,9 @@
     "react-render-html": "^0.6.0",
     "react-script-tag": "^1.1.2",
     "request": "^2.88.2",
-    "request-promise": "^4.2.5"
+    "request-promise": "^4.2.5",
+    "sharp": "^0.23.4",
+    "webshot": "^0.18.0"
   },
   "devDependencies": {},
   "repository": {
