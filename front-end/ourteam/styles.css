@@ -25,6 +25,12 @@
 	color: #000000;
 	margin-right: 5%;
 }
+.vanshika-ot-img:hover{
+	transition: .2s;
+}
+.vanshika-ot-img:hover{
+	transform: scale(1.04);
+}
 
 
 
