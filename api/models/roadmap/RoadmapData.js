@@ -8,38 +8,34 @@ const Roadmap_Data = new mongoose.Schema({
     type: String,
   },
   DatePublished: {
-    type: Date,
+    type: String,
+  },
+  ImageofAuthor:{
+    type:String
+  },
+  DescofAuthor:{
+    type:String
+  },
+  WorkofAuthor:{
+    type:String
   },
   Likes: {
     type: Number,
   },
   ImageLink: {
-    type: URL,
+    type: String,
   },
   Category: {
     type: String,
   },
-  Tags: [
-    {
-      type: String,
-    },
-  ],
-  Text: {
-    type: String,
+  Tags: {
+    type:String
   },
-  Timeline: [
-    {
-      name: {
-        type: String,
-      },
-      desc: {
-        type: String,
-      },
-      time: {
-        type: Number,
-      },
-    },
-  ],
+  Text: {
+    type:String,
+  },
+  TimelineTopics:String,
+  TimelineData:String
 });
 
 module.exports = RoadmapData = mongoose.model("RoadmapData", Roadmap_Data);

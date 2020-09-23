@@ -1137,8 +1137,14 @@ body {
     }
 
     .icon-keyboard_arrow_left:before {
-        content: "\e314";
-      }
+		content: "\e314";
+		background: #ee1e46;
+	  }
+	
+	.icon-keyboard_arrow_right:before{
+		background: #ee1e46;
+	}
+	  
 
 
     .sleft{

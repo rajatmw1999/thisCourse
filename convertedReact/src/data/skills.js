@@ -1,0 +1,1129 @@
+const skillsData = [
+    {
+        category:"Development-Web",
+        skills:[
+            {
+                displayName:"Javascript",
+                imageUrl:"https://img.icons8.com/color/48/000000/javascript.png",
+                redirectLink:"/javascript",
+                desc:"",
+                db:"javascript"
+            },
+            {
+                displayName:"React",
+                imageUrl:"https://img.icons8.com/plasticine/100/000000/react.png",
+                redirectLink:"/react",
+                desc:"",
+                db:"react"
+            },
+            {
+                displayName:"Angular",
+                imageUrl:"https://img.icons8.com/color/48/000000/angularjs.png",
+                redirectLink:"/angular",
+                desc:"",
+                db:"angular"
+            },
+            {
+                displayName:"CSS",
+                imageUrl:"https://img.icons8.com/color/48/000000/css3.png",
+                redirectLink:"/css",
+                desc:"",
+                db:"css"
+            },
+            {
+                displayName:"PHP",
+                imageUrl:"https://img.icons8.com/officel/16/000000/php-logo.png",
+                redirectLink:"/php",
+                desc:"",
+                db:"php"
+            },
+            {
+                displayName:"Node Js",
+                imageUrl:"https://img.icons8.com/color/48/000000/nodejs.png",
+                redirectLink:"/node-js",
+                desc:"",
+                db:"node-js"
+            },
+            {
+                displayName:"Python",
+                imageUrl:"https://img.icons8.com/color/48/000000/python.png",
+                redirectLink:"/python-django",
+                desc:"",
+                db:"python-django"
+            },
+            {
+                displayName:"Wordpress",
+                imageUrl:"https://img.icons8.com/color/48/000000/wordpress.png",
+                redirectLink:"/wordpress",
+                desc:"",
+                db:"wordpress"
+            },
+        ],
+        imageUrl:"https://img.icons8.com/flat_round/64/000000/communication-skill.png",
+        redirectLink: "/development",
+        displayName: "Web Development",
+        desc:""
+    },
+    {
+        category:"Development-Mobile",
+        skills:[
+            {
+                displayName:"Android",
+                imageUrl:"https://img.icons8.com/color/64/000000/android-os.png",
+                redirectLink:"/android-app",
+                desc:"",
+                db:"android-app"
+            },
+            {
+                displayName:"Flutter",
+                imageUrl:"https://img.icons8.com/color/48/000000/flutter.png",
+                redirectLink:"/flutter",
+                desc:"",
+                db:"flutter"
+            },
+            {
+                displayName:"Ios App",
+                imageUrl:"https://img.icons8.com/nolan/64/ios-logo.png",
+                redirectLink:"/ios-app",
+                desc:"",
+                db:"ios-app"
+            },
+            {
+                displayName:"React Native",
+                imageUrl:"https://img.icons8.com/color/64/000000/react-native.png",
+                redirectLink:"/react-native",
+                desc:"",
+                db:"react-native"
+            },
+            {
+                displayName:"Dart",
+                imageUrl:"https://img.icons8.com/color/48/000000/dart.png",
+                redirectLink:"/dart-mobile",
+                desc:"",
+                db:"dart-mobile"
+            },
+            {
+                displayName:"Kotlin",
+                imageUrl:"https://img.icons8.com/color/48/000000/kotlin.png",
+                redirectLink:"/kotlin",
+                desc:"",
+                db:"kotlin"
+            },
+        ],
+        imageUrl:"https://img.icons8.com/flat_round/64/000000/communication-skill.png",
+        redirectLink: "/development",
+        displayName: "Mobile Apps",
+        desc:""
+    },
+    {
+        category:"Development-DataScience",
+        skills:[
+            {
+                displayName:"Python",
+                imageUrl:"https://img.icons8.com/color/48/000000/python.png",
+                redirectLink:"/python",
+                desc:"",
+                db:"python"
+            },
+            {
+                displayName:"Machine Learning",
+                imageUrl:"https://img.icons8.com/doodle/48/000000/learning.png",
+                redirectLink:"/machine-learning",
+                desc:"",
+                db:"machine-learning"
+            },
+            {
+                displayName:"Deep Learning",
+                imageUrl:"https://img.icons8.com/flat_round/64/000000/communication-skill.png",
+                redirectLink:"/deep-learning",
+                desc:"",
+                db:"deep-learning"
+            },
+            {
+                displayName:"Data Analysis",
+                imageUrl:"https://img.icons8.com/color/48/000000/pie-chart--v1.png",
+                redirectLink:"/data-analysis",
+                desc:"",
+                db:"data-analysis"
+            },
+            {
+                displayName:"R",
+                imageUrl:"https://img.icons8.com/color/48/000000/ruby-programming-language.png",
+                redirectLink:"/r-programming",
+                desc:"",
+                db:"r-programming"
+            },
+            {
+                displayName:"Tensorflow",
+                imageUrl:"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/1200px-Tensorflow_logo.svg.png",
+                redirectLink:"/tensor-flow",
+                desc:"",
+                db:"tensor-flow"
+            },
+            {
+                displayName:"Artifical Intelligence",
+                imageUrl:"https://img.icons8.com/color/48/000000/artificial-intelligence.png",
+                redirectLink:"/artificial-intelligence",
+                desc:"",
+                db:"artificial-intelligence"
+            },
+            {
+                displayName:"Data Science",
+                imageUrl:"https://img.icons8.com/flat_round/64/000000/communication-skill.png",
+                redirectLink:"/data-science",
+                desc:"",
+                db:"data-science"
+            }
+        ],
+        imageUrl:"https://img.icons8.com/flat_round/64/000000/communication-skill.png",
+        redirectLink: "/development",
+        displayName: "Data Science",
+        desc:""
+    },
+    {
+        category:"Development-Programming",
+        skills:[
+            {
+                displayName:"C",
+                imageUrl:"https://img.icons8.com/color/48/000000/c-programming.png",
+                redirectLink:"/c-programming",
+                desc:"",
+                db:"c-programming"
+            },
+            {
+                displayName:"CPP",
+                imageUrl:"https://img.icons8.com/color/48/000000/c-plus-plus-logo.png",
+                redirectLink:"/cpp-programming",
+                desc:"",
+                db:"cpp-programming"
+            },
+            {
+                displayName:"Java",
+                imageUrl:"https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png",
+                redirectLink:"/java-programming",
+                desc:"",
+                db:"java-programming"
+            },
+            {
+                displayName:"C#",
+                imageUrl:"https://img.icons8.com/color/48/000000/c-sharp-logo-2.png",
+                redirectLink:"/c#",
+                desc:"",
+                db:"c#"
+            },
+            {
+                displayName:"Spring",
+                imageUrl:"https://img.icons8.com/color/48/000000/spring-logo.png",
+                redirectLink:"/spring-programming",
+                desc:"",
+                db:"spring-programming"
+            },
+        ],
+        imageUrl:"https://img.icons8.com/flat_round/64/000000/communication-skill.png",
+        redirectLink: "/development",
+        displayName: "Programming Languages",
+        desc:""
+    },
+    {
+        category:"Development-Game",
+        skills:[
+            {
+                displayName:"Unity",
+                imageUrl:"https://img.icons8.com/ios-filled/50/000000/unity.png",
+                redirectLink:"/unity",
+                desc:"",
+                db:"unity"
+            },
+            {
+                displayName:"Unreal Engine",
+                imageUrl:"https://img.icons8.com/ios-filled/50/000000/unreal-engine.png",
+                redirectLink:"/unreal-engine",
+                desc:"",
+                db:"unreal-engine"
+            },
+            {
+                displayName:"Blender",
+                imageUrl:"https://img.icons8.com/color/48/000000/blender-3d.png",
+                redirectLink:"/blender",
+                desc:"",
+                db:"blender"
+            },
+            {
+                displayName:"3D Game Development",
+                imageUrl:"https://img.icons8.com/officel/16/000000/controller.png",
+                redirectLink:"/3d-game-development",
+                desc:"",
+                db:"3d-game-development"
+            },
+            {
+                displayName:"2D Game Development",
+                imageUrl:"https://img.icons8.com/doodle/48/000000/controller.png",
+                redirectLink:"/2d-game-development",
+                desc:"",
+                db:"2d-game-development"
+            },
+        ],
+        imageUrl:"https://img.icons8.com/flat_round/48/000000/communication-skill.png",
+        redirectLink: "/development",
+        displayName: "Game Development",
+        desc:""
+    },
+    {
+        category:"Development-Databases",
+        skills:[
+            {
+                displayName:"SQL",
+                imageUrl:"https://img.icons8.com/ios-filled/16/000000/database.png",
+                redirectLink:"/sql",
+                desc:"",
+                db:"sql"
+            },
+            {
+                displayName:"NoSQL",
+                imageUrl:"https://img.icons8.com/fluent/48/000000/database.png",
+                redirectLink:"/no-sql",
+                desc:"",
+                db:"no-sql"
+            },
+            {
+                displayName:"MySQL",
+                imageUrl:"https://img.icons8.com/ios-filled/50/000000/mysql-logo.png",
+                redirectLink:"/my-sql",
+                desc:"",
+                db:"my-sql"
+            },
+            {
+                displayName:"PostgreSQL",
+                imageUrl:"https://img.icons8.com/color/48/000000/postgreesql.png",
+                redirectLink:"/postgre-sql",
+                desc:"",
+                db:"postgre-sql"
+            },
+        ],
+        imageUrl:"https://img.icons8.com/flat_round/48/000000/communication-skill.png",
+        redirectLink: "/development",
+        displayName: "Databases",
+        desc:""
+    },
+    {
+        category:"Development-DevOps",
+        skills:[
+            {
+                displayName:"AWS",
+                imageUrl:"https://img.icons8.com/color/48/000000/amazon-web-services.png",
+                redirectLink:"/aws",
+                desc:"",
+                db:"aws"
+            },
+            {
+                displayName:"Kubernetes",
+                imageUrl:"https://img.icons8.com/color/48/000000/kubernetes.png",
+                redirectLink:"/kubernetes",
+                desc:"",
+                db:"kubernetes"
+            },
+            {
+                displayName:"Microservices",
+                imageUrl:"https://img.icons8.com/flat_round/48/000000/communication-skill.png",
+                redirectLink:"/microservices",
+                desc:"",
+                db:"microservices"
+            },
+            {
+                displayName:"Docker",
+                imageUrl:"https://img.icons8.com/color/48/000000/docker.png",
+                redirectLink:"/docker",
+                desc:"",
+                db:"docker"
+            },
+            {
+                displayName:"Git",
+                imageUrl:"https://img.icons8.com/color/48/000000/git.png",
+                redirectLink:"/git-github",
+                desc:"",
+                db:"git-github"
+            },
+            {
+                displayName:"Jenkins",
+                imageUrl:"https://img.icons8.com/color/48/000000/jenkins.png",
+                redirectLink:"/jenkins",
+                desc:"",
+                db:"jenkins"
+            },
+        ],
+        imageUrl:"https://img.icons8.com/material/24/000000/devops.png",
+        redirectLink: "/development",
+        displayName: "DevOps",
+        desc:""
+    },
+    {
+        category:"Business-Finance",
+        skills:[
+            {
+                displayName:"Stock Trading",
+                imageUrl:"https://img.icons8.com/carbon-copy/100/000000/stocks.png",
+                redirectLink:"/stock-trading",
+                desc:"",
+                db:"stock-trading"
+            },
+            {
+                displayName:"Investing",
+                imageUrl:"https://img.icons8.com/fluent/48/000000/investment.png",
+                redirectLink:"/investing",
+                desc:"",
+                db:"investing"
+            },
+            {
+                displayName:"Accounting",
+                imageUrl:"https://img.icons8.com/plasticine/48/000000/accounting.png",
+                redirectLink:"/accounting",
+                desc:"",
+                db:"accounting"
+            },
+            {
+                displayName:"MS Excel",
+                imageUrl:"https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png",
+                redirectLink:"/ms-excel",
+                desc:"",
+                db:"ms-excel"
+            },
+            {
+                displayName:"Financial Analysis",
+                imageUrl:"https://img.icons8.com/fluent/48/000000/financial-growth-analysis.png",
+                redirectLink:"/financial-analysis",
+                desc:"",
+                db:"financial-analysis"
+            },
+            {
+                displayName:"Tally",
+                imageUrl:"https://upload.wikimedia.org/wikipedia/commons/0/09/Tally_-_Logo.png",
+                redirectLink:"/tally-",
+                desc:"",
+                db:"tally"
+            },
+            {
+                displayName:"Book Keeping",
+                imageUrl:"https://img.icons8.com/fluent/48/000000/book.png",
+                redirectLink:"/book-keeping",
+                desc:"",
+                db:"book-keeping"
+            },
+        ],
+        imageUrl:"https://img.icons8.com/color/48/000000/coin-in-hand.png",
+        redirectLink: "/business",
+        displayName: "Finance",
+        desc:""
+    },
+    {
+        category:"Business-Communication",
+        skills:[
+            {
+                displayName:"Writing",
+                imageUrl:"https://img.icons8.com/color/48/000000/hand-with-pen.png",
+                redirectLink:"/writing",
+                desc:"",
+                db:"writing"
+            },
+            {
+                displayName:"Public Speaking",
+                imageUrl:"https://img.icons8.com/color/48/000000/micro.png",
+                redirectLink:"/public-speaking",
+                desc:"",
+                db:"public-speaking"
+            },
+            {
+                displayName:"Selling",
+                imageUrl:"https://img.icons8.com/color/48/000000/reseller.png",
+                redirectLink:"/selling-sales",
+                desc:"",
+                db:"selling-sales"
+            },
+            {
+                displayName:"Technical Writing",
+                imageUrl:"https://img.icons8.com/color/48/000000/keyboard.png",
+                redirectLink:"/technical-writing",
+                desc:"",
+                db:"technical-writing"
+            },
+            {
+                displayName:"Presentational Skills",
+                imageUrl:"https://img.icons8.com/color/48/000000/presentation.png",
+                redirectLink:"/presentation-skills",
+                desc:"",
+                db:"presentation-skills"
+            },
+        ],
+        imageUrl:"https://img.icons8.com/color/48/000000/communication.png",
+        redirectLink: "/business",
+        displayName: "Communication",
+        desc:""
+    },
+    {
+        category:"Business-Management",
+        skills:[
+            {
+                displayName:"Product Management",
+                imageUrl:"https://img.icons8.com/color/48/000000/commercial-development-management.png",
+                redirectLink:"/product-management",
+                desc:"",
+                db:"product-management"
+            },
+            {
+                displayName:"Business Process",
+                imageUrl:"https://img.icons8.com/color/48/000000/client-company.png",
+                redirectLink:"/business-process",
+                desc:"",
+                db:"business-process"
+            },
+            {
+                displayName:"Risk Management",
+                imageUrl:"https://img.icons8.com/color/48/000000/project-management.png",
+                redirectLink:"/risk-management",
+                desc:"",
+                db:"risk-management"
+            },
+            {
+                displayName:"Leadership",
+                imageUrl:"https://img.icons8.com/color/48/000000/leadership.png",
+                redirectLink:"/leadership",
+                desc:"",
+                db:"leadership"
+            },
+            {
+                displayName:"Suplly Chains",
+                imageUrl:"https://img.icons8.com/color/48/000000/chain.png",
+                redirectLink:"/supply-chains",
+                desc:"",
+                db:"supply-chains"
+            },
+            {
+                displayName:"Agile",
+                imageUrl:"https://img.icons8.com/color/48/000000/development-skill.png",
+                redirectLink:"/agile",
+                desc:"",
+                db:"agile"
+            },
+        ],
+        imageUrl:"https://img.icons8.com/color/48/000000/development-skill.png",
+        redirectLink: "/business",
+        displayName: "Management",
+        desc:""
+    },
+    {
+        category:"Business-HumanResources",
+        skills:[
+            {
+                displayName:"Hiring",
+                imageUrl:"https://img.icons8.com/color/48/000000/permanent-job.png",
+                redirectLink:"/hiring-hr",
+                desc:"",
+                db:"hiring-hr"
+            },
+            {
+                displayName:"Emotional Intelligence",
+                imageUrl:"https://img.icons8.com/color/48/000000/brainstorm-skill.png",
+                redirectLink:"/emotional-intelligence",
+                desc:"",
+                db:"emotional-intelligence"
+            },
+            {
+                displayName:"Conflict Resolution",
+                imageUrl:"https://img.icons8.com/color/48/000000/peace-symbol.png",
+                redirectLink:"/conflict-resolution",
+                desc:"",
+                db:"conflict-resolution"
+            },
+            {
+                displayName:"Talent Management",
+                imageUrl:"https://img.icons8.com/color/48/000000/admin-settings-male.png",
+                redirectLink:"/talent-management",
+                desc:"",
+                db:"talent-management"
+            },
+        ],
+        imageUrl:"https://img.icons8.com/color/48/000000/conference.png",
+        redirectLink: "/business",
+        displayName: "Human Resources",
+        desc:""
+    },
+    {
+        category:"Business-Media",
+        skills:[
+            {
+                displayName:"Podcast",
+                imageUrl:"https://img.icons8.com/color/48/000000/microphone.png",
+                redirectLink:"/podcast-media",
+                desc:"",
+                db:"podcast-media"
+            },
+            {
+                displayName:"Youtube",
+                imageUrl:"https://img.icons8.com/color/48/000000/youtube-tourtials.png",
+                redirectLink:"/youtube",
+                desc:"",
+                db:"youtube"
+            },
+            {
+                displayName:"Journalism",
+                imageUrl:"https://img.icons8.com/color/48/000000/news.png",
+                redirectLink:"/journalism",
+                desc:"",
+                db:"journalism"
+            },
+            {
+                displayName:"SEO",
+                imageUrl:"https://img.icons8.com/color/48/000000/view-file.png",
+                redirectLink:"/seo-optimization",
+                desc:"",
+                db:"seo-optimization"
+            },
+            {
+                displayName:"Amazon Kindle",
+                imageUrl:"https://img.icons8.com/color/48/000000/amazon.png",
+                redirectLink:"/amazon-kindle",
+                desc:"",
+                db:"amazon-kindle"
+            },
+            {
+                displayName:"Adobe",
+                imageUrl:"https://img.icons8.com/color/48/000000/adobe-creative-cloud.png",
+                redirectLink:"/adobe-design",
+                desc:"",
+                db:"adobe-design"
+            },
+        ],
+        imageUrl:"https://img.icons8.com/color/48/000000/camcorder-pro.png",
+        redirectLink: "/business",
+        displayName: "Media",
+        desc:""
+    },
+    {
+        category:"IT-NetworkSecurity",
+        skills:[
+            {
+                displayName:"Ethical Hacking",
+                imageUrl:"https://img.icons8.com/color/48/000000/hacking.png",
+                redirectLink:"/ethical-hacking",
+                desc:"",
+                db:"ethical-hacking"
+            },
+            {
+                displayName:"Cyber Security",
+                imageUrl:"https://img.icons8.com/color/48/000000/keyhole-shield.png",
+                redirectLink:"/cyber-security",
+                desc:"",
+                db:"cyber-security"
+            },
+            {
+                displayName:"Penetration Testing",
+                imageUrl:"https://img.icons8.com/color/48/000000/ab-testing.png",
+                redirectLink:"/penetration-testing",
+                desc:"",
+                db:"penetration-testing"
+            },
+            {
+                displayName:"Network Security",
+                imageUrl:"https://img.icons8.com/color/48/000000/network.png",
+                redirectLink:"/network-security",
+                desc:"",
+                db:"network-security"
+            },
+            {
+                displayName:"IT networking",
+                imageUrl:"https://img.icons8.com/color/48/000000/networking-manager.png",
+                redirectLink:"/it-networking",
+                desc:"",
+                db:"it-networking"
+            },
+        ],
+        imageUrl:"https://img.icons8.com/color/48/000000/security-configuration.png",
+        redirectLink: "/it",
+        displayName: "Network and Security",
+        desc:""
+    },
+    {
+        category:"IT-hardware",
+        skills:[
+            {
+                displayName:"Arduino",
+                imageUrl:"https://img.icons8.com/color/48/000000/arduino.png",
+                redirectLink:"/arduino",
+                desc:"",
+                db:"arduino"
+            },
+            {
+                displayName:"PLC",
+                imageUrl:"https://img.icons8.com/flat_round/64/000000/communication-skill.png",
+                redirectLink:"/plc",
+                desc:"",
+                db:"plc"
+            },
+            {
+                displayName:"MicroControllers",
+                imageUrl:"https://img.icons8.com/flat_round/64/000000/communication-skill.png",
+                redirectLink:"/pmicro-controllers",
+                desc:"",
+                db:"micro-controllers"
+            },
+            {
+                displayName:"Raspberry Pi",
+                imageUrl:"https://img.icons8.com/color/64/000000/raspberry-pi.png",
+                redirectLink:"/raspberry-pi",
+                desc:"",
+                db:"raspberry-pi"
+            },
+            {
+                displayName:"Embedded Systems",
+                imageUrl:"https://img.icons8.com/wired/48/000000/circuit.png",
+                redirectLink:"/embedded-systems",
+                desc:"",
+                db:"embedded-systems"
+            },
+            {
+                displayName:"Embedded C",
+                imageUrl:"https://img.icons8.com/material/24/000000/circled-c.png",
+                redirectLink:"/embedded-c",
+                desc:"",
+                db:"embedded-c"
+            },
+        ],
+        imageUrl:"https://img.icons8.com/color/48/000000/development-skill.png",
+        redirectLink: "/it",
+        displayName: "Embedded Systems",
+        desc:""
+    },
+    {
+        category:"Personal",
+        skills:[
+            {
+                displayName:"Meditation",
+                imageUrl:"https://img.icons8.com/color/48/000000/meditation-guru.png",
+                redirectLink:"/meditation",
+                desc:"",
+                db:"meditation"
+            },
+            {
+                displayName:"Time Management",
+                imageUrl:"https://img.icons8.com/dusk/64/000000/time-management.png",
+                redirectLink:"/time-management",
+                desc:"",
+                db:"time-management"
+            },
+            {
+                displayName:"Organization",
+                imageUrl:"#",
+                redirectLink:"/organization",
+                desc:"",
+                db:"organization"
+            },
+            {
+                displayName:"Pesonal Management",
+                imageUrl:"https://img.icons8.com/fluent/48/000000/organization-chart-people.png",
+                redirectLink:"/personal-management",
+                desc:"",
+                db:"personal-management"
+            },
+            {
+                displayName:"Resume Writing",
+                imageUrl:"https://img.icons8.com/fluent/48/000000/attach-resume-male.png",
+                redirectLink:"/resume-writing",
+                desc:"",
+                db:"resume-writing"
+            },
+            {
+                displayName:"Life Coaching",
+                imageUrl:"https://img.icons8.com/doodle/48/000000/coaching.png",
+                redirectLink:"/life-coaching",
+                desc:"",
+                db:"life-coaching"
+            },
+            {
+                displayName:"Personal Branding",
+                imageUrl:"https://img.icons8.com/ios-filled/50/000000/personal-growth.png",
+                redirectLink:"/personal-branding",
+                desc:"",
+                db:"personal-branding"
+            },
+            {
+                displayName:"Digital Marketing",
+                imageUrl:"https://img.icons8.com/dusk/64/000000/marketing.png",
+                redirectLink:"/digital-marketing",
+                desc:"",
+                db:"digital-marketing"
+            },
+            {
+                displayName:"Stress Management",
+                imageUrl: "https://img.icons8.com/fluent/48/000000/communication-skill.png",
+                redirectLink:"/stress-management",
+                desc:"",
+                db:"stress-management"
+            },
+            {
+                displayName:"Photography",
+                imageUrl:"https://img.icons8.com/officel/40/000000/panorama.png",
+                redirectLink:"/photography-photo",
+                desc:"",
+                db:"photography-photo"
+            },
+        ],
+        imageUrl:"https://img.icons8.com/color/48/000000/development-skill.png",
+        redirectLink: "/personal",
+        displayName: "Personal Development",
+        desc:""
+    },
+    {
+        category:"Design-Web",
+        skills:[
+            {
+                displayName:"HTML",
+                imageUrl:"https://img.icons8.com/color/48/000000/html-5.png",
+                redirectLink:"/html-design",
+                desc:"",
+                db:"html-design"
+            },
+            {
+                displayName:"CSS",
+                imageUrl:"https://img.icons8.com/color/48/000000/css3.png",
+                redirectLink:"/css-design",
+                desc:"",
+                db:"css-design"
+            },
+            {
+                displayName:"Adobe Illustration",
+                imageUrl:"https://img.icons8.com/color/48/000000/adobe-illustrator.png",
+                redirectLink:"/adobe-illustrator",
+                desc:"",
+                db:"adobe-illustrator"
+            },
+            {
+                displayName:"PhotoShop",
+                imageUrl:"https://img.icons8.com/color/48/000000/adobe-photoshop.png",
+                redirectLink:"/photoshop-design",
+                desc:"",
+                db:"photoshop-design"
+            },
+        ],
+        imageUrl:"https://img.icons8.com/color/48/000000/web-design.png",
+        redirectLink: "/design",
+        displayName: "Web Design",
+        desc:""
+    },
+    {
+        category:"Design-Graphic",
+        skills:[
+            {
+                displayName:"Photoshop",
+                imageUrl:"https://img.icons8.com/color/48/000000/adobe-photoshop.png",
+                redirectLink:"/photoshop-design",
+                desc:"",
+                db:"photoshop-design"
+            },
+            {
+                displayName:"Logo Design",
+                imageUrl:"https://img.icons8.com/dusk/64/000000/web-design.png",
+                redirectLink:"/logo-design",
+                desc:"",
+                db:"logo-design"
+            },
+            {
+                displayName:"Adobe After Effects",
+                imageUrl:"https://img.icons8.com/color/64/000000/adobe-after-effects.png",
+                redirectLink:"/after-effects",
+                desc:"",
+                db:"after-effects"
+            },
+            {
+                displayName:"AutoCAD",
+                imageUrl:"https://img.icons8.com/color/48/000000/autodesk-autocad.png",
+                redirectLink:"/autocad-design",
+                desc:"",
+                db:"autocad-design"
+            },
+            {
+                displayName:"Video Editing",
+                imageUrl:"https://img.icons8.com/dusk/48/000000/video-editing.png",
+                redirectLink:"/video-editing",
+                desc:"",
+                db:"video-editing"
+            },
+            {
+                displayName:"Blender",
+                imageUrl:"https://img.icons8.com/color/64/000000/blender-3d.png",
+                redirectLink:"/blender",
+                desc:"",
+                db:"blender"
+            },
+            {
+                displayName:"Circuit Design",
+                imageUrl:"https://img.icons8.com/doodle/48/000000/circuit.png",
+                redirectLink:"/circuit-design",
+                desc:"",
+                db:"circuit-design"
+            },
+        ],
+        imageUrl:"https://img.icons8.com/nolan/64/photo-editor.png",
+        redirectLink: "/design",
+        displayName: "Graphic Design",
+        desc:""
+    },
+    {
+        category:"Marketing",
+        skills:[
+            {
+                displayName:"Google Ads",
+                imageUrl:"https://img.icons8.com/color/48/000000/google-ads.png",
+                redirectLink:"/google-ads",
+                desc:"",
+                db:"google-ads"
+            },
+            {
+                displayName:"Facebook Ads",
+                imageUrl:"https://img.icons8.com/color/48/000000/remove-ads.png",
+                redirectLink:"/facebook-ads",
+                desc:"",
+                db:"facebook-ads"
+            },
+            {
+                displayName:"Social Media Marketing",
+                imageUrl:"https://img.icons8.com/dusk/64/000000/social-network.png",
+                redirectLink:"/social-marketing",
+                desc:"",
+                db:"social-marketing"
+            },
+            {
+                displayName:"Email Marketing",
+                imageUrl:"https://img.icons8.com/plasticine/100/000000/email.png",
+                redirectLink:"/email-marketing",
+                desc:"",
+                db:"email-marketing"
+            },
+            {
+                displayName:"SEO",
+                imageUrl:"https://img.icons8.com/plasticine/100/000000/google-web-search.png",
+                redirectLink:"/seo-optimization",
+                desc:"",
+                db:"seo-optimization"
+            },
+            {
+                displayName:"Affiliate Marketing",
+                imageUrl:"https://img.icons8.com/fluent/48/000000/web-advertising.png",
+                redirectLink:"/affiliate-marketing",
+                desc:"",
+                db:"affiliate-marketing"
+            },
+            {
+                displayName:"Content Marketing",
+                imageUrl:"https://img.icons8.com/fluent/48/000000/content.png",
+                redirectLink:"/content-marketing",
+                desc:"",
+                db:"content-marketing"
+            },
+            {
+                displayName:"Free Lancing",
+                imageUrl: "https://img.icons8.com/color/48/000000/web-design.png",
+                redirectLink:"/freelancing-freelancer",
+                desc:"",
+                db:"freelancing-freelancer"
+            },
+            {
+                displayName:"Growth Hacking",
+                imageUrl:"https://img.icons8.com/fluent/48/000000/person-growth.png",
+                redirectLink:"/growth-strategy",
+                desc:"",
+                db:"growth-strategy"
+            },
+        ],
+        imageUrl:"https://img.icons8.com/material-sharp/48/000000/web-advertising.png",
+        redirectLink: "/marketing",
+        displayName: "Marketing",
+        desc:""
+    },{
+    category:"Academics-Engineering",
+    skills:[
+        {
+            displayName:"Data Structure",
+            imageUrl:"https://img.icons8.com/color/48/000000/data-.png",
+            redirectLink:"/data-structure",
+            desc:"",
+            db:"data-structure"
+        },
+        {
+            displayName:"Algorithms",
+            imageUrl:"https://img.icons8.com/officel/16/000000/incoming-data.png",
+            redirectLink:"/algorithms-dsa",
+            desc:"",
+            db:"algorithms-dsa"
+        },
+        {
+            displayName:"Electronics",
+            imageUrl:"https://img.icons8.com/officel/40/000000/electronics.png",
+            redirectLink:"/electronics-circuit",
+            desc:"",
+            db:"electronics-circuit"
+        },
+        {
+            displayName:"Robotics",
+            imageUrl:"https://img.icons8.com/doodle/48/000000/robot.png",
+            redirectLink:"/robotics-electronics",
+            desc:"",
+            db:"robotics-electronics"
+        },
+        {
+            displayName:"Structural Engineering",
+            imageUrl:"https://img.icons8.com/nolan/64/engineering.png",
+            redirectLink:"/structural-engineering",
+            desc:"",
+            db:"structural-engineering"
+        },
+        {
+            displayName:"Mechanical Engineering",
+            imageUrl:"https://img.icons8.com/color/64/000000/engineering.png",
+            redirectLink:"/mechanical-engineering",
+            desc:"",
+            db:"mechanical-engineering"
+        },
+    ],
+    imageUrl:"https://img.icons8.com/dusk/64/000000/engineering.png",
+    redirectLink: "/academics",
+    displayName: "Engineering",
+    desc:""
+},
+{
+category:"Academics-Math",
+skills:[
+    {
+        displayName:"Calculus",
+        imageUrl: "https://img.icons8.com/office/16/000000/approximately-equal-2.png",
+        redirectLink:"/calculus",
+        desc:"",
+        db:"calculus"
+    },
+    {
+        displayName:"Trigonometry",
+        imageUrl:"https://img.icons8.com/fluent/16/000000/trigonometry.png",
+        redirectLink:"/trigonometry",
+        desc:"",
+        db:"trigonometry"
+    },
+    {
+        displayName:"Geometry",
+        imageUrl:"https://img.icons8.com/color/48/000000/geometry.png",
+        redirectLink:"/geometry-math",
+        desc:"",
+        db:"geometry-math"
+    },
+    {
+        displayName:"Algebra",
+        imageUrl:"https://img.icons8.com/office/40/000000/square-root.png",
+        redirectLink:"/algebra",
+        desc:"",
+        db:"algebra"
+    },
+    {
+        displayName:"Discrete Math",
+        imageUrl:"https://img.icons8.com/color/48/000000/math.png",
+        redirectLink:"/discrete-math",
+        desc:"",
+        db:"discrete-math"
+    },
+],
+imageUrl:"https://img.icons8.com/officel/40/000000/upvote-downvote.png",
+redirectLink: "/academics",
+displayName: "Math",
+desc:""
+},{
+category:"Academics-Science",
+skills:[
+    {
+        displayName:"Physics",
+        imageUrl:"https://img.icons8.com/cotton/64/000000/physics--v1.png",
+        redirectLink:"/physics",
+        desc:"",
+        db:"physics"
+    },
+    {
+        displayName:"Biology",
+        imageUrl:"https://img.icons8.com/officel/40/000000/dna-helix.png",
+        redirectLink:"/biology",
+        desc:"",
+        db:"biology"
+    },
+    {
+        displayName:"Chemistry",
+        imageUrl:"https://img.icons8.com/fluent/48/000000/test-tube.png",
+        redirectLink:"/chemistry",
+        desc:"",
+        db:"chemistry"
+    },
+    {
+        displayName:"Anatomy",
+        imageUrl:"https://img.icons8.com/color/48/000000/skeleton.png",
+        redirectLink:"/anatomy",
+        desc:"",
+        db:"anatomy"
+    },
+    {
+        displayName:"Astronomy",
+        imageUrl:"https://img.icons8.com/officel/40/000000/earth-planet.png",
+        redirectLink:"/astronomy",
+        desc:"",
+        db:"astronomy"
+    },
+    {
+        displayName:"Research Paper",
+        imageUrl:"https://img.icons8.com/dusk/64/000000/paper.png",
+        redirectLink:"/research-paper",
+        desc:"",
+        db:"research-paper"
+    },
+],
+imageUrl:"https://img.icons8.com/dusk/64/000000/books.png",
+redirectLink: "/academics",
+displayName: "Science",
+desc:""
+},{
+    category:"Academics-Language",
+    skills:[
+        {
+            displayName:"English",
+            imageUrl:"https://img.icons8.com/dusk/64/000000/lowercase.png",
+            redirectLink:"/english-language",
+            desc:"",
+            db:"english-language"
+        },
+        {
+            displayName:"German",
+            imageUrl:"https://img.icons8.com/dusk/64/000000/germany.png",
+            redirectLink:"/german-language",
+            desc:"",
+            db:"german-language"
+        },
+        {
+            displayName:"Spanish",
+            imageUrl:"https://img.icons8.com/dusk/64/000000/spain.png",
+            redirectLink:"/spanish-language",
+            desc:"",
+            db:"spanish-language"
+        },
+        {
+            displayName:"France",
+            imageUrl:"https://img.icons8.com/dusk/64/000000/france.png",
+            redirectLink:"/france-language",
+            desc:"",
+            db:"france-language"
+        },
+        {
+            displayName:"Japanese",
+            imageUrl:"https://img.icons8.com/dusk/64/000000/hiragana-ma.png",
+            redirectLink:"/japanese-language",
+            desc:"",
+            db:"japanese-language"
+        },
+    ],
+    imageUrl:"https://img.icons8.com/dusk/64/000000/language.png",
+    redirectLink: "/academics",
+    displayName: "Science",
+    desc:""
+    },
+    ];
+    export {skillsData};

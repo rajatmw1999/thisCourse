@@ -34,20 +34,25 @@ let data = await page.evaluate(() =>{
 
 	// });
 	var courseName = document.querySelectorAll('div[class="webinar-event-box"] >h2');
-	var date = document.querySelectorAll('div[class="date_time"] >p');
+	var NumberofHours = document.querySelectorAll('div[class="date_time"] >p');
 	//var link = document.querySelectorAll('h3[class="title"] >a');
-	//
+	var UrlOfImageThumbnail = document.querySelectorAll('div[class="person_img"] >img[src]');
 	var instructorName = document.querySelectorAll('div[class="person_cont"] >h3');
 	//StanfordOnline
 	//var json = JSON.stringify(price);
 	//return courseName;
 	//,instructorName:[""]  courseName ,link:[]
-	var json = {courseName:[],date:[],instructorName:[""]};
+	var json = {courseName:[],price:[],link:[],instructorName:[],courseDescription:[],UrlOfImageThumbnail:[],NumberofHours:[],StudentsEnrolled:[],Rating:[]};
 	for(let i = 0; i < 10; i++){
 		json.courseName.push(JSON.stringify(courseName[i].innerText));
-		json.date.push(JSON.stringify(date[i].innerText).replace(/(\r\n|\n|\r)/gm,"").trim());
-		//json.link.push(JSON.stringify(link[i].href));
+		json.NumberofHours.push(JSON.stringify(NumberofHours[i].innerText).replace(/(\r\n|\n|\r)/gm,"").trim());
+		json.link.push("https://digigrad.in/webinars/");
+		json.courseDescription.push(JSON.stringify(courseName[i].innerText));
 		json.instructorName.push(JSON.stringify(instructorName[i].innerText));
+		json.price.push("FREE");
+		json.UrlOfImageThumbnail.push(JSON.stringify(UrlOfImageThumbnail[i].getAttribute('src')));
+		json.StudentsEnrolled.push(null);
+		json.Rating.push(null);
 	}
 	
 		return json;
@@ -58,11 +63,13 @@ let data = await page.evaluate(() =>{
 
 						  const skill = new Skill({
 								category:category,
+								platform:'digigrad',
 								nameSkill: data1,
-								Courses: [ {NameofCourse: data.courseName[1],Instructor: data.instructorName[1], NumberofHours: data.date[1]}, 
-											{NameofCourse: data.courseName[2],Instructor: data.instructorName[1], NumberofHours: data.date[2]},
-											{NameofCourse: data.courseName[3],Instructor: data.instructorName[1], NumberofHours: data.date[3]},
-											{NameofCourse: data.courseName[4],Instructor: data.instructorName[1], NumberofHours: data.date[4]},]
+								Courses: [ {NameofCourse: data.courseName[0], Price: data.price[0],LinkToCourse: data.link[0],Instructor:data.instructorName[0],CourseDescription: data.courseDescription[0],UrlOfImageThumbnail:data.UrlOfImageThumbnail[0],NumberofHours:data.NumberofHours[0],StudentsEnrolled:data.StudentsEnrolled[0],Rating:data.Rating[0]},//
+									{NameofCourse: data.courseName[1], Price: data.price[1],LinkToCourse: data.link[1],Instructor:data.instructorName[1],CourseDescription: data.courseDescription[1],UrlOfImageThumbnail:data.UrlOfImageThumbnail[1],NumberofHours:data.NumberofHours[1],StudentsEnrolled:data.StudentsEnrolled[1],Rating:data.Rating[1]},
+									{NameofCourse: data.courseName[2], Price: data.price[2],LinkToCourse: data.link[2],Instructor:data.instructorName[2],CourseDescription: data.courseDescription[2],UrlOfImageThumbnail:data.UrlOfImageThumbnail[2],NumberofHours:data.NumberofHours[2],StudentsEnrolled:data.StudentsEnrolled[2],Rating:data.Rating[2]},
+									{NameofCourse: data.courseName[3], Price: data.price[3],LinkToCourse: data.link[3],Instructor:data.instructorName[3],CourseDescription: data.courseDescription[3],UrlOfImageThumbnail:data.UrlOfImageThumbnail[3],NumberofHours:data.NumberofHours[3],StudentsEnrolled:data.StudentsEnrolled[3],Rating:data.Rating[3]}]
+
 							});
 							skill
 							.save()

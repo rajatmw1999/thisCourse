@@ -31,12 +31,14 @@ let data = await page.evaluate(() =>{
 	var courseName = document.querySelectorAll('h3[class="title"] >a');
 	//var price = document.querySelectorAll('div[class="field field-name-price"] >span');
 	var link = document.querySelectorAll('h3[class="title"] >a');
+	var CourseDescription = document.querySelectorAll('div[class="search-snippet-info"]>p[class="search-snippet"]');
 
-	var json = {courseName:[],link:[]};
+	var json = {courseName:[],link:[],CourseDescription:[]};
 	for(let i = 0; i < courseName.length; i++){
 		json.courseName.push(JSON.stringify(courseName[i].innerText));
 		//json.price.push(JSON.stringify(price[i].innerText));
 		json.link.push(JSON.stringify(link[i].href));
+		json.CourseDescription.push(JSON.stringify(CourseDescription[i].innerText));
 		//json.instructorName.push(JSON.stringify(instructorName[i].innerText));
 	}
 	
@@ -46,11 +48,13 @@ let data = await page.evaluate(() =>{
 
 						const skill = new Skill({
 								category:category,
+								platform:'openYale',
 								nameSkill: data1,
-								Courses: [ {NameofCourse: data.courseName[1],LinkToCourse: data.link[1]},
-											{NameofCourse: data.courseName[2],LinkToCourse: data.link[2]},
-											{NameofCourse: data.courseName[3],LinkToCourse: data.link[3]},
-											{NameofCourse: data.courseName[4],LinkToCourse: data.link[4]},]
+								Courses: [ 	{NameofCourse: data.courseName[0],LinkToCourse: data.link[0],CourseDescription:data.CourseDescription[0]},
+											{NameofCourse: data.courseName[1],LinkToCourse: data.link[1],CourseDescription:data.CourseDescription[1]},
+											{NameofCourse: data.courseName[2],LinkToCourse: data.link[2],CourseDescription:data.CourseDescription[2]},
+											{NameofCourse: data.courseName[3],LinkToCourse: data.link[3],CourseDescription:data.CourseDescription[3]},
+											{NameofCourse: data.courseName[4],LinkToCourse: data.link[4],CourseDescription:data.CourseDescription[4]}]
 							});
 							skill
 							.save()

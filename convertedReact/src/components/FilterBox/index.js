@@ -3,7 +3,103 @@ import ReactDOM from 'react-dom';
 import "./index.css";
 
 class FilterBox extends React.Component {
+constructor(props)
+{
+    super(props);
+    // console.log("Props of filter = " + this.props);
+    this.state={
+        provider:[],
+        feature:0,
+        rating:0
+    };
+    this.handleProvider = this.handleProvider.bind(this);
+    this.handleFeature = this.handleFeature.bind(this);
+    this.handleRating = this.handleRating.bind(this);
+    this.clearFilters = this.clearFilters.bind(this);
+}
 
+async clearFilters(){
+    await this.setState({
+        provider:[],
+        feature:0,
+        rating:0
+    });
+    this.props.clicked(this.state);
+}
+
+async handleProvider(event){
+    // console.log(event.target.checked);
+    // console.log(event.target.value);
+    var arr = this.state.provider;
+    if(event.target.checked == true)
+        arr.push(event.target.value);
+    else
+    {
+        arr = await arr.filter(function(value, index, arr)
+        {
+             return event.target.value != value;
+        }
+        )
+    }
+    this.setState({
+        provider:arr
+    });
+    // console.log(this.state.provider);
+}
+
+async handleRating(event){
+    var score = this.state.rating;
+    if(event.target.value == "high")
+    {
+        // console.log("high");
+        if(event.target.checked == true)
+            score+=1;
+        else
+            score-=1;
+            await this.setState({
+                rating:score
+            });
+    }
+    else if(event.target.value=="moderate")
+    {
+        // console.log("moderate");
+        if(event.target.checked == true)
+            score-=1;
+        else
+            score+=1;
+            await this.setState({
+                rating:score
+            });
+    }
+    // console.log(this.state.rating);   
+}
+
+async handleFeature(event){
+    var score = this.state.feature;
+    if(event.target.value == "featured")
+    {
+        // console.log("featured");
+        if(event.target.checked == true)
+            score+=1;
+        else
+            score-=1;
+            await this.setState({
+                feature:score
+            });
+    }
+    else if(event.target.value=="nonfeatured")
+    {
+        // console.log("nonfeatured");
+        if(event.target.checked == true)
+            score-=1;
+        else
+            score+=1;
+            await this.setState({
+                feature:score
+            });
+    }
+    // console.log(this.state.feature);
+}
 
     uncheckAll1() {
         var inputs = document.querySelectorAll('.provider');
@@ -102,6 +198,22 @@ class FilterBox extends React.Component {
                             <div class="col-4 text-right caption">
                                 <span id="slider-range-value21"></span>
                             </div>
+
+                            
+
+
+                            <div class="col-4 aradhna_filterinputbox" style={{border: '1px black'}}>
+                                        <span id=""><input type="text" placeholder="MIN"></input></span>
+                                        </div>
+
+                                        <div class="col-4 aradhna_filterinputbox" style={{border: '1px black'}}>
+                                        </div>
+
+                                        <div class="col-4 text-right aradhna_filterinputbox">
+                                        <span id=""><input type="text" placeholder="MAX"></input></span>
+                                        </div>
+                            
+
                             </div>
                         </div>
                         </div>
@@ -164,6 +276,17 @@ class FilterBox extends React.Component {
                                         <div class="col-3 text-right caption">
                                             <span id="slider-range-hour-value21"></span>
                                             </div>
+
+                                        <div class="col-4 aradhna_filterinputbox" style={{border: '1px black'}}>
+                                        <span id=""><input type="text" placeholder="MIN"></input></span>
+                                        </div>
+
+                                        <div class="col-4 aradhna_filterinputbox" style={{border: '1px black'}}>
+                                        </div>
+
+                                        <div class="col-4 text-right aradhna_filterinputbox">
+                                        <span id=""><input type="text" placeholder="MAX"></input></span>
+                                        </div>
                                         
                                 </div>
                             </div>
@@ -217,10 +340,10 @@ class FilterBox extends React.Component {
                                
                                 <ul id="providers">
                                     <li>
-                                        <input class="provider" value="Udemy" type="checkbox" name="provider" id="checkbox1"/>
+                                        <input class="provider" value="Apnacourse" type="checkbox" name="provider" id="checkbox1"/>
                                         <label class="checkbox-label" for="checkbox1">
                                             <span class="el:m-checkbox__label">
-                                                <a>Udemy</a>
+                                                <a>Apnacourse</a>
                                             <span class="el:m-checkbox__summary">
                                                 (571)
                                             </span>
@@ -228,10 +351,10 @@ class FilterBox extends React.Component {
                                         </label>
                                     </li>
                                     <li>
-                                        <input class="provider"  value="Pluralsight" type="checkbox" name="provider" id="checkbox2"/>
+                                        <input class="provider"  value="Arcademics" type="checkbox" name="provider" id="checkbox2"/>
                                         <label class="checkbox-label" for="checkbox2">
                                             <span class="el:m-checkbox__label">
-                                                <a>Pluralsight</a>
+                                                <a>Arcademics</a>
                                             <span class="el:m-checkbox__summary">
                                                 (184)
                                             </span>
@@ -239,65 +362,59 @@ class FilterBox extends React.Component {
                                         </label>
                                     </li>
                                     <li>
-                                        <input class="provider" type="checkbox" value="Linkedin Learning" name="provider" id="checkbox3"/>
+                                        <input class="provider" type="checkbox" value="Bitdegree" name="provider" id="checkbox3"/>
                                         <label class="checkbox-label" for="checkbox3">
-                                            <span class="el:m-checkbox__label"><a>Linkedin Learning</a><span class="el:m-checkbox__summary">
+                                            <span class="el:m-checkbox__label"><a>Bitdegree</a><span class="el:m-checkbox__summary">
                                                 (45)</span></span>
                                         </label>
                                     </li>
                                     <li>
-                                        <input class="provider" type="checkbox" value="Egghead" name="provider" id="checkbox4"/>
+                                        <input class="provider" type="checkbox" value="Udemy" name="provider" id="checkbox4"/>
                                         <label class="checkbox-label" for="checkbox4">
-                                            <span class="el:m-checkbox__label"><a>Egghead</a><span class="el:m-checkbox__summary">
+                                            <span class="el:m-checkbox__label"><a>Udemy</a><span class="el:m-checkbox__summary">
                                                 (33)</span></span>
                                         </label>
                                     </li>
                                     
                                                       
                                     <li>
-                                        <input class="provider" type="checkbox" value="Frontend Masters" name="provider" id="checkbox5"/>
+                                        <input class="provider" type="checkbox" value="Coursera" name="provider" id="checkbox5"/>
                                         <label class="checkbox-label" for="checkbox5">
-                                            <span class="el:m-checkbox__label"><a>Frontend Masters</a><span class="el:m-checkbox__summary">
+                                            <span class="el:m-checkbox__label"><a>Coursera</a><span class="el:m-checkbox__summary">
                                                 (11)</span></span>
                                         </label>
                                     </li>
                                     
                                     <li>
-                                        <input class="provider" type="checkbox" value="Platzi" name="provider" id="checkbox6"/>
+                                        <input class="provider" type="checkbox" value="Digigrad" name="provider" id="checkbox6"/>
                                         <label class="checkbox-label" for="checkbox6">
-                                            <span class="el:m-checkbox__label"><a>Platzi</a><span class="el:m-checkbox__summary">
+                                            <span class="el:m-checkbox__label"><a>Digigrad</a><span class="el:m-checkbox__summary">
                                                 (9)</span></span>
                                         </label>
                                     </li>
                                   
                                     <li>
-                                        <input class="provider" type="checkbox" value="Alison" name="provider" id="checkbox7"/>
+                                        <input class="provider" type="checkbox" value="Skillshare" name="provider" id="checkbox7"/>
                                         <label class="checkbox-label" for="checkbox7">
-                                            <span class="el:m-checkbox__label"><a>Alison</a><span class="el:m-checkbox__summary">
+                                            <span class="el:m-checkbox__label"><a>Skillshare</a><span class="el:m-checkbox__summary">
                                                 (7)</span></span>
                                         </label>
                                     </li>
                                  
                                     <li>
-                                        <input class="provider" type="checkbox" value="Ultimate Courses" name="provider" id="checkbox8"/>
+                                        <input class="provider" type="checkbox" value="Harvard" name="provider" id="checkbox8"/>
                                         <label class="checkbox-label" for="checkbox8">
-                                            <span class="el:m-checkbox__label"><a>Ultimate Courses</a><span class="el:m-checkbox__summary">
+                                            <span class="el:m-checkbox__label"><a>Harvard</a><span class="el:m-checkbox__summary">
                                                 (6)</span></span>
                                         </label>
                                     </li>
                                    
-                                    <li>
-                                        <input class="provider" type="checkbox" value="Coursera" name="provider" id="checkbox9"/>
-                                        <label class="checkbox-label" for="checkbox9">
-                                            <span class="el:m-checkbox__label"><a>Coursera</a><span class="el:m-checkbox__summary">
-                                                (5)</span></span>
-                                        </label>
-                                    </li>
+                               
                                     
                                     <li>
-                                        <input class="provider" type="checkbox" value="Alura" name="provider" id="checkbox10"/>
+                                        <input class="provider" type="checkbox" value="OpenYale" name="provider" id="checkbox10"/>
                                         <label class="checkbox-label" for="checkbox10">
-                                            <span class="el:m-checkbox__label"><a>Alura</a><span class="el:m-checkbox__summary">
+                                            <span class="el:m-checkbox__label"><a>OpenYale</a><span class="el:m-checkbox__summary">
                                                 (5)</span></span>
                                         </label>
                                     </li>
@@ -311,9 +428,9 @@ class FilterBox extends React.Component {
                                     </li>
                                     
                                     <li>
-                                        <input class="provider" type="checkbox" value="Treehouse" name="provider" id="checkbox12"/>
+                                        <input class="provider" type="checkbox" value="Udacity" name="provider" id="checkbox12"/>
                                         <label class="checkbox-label" for="checkbox12">
-                                            <span class="el:m-checkbox__label"><a>Treehouse</a><span class="el:m-checkbox__summary">
+                                            <span class="el:m-checkbox__label"><a>Udacity</a><span class="el:m-checkbox__summary">
                                                 (2)</span></span>
                                         </label>
                                     </li>
@@ -327,20 +444,14 @@ class FilterBox extends React.Component {
                                     </li>
                                    
                                     <li>
-                                        <input class="provider" type="checkbox" value="Edureka" name="provider" id="checkbox14"/>
+                                        <input class="provider" type="checkbox" value="Verbling" name="provider" id="checkbox14"/>
                                         <label class="checkbox-label" for="checkbox14">
-                                            <span class="el:m-checkbox__label"><a>Edureka</a><span class="el:m-checkbox__summary">
+                                            <span class="el:m-checkbox__label"><a>Verbling</a><span class="el:m-checkbox__summary">
                                                 (1)</span></span>
                                         </label>
                                     </li>
                                     
-                                    <li>
-                                        <input class="provider" type="checkbox" value="Codecademy" name="provider" id="checkbox15"/>
-                                        <label class="checkbox-label" for="checkbox15">
-                                            <span class="el:m-checkbox__label"><a>Codecademy</a><span class="el:m-checkbox__summary">
-                                                (1)</span></span>
-                                        </label>
-                                    </li>
+                                  
                                 </ul>
                             </div>
                         </div>
@@ -369,13 +480,13 @@ class FilterBox extends React.Component {
                 <form role="form" action='#' method="post">
                 <div class="modal-body">
                    
-                        <div class="el:o-fieldset-frame__header">
+                        {/* <div class="el:o-fieldset-frame__header">
                             <legend class="el:o-fieldset-frame__title el:o-fieldset-frame__title--stand-out">Languages</legend>
                              <a href="#" onclick="uncheckAll2()"  class="el:o-fieldset-frame__action el:amx-Ws(nw)" >
                                 Clear
                             </a>
-                        </div>
-                        <div class="el:o-fieldset-frame__item" >
+                        </div> */}
+                        {/* <div class="el:o-fieldset-frame__item" >
                             <div class="el:m-search-suggest" >
                                 <div id="suggestions.provider_name">
                                     
@@ -385,7 +496,7 @@ class FilterBox extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         <div class="el:o-fieldset-frame__item" >
                             <div >
                                 
@@ -652,275 +763,195 @@ class FilterBox extends React.Component {
                 <div class="filter-nav" data-v-7cc4708a="" style={{border :"1px solid #ccc"}}>
                     <div class="el:amx-D(F) el:amx-FxJc(sb)" data-v-7cc4708a="">
                         <h4 class="filter" data-v-7cc4708a="">Filters</h4>  
-                        <a href="#" onclick="uncheckAll4()" class="filter-clear el:amx-C_er el:amx-Fw(b) el:amx-Fs(0.625em)" style={{margin: 'auto 0', textAlign: 'right'}} data-v-7cc4708a="">
+                        <a onClick={this.clearFilters} class="filter-clear el:amx-C_er el:amx-Fw(b) el:amx-Fs(0.625em)" style={{margin: 'auto 0', textAlign: 'right', color:"red"}} data-v-7cc4708a="">
                       Clear all filters
                     </a>
+
                     </div>
-                    <form  data-v-7cc4708a="">
-                        <hr />
-                        <fieldset class="el:o-fieldset-frame" >
-                            <div class="el:o-fieldset-frame__header">
-                                <legend class="el:o-fieldset-frame__title el:o-fieldset-frame__title--stand-out">Price</legend>
-                                 <a href="#" onclick="uncheckAll5()" class="el:o-fieldset-frame__action el:amx-Ws(nw)" >
-                                Clear
-                                </a>
-                            </div>
-                            
-                            <div class="priceslider el:o-fieldset-frame__item" >
-                                 <div class="col-sm-12">
-                                    <div id="slider-range" ></div>
-                                  </div>
-                                  
-                                <div class="row" style={{marginTop:'1em', display:'flex'}} >
-                                    
-                                        
-                                        <div class="col-4 caption" style={{border: '1px black'}}>
-                                             <span id="slider-range-value1"></span>
-                                          </div>
-                                        
-                                        
-                                     <span class="col-4 el:amx-D(ib)" style={{margin:'auto 0em',fontSize:'0.875em' ,flexBasis:'150px',textAlign:'center'}} >
-                                                in USD
-                                            </span> 
-                                        
-                                        <div class="col-4 text-right caption">
-                                           <span id="slider-range-value2"></span>
-                                          </div>
-                                        
-                                </div>
-                            </div>
-                        
-                            
-
-
-                        </fieldset>
-                        <hr />
-
-                        <fieldset class="el:o-fieldset-frame" >
-                            <div class="el:o-fieldset-frame__header">
-                                <legend class="el:o-fieldset-frame__title el:o-fieldset-frame__title--stand-out">Hours</legend>
-                                 <a href="#" onclick="uncheckAll6()" class="el:o-fieldset-frame__action el:amx-Ws(nw)" >
-                                <span>Clear</span>
-                                </a>
-                            </div>
-
-
-                            {/* <!-- no of hours --> */}
-                            <div class="el:o-fieldset-frame__item" >
-                                <div class="col-sm-12">
-                                   <div id="slider-range-hour"></div>
-                                 </div>
-                                 
-                               <div class="row" style={{marginTop:'1em', display:'flex'}} >
-                                   
-                                       
-                                       <div class="col-3 caption" style={{border: '1px black'}}>
-                                            <span id="slider-range-hour-value1"></span>
-                                         </div>
-                                       
-                                       
-                                    <span class="col-6 el:amx-D(ib)" style={{margin:'auto 0em',fontSize:'0.875em' ,flexBasis:'150px',textAlign:'center'}} >
-                                               in Hours
-                                           </span> 
-                                       
-                                       <div class="col-3 text-right caption">
-                                          <span id="slider-range-hour-value2"></span>
-                                         </div>
-                                       
-                               </div>
-                           </div>
-
-
-                        </fieldset>
-
+                    <form >
                         <hr />
 
                         <fieldset class="el:o-fieldset-frame" >
                             <div class="el:o-fieldset-frame__header">
                                 <legend class="el:o-fieldset-frame__title el:o-fieldset-frame__title--stand-out">Providers</legend>
-                                 <a href="#" onclick="uncheckAll1()"  class="el:o-fieldset-frame__action el:amx-Ws(nw)" >
+                                 {/* <a href="#" onclick="uncheckAll1()"  class="el:o-fieldset-frame__action el:amx-Ws(nw)" >
                                     Clear
-                                </a>
+                                </a> */}
                             </div>
-                            <div class="el:o-fieldset-frame__item" >
-                                <div class="el:m-search-suggest" >
-                                    <div id="suggestions.provider_name">
-                                        
-                                        <input type="text" id="myInput1" onkeyup="myFunction1()" placeholder="Search providers" class="el:m-search-suggest__input"/>
-                                        <div class="mx-D(n)">
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        
                             <div class="el:o-fieldset-frame__item" >
                                 <div >
                                     
                                    
                                     <ul id="providerss">
                                         <li>
-                                            <input class="provider" value="Udemy" type="checkbox" name="provider" id="checkbox1"/>
+                                            <input onClick={this.handleProvider}  value="apnaCourse" class="provider" value="Apnacourse" type="checkbox" name="provider" id="checkbox1"/>
                                             <label class="checkbox-label" for="checkbox1">
                                                 <span class="el:m-checkbox__label">
-                                                    <a>Udemy</a>
-                                                <span class="el:m-checkbox__summary">
+                                                    <a>Apnacourse</a>
+                                                {/* <span class="el:m-checkbox__summary">
                                                     (571)
-                                                </span>
+                                                </span> */}
                                                 </span>
                                             </label>
                                         </li>
                                         <li>
-                                            <input class="provider"  value="Pluralsight" type="checkbox" name="provider" id="checkbox2"/>
+                                            <input onClick={this.handleProvider}  class="provider"  value="arcademics" type="checkbox" name="provider" id="checkbox2"/>
                                             <label class="checkbox-label" for="checkbox2">
                                                 <span class="el:m-checkbox__label">
-                                                    <a>Pluralsight</a>
-                                                <span class="el:m-checkbox__summary">
+                                                    <a>Arcademics</a>
+                                                {/* <span class="el:m-checkbox__summary">
                                                     (184)
-                                                </span>
+                                                </span> */}
                                                 </span>
                                             </label>
                                         </li>
                                         <li>
-                                            <input class="provider" type="checkbox" value="Linkedin Learning" name="provider" id="checkbox3"/>
+                                            <input onClick={this.handleProvider}  class="provider" type="checkbox" value="bitdegree" name="provider" id="checkbox3"/>
                                             <label class="checkbox-label" for="checkbox3">
-                                                <span class="el:m-checkbox__label"><a>Linkedin Learning</a><span class="el:m-checkbox__summary">
-                                                    (45)</span></span>
+                                                <span class="el:m-checkbox__label"><a>Bitdegree</a>
+                                                {/* <span class="el:m-checkbox__summary">
+                                                    (45)</span> */}
+                                                    </span>
                                             </label>
                                         </li>
                                         <li>
-                                            <input class="provider" type="checkbox" value="Egghead" name="provider" id="checkbox4"/>
+                                            < input onClick={this.handleProvider}  class="provider" type="checkbox" value="udemy" name="provider" id="checkbox4"/>
                                             <label class="checkbox-label" for="checkbox4">
-                                                <span class="el:m-checkbox__label"><a>Egghead</a><span class="el:m-checkbox__summary">
-                                                    (33)</span></span>
+                                                <span class="el:m-checkbox__label"><a>Udemy</a>
+                                                {/* <span class="el:m-checkbox__summary">
+                                                    (33)</span> */}
+                                                    </span>
                                             </label>
                                         </li>
                                         
                                                           
                                         <li>
-                                            <input class="provider" type="checkbox" value="Frontend Masters" name="provider" id="checkbox5"/>
+                                            <input  onClick={this.handleProvider}  class="provider" type="checkbox" value="coursera" name="provider" id="checkbox5"/>
                                             <label class="checkbox-label" for="checkbox5">
-                                                <span class="el:m-checkbox__label"><a>Frontend Masters</a><span class="el:m-checkbox__summary">
-                                                    (11)</span></span>
+                                                <span class="el:m-checkbox__label"><a>Coursera</a>
+                                                {/* <span class="el:m-checkbox__summary">
+                                                    (11)</span> */}
+                                                    </span>
                                             </label>
                                         </li>
                                         
                                         <li>
-                                            <input class="provider" type="checkbox" value="Platzi" name="provider" id="checkbox6"/>
+                                            <input onClick={this.handleProvider}  class="provider" type="checkbox" value="digigrad" name="provider" id="checkbox6"/>
                                             <label class="checkbox-label" for="checkbox6">
-                                                <span class="el:m-checkbox__label"><a>Platzi</a><span class="el:m-checkbox__summary">
-                                                    (9)</span></span>
+                                                <span class="el:m-checkbox__label"><a>Digigrad</a>
+                                                {/* <span class="el:m-checkbox__summary">
+                                                    (9)</span> */}
+                                                    </span>
                                             </label>
                                         </li>
                                       
                                         <li>
-                                            <input class="provider" type="checkbox" value="Alison" name="provider" id="checkbox7"/>
+                                            <input onClick={this.handleProvider}  class="provider" type="checkbox" value="edx" name="provider" id="checkbox7"/>
                                             <label class="checkbox-label" for="checkbox7">
-                                                <span class="el:m-checkbox__label"><a>Alison</a><span class="el:m-checkbox__summary">
-                                                    (7)</span></span>
+                                                <span class="el:m-checkbox__label"><a>Edx </a>
+                                                {/* <span class="el:m-checkbox__summary">
+                                                    (7)</span>*/}
+                                                    </span> 
+                                                    
                                             </label>
                                         </li>
                                      
                                         <li>
-                                            <input class="provider" type="checkbox" value="Ultimate Courses" name="provider" id="checkbox8"/>
+                                            < input onClick={this.handleProvider}  class="provider" type="checkbox" value="harvard" name="provider" id="checkbox8"/>
                                             <label class="checkbox-label" for="checkbox8">
-                                                <span class="el:m-checkbox__label"><a>Ultimate Courses</a><span class="el:m-checkbox__summary">
-                                                    (6)</span></span>
+                                                <span class="el:m-checkbox__label"><a>Harvard </a>
+                                                {/* <span class="el:m-checkbox__summary">
+                                                    (6)</span> */}
+                                                    </span>
                                             </label>
                                         </li>
                                        
+                                     
                                         <li>
-                                            <input class="provider" type="checkbox" value="Coursera" name="provider" id="checkbox9"/>
-                                            <label class="checkbox-label" for="checkbox9">
-                                                <span class="el:m-checkbox__label"><a>Coursera</a><span class="el:m-checkbox__summary">
-                                                    (5)</span></span>
-                                            </label>
-                                        </li>
-                                        
-                                        <li>
-                                            <input class="provider" type="checkbox" value="Alura" name="provider" id="checkbox10"/>
+                                            <input onClick={this.handleProvider}  class="provider" type="checkbox" value="openYale" name="provider" id="checkbox10"/>
                                             <label class="checkbox-label" for="checkbox10">
-                                                <span class="el:m-checkbox__label"><a>Alura</a><span class="el:m-checkbox__summary">
-                                                    (5)</span></span>
+                                                <span class="el:m-checkbox__label"><a>OpenYale </a>
+                                                {/* <span class="el:m-checkbox__summary">
+                                                    (5)</span> */}
+                                                    </span>
                                             </label>
                                         </li>
                                        
                                         <li>
-                                            <input class="provider" type="checkbox" value="Edx" name="provider" id="checkbox11"/>
+                                            <input onClick={this.handleProvider}  class="provider" type="checkbox" value="skillShare" name="provider" id="checkbox11"/>
                                             <label class="checkbox-label" for="checkbox11">
-                                                <span class="el:m-checkbox__label"><a>Edx</a><span class="el:m-checkbox__summary">
-                                                    (4)</span></span>
+                                                <span class="el:m-checkbox__label"><a>Skillshare </a>
+                                                {/* <span class="el:m-checkbox__summary">
+                                                    (4)</span> */}
+                                                    </span>
                                             </label>
                                         </li>
                                         
                                         <li>
-                                            <input class="provider" type="checkbox" value="Treehouse" name="provider" id="checkbox12"/>
+                                            <input  onClick={this.handleProvider}  class="provider" type="checkbox" value="udacity" name="provider" id="checkbox12"/>
                                             <label class="checkbox-label" for="checkbox12">
-                                                <span class="el:m-checkbox__label"><a>Treehouse</a><span class="el:m-checkbox__summary">
-                                                    (2)</span></span>
+                                                <span class="el:m-checkbox__label"><a>Udacity</a>
+                                                {/* <span class="el:m-checkbox__summary">
+                                                    (2)</span> */}
+                                                    </span>
                                             </label>
                                         </li>
                                       
                                         <li>
-                                            <input class="provider" type="checkbox" value="Khan Academy" name="provider" id="checkbox13"/>
+                                            <input onClick={this.handleProvider}  class="provider" type="checkbox" value="khanAcademy" name="provider" id="checkbox13"/>
                                             <label class="checkbox-label" for="checkbox13">
-                                                <span class="el:m-checkbox__label"><a>Khan Academy</a><span class="el:m-checkbox__summary">
-                                                    (2)</span></span>
+                                                <span class="el:m-checkbox__label"><a>Khan Academy</a>
+                                                {/* <span class="el:m-checkbox__summary">
+                                                    (2)</span> */}
+                                                    </span>
                                             </label>
                                         </li>
-                                       
                                         <li>
-                                            <input class="provider" type="checkbox" value="Edureka" name="provider" id="checkbox14"/>
+                                            <input onClick={this.handleProvider}  class="provider" type="checkbox" value="Code Academy" name="provider" id="checkbox14"/>
                                             <label class="checkbox-label" for="checkbox14">
-                                                <span class="el:m-checkbox__label"><a>Edureka</a><span class="el:m-checkbox__summary">
-                                                    (1)</span></span>
-                                            </label>
+                                                 <span class="el:m-checkbox__label"><a>Code Academy</a>
+                                                 {/*<span class="el:m-checkbox__summary">
+                                                    (1)</span>*/}
+                                                    </span>
+                                            </label> 
                                         </li>
                                         
                                         <li>
-                                            <input class="provider" type="checkbox" value="Codecademy" name="provider" id="checkbox15"/>
-                                            <label class="checkbox-label" for="checkbox15">
-                                                <span class="el:m-checkbox__label"><a>Codecademy</a><span class="el:m-checkbox__summary">
-                                                    (1)</span></span>
+                                            <input  onClick={this.handleProvider} class="provider" type="checkbox" value="verbling" name="provider" id="checkbox14"/>
+                                            <label class="checkbox-label" for="checkbox14">
+                                                <span class="el:m-checkbox__label"><a>Verbling</a>
+                                                {/* <span class="el:m-checkbox__summary">
+                                                    (1)</span> */}
+                                                    </span>
                                             </label>
                                         </li>
+                                        
+                                       
                                     </ul>
                                 </div>
                             </div>
                         </fieldset>
 
-                        <hr />
+                        {/* <hr /> */}
 
-                        <fieldset class="el:o-fieldset-frame" >
+                        {/* <fieldset class="el:o-fieldset-frame" >
                             <div class="el:o-fieldset-frame__header">
-                                <legend class="el:o-fieldset-frame__title el:o-fieldset-frame__title--stand-out">Languages</legend>
-                                 <a href="#" onclick="uncheckAll2()"  class="el:o-fieldset-frame__action el:amx-Ws(nw)" >
-                                    Clear
-                                </a>
+                                <legend class="el:o-fieldset-frame__title el:o-fieldset-frame__title--stand-out">Popularity</legend>
+                                
                             </div>
-                            <div class="el:o-fieldset-frame__item" >
-                                <div class="el:m-search-suggest" >
-                                    <div id="suggestions.provider_name">
-                                        
-                                        <input type="text" id="myInput21" onkeyup="myFunction21()" placeholder="Search Language" class="el:m-search-suggest__input"/>
-                                        <div class="mx-D(n)">
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                           
                             <div class="el:o-fieldset-frame__item" >
                                 <div >
                                     
                                    
                                     <ul id="languagess">
                                         <li>
-                                            <input class="language" value="English" type="checkbox" name="language" id="language1"/>
+                                            <input onClick={this.handleRating}  class="language" value="high" type="checkbox" name="language" id="language1"/>
                                             <label class="checkbox-label" for="language1">
                                                 <span class="el:m-checkbox__label">
-                                                    <a>English</a>
-                                                <span class="el:m-checkbox__summary">
-                                                    (717)
-                                                </span>
+                                                    <a>High</a>
+                                               
                                                 </span>
                                             </label>
                                         </li>
@@ -928,211 +959,71 @@ class FilterBox extends React.Component {
                                         <li>
                                             
                                             <label class="checkbox-label" for="language2">
-                                                <input class="language"  value="Spanish" type="checkbox" name="language" id="language2"/>
+                                                <input  onClick={this.handleRating} class="language"  value="moderate" type="checkbox" name="language" id="language2"/>
                                                 <span class="el:m-checkbox__label">
-                                                    <a>Spanish</a>
-                                                <span class="el:m-checkbox__summary">
-                                                    (90)
+                                                    <a>Moderate</a>
+                                                
                                                 </span>
-                                                </span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input class="language" type="checkbox" value="Portuguese" name="language" id="language3"/>
-                                            <label class="checkbox-label" for="language3">
-                                                <span class="el:m-checkbox__label"><a>Portuguese</a><span class="el:m-checkbox__summary">
-                                                    (56)</span></span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input class="language" type="checkbox" value="French" name="language" id="language4"/>
-                                            <label class="checkbox-label" for="language4">
-                                                <span class="el:m-checkbox__label"><a>French</a><span class="el:m-checkbox__summary">
-                                                    (19)</span></span>
-                                            </label>
-                                        </li>
-                                        
-                                                          
-                                        <li>
-                                            <input class="language" type="checkbox" value="Turkish" name="language" id="language5"/>
-                                            <label class="checkbox-label" for="language5">
-                                                <span class="el:m-checkbox__label"><a>Turkish</a><span class="el:m-checkbox__summary">
-                                                    (14)</span></span>
-                                            </label>
-                                        </li>
-                                        
-                                        <li>
-                                            <input class="language" type="checkbox" value="Italian" name="language" id="language6"/>
-                                            <label class="checkbox-label" for="language6">
-                                                <span class="el:m-checkbox__label"><a>Italian</a><span class="el:m-checkbox__summary">
-                                                    (13)</span></span>
                                             </label>
                                         </li>
                                       
-                                        <li>
-                                            <input class="language" type="checkbox" value="Thai" name="language" id="language7"/>
-                                            <label class="checkbox-label" for="language7">
-                                                <span class="el:m-checkbox__label"><a>Thai</a><span class="el:m-checkbox__summary">
-                                                    (9)</span></span>
-                                            </label>
-                                        </li>
-                                     
-                                        <li>
-                                            <input class="language" type="checkbox" value="Polish" name="language" id="language8"/>
-                                            <label class="checkbox-label" for="language8">
-                                                <span class="el:m-checkbox__label"><a>Polish</a><span class="el:m-checkbox__summary">
-                                                    (8)</span></span>
-                                            </label>
-                                        </li>
-                                       
-                                        <li>
-                                            <input class="language" type="checkbox" value="Chinese" name="language" id="language9"/>
-                                            <label class="checkbox-label" for="language9">
-                                                <span class="el:m-checkbox__label"><a>Chinese</a><span class="el:m-checkbox__summary">
-                                                    (7)</span></span>
-                                            </label>
-                                        </li>
-                                        
-                                        <li>
-                                            <input class="language" type="checkbox" value="German" name="language" id="language10"/>
-                                            <label class="checkbox-label" for="language10">
-                                                <span class="el:m-checkbox__label"><a>German</a><span class="el:m-checkbox__summary">
-                                                    (4)</span></span>
-                                            </label>
-                                        </li>
                                        
                                         
                                     </ul>
                                 </div>
                             </div>
-                        </fieldset>
+                        </fieldset> */}
                         
                         <hr />
 
                         <fieldset class="el:o-fieldset-frame" >
                             <div class="el:o-fieldset-frame__header">
-                                <legend class="el:o-fieldset-frame__title el:o-fieldset-frame__title--stand-out">Subtitles</legend>
-                                 <a href="#" onclick="uncheckAll3()"  class="el:o-fieldset-frame__action el:amx-Ws(nw)" >
-                                    Clear
-                                </a>
+                                <legend class="el:o-fieldset-frame__title el:o-fieldset-frame__title--stand-out">Discounted</legend>
+                                
                             </div>
-                            <div class="el:o-fieldset-frame__item" >
-                                <div class="el:m-search-suggest" >
-                                    <div id="suggestions.provider_name">
-                                        
-                                        <input type="text" id="myInput31" onkeyup="myFunction31()" placeholder="Search Subtitles.." class="el:m-search-suggest__input"/>
-                                        <div class="mx-D(n)">
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                           
                             <div class="el:o-fieldset-frame__item" >
                                 <div >
                                     
                                    
                                     <ul id="subtitless">
                                         <li>
-                                            <input class="subtitle" value="English (US)" type="checkbox" name="subtitle" id="subtitle1"/>
+                                            <input onClick={this.handleFeature} class="subtitle" value="featured" type="checkbox" name="subtitle" id="subtitle1"/>
                                             <label class="checkbox-label" for="subtitle1">
                                                 <a><span class="el:m-checkbox__label">
-                                                    English (US)
-                                                <span class="el:m-checkbox__summary">
+                                                    Featured
+                                                {/* <span class="el:m-checkbox__summary">
                                                     (717)
-                                                </span>
+                                                </span> */}
                                                 </span>
                                             </a>
                                             </label>
                                         </li>
                                         <li>
-                                            <input class="subtitle"  value="English" type="checkbox" name="subtitle" id="subtitle2"/>
+                                            <input onClick={this.handleFeature} class="subtitle"  value="nonfeatured" type="checkbox" name="subtitle" id="subtitle2"/>
                                             <label class="checkbox-label" for="subtitle2">
                                                 <a><span class="el:m-checkbox__label">
-                                                    English
-                                                <span class="el:m-checkbox__summary">
+                                                    Non-Featured
+                                                {/* <span class="el:m-checkbox__summary">
                                                     (262)
-                                                </span>
+                                                </span> */}
                                                 </span></a>
                                             </label>
                                         </li>
-                                        <li>
-                                            <input class="subtitle" type="checkbox" value="Spanish" name="subtitle" id="subtitle3"/>
-                                            <label class="checkbox-label" for="subtitle3">
-                                                <span class="el:m-checkbox__label"><a>Spanish</a><span class="el:m-checkbox__summary">
-                                                    (87)</span></span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input class="subtitle" type="checkbox" value="Portuguese" name="subtitle" id="subtitle4"/>
-                                            <label class="checkbox-label" for="subtitle4">
-                                                <span class="el:m-checkbox__label"><a>Portuguese</a><span class="el:m-checkbox__summary">
-                                                    (79)</span></span>
-                                            </label>
-                                        </li>
-                                        
-                                                          
-                                        <li>
-                                            <input class="subtitle" type="checkbox" value="French" name="subtitle" id="subtitle5"/>
-                                            <label class="checkbox-label" for="subtitle5">
-                                                <span class="el:m-checkbox__label"><a>French</a><span class="el:m-checkbox__summary">
-                                                    (75)</span></span>
-                                            </label>
-                                        </li>
-                                        
-                                        <li>
-                                            <input class="subtitle" type="checkbox" value="Bulgarian" name="subtitle" id="subtitle6"/>
-                                            <label class="checkbox-label" for="subtitle6">
-                                                <span class="el:m-checkbox__label"><a>Bulgarian</a><span class="el:m-checkbox__summary">
-                                                    (75)</span></span>
-                                            </label>
-                                        </li>
-                                      
-                                        <li>
-                                            <input class="subtitle" type="checkbox" value="Thai" name="subtitle" id="subtitle7"/>
-                                            <label class="checkbox-label" for="subtitle7">
-                                                <span class="el:m-checkbox__label"><a>Thai</a><span class="el:m-checkbox__summary">
-                                                    (9)</span></span>
-                                            </label>
-                                        </li>
-                                     
-                                        <li>
-                                            <input class="subtitle" type="checkbox" value="Polish" name="subtitle" id="subtitle8"/>
-                                            <label class="checkbox-label" for="subtitle8">
-                                                <span class="el:m-checkbox__label"><a>Polish</a><span class="el:m-checkbox__summary">
-                                                    (74)</span></span>
-                                            </label>
-                                        </li>
-                                       
-                                        <li>
-                                            <input class="subtitle" type="checkbox" value="Georgian" name="subtitle" id="subtitle9"/>
-                                            <label class="checkbox-label" for="subtitle9">
-                                                <span class="el:m-checkbox__label"><a>Georgian</a><span class="el:m-checkbox__summary">
-                                                    (74)</span></span>
-                                            </label>
-                                        </li>
-                                        
-                                        <li>
-                                            <input class="subtitle" type="checkbox" value="Italian" name="subtitle" id="subtitle10"/>
-                                            <label class="checkbox-label" for="subtitle10">
-                                                <span class="el:m-checkbox__label"><a>Italian</a><span class="el:m-checkbox__summary">
-                                                    (74)</span></span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input class="subtitle" type="checkbox" value="Danish" name="subtitle" id="subtitle11"/>
-                                            <label class="checkbox-label" for="subtitle11">
-                                                <span class="el:m-checkbox__label"><a>Danish</a><span class="el:m-checkbox__summary">
-                                                    (74)</span></span>
-                                            </label>
-                                        </li>
+
                                        
                                         
                                     </ul>
                                 </div>
                             </div>
                         </fieldset>
-                        
+                        {/* <button onClick={() => this.props.clicked(this.state)} class="btn btn-block" >
+                      Apply Filters
+                    </button> */}
+                    <a onClick={() => this.props.clicked(this.state)} className="btn btn-success btn-sm" >Apply Filters</a>
+                   
                     </form>
+                   
                 </div>
             </div>
             <div class="col-12 el:amx-D(n)@>lg el:amx-Mb(1em)" data-v-7cc4708a="">
@@ -1151,6 +1042,8 @@ class FilterBox extends React.Component {
                   </a>
                 </div>
             </div>
+
+          
            
          </div>
 //     </div>

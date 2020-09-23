@@ -1,8 +1,12 @@
 import React, {Component} from "react";
 import "./blogPostRoadmap.css";
 import Timeline from '../timeline/index';
-
+import renderHtml from 'react-render-html';
 class BlogPostRoadmap extends Component {
+    constructor(props){
+        super(props);
+        // console.log(this.props);
+    }
     render() {
         return (
             <div
@@ -18,7 +22,8 @@ class BlogPostRoadmap extends Component {
                         <header className="crayons-article__header" id="main-title">
                             <div className="crayons-article__cover">
                                 <img
-                                    src="https://res.cloudinary.com/practicaldev/image/fetch/s--gOJlVA9M--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://res.cloudinary.com/practicaldev/image/fetch/s--JRjrJNLA--/c_imagga_scale%2Cf_auto%2Cfl_progressive%2Ch_420%2Cq_auto%2Cw_1000/https://thepracticaldev.s3.amazonaws.com/i/a6byfpckrkz5zv5jkg93.png"
+                                    // src="https://res.cloudinary.com/practicaldev/image/fetch/s--gOJlVA9M--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://res.cloudinary.com/practicaldev/image/fetch/s--JRjrJNLA--/c_imagga_scale%2Cf_auto%2Cfl_progressive%2Ch_420%2Cq_auto%2Cw_1000/https://thepracticaldev.s3.amazonaws.com/i/a6byfpckrkz5zv5jkg93.png"
+                                    src={this.props.data.ImageLink?`${this.props.data.ImageLink}`:"https://res.cloudinary.com/practicaldev/image/fetch/s--gOJlVA9M--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://res.cloudinary.com/practicaldev/image/fetch/s--JRjrJNLA--/c_imagga_scale%2Cf_auto%2Cfl_progressive%2Ch_420%2Cq_auto%2Cw_1000/https://thepracticaldev.s3.amazonaws.com/i/a6byfpckrkz5zv5jkg93.png"}
                                     width="1000"
                                     height="420"
                                     style={{
@@ -31,17 +36,17 @@ class BlogPostRoadmap extends Component {
                             <div Name="crayons-article__header__meta" style={{
     padding: "0 var(--article-padding-x) var(--article-padding-y) var(--article-padding-x)"}}>
                                 <h1 className="topic_custom_blogpostroadmap mb-4 medium">
-                                    How To Become A Full Stack Developer In 2020[ROADMAP]?
+                                    {this.props.data.NameOfRoadmap}
                                 </h1>
 
                                 <div className="mb-4 spec__tags">
-                                    <a
+                                    <span
                                         className="crayons-tag mr-1"
-                                        href="/t/fullstackdeveloper"
+                                        href="#"
                                         style={{
                                         backgroundColor: "whitesmoke"
                                     }}>
-                                        <span className="crayons-tag__prefix">#</span>fullstackdeveloper</a>
+                                        <span className="crayons-tag__prefix">#</span>{this.props.data.Category}</span>
                                 </div>
 
                                 <div className="crayons-article__subheader">
@@ -58,25 +63,25 @@ class BlogPostRoadmap extends Component {
                                         }}>
                                             <img
                                                 class="crayons-avatar__image"
-                                                src="https://res.cloudinary.com/practicaldev/image/fetch/s--dtfmt9Ke--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/194160/21c019c6-26a2-41e4-ba4b-307631717363.jpg"
+                                                src={this.props.data.ImageofAuthor}
                                                 alt="blog profile image"></img>
                                         </span>
-                                        Larson Reever
+                                        {this.props.data.NameofAuthor}
                                     </a>
 
                                     <span className="fs-s  s:mb-0">
-                                        <time
+                                        {/* <time
                                             datetime="2019-07-12T06:50:47Z"
                                             className="date-no-year"
-                                            title="Friday, 12 July, 2019, 12:20:47 pm">12 Jul</time>
+                                            title="Friday, 12 July, 2019, 12:20:47 pm">12 Jul</time> */}
 
-                                        <em>Updated on
+                                        <em>
                                             <time
                                                 datetime="2020-03-28T11:07:45Z"
-                                                title="Saturday, 28 March, 2020, 4:37:45 pm">Mar 28, 2020</time>
+                                                title="Saturday, 28 March, 2020, 4:37:45 pm">{this.props.data.DatePublished?this.props.data.DatePublished:""}</time>
                                         </em>
 
-                                        <span className="mr-4">・3 min read</span>
+                                        {/* <span className="mr-4">・3 min read</span> */}
                                     </span>
                                     <span id="action-space" className="mb-4 s:mb-0"></span>
                                 </div>
@@ -88,8 +93,8 @@ class BlogPostRoadmap extends Component {
                             className="crayons-article__body text-styles spec__body"
                             data-article-id="139464"
                             id="article-body">
-                                 <Timeline />
-                            <p>With technological advancements in the recent years, there comes the highest
+                                 <Timeline topics={this.props.data.TimelineTopics} data={this.props.data.TimelineData} />
+                            {/* <p>With technological advancements in the recent years, there comes the highest
                                 demand for full stack developers than ever before.</p>
 
                             <p>
@@ -229,9 +234,9 @@ class BlogPostRoadmap extends Component {
 
                             <p>17.. Work with the command line</p>
 
-                            <p>18.. Ask good questions on Stack Overflow</p>
+                            <p>18.. Ask good questions on Stack Overflow</p> */}
 
-                            <h2>
+                            {/* <h2>
                                 <a
                                     name="full-stack-developer-roadmap"
                                     href="#full-stack-developer-roadmap"
@@ -265,7 +270,8 @@ class BlogPostRoadmap extends Component {
 
                             <p>I created this list and am constantly updating it with new resources,
                                 information, and news.
-                            </p>
+                            </p> */}
+                            {renderHtml(this.props.data.Text)}
                            
                         </div>
 

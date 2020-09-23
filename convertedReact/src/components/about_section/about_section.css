@@ -1,9 +1,14 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,400;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,600;0,700;1,100;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald');
 
 .bg {
+    /* font-family:   'Work Sans'; */
     max-width: 100%;
     /* The image used */
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url("https://www.upskilled.edu.au/getmedia/26e5eefe-8bac-4084-a7a2-21074c52747b/myths-and-realities-of-studying-online-2.jpg;.aspx");
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url("../../data/about_section.jpg");
     /* Full height */
     height: 100%;
     /* Center and scale the image nicely */
@@ -11,7 +16,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(0,0,0,0.7);
-    padding: 25px 0px;
+    padding: 65px 0px;
    
 }
 
@@ -45,6 +50,8 @@
     padding-left: 3%;
     font-size: 3.5em;
    color: white;
+   font-family: 'Montserrat';
+    font-weight: 600;
 }
 
 
@@ -52,7 +59,9 @@
 .tag {
     padding-left: 3%;
     font-size: 1.2em;
-    font-family: 'Fondamento', cursive;
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 2px;
+    font-weight: 400;
 }
 
 .alpha {

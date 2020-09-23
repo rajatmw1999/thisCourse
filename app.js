@@ -22,11 +22,27 @@ const alisonSearchRoutes = require("./api/routes/alison");
 const arcademicsSearchRoutes = require("./api/routes/arcademics");
 const harvardBusinessSearchRoutes = require("./api/routes/harvardBusiness");
 const verblingSearchRoutes = require("./api/routes/verbling");
-
+const Roadmap = require("./api/routes/roadmap");
 const marketingSearchRoutes = require("./api/routes/marketing");
 const testRoute = require("./api/routes/test");
 const masterRoute = require("./api/routes/master");
+const developmentRoute = require("./api/routes/categories/development");
+const businessRoute = require("./api/routes/categories/business");
+const academicsRoute = require("./api/routes/categories/academics");
+const itRoute = require("./api/routes/categories/it");
+const designRoute = require("./api/routes/categories/design");
+const personalRoute = require("./api/routes/categories/personal");
 const dataRoutes = require("./api/data_routes/index");
+const searrch = require("./api/routes/search");
+const likeRoute = require("./api/routes/likes");
+const deleteSkills = require("./api/routes/deleteSkills");
+const admin_routes = require("./api/admin_routes/routes");
+
+//CORS
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
 
 //console.log('In routes file');
 mongoose.connect(
@@ -35,7 +51,8 @@ mongoose.connect(
     //useMongoClient: true
     useNewUrlParser: true,
     useUnifiedTopology: true,
-  }
+  },
+  console.log("Database Connected")
 );
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -69,11 +86,22 @@ app.use("/alisonSearch", alisonSearchRoutes);
 app.use("/arcademicsSearch", arcademicsSearchRoutes);
 app.use("/harvardBusinessSearch", harvardBusinessSearchRoutes);
 app.use("/verblingSearch", verblingSearchRoutes);
-
+app.use("/roadmap", Roadmap);
 app.use("/marketing", marketingSearchRoutes);
 app.use("/test", testRoute);
 app.use("/master", masterRoute);
+app.use("/development",developmentRoute);
+app.use("/business",businessRoute);
+app.use("/academics",academicsRoute);
+app.use("/it",itRoute);
+app.use("/design",designRoute);
+app.use("/personal",personalRoute);
 app.use("/data", dataRoutes);
+app.use("/search", searrch);
+app.use("/like", likeRoute);
+app.use("/deleteSkills", deleteSkills);
+
+app.use('/admin', admin_routes);
 
 //console.log('aint here');
 app.use((req, res, next) => {
@@ -91,8 +119,28 @@ app.use((error, req, res, next) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
+// Add headers
+// app.use(function (req, res, next) {
+
+//   // Website you wish to allow to connect
+//   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+
+//   // Request methods you wish to allow
+//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+//   // Request headers you wish to allow
+//   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+//   // Set to true if you need the website to include cookies in the requests sent
+//   // to the API (e.g. in case you use sessions)
+//   res.setHeader('Access-Control-Allow-Credentials', true);
+
+//   // Pass to next layer of middleware
+//   next();
+// });
+
+app.listen(5000, () => {
+  console.log("Server is running on port 5000");
 });
 
 module.exports = app;

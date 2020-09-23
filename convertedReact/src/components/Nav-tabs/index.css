@@ -97,3 +97,13 @@ a{
   .nav-tabs{
 
   }
+
+  .rajat_navtabs_center{
+    display:flex;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .rajat_navtabs_buttonmargin{
+    margin-left:2px;
+  }
