@@ -1,0 +1,36 @@
+.vanshika-ot-body{
+	padding-top: 5%; 
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+	align-content: center;
+	background-color: #F8FAFC;
+}
+
+.vanshika-ot-main-heading{
+	font-weight: 700;
+	font-size: 3rem;
+}
+.vanshika-ot-card{
+	border: none;
+	margin-top: 10%;
+}
+.vanshika-ot-Team{
+	color: #5967D8;
+}
+.vanshika-ot-card-text{
+	color: #A0AEC0;
+}
+.vanshika-ot-social-icons{
+	text-decoration: none;
+	color: #000000;
+	margin-right: 5%;
+}
+.vanshika-ot-img:hover{
+	transition: .2s;
+}
+.vanshika-ot-img:hover{
+	transform: scale(1.04);
+}
+
+
+
