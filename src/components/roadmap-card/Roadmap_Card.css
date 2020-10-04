@@ -1,0 +1,23 @@
+.roadmap{
+  margin : 0px;
+  display : block;
+}
+.hello{
+  display: inline-block;
+}
+
+.h4tag{
+  font-weight: bolder;
+  color: black;
+}
+
+
+.spantag{
+  margin-left: 10% ;
+}
+
+/* span{
+  color:#8e928b;
+} */
+
+

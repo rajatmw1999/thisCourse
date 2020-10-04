@@ -1,0 +1,30 @@
+/* Styles for wrapping the search box */
+
+.main {
+    width: 50%;
+    margin: 50px auto;
+}
+
+@media only screen and (max-width: 600px)
+{ .main{
+    width:90%;
+    margin:50px auto;
+}
+}
+.has-search .form-control {
+    padding-left: 2.375rem;
+   /* box-shadow:2px 2px;*/
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}

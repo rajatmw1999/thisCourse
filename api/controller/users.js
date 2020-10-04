@@ -24,7 +24,10 @@ exports.users_signup = (req, res, next) =>{
 						const user = new User({
 						_id: new mongoose.Types.ObjectId(),
 						email:req.body.email,
-						password: hash
+						password: hash,
+						name:req.body.name,
+						profession:req.body.profession,
+						institute:req.body.institute
 						});
 						user
 						.save()
@@ -72,10 +75,15 @@ exports.users_login = (req, res, next) => {
 						expiresIn: '1h'
 					}
 				);
-				return res.status(200).json({
-					message: 'Success Authorization',
-					token: token
-				});
+				if(user[0].activate == true)
+					return res.status(200).json({
+						message: 'Success Authorization',
+						token: token
+					});
+				else
+					return res.status(300).json({
+						message: 'Account Not Activated'
+					});
 			}
 			return res.status(401).json({
 				message: 'Authorization Failed'

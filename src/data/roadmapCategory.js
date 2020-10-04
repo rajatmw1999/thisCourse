@@ -1,0 +1,65 @@
+const category = [
+    {
+        displayName:"Development",
+        redirectLink:"/development-roadmap",
+        desc:"",
+        iconLink:""
+    },
+    {
+        displayName:"Business",
+        redirectLink:"/business-roadmap",
+        desc:"",
+        iconLink:""
+    },
+    {
+        displayName:"Finance",
+        redirectLink:"/finance-roadmap",
+        desc:"",
+        iconLink:""
+    },
+    {
+        displayName:"IT",
+        redirectLink:"/it-software-roadmap",
+        desc:"",
+        iconLink:""
+    },
+    {
+        displayName:"Productivity",
+        redirectLink:"/office-OS-roadmap",
+        desc:"",
+        iconLink:""
+    },
+    {
+        displayName:"Personal",
+        redirectLink:"/personal-development-roadmap",
+        desc:"",
+        iconLink:""
+    },
+    {
+        displayName:"Designing",
+        redirectLink:"/design-roadmap",
+        desc:"",
+        iconLink:""
+    },
+    {
+        displayName:"Marketing",
+        redirectLink:"/marketing-roadmap",
+        desc:"",
+        iconLink:""
+    },
+    {
+        displayName:"Photography",
+        redirectLink:"/photography-roadmap",
+        desc:"",
+        iconLink:""
+    },
+    {
+        displayName:"Academics",
+        redirectLink:"/academics-roadmap",
+        desc:"",
+        iconLink:""
+    },
+    
+];
+
+export default category;
