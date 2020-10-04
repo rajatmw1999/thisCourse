@@ -21,11 +21,12 @@ router.get("/",(req,res,next) => {
     // apnacourse(req, res,next, 'html', 'design');
     // udemy(req, res, next, 'html', 'design');
     // coursera(req,res,next,'html','design');
+    // bitdegree(req,res,next,'html','design');
+    // codecademy(req,res,next,'html','design');
+
     // -------------left here------------------
 
 
-    // bitdegree(req,res,next,'javascript','development');
-    // codecademy(req,res,next,'javascript','development');
     // edx(req,res,next,'javascript','development');
     // khanacademy(req,res,next,'javascript','development');
     // skillshare(req,res,next,'javascript','development');

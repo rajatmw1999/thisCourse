@@ -20,11 +20,16 @@ router.post('/create',(req, res, next) =>{
 		NameOfRoadmap: req.body.data.NameOfRoadmap,
 		NameofAuthor: req.body.data.NameofAuthor,
 		Likes:req.body.data.Likes,
-		// DatePublished:req.body.DatePublished,
+		DatePublished:req.body.data.DatePublished,
 		ImageLink: req.body.data.ImageLink,
 		Category: req.body.data.Category,
 		Text: req.body.data.Text,
-		Tags: req.body.data.Tags
+		Tags: req.body.data.Tags,
+		ImageofAuthor:req.body.data.ImageofAuthor,
+		DescofAuthor:req.body.data.DescofAuthor,
+		WorkofAuthor:req.body.data.WorkofAuthor,
+		TimelineTopics:req.body.data.TimelineTopics,
+		TimelineData:req.body.data.TimelineData
 	 });
 	
 	roadmap
@@ -40,7 +45,9 @@ router.post('/create',(req, res, next) =>{
 			// DatePublished: result.DatePublished ,
 			ImageLink: result.ImageLink ,
 			Category: result.Category ,
-			Text: result.Text
+			Text: result.Text,
+			TimelineTopics:req.body.data.TimelineTopics,
+			TimelineData:req.body.data.TimelineData
 		}
 		});
 	})
@@ -64,7 +71,9 @@ router.patch('/edit/:roadmapId',(req, res, next) =>{
 			"Text":req.body.data.Text,
 			"ImageLink":req.body.data.ImageLink,
 			"Category":req.body.data.Category,
-			"Tags":req.body.data.Tags
+			"Tags":req.body.data.Tags,
+			"TimelineTopics":req.body.data.TimelineTopics,
+			"TimelineData":req.body.data.TimelineData
 		};
 		console.log(updateOps);
 		RoadmapData.update({ _id: id}, {$set: updateOps})
