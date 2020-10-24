@@ -8,7 +8,7 @@
     /* font-family:   'Work Sans'; */
     max-width: 100%;
     /* The image used */
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url("../../data/about_section.jpg");
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),url("../../data/about_section.jpg");
     /* Full height */
     height: 100%;
     /* Center and scale the image nicely */

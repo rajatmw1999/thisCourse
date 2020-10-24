@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import {categoryData} from '../../data/category'
 import {domain} from '../../data/hosted'
+import skillungapic from '../../data/skillunga.png'
+
 class Footer extends React.Component {
     constructor(props)
     {
@@ -86,7 +88,7 @@ class Footer extends React.Component {
                                 </ul>
                             </div>
                             <div className="col-sm-4 col-md-3 item col-lg-2">
-                                <h3>ThisCourse</h3>
+                                <h3>Unga Factors</h3>
                                 <ul>
                                     <li className="aradhna_footerli"><a href="/featured">Featured Courses</a></li>
                                     <li className="aradhna_footerli"><a href="/featured">Top Discounts</a></li>
@@ -98,29 +100,31 @@ class Footer extends React.Component {
                             <div className="col-sm-4 col-md-4  col-lg-3 item social">
                             
                             
-                                <a href="#" className="fb-col">
+                                <a href="https://www.facebook.com/InCampus.in/" target='_blank' className="fb-col">
                                     <i className="icon ion-social-facebook"></i>
                                 </a>
-                                <a href="#"className="tw-col">
+                                {/* <a href="#"className="tw-col">
                                     <i className="icon ion-social-twitter"></i>
-                                </a>
-                                <a href="#" className="lin-col">
+                                </a> */}
+                                <a href="https://www.linkedin.com/company/incampusinc" target="_blank" className="lin-col">
                                     <i className="icon ion-social-linkedin"></i>
-                                </a><a href="#" className="ins-col">
+                                </a><a href="https://www.instagram.com/official_incampus/?hl=en" target="_blank" className="ins-col">
                                     <i className="icon ion-social-instagram"></i>
                                 </a>
                             
                             
                                 
-                                <p className="copyright">ThisCourse © 2020</p>
-                                <p className="copyright">Terms &amp; Conditions</p>
-                                <p className="copyright">Privacy Policy</p>
+                                <p className="copyright"> <img src={skillungapic} id="rajat_footer_logo" /> </p>
+                                <b>  <p className="copyright">A  <a href="https://incampus.in" target="_blank"> InCampus </a> Initiative.  </p></b>
+                                {/* <p className="copyright">Terms &amp; Conditions</p>
+                                <p className="copyright">Privacy Policy</p> */}
                             </div>
                             :
                             <div className="col-sm-4 col-md-4  col-lg-3 item social">
-                             <p className="copyright">ThisCourse © 2020</p>
-                                <p className="copyright">Terms &amp; Conditions</p>
-                                <p className="copyright">Privacy Policy</p>
+                             <p className="copyright"> <img src={skillungapic} id="rajat_footer_logo" /> </p>
+                           <b>  <p className="copyright">A  <a href="https://incampus.in" target="_blank"> InCampus </a> Initiative.  </p></b>
+                                {/* <p className="copyright">Terms &amp; Conditions</p>
+                                <p className="copyright">Privacy Policy</p> */}
                             </div>
                             }
                         </div>

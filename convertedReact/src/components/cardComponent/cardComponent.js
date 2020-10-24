@@ -2,7 +2,14 @@ import React,{Component} from "react";
 import "./cardComponent.css";
 import renderHtml from 'react-render-html';
 import CourseDetail from '../../pages/courseDetail/courseDetail'
-import defaultPic from '../../data/listcourse.jpg'
+import pic1 from '../../data/1.jpg'
+import pic2 from '../../data/2.jpg'
+import pic3 from '../../data/3.jpg'
+import pic4 from '../../data/4.jpg'
+import pic5 from '../../data/5.jpg'
+import pic6 from '../../data/6.jpg'
+import pic7 from '../../data/7.jpg'
+import pic8 from '../../data/8.jpg'
 import arcademics from './icons/arcademics.PNG'
 import skillshare from './icons/skillshare.png'
 import {
@@ -17,6 +24,16 @@ class CardComponent extends Component {
 
     render(){
         var link = "https://" + this.props.platform + ".com";
+        if(this.props.platform == "YOUTUBE")
+        {
+            name = this.props.NameofCourse;
+            link = this.props.LinkToCourse;
+            duration = this.props.NumberofHours;
+            price = this.props.Price;
+            img = this.props.UrlOfImageThumbnail;
+        }
+        else
+        {
         if(this.props.LinkToCourse){
         link = this.props.LinkToCourse;
         link = link.substring(1,link.length-1);
@@ -32,7 +49,24 @@ class CardComponent extends Component {
             price = this.props.Price;
             price = duration.substring(1, price.length-1);
         }
-        var img = defaultPic;
+        var number = Math.floor((Math.random() * 8) + 1);
+        var img;
+        if(number == 1)
+            img=pic1;
+        else if(number ==2)
+            img = pic2;
+            else if(number ==3)
+            img = pic3;
+            else if(number ==4)
+            img = pic4;
+            else if(number ==5)
+            img = pic5;
+            else if(number ==6)
+            img = pic6;
+            else if(number ==7)
+            img = pic7;
+            else if(number ==8)
+            img = pic8;
         if((this.props.UrlOfImageThumbnail)&&(this.props.UrlOfImageThumbnail[1]=='h')&&(this.props.UrlOfImageThumbnail[2]=='t')&&(this.props.UrlOfImageThumbnail[3]=='t')){
         img = this.props.UrlOfImageThumbnail;
         img = img.substring(1, img.length-1);
@@ -48,7 +82,7 @@ class CardComponent extends Component {
             // rating = renderHtml(rating);
             // console.log("Rating  = " + rating);
         }
-
+    }
         
 
         var picUrl;
@@ -80,7 +114,7 @@ class CardComponent extends Component {
             picUrl = "https://d20vrrgs8k4bvw.cloudfront.net/images/open-graph/udacity.png";
         else if(this.props.platform == "verbling")
             picUrl = "https://cdn.verbling.com/0000_images/logos/logomark-gradient-400.png";
-        else if(this.props.platform == "youtube")
+        else if(this.props.platform == "YOUTUBE")
             picUrl = "https://lh3.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc"
 
 

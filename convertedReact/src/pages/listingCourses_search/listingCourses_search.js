@@ -175,7 +175,11 @@ class listingCourses extends Component{
                                 UrlOfImageThumbnail={course.UrlOfImageThumbnail} Instructor={course.Instructor} Id={course._id}
                                 />
                             )
-                            ):"Loading!!"
+                            ):<div>
+                              <div className="rajat_loading_loader_animation">
+                                </div>
+                                <h1>Loading....</h1>
+                            </div>
                         }
                        {this.state.loaded?<button className="btn btn-outline-primary rajat_listing_loadmore_btn" onClick={this.clickedLoadMore}>Load More!</button>:""} 
                         </div>

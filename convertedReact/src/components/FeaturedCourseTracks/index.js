@@ -6,7 +6,7 @@ import photo from './images/img1.png'
 const FeaturedCourseTracks = props => {
     return (
         <div  class="container">
-            <h2 class="career_heading">Career Track <span><badge class="grad-badge">50% Cashback</badge></span></h2>
+            <h2 class="career_heading">Grab best offers <span><badge class="grad-badge">Exclusive Cashbacks</badge></span></h2>
 
 
             <div class="foundation and algorithm">
