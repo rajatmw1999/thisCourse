@@ -29,6 +29,8 @@ import Roadmap from './components/read-more-roadmap/Roadmap';
 import RoadmapCard from './components/roadmap-card/Roadmap_Card';
 import Search from './components/searchbar/Search';
 // import Signup from './components/signup/signup';
+import Auth from './components/authentication/auth';
+
 import SuggestionCarousel from './components/suggestion-carousel';
 import Timeline from './components/timeline';
 import ListingCoursesPage from "./pages/listingCourses/listingCourses";
@@ -122,6 +124,9 @@ roadmapPath = roadmapCategory.map((category) =>
         <Route path='/search' component={listingCourses_search} />
         <Route path='/ourteam' component={OurTeam} />
         {/* <Route path='/signup' component={Signup} /> */}
+
+        <Route path='/auth' component={Auth} />
+        
         <Route path='/privacy' component={privacy} />
         {/* <Admin_ChangePassword /> */}
         {/* <Admin_DeleteRescrape /> */}

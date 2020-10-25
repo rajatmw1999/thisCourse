@@ -91,21 +91,18 @@ app.use("/roadmap", Roadmap);
 app.use("/marketingSearch", marketingSearchRoutes);
 app.use("/test", testRoute);
 app.use("/master", masterRoute);
-<<<<<<< HEAD
 app.use("/development", developmentRoute);
 app.use("/academics", academicsRoute);
 app.use("/marketing", marketingRoute);
 app.use("/it", itRoute);
 app.use("/design", designRoute);
 app.use("/personal", personalRoute);
-=======
 app.use("/development",developmentRoute);
 app.use("/business",businessRoute);
 app.use("/academics",academicsRoute);
 app.use("/it",itRoute);
 app.use("/design",designRoute);
 app.use("/personal",personalRoute);
->>>>>>> 89701844a0804d02ef7a059937064207c19c4c9c
 app.use("/data", dataRoutes);
 app.use("/search", searrch);
 app.use("/like", likeRoute);
