@@ -264,7 +264,12 @@ class Navtabs extends React.Component {
                 
             </div>
             <br />
-            {this.state.dataToDisplay ? this.state.dataToDisplay : <h1>Loading</h1>}
+            {this.state.dataToDisplay ? this.state.dataToDisplay : 
+            <div>
+            <div className="rajat_loading_loader_animation">
+              </div>
+              <h1>Loading....</h1>
+          </div>}
             {/* <div className="tab-content">
                 <div id="home" className="tab-pane fade in active">
                 <h3>HOME HERE</h3>

@@ -29,6 +29,7 @@ const masterRoute = require("./api/routes/master");
 const developmentRoute = require("./api/routes/categories/development");
 const businessRoute = require("./api/routes/categories/business");
 const academicsRoute = require("./api/routes/categories/academics");
+const marketingRoute = require("./api/routes/categories/marketing");
 const itRoute = require("./api/routes/categories/it");
 const designRoute = require("./api/routes/categories/design");
 const personalRoute = require("./api/routes/categories/personal");
@@ -40,7 +41,7 @@ const admin_routes = require("./api/admin_routes/routes");
 
 //CORS
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
+  res.header("Access-Control-Allow-Origin", "*");
   next();
 });
 
@@ -87,9 +88,15 @@ app.use("/arcademicsSearch", arcademicsSearchRoutes);
 app.use("/harvardBusinessSearch", harvardBusinessSearchRoutes);
 app.use("/verblingSearch", verblingSearchRoutes);
 app.use("/roadmap", Roadmap);
-app.use("/marketing", marketingSearchRoutes);
+app.use("/marketingSearch", marketingSearchRoutes);
 app.use("/test", testRoute);
 app.use("/master", masterRoute);
+app.use("/development", developmentRoute);
+app.use("/academics", academicsRoute);
+app.use("/marketing", marketingRoute);
+app.use("/it", itRoute);
+app.use("/design", designRoute);
+app.use("/personal", personalRoute);
 app.use("/development",developmentRoute);
 app.use("/business",businessRoute);
 app.use("/academics",academicsRoute);
@@ -101,7 +108,7 @@ app.use("/search", searrch);
 app.use("/like", likeRoute);
 app.use("/deleteSkills", deleteSkills);
 
-app.use('/admin', admin_routes);
+app.use("/admin", admin_routes);
 
 //console.log('aint here');
 app.use((req, res, next) => {

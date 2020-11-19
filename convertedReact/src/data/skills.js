@@ -575,7 +575,7 @@ const skillsData = [
                 imageUrl:"https://img.icons8.com/color/48/000000/view-file.png",
                 redirectLink:"/seo-optimization",
                 desc:"",
-                db:"seo-optimization"
+                db:"seo"
             },
             {
                 displayName:"Amazon Kindle",
@@ -900,9 +900,9 @@ const skillsData = [
             {
                 displayName:"SEO",
                 imageUrl:"https://img.icons8.com/plasticine/100/000000/google-web-search.png",
-                redirectLink:"/seo-optimization",
+                redirectLink:"/seo",
                 desc:"",
-                db:"seo-optimization"
+                db:"seo"
             },
             {
                 displayName:"Affiliate Marketing",

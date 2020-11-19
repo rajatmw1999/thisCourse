@@ -24,6 +24,13 @@ class ParticularRoadmapPage extends Component {
     };
 
     async componentDidMount(){
+            // var loginName = localStorage.getItem("google-name");
+            // if(loginName=="null")
+            // {
+            //     window.location = "/signup";
+            // }
+            // else {
+        
         var roadmapId = window.location.pathname.split('/')[2];
         console.log(roadmapId);
         var fetchSkills = domain + "roadmap/" + roadmapId;
@@ -49,6 +56,7 @@ class ParticularRoadmapPage extends Component {
               });
             }
           )
+        // }
     }
 
     render() {

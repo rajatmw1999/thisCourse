@@ -28,7 +28,9 @@ import OutermostCategory from './components/outermost-category/index'
 import Roadmap from './components/read-more-roadmap/Roadmap';
 import RoadmapCard from './components/roadmap-card/Roadmap_Card';
 import Search from './components/searchbar/Search';
-import Signup from './components/signup/signup';
+// import Signup from './components/signup/signup';
+import Auth from './components/authentication/auth';
+
 import SuggestionCarousel from './components/suggestion-carousel';
 import Timeline from './components/timeline';
 import ListingCoursesPage from "./pages/listingCourses/listingCourses";
@@ -51,11 +53,11 @@ import Admin_DeleteRescrape from './pages/Admin-Pages/Aniket_DeleteRescrapePage'
 import Admin_EditFeaturedCourse from './pages/Admin-Pages/Aniket_EditFeaturedPage'
 import Admin_NewFeaturedCourse from './pages/Admin-Pages/Aniket_NewFeaturedPage'
 import Admin_Profile from './pages/Admin-Pages/Aniket_ProfilePage'
-
+import OurTeam from './pages/ourteam/index'
 import {categoryData} from './data/category';
 import {skillsData} from './data/skills';
 import roadmapCategory from './data/roadmapCategory'
-
+import privacy from './components/privacy'
 
 import {
   Route,
@@ -84,7 +86,7 @@ function App() {
   })
   
 });
-console.log(links);
+// console.log(links);
 let i=-1;
 skillsPath = links.map((data) => {
   ++i;
@@ -92,7 +94,14 @@ return <Route exact path={`${data.redirectLink}`} render={()=><ListingCoursesPag
 }
 )
 var roadmapPath;
-
+// var loginEmail = localStorage.getItem("google-email");
+// var loginName = localStorage.getItem("google-name");
+// var logged = false;
+// if(loginName!="null" && loginEmail!="null")
+// {
+//   logged=true;
+// }
+var logged = true;
 roadmapPath = roadmapCategory.map((category) => 
   <Route exact path={`${category.redirectLink}/rp`}  render={()=><RoadmapLandingPage dbQuery={category.displayName.toLowerCase()} displayName={category.displayName} />} />
 );
@@ -100,16 +109,25 @@ roadmapPath = roadmapCategory.map((category) =>
   return (
 
     <div>
-        <Route exact path="/roadmap/:id" component={ParticularRoadmapPage} />
+      <Route exact path="/roadmap/:id" component={ParticularRoadmapPage} />
+        
         {categoryPath}
         {skillsPath?skillsPath:""}
         {roadmapPath}
         <Route exact path='/' component={LandingPage} />
+
         <Route exact path='/roadmaps' render={()=><RoadmapLandingPage dbQuery={null} displayName={null} />} />
+        
         <Route exact path='/featured' component={FeaturedLandingPageSection} />
+        
+        
         <Route path='/search' component={listingCourses_search} />
+        <Route path='/ourteam' component={OurTeam} />
+        {/* <Route path='/signup' component={Signup} /> */}
+
+        <Route path='/auth' component={Auth} />
         
-        
+        <Route path='/privacy' component={privacy} />
         {/* <Admin_ChangePassword /> */}
         {/* <Admin_DeleteRescrape /> */}
         {/* <Admin_EditFeaturedCourse /> */}

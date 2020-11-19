@@ -5,6 +5,14 @@ import img4 from './img/img4.png'
 // import Landing_Page_Card_Nj from "../components/Landing_Page_Card_Nj/Landing_Page_Card_Nj";
 
 class Nj_PageComponent extends Component {
+    componentDidMount()
+    {
+        var loginName = localStorage.getItem("google-name");
+        if(loginName=="null")
+        {
+            window.location = "/signup";
+        }
+    }
     render() {
         return (
             <div className="popular_courses">

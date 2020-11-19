@@ -20,6 +20,8 @@ class FeaturedLandingPageSection extends Component {
     }
     
     async componentDidMount(){
+        
+        
         const categoryPath =  categoryData.map((data) =>  
         <li class="nav-item">
              <a 
@@ -57,6 +59,7 @@ class FeaturedLandingPageSection extends Component {
             });
           }
         )
+        
     }
 
     async handleCategoryChange(link){

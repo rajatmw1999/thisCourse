@@ -1,3 +1,3 @@
-const domain = "http://localhost:5000/"
+const domain = "https://skillunga.herokuapp.com/"
     
 export {domain};

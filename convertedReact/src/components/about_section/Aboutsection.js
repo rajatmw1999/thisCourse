@@ -36,7 +36,7 @@ class Aboutsection extends React.Component {
                             <a href="#" onClick={() => copyToClipboard("twitter")} className="fa custom_about fa-twitter"></a>
                             <a href="#" onClick={() => copyToClipboard("facebook")} className="fa custom_about fa-facebook"></a>
                             <a href="#" onClick={() => copyToClipboard("reddit")} className="fa custom_about fa-reddit"></a>
-                            (Click to copy link)
+                            (click to copy)
                         </p>
                     </div>
 

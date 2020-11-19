@@ -156,7 +156,9 @@ class listingCourses extends Component{
                                 UrlOfImageThumbnail={course.UrlOfImageThumbnail} Instructor={course.Instructor} Id={course._id}
                                 />
                             )
-                            ):<h1>Loading</h1>
+                            ):<div><div class="rajat_loading_loader_animation" />
+                            <h1>Loading....</h1>
+                            </div>
                         }
                         {
                             this.state.loaded?
